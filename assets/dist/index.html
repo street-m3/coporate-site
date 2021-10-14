@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Components</title>
+    <title>藤岡行政書士事務所</title>
     <meta name="description" content="ディスクリプション">
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
@@ -11,12 +11,6 @@
     <link rel="apple-touch-icon" href="./img/favicon.ico" sizes="180x180">
     <!-- 【JP Fonts】-- Noto Sans JP, sans-serif -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- 【Global Fonts】-- Lexend Mega, sans-serif && Lobster Two, cursive -->
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     <!-- 【Font Awesome】 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
@@ -25,300 +19,396 @@
 <body data-focus-visible="false" data-animate-effect="false">
 
     <div class="wrapper">
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm">
-                <h2 class="p-section-headline">Video</h2>
-                <video class="js-responsiveMovies" webkit-playsinline="" playsinline="" muted="" autoplay="" loop="" preload="auto">
-                    <source data-src="./images/movie-fog.mp4" data-media="desktop">
-                    <source data-src="./images/movie-waves.mp4" data-media="tablet">
-                    <source data-src="./images/movie-coffee.mp4" data-media="mobile">
-                </video>
-            </div>
-        </section>
 
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm">
-                <h2 class="p-section-headline">Accordion</h2>
-                <div class="p-accordions">
-                    <div class="c-accordion-item">
-                        <div class="c-accordion-header js-accordion-header">
-                            <button type="button" class="c-accordion-tab">
-                                ここに質問文を挿入
-                                <span class="c-accordion-tabicon"></span>
-                            </button>
-                        </div>
-                        <div class="c-accordion-panel js-accordion-panel">
-                            <div class="c-accordion-content">
-                                <p>ここに回答文を挿入</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-accordion-item">
-                        <div class="c-accordion-header js-accordion-header">
-                            <button type="button" class="c-accordion-tab">
-                                ここに質問文を挿入
-                                <span class="c-accordion-tabicon"></span>
-                            </button>
-                        </div>
-                        <div class="c-accordion-panel js-accordion-panel">
-                            <div class="c-accordion-content">
-                                <p>ここに回答文を挿入</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm">
-                <h2 class="p-section-headline">Alert</h2>
-                <div class="alerts">
-                    <div class="alert alert-info" role="alert" title="info">
-                        <strong>Heads up!</strong>
-                        This alert needs your attention, but it's not super important.
-                    </div>
-                    <div class="alert alert-success" role="alert" title="success">
-                        <strong>Well done!</strong>
-                        You successfully read this important alert message.
-                    </div>
-                    <div class="alert alert-warning" role="alert" title="warning">
-                        <strong>Warning!</strong>
-                        Better check yourself, you're not looking too good.
-                    </div>
-                    <div class="alert alert-danger" role="alert" title="danger">
-                        <strong>Oh snap!</strong>
-                        Change a few things up and try submitting again.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm">
-                <h2 class="p-section-headline">Breadcrumbs</h2>
-                <!-- pattern1 -->
-                <div class="p-breadcrumb p-bread-pattern-01">
-                    <nav class="c-breadcrumb" aria-label="breadcrumb">
-                        <ol class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item"><span itemprop="name">トップ</span></a>
-                                <meta itemprop="position" content="1">
-                            </li>
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item"><span itemprop="name">会社概要</span></a>
-                                <meta itemprop="position" content="2">
-                            </li>
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item"><span itemprop="name">社員紹介</span></a>
-                                <meta itemprop="position" content="3">
-                            </li>
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item" aria-current="page"><span itemprop="name">社長のご挨拶</span></a>
-                                <meta itemprop="position" content="4">
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
-                <!-- pattern2 -->
-                <div class="p-breadcrumb p-bread-pattern-02">
-                    <nav class="c-breadcrumb" aria-label="breadcrumb">
-                        <ol class="c-breadcrumb__list"  itemscope itemtype="https://schema.org/BreadcrumbList">
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item"><span itemprop="name" class="c-fonticon-home">トップ</span></a>
-                                <meta itemprop="position" content="1">
-                            </li>
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item"><span itemprop="name">会社概要</span></a>
-                                <meta itemprop="position" content="2">
-                            </li>
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item"><span itemprop="name">社員紹介</span></a>
-                                <meta itemprop="position" content="3">
-                            </li>
-                            <li class="c-breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="https://example.com" itemprop="item" aria-current="page"><span itemprop="name">社長のご挨拶</span></a>
-                                <meta itemprop="position" content="4">
-                            </li>
-                        </ol>
+        <header class="s-header" role="banner">
+            <div class="s-header__inner">
+                <h1 class="s-header__brand">
+                    <a href="/" class="s-header__brand--title">
+                        <img src="./images/logo.svg" width="73px" height="79px" alt="藤岡行政書士事務所">
+                    </a>
+                </h1>
+                <div class="s-header__nav__wrapper">
+                    <nav class="s-header__nav">
+                        <ul class="s-header__navlist">
+                            <li class="s-header__navlist--item"><a href="/">ホーム</a></li>
+                            <li class="s-header__navlist--item"><a href="/">サービス</a></li>
+                            <li class="s-header__navlist--item"><a href="/">価格</a></li>
+                            <li class="s-header__navlist--item"><a href="/">お知らせ</a></li>
+                            <li class="s-header__navlist--item"><a href="/">会社情報</a></li>
+                            <li class="s-header__navlist--item"><a href="/">よくある質問</a></li>
+                        </ul>
+                        <ul class="s-header__contactArea">
+                            <li class="s-header__contactArea--item"><a href="/">CONTACT</a></li>
+                        </ul>
                     </nav>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm component-items">
-                <h2 class="p-section-headline">Button</h2>
-                <div>
-                    <button type="button" class="c-button pattern-01" title="button1">
-                        button1
-                    </button>
+        <!-- Drawer -->
+        <div class="s-drawer">
+            <button type="button" class="s-drawer__button" aria-controls="site:drawer-navMenu" aria-label="モバイルメニュー"
+                aria-expanded=false>
+                <span class="button-line button-line--1"></span>
+                <span class="button-line button-line--2"></span>
+            </button>
+            <div class="s-drawer__overlay" data-focus-visible="false"></div>
+            <div id="site:drawer-navMenu" class="s-drawer-navMenu" aria-hidden=true>
+                <nav class="s-drawer-navMenu__content" role="navigation">
+                    <ul class="s-drawer-navMenu__list">
+                        <li class="s-drawer-navMenu__list--item">
+                            <a href="#">ホーム</a>
+                        </li>
+                        <li class="s-drawer-navMenu__list--item p-dropdownMenu">
+                            <div class="p-dropdownMenu__header js-dropdownMenu-header">
+                                <button type="button" class="p-dropdownMenu__tab">
+                                    サービス
+                                </button>
+                            </div>
+                            <div class="p-dropdownMenu__panel js-p-dropdownMenu__panel">
+                                <ul class="p-dropdownMenu__list">
+                                    <li class="s-drawer-navMenu__list--item">
+                                        <a href="#">IT法務</a>
+                                    </li>
+                                    <li class="s-drawer-navMenu__list--item">
+                                        <a href="#">ビザ申請</a>
+                                    </li>
+                                    <li class="s-drawer-navMenu__list--item">
+                                        <a href="#">民宿申請</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="s-drawer-navMenu__list--item">
+                            <a href="#">価格</a>
+                        </li>
+                        <li class="s-drawer-navMenu__list--item">
+                            <a href="#">お知らせ</a>
+                        </li>
+                        <li class="s-drawer-navMenu__list--item">
+                            <a href="#">会社情報</a>
+                        </li>
+                        <li class="s-drawer-navMenu__list--item">
+                            <a href="#">よくある質問</a>
+                        </li>
+                        <li class="s-drawer-navMenu__list--item">
+                            <a href="#">サイトマップ</a>
+                        </li>
+                        <li class="s-drawer-navMenu__list--item">
+                            <a href="#">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                    <div class="s-drawer-navMenu__contact">
+                        <div class="s-drawer-navMenu__contact--title">
+                            <span lang="en">CONTACT</span>
+                            <span lang="ja">お問い合わせ</span>
+                            <p class="s-drawer-navMenu__contact--caption">ご質問などありましたらお気軽にお問い合わせください</p>
+                        </div>
+                        <a href="./" class="c-button c-button__border--middle-line">お問い合わせフォームへ</a>
+                        <div class="s-drawer-navMenu__tel">
+                            <p class="s-drawer-navMenu__tel--caption">お電話でのお問い合わせ</p>
+                            <a href="tel:0123-456-789​" class="s-drawer-navMenu__tel--number">0123-456-789​</a>
+                            <p class="s-drawer-navMenu__tel--day">（平日00:00〜00:00）</p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="p-mainvisual">
+            <div class="p-mainvisual__inner">
+                <div class="p-mainvisual__title">
+                    <p class="p-mainvisual__title--main">WEB INTEGRATION &<br>LEGAL AFFAIRS</p>
+                    <p class="p-mainvisual__title--sub">新しい価値を創造する</p>
                 </div>
-                <div>
-                    <button type="button" class="c-button pattern-02" title="button2">
-                        button2
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-03" title="button3">
-                        button3
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-04" title="button4">
-                        button4
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-05" title="button5">
-                        <span>button5</span>
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-06" title="button6">
-                        button6
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-07" title="button7">
-                        button7
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-08" title="button8">
-                        button8
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-09" title="button9">
-                        button9
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-10" title="button10">
-                        button10
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-11" title="button11">
-                        button11
-                    </button>
-                </div>
-                <div>
-                    <button type="button" class="c-button pattern-12" title="button12">
-                        button12
-                    </button>
+
+                <div class="c-newsticker">
+                    <ol class="c-newsticker__list">
+                        <li class="c-newsticker__list--item">
+                            <a href="./" class="c-newsticker__news">
+                                <div class="c-newsticker__news--category">NEWS</div>
+                                <div class="c-newsticker__wrapper">
+                                    <time class="c-newsticker__news--date">2020/01/1</time>
+                                    <p class="c-newsticker__news--caption">あけましておめでとうございます。新年も宜しくお願い致します。今…</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="c-newsticker__list--item">
+                            <a href="./" class="c-newsticker__news">
+                                <div class="c-newsticker__news--category">お知らせ</div>
+                                <div class="c-newsticker__wrapper">
+                                    <time class="c-newsticker__news--date">2020/01/1</time>
+                                    <p class="c-newsticker__news--caption">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="c-newsticker__list--item">
+                            <a href="./" class="c-newsticker__news">
+                                <div class="c-newsticker__news--category">お知らせ</div>
+                                <div class="c-newsticker__wrapper">
+                                    <time class="c-newsticker__news--date">2020/01/1</time>
+                                    <p class="c-newsticker__news--caption">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="c-newsticker__list--item">
+                            <a href="./" class="c-newsticker__news">
+                                <div class="c-newsticker__news--category">お知らせ</div>
+                                <div class="c-newsticker__wrapper">
+                                    <time class="c-newsticker__news--date">2020/01/1</time>
+                                    <p class="c-newsticker__news--caption">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+                    <a href="./" class="c-newsticker__link" title="全ての記事を見る">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                            <g id="up-arrow" transform="translate(27) rotate(90)">
+                                <g id="グループ_10303" data-name="グループ 10303">
+                                    <g id="グループ_10302" data-name="グループ 10302">
+                                        <path id="パス_4090" data-name="パス 4090"
+                                            d="M13.5,0A13.5,13.5,0,1,0,27,13.5,13.515,13.515,0,0,0,13.5,0Zm0,24.909A11.409,11.409,0,1,1,24.909,13.5,11.422,11.422,0,0,1,13.5,24.909Z"
+                                            fill="#fff" />
+                                    </g>
+                                </g>
+                                <g id="グループ_10305" data-name="グループ 10305" transform="translate(7.288 9.41)">
+                                    <g id="グループ_10304" data-name="グループ 10304">
+                                        <path id="パス_4091" data-name="パス 4091"
+                                            d="M150.38,183.979l-5.229-5.229a1.045,1.045,0,0,0-1.474,0l-5.229,5.229a1.046,1.046,0,0,0,1.474,1.474l4.486-4.486,4.5,4.486a1.043,1.043,0,1,0,1.474-1.474Z"
+                                            transform="translate(-138.197 -178.446)" fill="#fff" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm">
-                <h2 class="p-section-headline">headline</h2>
-                <div class="p-headline-wrapper">
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-01">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-02">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-03">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-04">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-05">セクション見出し(擬似要素)</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-06">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-07">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-08">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group">
-                        <h3 class="c-headline border-09">セクション見出し</h3>
-                    </div>
-                    <div class="p-headline-group other-headline">
-                        <h3 class="c-headline border-10">いろいろな見出し</h3>
-                        <h3 class="c-headline border-11">
-                            <span lang="en">other</span>
-                            <span lang="ja">いろいろな見出し</span>
-                        </h3>
-                    </div>
-                    <!-- <div class="p-headline-group">
-                        <h3 class="c-headline border-11" data-en="Recruit">セクション見出し</h3>
-                    </div> -->
+        <main role="main">
+            <div class="p-message">
+                <div class="p-message__inner">
+                    <p class="p-message__large js-scrollY-text-slide" lang="en">WEB INTEGRATION</p>
+                    <p class="p-message__small" lang="ja">IT専門の行政書士たちが<br>あなたのビジネスを守ります</p>
                 </div>
             </div>
-        </section>
 
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm component-items">
-                <h2 class="p-section-headline">JS Button</h2>
-                <div>
-                    <button type="button" class="c-topScroll-button" title="top Scroll button">
-                        <span class="topScroll-Icon"></span>
-                    </button>
+            <section class="p-introduction">
+                <div class="p-introduction__inner">
+                    <div class="p-introduction__image"></div>
+                    <div class="p-introduction__detail"></div>
                 </div>
-                <div>
-                    <button type="button" class="c-scroll-down__button" title="down Scroll button">
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="sec-component u-content-area">
-            <div class="ly-inner-sm">
-                <h2 class="p-section-headline">Tab</h2>
-                <div class="tab-component__block">
-                    <ul class="tab-component__list" role="tablist">
-                        <li class="tab-component__item -one" role="presentation">
-                            <button type="button" role="tab" class="tab-component__item--button" aria-selected="true">
-                                Tab01
-                            </button>
-                        </li>
-                        <li class="tab-component__item -two" role="presentation">
-                            <button type="button" role="tab" class="tab-component__item--button" aria-selected="false">
-                                Tab02
-                            </button>
-                        </li>
-                        <li class="tab-component__item -three" role="presentation">
-                            <button type="button" role="tab" class="tab-component__item--button" aria-selected="false">
-                                Tab03
-                            </button>
-                        </li>
-                        <li class="tab-component__item -four" role="presentation">
-                            <button type="button" role="tab" class="tab-component__item--button" aria-selected="false">
-                                Tab04
-                            </button>
-                        </li>
-                    </ul> <!-- tab list end -->
-
-                    <div class="tab-component-panels">
-                        <section class="tab-component-panel" role="tabpanel" aria-hidden="false">
-                            <p class="tab-component__content">ここに内容外入ります。タブ1</p>
-                        </section>
-                        <section class="tab-component-panel" role="tabpanel" aria-hidden="true">
-                            <p class="tab-component__content">ここに内容外入ります。タブ2</p>
-                        </section>
-                        <section class="tab-component-panel" role="tabpanel" aria-hidden="true">
-                            <p class="tab-component__content">ここに内容外入ります。タブ3</p>
-                        </section>
-                        <section class="tab-component-panel" role="tabpanel" aria-hidden="true">
-                            <p class="tab-component__content">ここに内容外入ります。タブ4</p>
-                        </section>
+            <section class="p-serviceModel">
+                <div class="p-serviceModel__inner">
+                    <figure class="p-serviceModel__image">
+                        <img src="" alt="">
+                    </figure>
+                    <div class="p-serviceModel__detail">
+                        <h2 class="p-serviceModel__headline c-headline__primary">
+                            <span class="c-headline__primary--small">MESSAGE</span>
+                            Webを通して人々の心や生活が豊かになるよう、法律の面からサポートいたします
+                        </h2>
+                        <p>当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてWebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くWebに関する手続きのサポートを行ってまいります。
+                        </p>
+                        <div class="p-serviceModel__link">
+                            <a href="./" class="c-button c-button__border--middle-line">View More</a>
+                        </div>
                     </div>
                 </div>
+            </section>
+
+            <section class="p-service-contents">
+                <div class="p-service-contents__inner">
+                    <h2 class="p-service-contents__headline c-headline__primary">
+                        <span class="c-headline__primary--small">SERVICE</span>
+                        サービス内容
+                    </h2>
+                    <div class="u-flex u-flex-content-center u-flex-wrap">
+                        <article class="c-card p-service-content">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <h3 class="c-card__title">IT法務</h3>
+                                <p class="c-card__caption">
+                                    当事務所では、新規サービスの適法性判断、利用規約の作成、主要契約書の作成・レビュー、紛争対応などの総合的な法務サービスを提供しています。まずは気軽にご相談ください。
+                                </p>
+                            </div>
+                        </article>
+                        <article class="c-card p-service-content">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <h3 class="c-card__title">IT法務</h3>
+                                <p class="c-card__caption">
+                                    当事務所では、新規サービスの適法性判断、利用規約の作成、主要契約書の作成・レビュー、紛争対応などの総合的な法務サービスを提供しています。まずは気軽にご相談ください。
+                                </p>
+                            </div>
+                        </article>
+                        <article class="c-card p-service-content">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <h3 class="c-card__title">IT法務</h3>
+                                <p class="c-card__caption">
+                                    当事務所では、新規サービスの適法性判断、利用規約の作成、主要契約書の作成・レビュー、紛争対応などの総合的な法務サービスを提供しています。まずは気軽にご相談ください。
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="p-service-contents__link">
+                        <a href="./" class="c-button c-button__border--middle-line">View More</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-feature">
+                <div class="p-feature__inner">
+                    <h2 class="p-feature__headline c-headline__primary">
+                        <span class="c-headline__primary--small">FEATURE</span>
+                        私たちの強み
+                    </h2>
+                    <div class="p-feature__contents">
+                        <div class="p-feature__content">
+                            <figure class="p-feature__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="p-feature__body">
+                                <h2 class="p-feature__headline c-headline__primary">
+                                    <span class="c-headline__primary--small">POINT.01</span>
+                                    本社と現地法人の間の情報交換、交通整理をスムーズにします。
+                                </h2>
+                                <p>従業員一人の給与にも満たない顧問料で，取締役会議事録の作 成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。</p>
+                            </div>
+                        </div>
+                        <div class="p-feature__content">
+                            <figure class="p-feature__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="p-feature__body">
+                                <h2 class="p-feature__headline c-headline__primary">
+                                    <span class="c-headline__primary--small">POINT.02</span>
+                                    情報の正確性、日本法との比較、スピード感は日本基準です。
+                                </h2>
+                                <p>当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、
+                                    M&Aを積極的に推し進めて参ります。</p>
+                            </div>
+                        </div>
+                        <div class="p-feature__content">
+                            <figure class="p-feature__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="p-feature__body">
+                                <h2 class="p-feature__headline c-headline__primary">
+                                    <span class="c-headline__primary--small">POINT.03</span>
+                                    最低限のコストで、高いパフォーマンスを発揮いたします。
+                                </h2>
+                                <p>当弁護士事務所は，これまで国内最大級のサービサーの経験を生かし，通常は債務者が行う会社更生や民事再生の申立を，債権者の側から行い，スポンサーに入札させ，一挙に債権回収を図ることを手がけます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-member">
+                <div class="p-member__inner">
+                    <h2 class="p-member__headline c-headline__primary">
+                        <span class="c-headline__primary--small">SERVICE</span>
+                        サービス内容
+                    </h2>
+                    <div class="u-flex u-flex-wrap u-flex-contnet-center">
+                        <article class="c-card p-member__card">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <div class="c-card__name">
+                                    <span lang="ja"></span>
+                                    <span lang="en"></span>
+                                </div>
+                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                            </div>
+                        </article>
+                        <article class="c-card p-member__card">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <div class="c-card__name">
+                                    <span lang="ja"></span>
+                                    <span lang="en"></span>
+                                </div>
+                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                            </div>
+                        </article>
+                        <article class="c-card p-member__card">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <div class="c-card__name">
+                                    <span lang="ja"></span>
+                                    <span lang="en"></span>
+                                </div>
+                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                            </div>
+                        </article>
+                        <article class="c-card p-member__card">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <div class="c-card__name">
+                                    <span lang="ja"></span>
+                                    <span lang="en"></span>
+                                </div>
+                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                            </div>
+                        </article>
+                        <article class="c-card p-member__card">
+                            <figure class="c-card__image">
+                                <img src="" alt="">
+                            </figure>
+                            <div class="c-card__body">
+                                <div class="c-card__name">
+                                    <span lang="ja"></span>
+                                    <span lang="en"></span>
+                                </div>
+                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <aside class="s-footer-info">
+            <div class="s-footer-info__inner">
+                <h2 class="s-contact-footer__headline">
+                    <span lang="en">CONTACT</span>
+                    <span lang="ja">お問い合わせ</span>
+                </h2>
+                <p>ご質問などありましたらお気軽にお問い合わせください</p>
+                <div class="s-contact-footer__link">
+                    <a href="./" class="c-button c-button__border--middle-line">お問い合わせフォームへ</a>
+                </div>
             </div>
-        </section>
+        </aside>
+
+        <footer class="s-footer" role="contentinfo">
+            <div class="s-footer__inner">
+
+            </div>
+        </footer>
 
     </div>
+    <script src="./js/drawer.js"></script>
     <script src="./js/accordion.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/responsive-movie.js"></script>
