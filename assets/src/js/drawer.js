@@ -11,10 +11,10 @@ class Drawer {
     constructor(breakpoints) {
         const o = {
             openVisibleSet: "data-focus-visible", //body && Overlay
-            triggerButton: "mod-drawer__button",
-            toggleOverlay: "mod-drawer__overlay",
-            openMenuNavlist: "mod-drawer-navMenu",
-            headerNavlist: "mod-header__navlist",
+            triggerButton: "s-drawer__button",
+            toggleOverlay: "s-drawer__overlay",
+            openMenuNavlist: "s-drawer-navMenu",
+            headerNavlist: "s-header__navlist",
         };
 
         /**
