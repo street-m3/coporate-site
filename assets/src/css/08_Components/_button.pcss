@@ -1,14 +1,10 @@
 /*----------  init Button  ----------*/
 .c-button {
     background-image: none;
-    color: #ffffff;
     display: inline-block;
-    font-family: "Lobster Two", cursive;
-    font-size: 1.2rem;
-    font-style: italic;
     font-weight: bold;
     letter-spacing: 0.03em;
-    min-width: 160px;
+    min-width: 200px;
     position: relative;
     text-align: center;
     -webkit-user-select: none;
@@ -17,6 +13,8 @@
             user-select: none;
     white-space: nowrap;
 }
+
+
 
 /*----------  Button 01  ----------*/
 .pattern-01 {
@@ -292,4 +290,26 @@
 }
 .pattern-12:active {
     box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #ffffff;
+}
+
+.c-button__border--middle-line {
+    border: 1px solid $color-white;
+    background-color: $color-theme-primary;
+    font-size: 15px;
+    padding: 22px 0;
+    font-weight: normal;
+    max-width: 260px;
+    width: 100%;
+
+    &::after {
+        content: "";
+        width: 37px;
+        height: 1px;
+        background-color: $color-white;
+        color: $color-white;
+        position: absolute;
+        right: -18.5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
