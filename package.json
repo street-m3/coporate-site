@@ -23,7 +23,7 @@
     "watch:html": "watch 'npm run Html' ./assets/src/",
     "watch:css": "watch 'npm run css' ./assets/src/css/",
     "watch:js": "watch 'npm run js' ./assets/src/js/",
-    "watch:img": "onchange ./assets/src/images/ -e '**/*.DS_Store' -- npm run images",
+    "watch:img": "onchange ./assets/src/images/ -e '**/*.DS_Store' -- npm run img",
     "watch": "npm-run-all -p watch:*",
     "test": "echo \"--TEST MESSAGE-- Hello NPM World!\""
   },
@@ -49,6 +49,7 @@
     "postcss-import-ext-glob": "^2.0.1",
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.6",
+    "postcss-pxtorem": "^6.0.0",
     "postcss-simple-vars": "^6.0.3",
     "postcss-sort-media-queries": "^4.1.0",
     "postcss-sorting": "^6.0.0",
