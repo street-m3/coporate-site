@@ -1,63 +1,42 @@
 @font-face {
     font-family: 'Affogato-Black';
-    src:url('webfont/Affogato-Black.woff') format('woff'),
-        url('webfont/Affogato-Black.woff2') format('woff2'),
-        url('webfont/Affogato-Black.ttf') format('truetype');
+    src:url('Affogato-Black.woff') format('woff'),
+        url('Affogato-Black.woff2') format('woff2'),
+        url('Affogato-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Affogato-Bold';
-    src:url('webfont/Affogato-Bold.woff') format('woff'),
-        url('webfont/Affogato-Bold.woff2') format('woff2'),
-        url('webfont/Affogato-Bold.ttf') format('truetype');
+    src:url('Affogato-Bold.woff') format('woff'),
+        url('Affogato-Bold.woff2') format('woff2'),
+        url('Affogato-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Affogato-Medium';
-    src:url('webfont/Affogato-Medium.woff') format('woff'),
-        url('webfont/Affogato-Medium.woff2') format('woff2'),
-        url('webfont/Affogato-Medium.ttf') format('truetype');
+    src:url('Affogato-Medium.woff') format('woff'),
+        url('Affogato-Medium.woff2') format('woff2'),
+        url('Affogato-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Affogato-Regular';
-    src:url('webfont/Affogato-Regular.woff') format('woff'),
-        url('webfont/Affogato-Regular.woff2') format('woff2'),
-        url('webfont/Affogato-Regular.ttf') format('truetype');
+    src:url('Affogato-Regular.woff') format('woff'),
+        url('Affogato-Regular.woff2') format('woff2'),
+        url('Affogato-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Affogato-Light';
-    src:url('webfont/Affogato-Light.woff') format('woff'),
-        url('webfont/Affogato-Light.woff2') format('woff2'),
-        url('webfont/Affogato-Light.ttf') format('truetype');
+    src:url('Affogato-Light.woff') format('woff'),
+        url('Affogato-Light.woff2') format('woff2'),
+        url('Affogato-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-
-/* Font Declarations */
-.black {
-    font-family: 'Affogato-Black', sans-serif;
-}
-
-.bold {
-    font-family: 'Affogato-Bold', sans-serif;
-}
-
-.medium {
-    font-family: 'Affogato-Medium', sans-serif;
-}
-
-.regular {
-    font-family: 'Affogato-Regular', sans-serif;
-}
-
-.light {
-    font-family: 'Affogato-Light', sans-serif;
 }
