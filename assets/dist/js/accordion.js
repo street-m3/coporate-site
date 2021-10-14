@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
     new Accordion('p-accordions', 'js-accordion-header');
+    new Accordion('p-dropdownMenu', 'js-dropdownMenu-header');
 });
 
 class Accordion {
