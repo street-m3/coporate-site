@@ -1,10 +1,29 @@
+.ly-inner {
+    margin: 0 auto;
+    max-width: 100%;
+
+    @media (--xxl) {
+        width: $layout-inner;
+    }
+
+    @media (--lg) {
+        padding: 0 32px;
+    }
+
+    @media (--sm) {
+        padding: 0 16px;
+    }
+}
+
 .ly-inner-sm {
     width: $layout-inner-sm;
     margin: 0 auto;
     max-width: 100%;
+
     @media (--max-md) {
         padding: 0 32px;
     }
+    
     @media (--max-sm) {
         padding: 0 16px;
     }
