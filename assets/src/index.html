@@ -17,30 +17,57 @@
 </head>
 
 <body data-focus-visible="false" data-animate-effect="false">
-
     <div class="wrapper">
-
         <header class="s-header" role="banner">
-            <div class="s-header__inner">
+            <div class="s-header__inner" data-scroll="false" data-hover="false">
                 <h1 class="s-header__brand">
                     <a href="/" class="s-header__brand--title">
-                        <img src="./images/logo.svg" width="73px" height="79px" alt="藤岡行政書士事務所">
+                        <img src="./images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
                     </a>
                 </h1>
-                <div class="s-header__nav__wrapper">
-                    <nav class="s-header__nav">
+                <nav class="s-header__nav">
+                    <div class="s-header__nav--wrapper">
                         <ul class="s-header__navlist">
-                            <li class="s-header__navlist--item"><a href="/">ホーム</a></li>
-                            <li class="s-header__navlist--item"><a href="/">サービス</a></li>
-                            <li class="s-header__navlist--item"><a href="/">価格</a></li>
-                            <li class="s-header__navlist--item"><a href="/">お知らせ</a></li>
-                            <li class="s-header__navlist--item"><a href="/">会社情報</a></li>
-                            <li class="s-header__navlist--item"><a href="/">よくある質問</a></li>
+                            <li class="s-header__navlist--item">
+                                <a class="touch-hover" href="/">ホーム</a>
+                            </li>
+                            <li class="s-header__navlist--item js-dropdownMenu-item">
+                                <a class="touch-hover" role="button">サービス</a>
+                            </li>
+                            <li class="s-header__navlist--item">
+                                <a class="touch-hover" href="/">価格</a>
+                            </li>
+                            <li class="s-header__navlist--item">
+                                <a class="touch-hover" href="/">お知らせ</a>
+                            </li>
+                            <li class="s-header__navlist--item">
+                                <a class="touch-hover" href="/">会社情報</a>
+                            </li>
+                            <li class="s-header__navlist--item">
+                                <a class="touch-hover" href="/">よくある質問</a>
+                            </li>
                         </ul>
                         <ul class="s-header__contactArea">
-                            <li class="s-header__contactArea--item"><a href="/">CONTACT</a></li>
+                            <li class="s-header__contactArea--item">
+                                <a href="/">CONTACT</a>
+                            </li>
                         </ul>
-                    </nav>
+                    </div>
+                </nav>
+                <div class="s-header-dropdownMenu" aria-hidden="true">
+                    <div class="s-header-dropdownMenu__inner">
+                        <ul class="s-header-dropdownMenu__list">
+                            <li class="s-header-dropdownMenu__list--item">
+                                <a href="/">IT法務</a>
+                            </li>
+                            <li class="s-header-dropdownMenu__list--item">
+                                <a href="/">ビザ申請</a>
+                            </li>
+                            <li class="s-header-dropdownMenu__list--item">
+                                <a href="/">民泊申請</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </header>
@@ -48,25 +75,25 @@
         <!-- Drawer -->
         <div class="s-drawer">
             <button type="button" class="s-drawer__button" aria-controls="site:drawer-navMenu" aria-label="モバイルメニュー"
-                aria-expanded=false>
+                aria-expanded="false">
                 <span class="button-line button-line--1"></span>
                 <span class="button-line button-line--2"></span>
             </button>
             <div class="s-drawer__overlay" data-focus-visible="false"></div>
-            <div id="site:drawer-navMenu" class="s-drawer-navMenu" aria-hidden=true>
+            <div id="site:drawer-navMenu" class="s-drawer-navMenu" aria-hidden="true">
                 <nav class="s-drawer-navMenu__content" role="navigation">
                     <ul class="s-drawer-navMenu__list">
                         <li class="s-drawer-navMenu__list--item">
                             <a href="#">ホーム</a>
                         </li>
-                        <li class="s-drawer-navMenu__list--item p-dropdownMenu">
-                            <div class="p-dropdownMenu__header js-dropdownMenu-header">
-                                <button type="button" class="p-dropdownMenu__tab">
+                        <li class="s-drawer-navMenu__list--item s-drawer-dropdown">
+                            <div class="s-drawer-dropdown__header js-drawer-dropdown-header">
+                                <button type="button" class="s-drawer-dropdown__tab">
                                     サービス
                                 </button>
                             </div>
-                            <div class="p-dropdownMenu__panel js-p-dropdownMenu__panel">
-                                <ul class="p-dropdownMenu__list">
+                            <div class="s-drawer-dropdown__panel">
+                                <ul class="s-drawer-dropdown__list">
                                     <li class="s-drawer-navMenu__list--item">
                                         <a href="#">IT法務</a>
                                     </li>
@@ -98,19 +125,28 @@
                             <a href="#">プライバシーポリシー</a>
                         </li>
                     </ul>
-                    <div class="s-drawer-navMenu__contact">
-                        <div class="s-drawer-navMenu__contact--title">
-                            <span lang="en">CONTACT</span>
-                            <span lang="ja">お問い合わせ</span>
-                            <p class="s-drawer-navMenu__contact--caption">ご質問などありましたらお気軽にお問い合わせください</p>
+                    <aside class="s-contact">
+                        <div class="s-contact__inner">
+                            <h2 class="s-contact__headline">
+                                <span lang="en">CONTACT</span>
+                                <span lang="ja">お問い合わせ</span>
+                            </h2>
+                            <p class="s-contact__caption">
+                                ご質問などありましたらお気軽にお問い合わせください
+                            </p>
+                            <div class="s-contact__link">
+                                <a href="./" class="c-button s-contact__link--button">お問い合わせフォームへ</a>
+                                <!-- c-button c-button-border op:vertical-right -->
+                            </div>
+                            <div class="s-contact__tel">
+                                <p class="s-contact__tel--caption">お電話でのお問い合わせ</p>
+                                <div class="s-contact__tel__wrapper">
+                                    <a href="tel:0123-456-789​" class="s-contact__tel--number">0123-456-789​</a>
+                                    <p class="s-contact__tel--day">（平日00:00〜00:00）</p>
+                                </div>
+                            </div>
                         </div>
-                        <a href="./" class="c-button c-button__border--middle-line">お問い合わせフォームへ</a>
-                        <div class="s-drawer-navMenu__tel">
-                            <p class="s-drawer-navMenu__tel--caption">お電話でのお問い合わせ</p>
-                            <a href="tel:0123-456-789​" class="s-drawer-navMenu__tel--number">0123-456-789​</a>
-                            <p class="s-drawer-navMenu__tel--day">（平日00:00〜00:00）</p>
-                        </div>
-                    </div>
+                    </aside>
                 </nav>
             </div>
         </div>
@@ -118,7 +154,9 @@
         <div class="p-mainvisual">
             <div class="p-mainvisual__inner">
                 <div class="p-mainvisual__title">
-                    <p class="p-mainvisual__title--main">WEB INTEGRATION &<br>LEGAL AFFAIRS</p>
+                    <p class="p-mainvisual__title--main">
+                        WEB INTEGRATION &<br>LEGAL AFFAIRS
+                    </p>
                     <p class="p-mainvisual__title--sub">新しい価値を創造する</p>
                 </div>
 
@@ -129,7 +167,9 @@
                                 <div class="c-newsticker__news--category">NEWS</div>
                                 <div class="c-newsticker__wrapper">
                                     <time class="c-newsticker__news--date">2020/01/1</time>
-                                    <p class="c-newsticker__news--caption">あけましておめでとうございます。新年も宜しくお願い致します。今…</p>
+                                    <p class="c-newsticker__news--caption">
+                                        あけましておめでとうございます。新年も宜しくお願い致します。今…
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -138,7 +178,9 @@
                                 <div class="c-newsticker__news--category">お知らせ</div>
                                 <div class="c-newsticker__wrapper">
                                     <time class="c-newsticker__news--date">2020/01/1</time>
-                                    <p class="c-newsticker__news--caption">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                    <p class="c-newsticker__news--caption">
+                                        テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -147,7 +189,9 @@
                                 <div class="c-newsticker__news--category">お知らせ</div>
                                 <div class="c-newsticker__wrapper">
                                     <time class="c-newsticker__news--date">2020/01/1</time>
-                                    <p class="c-newsticker__news--caption">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                    <p class="c-newsticker__news--caption">
+                                        テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -156,7 +200,9 @@
                                 <div class="c-newsticker__news--category">お知らせ</div>
                                 <div class="c-newsticker__wrapper">
                                     <time class="c-newsticker__news--date">2020/01/1</time>
-                                    <p class="c-newsticker__news--caption">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                                    <p class="c-newsticker__news--caption">
+                                        テキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
                                 </div>
                             </a>
                         </li>
@@ -168,14 +214,14 @@
                                     <g id="グループ_10302" data-name="グループ 10302">
                                         <path id="パス_4090" data-name="パス 4090"
                                             d="M13.5,0A13.5,13.5,0,1,0,27,13.5,13.515,13.515,0,0,0,13.5,0Zm0,24.909A11.409,11.409,0,1,1,24.909,13.5,11.422,11.422,0,0,1,13.5,24.909Z"
-                                            fill="#fff" />
+                                            fill="#fff">
                                     </g>
                                 </g>
                                 <g id="グループ_10305" data-name="グループ 10305" transform="translate(7.288 9.41)">
                                     <g id="グループ_10304" data-name="グループ 10304">
                                         <path id="パス_4091" data-name="パス 4091"
                                             d="M150.38,183.979l-5.229-5.229a1.045,1.045,0,0,0-1.474,0l-5.229,5.229a1.046,1.046,0,0,0,1.474,1.474l4.486-4.486,4.5,4.486a1.043,1.043,0,1,0,1.474-1.474Z"
-                                            transform="translate(-138.197 -178.446)" fill="#fff" />
+                                            transform="translate(-138.197 -178.446)" fill="#fff">
                                     </g>
                                 </g>
                             </g>
@@ -188,8 +234,12 @@
         <main role="main">
             <div class="p-message">
                 <div class="p-message__inner">
-                    <p class="p-message__large js-scrollY-text-slide" lang="en">WEB INTEGRATION</p>
-                    <p class="p-message__small" lang="ja">IT専門の行政書士たちが<br>あなたのビジネスを守ります</p>
+                    <p class="p-message__large js-horizontal-move-text" lang="en" aria-hidden="true">
+                        WEB INTEGRATION
+                    </p>
+                    <p class="p-message__small" lang="ja">
+                        IT専門の行政書士たちが<br>あなたのビジネスを守ります
+                    </p>
                 </div>
             </div>
 
@@ -210,7 +260,8 @@
                             <span class="c-headline__primary--small">MESSAGE</span>
                             Webを通して人々の心や生活が豊かになるよう、法律の面からサポートいたします
                         </h2>
-                        <p>当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてWebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くWebに関する手続きのサポートを行ってまいります。
+                        <p>
+                            当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてWebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くWebに関する手続きのサポートを行ってまいります。
                         </p>
                         <div class="p-serviceModel__link">
                             <a href="./" class="c-button c-button__border--middle-line">View More</a>
@@ -282,7 +333,10 @@
                                     <span class="c-headline__primary--small">POINT.01</span>
                                     本社と現地法人の間の情報交換、交通整理をスムーズにします。
                                 </h2>
-                                <p>従業員一人の給与にも満たない顧問料で，取締役会議事録の作 成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。</p>
+                                <p>
+                                    従業員一人の給与にも満たない顧問料で，取締役会議事録の作
+                                    成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。
+                                </p>
                             </div>
                         </div>
                         <div class="p-feature__content">
@@ -294,8 +348,10 @@
                                     <span class="c-headline__primary--small">POINT.02</span>
                                     情報の正確性、日本法との比較、スピード感は日本基準です。
                                 </h2>
-                                <p>当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、
-                                    M&Aを積極的に推し進めて参ります。</p>
+                                <p>
+                                    当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、
+                                    M&Aを積極的に推し進めて参ります。
+                                </p>
                             </div>
                         </div>
                         <div class="p-feature__content">
@@ -307,7 +363,8 @@
                                     <span class="c-headline__primary--small">POINT.03</span>
                                     最低限のコストで、高いパフォーマンスを発揮いたします。
                                 </h2>
-                                <p>当弁護士事務所は，これまで国内最大級のサービサーの経験を生かし，通常は債務者が行う会社更生や民事再生の申立を，債権者の側から行い，スポンサーに入札させ，一挙に債権回収を図ることを手がけます。
+                                <p>
+                                    当弁護士事務所は，これまで国内最大級のサービサーの経験を生かし，通常は債務者が行う会社更生や民事再生の申立を，債権者の側から行い，スポンサーに入札させ，一挙に債権回収を図ることを手がけます。
                                 </p>
                             </div>
                         </div>
@@ -331,7 +388,9 @@
                                     <span lang="ja"></span>
                                     <span lang="en"></span>
                                 </div>
-                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                                <p>
+                                    法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。
+                                </p>
                             </div>
                         </article>
                         <article class="c-card p-member__card">
@@ -343,7 +402,9 @@
                                     <span lang="ja"></span>
                                     <span lang="en"></span>
                                 </div>
-                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                                <p>
+                                    法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。
+                                </p>
                             </div>
                         </article>
                         <article class="c-card p-member__card">
@@ -355,7 +416,9 @@
                                     <span lang="ja"></span>
                                     <span lang="en"></span>
                                 </div>
-                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                                <p>
+                                    法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。
+                                </p>
                             </div>
                         </article>
                         <article class="c-card p-member__card">
@@ -367,7 +430,9 @@
                                     <span lang="ja"></span>
                                     <span lang="en"></span>
                                 </div>
-                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                                <p>
+                                    法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。
+                                </p>
                             </div>
                         </article>
                         <article class="c-card p-member__card">
@@ -379,7 +444,9 @@
                                     <span lang="ja"></span>
                                     <span lang="en"></span>
                                 </div>
-                                <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                                <p>
+                                    法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。
+                                </p>
                             </div>
                         </article>
                     </div>
@@ -387,31 +454,99 @@
             </section>
         </main>
 
-
-        <aside class="s-footer-info">
-            <div class="s-footer-info__inner">
-                <h2 class="s-contact-footer__headline">
+        <aside class="s-contact">
+            <div class="s-contact__inner">
+                <h2 class="s-contact__headline">
                     <span lang="en">CONTACT</span>
                     <span lang="ja">お問い合わせ</span>
                 </h2>
-                <p>ご質問などありましたらお気軽にお問い合わせください</p>
-                <div class="s-contact-footer__link">
-                    <a href="./" class="c-button c-button__border--middle-line">お問い合わせフォームへ</a>
+                <p class="s-contact__caption">
+                    ご質問などありましたらお気軽にお問い合わせください
+                </p>
+                <div class="s-contact__link">
+                    <a href="./" class="c-button s-contact__link--button">お問い合わせフォームへ</a>
+                    <!-- c-button c-button-border data-op="vertical-right" -->
+                </div>
+                <div class="s-contact__tel">
+                    <p class="s-contact__tel--caption">お電話でのお問い合わせ</p>
+                    <div class="s-contact__tel__wrapper">
+                        <a href="tel:0123-456-789​" class="s-contact__tel--number">0123-456-789​</a>
+                        <p class="s-contact__tel--day">（平日00:00〜00:00）</p>
+                    </div>
                 </div>
             </div>
         </aside>
 
         <footer class="s-footer" role="contentinfo">
-            <div class="s-footer__inner">
-
+            <div class="s-footer__inner ly-inner">
+                <address class="s-footer__address">
+                    <div class="s-footer__address--brand">
+                        <img src="./images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
+                        <ul class="s-footer__addresslist">
+                            <li class="s-footer__addresslist--item">〒234-0013</li>
+                            <li class="s-footer__addresslist--item">
+                                京都府京都市伏見区淀水垂町509-16
+                            </li>
+                        </ul>
+                    </div>
+                </address>
+                <nav class="s-footer__nav">
+                    <ul class="s-footer__navlist">
+                        <li class="s-footer__navlist--item">
+                            <a class="touch-hover" href="./">ホーム</a>
+                        </li>
+                        <li class="s-footer__navlist--item s-footer-dropdown">
+                            <div class="s-footer-dropdown__header js-footer-dropdown-header">
+                                <button type="button" class="s-footer-dropdown__tab">
+                                    サービス一覧
+                                </button>
+                            </div>
+                            <div class="s-footer-dropdown__panel">
+                                <ul class="s-footer-dropdown__list">
+                                    <li class="s-footer-dropdown__list--item">
+                                        <a href="#">IT法務</a>
+                                    </li>
+                                    <li class="s-footer-dropdown__list--item">
+                                        <a href="#">ビザ申請</a>
+                                    </li>
+                                    <li class="s-footer-dropdown__list--item">
+                                        <a href="#">民宿申請</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="s-footer__navlist--item">
+                            <a class="touch-hover" href="./">価格</a>
+                        </li>
+                        <li class="s-footer__navlist--item">
+                            <a class="touch-hover" href="./">お知らせ</a>
+                        </li>
+                        <li class="s-footer__navlist--item">
+                            <a class="touch-hover" href="./">会社概要</a>
+                        </li>
+                        <li class="s-footer__navlist--item">
+                            <a class="touch-hover" href="./">よくある質問</a>
+                        </li>
+                        <li class="s-footer__navlist--item">
+                            <a class="touch-hover" href="./">サイトマップ</a>
+                        </li>
+                        <li class="s-footer__navlist--item">
+                            <a class="touch-hover" href="./">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="s-footer__copyright ly-inner">
+                <small class="s-footer__copyright--text">© 藤岡行政書士事務所 All Rights Reserved.</small>
             </div>
         </footer>
-
     </div>
     <script src="./js/drawer.js"></script>
     <script src="./js/accordion.js"></script>
     <script src="./js/tab.js"></script>
     <script src="./js/responsive-movie.js"></script>
+    <script src="./js/hover.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
