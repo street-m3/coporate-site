@@ -19,20 +19,41 @@
 <body data-focus-visible="false" data-animate-effect="false">
     <div class="wrapper">
         <header class="s-header" role="banner">
+            <h1 class="s-header__brand">
+                <a href="/" class="s-header__brand--title">
+                    <img src="../images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
+                </a>
+            </h1>
             <div class="s-header__inner" data-scroll="false" data-hover="false">
-                <h1 class="s-header__brand">
-                    <a href="/" class="s-header__brand--title">
-                        <img src="./images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
-                    </a>
-                </h1>
-                <nav class="s-header__nav">
-                    <div class="s-header__nav--wrapper">
+                <nav class="s-header-nav">
+                    <div class="s-header-nav__wrapper">
                         <ul class="s-header__navlist">
                             <li class="s-header__navlist--item">
                                 <a class="touch-hover" href="/">ホーム</a>
                             </li>
-                            <li class="s-header__navlist--item js-dropdownMenu-item">
-                                <a class="touch-hover" role="button">サービス</a>
+                            <li class="s-header__navlist--item js-header-dropdown">
+                                <a class="touch-hover" href="/">サービス</a>
+                                <div class="s-header-dropdown" aria-hidden="true">
+                                    <div class="s-header-dropdown__inner">
+                                        <ul class="s-header-dropdown__list">
+                                            <li class="s-header-dropdown__list--item">
+                                                <a href="/">IT法務</a>
+                                            </li>
+                                            <li class="s-header-dropdown__list--item">
+                                                <a href="/">ビザ申請</a>
+                                            </li>
+                                            <li class="s-header-dropdown__list--item">
+                                                <a href="/">民泊申請</a>
+                                            </li>
+                                        </ul>
+                                        <div class="m-header-dropdown__contact">
+                                            <div class="c-contact-tel">
+                                                <a href="tel:0123-456-789​" class="c-contact-tel__number">0123-456-789​</a>
+                                                <p class="c-contact-tel__day">(平日00:00〜00:00)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="s-header__navlist--item">
                                 <a class="touch-hover" href="/">価格</a>
@@ -54,21 +75,6 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="s-header-dropdownMenu" aria-hidden="true">
-                    <div class="s-header-dropdownMenu__inner">
-                        <ul class="s-header-dropdownMenu__list">
-                            <li class="s-header-dropdownMenu__list--item">
-                                <a href="/">IT法務</a>
-                            </li>
-                            <li class="s-header-dropdownMenu__list--item">
-                                <a href="/">ビザ申請</a>
-                            </li>
-                            <li class="s-header-dropdownMenu__list--item">
-                                <a href="/">民泊申請</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </header>
 
