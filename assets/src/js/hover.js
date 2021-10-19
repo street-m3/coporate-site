@@ -11,31 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
 class Hover {
     constructor() {
         const o = {
-            hoverEffectObjects: 'touch-hover',
-            hoverEventToggleCls: 'hover',
+            hoverEventGetClass: 'touch-hover',
+            hoverEventAddClass: 'hover',
         }
-        this.hoverEffectObjects = document.querySelectorAll(`.${o.hoverEffectObjects}`);
-        this.hoverEventToggleCls = o.hoverEventToggleCls;
-        this.hoverEventStart = this._hoverEffectEventStart();
-        this.hoverEventEnd = this._hoverEffectEventEnd();
-        this._hoverEventEffect();
+        this.hoverEventGetClass = document.querySelectorAll(`.${o.hoverEventGetClass}`);
+        this.hoverEventAddClass = o.hoverEventAddClass;
+        this.hoverEventStart = this._hoverEventStart();
+        this.hoverEventEnd = this._hoverEventEnd();
+        this._hoverEventMethod(this.hoverEventGetClass);
     }
 
-    _hoverEventEffect() {
-        this.hoverEffectObjects.forEach(element => {
+    _hoverEventMethod(array) {
+        array.forEach(element => {
             element.addEventListener(this.hoverEventStart, () => {
-                element.classList.add(this.hoverEventToggleCls);
+                element.classList.add(this.hoverEventAddClass);
             });
             element.addEventListener(this.hoverEventEnd, () => {
-                element.classList.remove(this.hoverEventToggleCls);
+                element.classList.remove(this.hoverEventAddClass);
             });
         });
     }
 
-    _hoverEffectEventStart() {
+    _hoverEventStart() {
         return window.ontouchstart ? 'touchstart' : 'mouseover';
     }
-    _hoverEffectEventEnd() {
+
+    _hoverEventEnd() {
         return window.ontouchstart ? 'touchend' : 'mouseout';
     }
 }
