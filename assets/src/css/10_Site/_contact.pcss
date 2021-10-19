@@ -1,0 +1,129 @@
+.s-contact {
+    background-color: $color-theme-primary;
+    color: $color-white;
+    font-family: $medium;
+    width: 100%;
+
+    &__inner {
+        padding: clamp(60px, calc(3.75rem + ((1vw - 4px) * 4.1408)), 100px) 0;
+        text-align: center;
+
+        @media (--md) {
+            padding: clamp(60px, calc(3.75rem + ((1vw - 4px) * 4.1408)), 100px) 0 124px;
+            width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &__headline {
+        text-align: center;
+        font-family: $medium;
+        font-weight: normal;
+
+        &>* {
+            display: block;
+            line-height: initial;
+        }
+
+        & [lang="en"] {
+            font-size: 11px;
+            margin-bottom: 5px;
+        }
+
+        & [lang="ja"] {
+            font-size: 21px;
+
+            @media (--md) {
+                font-size: 28px;
+            }
+        }
+    }
+
+    &__caption {
+        font-size: 10px;
+        margin-top: 10px;
+
+        @media (--md) {
+            font-size: 14px;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-align: center;
+        margin-top: 24px;
+
+        @media (--md) {
+            margin-top: 50px;
+        }
+
+        &--button {
+            display: inline-block;
+            border: 1px solid $color-white;
+            background-color: $color-theme-primary;
+            font-size: 15px;
+            font-weight: normal;
+            padding: 23px 0;
+            width: 280px;
+
+            @media (--md) {
+                padding: 27px 0;
+                width: 100%;
+                font-size: 22px;
+            }
+
+            &::after {
+                content: "";
+                width: 37px;
+                height: 1px;
+                background-color: $color-white;
+                color: $color-white;
+                position: absolute;
+                right: -18.5px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media (--md) {
+                    width: 69px;
+                    right: calc(- 69px / 2);
+                }
+            }
+        }
+    }
+
+    &__tel {
+        margin-top: 32px;
+        display: block;
+
+        @media (--md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &--caption {
+            font-size: 16px;
+        }
+
+        &__wrapper {
+            display: inline-block;
+        }
+
+        &--number {
+            font-size: 34px;
+            margin-top: 10px;
+
+            &::before {
+                content: url(../images/tel.svg);
+                display: inline-block;
+                margin-right: 8px;
+            }
+        }
+
+        &--day {
+            text-align: right;
+            font-size: 14px;
+        }
+    }
+}
