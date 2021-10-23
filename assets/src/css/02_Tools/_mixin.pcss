@@ -1,10 +1,58 @@
-@define-mixin clearfix {
+@define-mixin clearfix $args {
     &::after {
         content: "";
         display: table;
-        clear: both;
+        clear: $args;
     }
 }
+
+
+@define-mixin panelContainer $left, $right {
+    & {
+        padding-left: $left;
+        padding-right: $right;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+@define-mixin buttonPrimary $color, $fontSize, $space, $borderWidth, $minus  {
+    & {
+        border: 1px solid $color;
+        color: $color;
+        font-size: $fontSize;
+        font-weight: 600;
+        max-width: 260px;
+        padding-top: $space;
+        padding-bottom: $space;
+        width: 100%;
+
+        &::after {
+            background-color: $color;
+            content: "";
+            height: 1px;
+            position: absolute;
+            right: $minus;
+            top: 50%;
+            transform: translateY(-50%);
+            width: $borderWidth;
+        }
+    }
+}
+
+@define-mixin buttonSecondary $color, $fontSize, $space, $borderWidth, $minus  {
+    & {
+        color: $color;
+        font-size: $fontSize;
+        font-weight: 600;
+        max-width: 260px;
+        padding-top: $space;
+        padding-bottom: $space;
+        width: 100%;
+    }
+}
+
 /* .navigation {
-    @add-mixin clearfix;
+    @add-mixin clearfix both;
 } */
