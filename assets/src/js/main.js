@@ -7,19 +7,13 @@ window.addEventListener('load', () => {
 class MicroMethod {
     constructor() {
         const o = {
-            headerContainer: "data-scroll",
-            pageVisual: "js-visual-offsetHeight",
-            headerBreakpoint: 992,
             scrollSlideText: "js-horizontal-move-text",
             headerNavListItem: "s-header__navlist--item",
             headerNavClosest: "data-hover",
             dropdownMenu: "js-header-dropdown",
             drapdownMenuDetails: "s-header-dropdown",
         };
-        this.headerContainer = document.querySelector(`[${o.headerContainer}]`);
-        this.headerBreakpoint = window.matchMedia(`(min-width: ${o.headerBreakpoint}px)`).matches;
         this.scrollSlideText = document.querySelector(`.${o.scrollSlideText}`)
-        this.pageVisual = document.querySelector(`.${o.pageVisual}`);
         this.headerNavListItem = document.querySelectorAll(`.${o.headerNavListItem}`);
         this.headerNavClosest = document.querySelector(`[${o.headerNavClosest}]`);
         this.dropdownMenu = document.querySelectorAll(`.${o.dropdownMenu}`);
@@ -27,24 +21,9 @@ class MicroMethod {
         this.hoverEventStart = this.hoverEventStart();
         this.hoverEventEnd = this.hoverEventEnd();
         this.clickEventListeners = this.clickEventListeners();
-        this._headerScrollBackground();
         this._scrollSlideEffect();
         this._headerNavMenuHover();
         this._dropDownMenu();
-    }
-
-    /**
-     * 100vhスクロールさせたらheaderの背景色が変化
-     */
-    _headerScrollBackground() {
-        const visualHeigt = this.pageVisual.clientHeight;
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > visualHeigt && this.headerBreakpoint) {
-                this.headerContainer.dataset.scroll = "true";
-            } else {
-                this.headerContainer.dataset.scroll = "false";
-            }
-        });
     }
 
     /**
