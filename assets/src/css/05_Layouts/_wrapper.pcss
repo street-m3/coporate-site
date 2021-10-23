@@ -1,17 +1,11 @@
 .ly-inner {
     margin: 0 auto;
     max-width: 100%;
+    width: $layout-inner;
+    padding: 0;
 
-    @media (--xl) {
-        width: $layout-inner;
-    }
-
-    @media (--lg) {
-        padding: 0 32px;
-    }
-
-    @media (--sm) {
-        padding: 0 16px;
+    @media (--max-md) {
+        padding: 0 40px;
     }
 }
 
@@ -21,10 +15,30 @@
     max-width: 100%;
 
     @media (--max-md) {
-        padding: 0 32px;
+        padding: 0 40px;
     }
-    
-    @media (--max-sm) {
-        padding: 0 16px;
+}
+
+.ly-contentArea {
+    padding-top: 45px;
+    padding-bottom: 190px;
+
+    @media (--md) {
+        padding-top: 60px;
+        padding-bottom: 200px;
+    }
+}
+
+.ly-sectionArea {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.ly-content-block {
+    padding: 0;
+    margin-top: 62px;
+
+    @media (--lg) {
+        padding: 0 55px;
     }
 }
