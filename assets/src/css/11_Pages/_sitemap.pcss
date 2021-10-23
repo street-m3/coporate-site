@@ -1,0 +1,47 @@
+[data-placement="sitemap"] {
+    & .p-content-block-scope {
+        width: 687px;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.p-sitemap-block {
+    flex: 100%;
+    @media (--md) {
+        flex: 1;
+    }
+}
+
+.p-sitemap__list {
+    &--item {
+        a {
+            display: block;
+            position: relative;
+            padding-left: 18px;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+
+            &::before {
+                width: 8px;
+                height: 8px;
+                display: inline-block;
+                content: "";
+                background-color: $color-theme-primary;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.p-sitemap__nested {
+    margin-left: 40px;
+}

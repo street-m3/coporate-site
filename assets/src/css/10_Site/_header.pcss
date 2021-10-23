@@ -1,14 +1,9 @@
 .s-header__contactArea--item a {
-    display: block;
+    @add-mixin buttonSecondary $color-white, 14px, 16px, 0px, 0px;
     background-color: $color-theme-primary;
     font-weight: bold;
-    letter-spacing: 0.03em;
+    letter-spacing: $base-spacing;
     min-width: 200px;
-    padding: 15px 0;
-    position: relative;
-    text-align: center;
-    user-select: none;
-    white-space: nowrap;
 }
 
 .s-header[role="banner"] {

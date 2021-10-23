@@ -56,39 +56,6 @@
         @media (--md) {
             margin-top: 50px;
         }
-
-        &--button {
-            display: inline-block;
-            border: 1px solid $color-white;
-            background-color: $color-theme-primary;
-            font-size: 15px;
-            font-weight: normal;
-            padding: 23px 0;
-            width: 280px;
-
-            @media (--md) {
-                padding: 27px 0;
-                width: 100%;
-                font-size: 22px;
-            }
-
-            &::after {
-                content: "";
-                width: 37px;
-                height: 1px;
-                background-color: $color-white;
-                color: $color-white;
-                position: absolute;
-                right: -18.5px;
-                top: 50%;
-                transform: translateY(-50%);
-
-                @media (--md) {
-                    width: 69px;
-                    right: calc(- 69px / 2);
-                }
-            }
-        }
     }
 
     &__tel {
