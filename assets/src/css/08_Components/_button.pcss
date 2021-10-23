@@ -3,7 +3,7 @@
     background-image: none;
     display: inline-block;
     font-weight: bold;
-    letter-spacing: 0.03em;
+    letter-spacing: $base-spacing;
     min-width: 200px;
     position: relative;
     text-align: center;
@@ -100,7 +100,7 @@
 .pattern-05 span {
     color: #ffffff;
     display: inline-block;
-    letter-spacing: 0.03em;
+    letter-spacing: $base-spacing;
     line-height: 1;
     position: relative;
     width: 100%;
@@ -292,14 +292,20 @@
     box-shadow: inset 1px 1px 3px #c8d0e7, inset -1px -1px 3px #ffffff;
 }
 
-.c-button__border--middle-line {
-    border: 1px solid $color-white;
+.c-contact-button {
     background-color: $color-theme-primary;
+    border: 1px solid $color-white;
+    display: inline-block;
     font-size: 15px;
-    padding: 27px 0;
     font-weight: normal;
-    max-width: 260px;
-    width: 100%;
+    padding: 23px 0;
+    width: 280px;
+
+    @media (--md) {
+        padding: 27px 0;
+        width: 100%;
+        font-size: 22px;
+    }
 
     &::after {
         content: "";
@@ -311,5 +317,10 @@
         right: -18.5px;
         top: 50%;
         transform: translateY(-50%);
+
+        @media (--md) {
+            width: 69px;
+            right: -34.5px;
+        }
     }
 }
