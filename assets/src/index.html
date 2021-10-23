@@ -70,7 +70,7 @@
                         </ul>
                         <ul class="s-header__contactArea">
                             <li class="s-header__contactArea--item">
-                                <a href="/">CONTACT</a>
+                                <a href="/" class="c-button">CONTACT</a>
                             </li>
                         </ul>
                     </div>
@@ -141,7 +141,7 @@
                                 ご質問などありましたらお気軽にお問い合わせください
                             </p>
                             <div class="s-contact__link">
-                                <a href="./" class="c-button s-contact__link--button">お問い合わせフォームへ</a>
+                                <a href="./" class="c-button c-contact-button">お問い合わせフォームへ</a>
                                 <!-- c-button c-button-border op:vertical-right -->
                             </div>
                             <div class="s-contact__tel">
@@ -157,16 +157,16 @@
             </div>
         </div>
 
-        <div class="p-mainvisual">
-            <div class="p-mainvisual__inner">
-                <div class="p-mainvisual__title">
-                    <p class="p-mainvisual__title--main">
+        <div class="p-topMainvisual js-visual-offsetHeight">
+            <div class="p-topMainvisual__inner">
+                <div class="p-topMainvisual__title">
+                    <p class="p-topMainvisual__title--main">
                         WEB INTEGRATION &<br>LEGAL AFFAIRS
                     </p>
-                    <p class="p-mainvisual__title--sub">新しい価値を創造する</p>
+                    <p class="p-topMainvisual__title--sub">新しい価値を創造する</p>
                 </div>
 
-                <div class="c-newsticker">
+                <div class="c-newsticker p-newsticker">
                     <ol class="c-newsticker__list">
                         <li class="c-newsticker__list--item">
                             <a href="./" class="c-newsticker__news">
@@ -238,45 +238,139 @@
         </div>
 
         <main role="main">
-            <div class="p-message">
-                <div class="p-message__inner">
-                    <p class="p-message__large js-horizontal-move-text" lang="en" aria-hidden="true">
+            <!-- declaration -->
+            <div class="p-declaration">
+                <div class="p-declaration__inner">
+                    <p class="p-declaration__large js-horizontal-move-text" lang="en" aria-hidden="true">
                         WEB INTEGRATION
                     </p>
-                    <p class="p-message__small" lang="ja">
+                    <p class="p-declaration__small" lang="ja">
                         IT専門の行政書士たちが<br>あなたのビジネスを守ります
                     </p>
                 </div>
             </div>
 
-            <section class="p-introduction">
-                <div class="p-introduction__inner">
-                    <div class="p-introduction__image"></div>
-                    <div class="p-introduction__detail"></div>
-                </div>
-            </section>
-
-            <section class="p-serviceModel">
-                <div class="p-serviceModel__inner">
-                    <figure class="p-serviceModel__image">
-                        <img src="" alt="">
-                    </figure>
-                    <div class="p-serviceModel__detail">
-                        <h2 class="p-serviceModel__headline c-headline__primary">
-                            <span class="c-headline__primary--small">MESSAGE</span>
-                            Webを通して人々の心や生活が豊かになるよう、法律の面からサポートいたします
+            <!-- Message -->
+            <section class="p-picture-panels p-Message">
+                <div class="p-picture-panel__inner">
+                    <div class="p-picture-panel__picture">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/message_pc.jpg">
+                            <img src="./images/message_sp.jpg" alt="行政書士がサポート">
+                        </picture>
+                    </div>
+                    <div class="p-picture-panel__details">
+                        <h2 class="c-headline-overlap p-picture-panel__headline">
+                            <span lang="en">MESSAGE</span>
+                            <span lang="ja">Webを通して人々の心や生活が豊かになるよう、法律の面からサポートいたします</span>
                         </h2>
-                        <p>
-                            当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてWebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くWebに関する手続きのサポートを行ってまいります。
-                        </p>
-                        <div class="p-serviceModel__link">
-                            <a href="./" class="c-button c-button__border--middle-line">View More</a>
+                        <p class="p-picture-panel__details--text">当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてwebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くwebに関する手続きのサポートを行ってまいります。</p>
+                        <div class="p-picture-panel__link">
+                            <a href="" class="c-button p-picture-panel__link--button">View More</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="p-service-contents">
+            <section class="p-service-contents ly-sectionArea">
+                <div class="p-service-contents__inner">
+                    <div class="p-service-content">
+                        <h2 class="c-headline-overlap p-picture-panel__headline">
+                            <span lang="en">SERVICE</span>
+                            <span lang="ja">サービス内容</span>
+                        </h2>
+                        <div class="c-card-components">
+                            <div class="c-card p-service__card">
+                                <figure class="c-card__image">
+                                    <img src="./images/service-01.jpg" alt="">
+                                </figure>
+                                <div class="c-card__body">
+                                    <h3 class="c-card__title">IT法務</h3>
+                                    <p class="c-card__text">
+                                        当事務所では、新規サービスの適法性判断、利用規約の作成、主要契約書の作成・レビュー、紛争対応などの総合的な法務サービスを提供しています。まずは気軽にご相談ください。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="c-card p-service__card">
+                                <figure class="c-card__image">
+                                    <img src="./images/service-02.jpg" alt="">
+                                </figure>
+                                <div class="c-card__body">
+                                    <h3 class="c-card__title">ビザ申請</h3>
+                                    <p class="c-card__text">
+                                        初めに無料相談を受けてから、後は全て私どもが手続きをさせていただきます。ビザ申請時の入局管理局面接の立会いもご依頼があればお受けいたします。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="c-card p-service__card">
+                                <figure class="c-card__image">
+                                    <img src="./images/service-03.jpg" alt="">
+                                </figure>
+                                <div class="c-card__body">
+                                    <h3 class="c-card__title">民泊申請</h3>
+                                    <p class="c-card__text">
+                                        住宅宿泊管理業者の登録を受けようとする者は、住宅宿泊管理業者登録申請書に必要事項を記入の上、必要な添付書類と合わせて、国土交通大臣に提出する必要があります。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-fature-panels ly-contentArea">
+                <div class="ly-inner">
+                    
+                </div>
+            </section>
+
+            <!-- <section class="p-service-contents ly-sectionArea">
+                <div class="p-service-contents__inner">
+                    <div class="p-service-content">
+                        <h2 class="c-headline-overlap p-picture-panel__headline">
+                            <span lang="en">SERVICE</span>
+                            <span lang="ja">サービス内容</span>
+                        </h2>
+                        <div class="c-card-components">
+                            <div class="c-card p-service__card">
+                                <figure class="c-card__image">
+                                    <img src="./images/service-01.jpg" alt="">
+                                </figure>
+                                <div class="c-card__body">
+                                    <h3 class="c-card__title">IT法務</h3>
+                                    <p class="c-card__text">
+                                        当事務所では、新規サービスの適法性判断、利用規約の作成、主要契約書の作成・レビュー、紛争対応などの総合的な法務サービスを提供しています。まずは気軽にご相談ください。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="c-card p-service__card">
+                                <figure class="c-card__image">
+                                    <img src="./images/service-02.jpg" alt="">
+                                </figure>
+                                <div class="c-card__body">
+                                    <h3 class="c-card__title">ビザ申請</h3>
+                                    <p class="c-card__text">
+                                        初めに無料相談を受けてから、後は全て私どもが手続きをさせていただきます。ビザ申請時の入局管理局面接の立会いもご依頼があればお受けいたします。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="c-card p-service__card">
+                                <figure class="c-card__image">
+                                    <img src="./images/service-03.jpg" alt="">
+                                </figure>
+                                <div class="c-card__body">
+                                    <h3 class="c-card__title">民泊申請</h3>
+                                    <p class="c-card__text">
+                                        住宅宿泊管理業者の登録を受けようとする者は、住宅宿泊管理業者登録申請書に必要事項を記入の上、必要な添付書類と合わせて、国土交通大臣に提出する必要があります。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- <section class="p-service-contents">
                 <div class="p-service-contents__inner">
                     <h2 class="p-service-contents__headline c-headline__primary">
                         <span class="c-headline__primary--small">SERVICE</span>
@@ -321,7 +415,7 @@
                         <a href="./" class="c-button c-button__border--middle-line">View More</a>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <section class="p-feature">
                 <div class="p-feature__inner">
@@ -470,7 +564,7 @@
                     ご質問などありましたらお気軽にお問い合わせください
                 </p>
                 <div class="s-contact__link">
-                    <a href="./" class="c-button s-contact__link--button">お問い合わせフォームへ</a>
+                    <a href="./" class="c-button c-contact-button">お問い合わせフォームへ</a>
                     <!-- c-button c-button-border data-op="vertical-right" -->
                 </div>
                 <div class="s-contact__tel">
@@ -484,7 +578,7 @@
         </aside>
 
         <footer class="s-footer" role="contentinfo">
-            <div class="s-footer__inner ly-inner">
+            <div class="s-footer__inner">
                 <address class="s-footer__address">
                     <div class="s-footer__address--brand">
                         <img src="./images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
@@ -542,8 +636,10 @@
                     </ul>
                 </nav>
             </div>
-            <div class="s-footer__copyright ly-inner">
-                <small class="s-footer__copyright--text">© 藤岡行政書士事務所 All Rights Reserved.</small>
+            <div class="s-footer__copyright">
+                <div class="ly-inner">
+                    <small class="s-footer__copyright--text">© 藤岡行政書士事務所 All Rights Reserved.</small>
+                </div>
             </div>
         </footer>
     </div>
