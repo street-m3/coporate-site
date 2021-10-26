@@ -1,3 +1,5 @@
+
+/*----------  ClearFix Utility  ----------*/
 @define-mixin clearfix $args {
     &::after {
         content: "";
@@ -6,7 +8,7 @@
     }
 }
 
-
+/*----------  Panel Container Mixin  ----------*/
 @define-mixin panelContainer $left, $right {
     & {
         padding-left: $left;
@@ -16,7 +18,7 @@
     }
 }
 
-
+/*----------  button Primary Mixin ----------*/
 @define-mixin buttonPrimary $color, $fontSize, $space, $borderWidth, $minus  {
     & {
         border: 1px solid $color;
@@ -41,6 +43,7 @@
     }
 }
 
+/*----------  button Secondary Mixin  ----------*/
 @define-mixin buttonSecondary $color, $fontSize, $space, $borderWidth, $minus  {
     & {
         color: $color;
@@ -53,6 +56,30 @@
     }
 }
 
+/*----------  line-height crop Mixin  ----------*/
+@define-mixin lineHeightCrop $line-height {
+    &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-top: calc((1 - {$line-height}) * .5em);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-bottom: calc((1 - {$line-height}) * .5em);
+    }
+}
+
+/* Sample// */
 /* .navigation {
     @add-mixin clearfix both;
 } */
+
+.sample {
+    @add-mixin lineHeightCrop 1.5;
+}
