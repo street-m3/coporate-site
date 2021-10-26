@@ -63,7 +63,7 @@
         display: block;
         width: 0;
         height: 0;
-        margin-top: calc((1 - {$line-height}) * .5em);
+        margin-top: calc((1 - $line-height) * .5em);
     }
 
     &::after {
@@ -71,7 +71,7 @@
         display: block;
         width: 0;
         height: 0;
-        margin-bottom: calc((1 - {$line-height}) * .5em);
+        margin-bottom: calc((1 - $line-height) * .5em);
     }
 }
 
@@ -79,7 +79,3 @@
 /* .navigation {
     @add-mixin clearfix both;
 } */
-
-.sample {
-    @add-mixin lineHeightCrop 1.5;
-}
