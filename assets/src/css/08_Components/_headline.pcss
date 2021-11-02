@@ -1,76 +1,75 @@
 /* 
-	* 汎用的な見出しの定義をするファイル
-	* 固有の見出しは別のクラスで定義
+    * 汎用的な見出しの定義をするファイル
+    * 固有の見出しは別のクラスで定義
  */
 
 /* article headline h1 */
 .c-headline-lv1 {
-	font-size: clamp($font-size-md, 3.645vw, $font-size-xxl);
-	font-weight: 500;
-	line-height: $font-lineHeight-default;
-	letter-spacing: $tracking-wide;
-	@add-mixin lineHeightCrop $tracking-wide;
+    font-size: clamp($font-size-md, 3.645vw, $font-size-xxl);
+    font-weight: 500;
+    line-height: $font-lineHeight-default;
+    letter-spacing: $tracking-wide;
+    @add-mixin lineHeightCrop $tracking-wide;
 }
 
 /* sections-title by top-page 21px ~ 28px */
 .c-headline-lv2 {
-	font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
-	font-weight: 500;
-	line-height: $font-lineHeight-default;
-	letter-spacing: $tracking-widest;
-	@add-mixin lineHeightCrop $tracking-widest;
+    font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
+    font-weight: 500;
+    line-height: $font-lineHeight-default;
+    letter-spacing: $tracking-widest;
+    @add-mixin lineHeightCrop $tracking-widest;
 }
 
 /* headline-base picture-panels 18px ~ 28px */
 .c-headline-lv3 {
-	font-size: clamp($font-size-md, 3.125vw, $font-size-xl);
-	font-weight: 500;
-	letter-spacing: $tracking-relaxed;
-	line-height: $leading-x-tight;
-	@add-mixin lineHeightCrop $leading-x-tight;
+    font-size: clamp($font-size-md, 3.125vw, $font-size-xl);
+    font-weight: 500;
+    letter-spacing: $tracking-relaxed;
+    line-height: $leading-x-tight;
+    @add-mixin lineHeightCrop $leading-x-tight;
 }
 
 /* news-list */
 .c-headline-lv4 {
-	font-size: clamp($font-size-root, 2.777vw, $font-size-lg);
-	font-weight: 500;
-	line-height: $leading-snug;
-	letter-spacing: $tracking-wide;
+    font-size: clamp($font-size-root, 2.777vw, $font-size-lg);
+    font-weight: 500;
+    line-height: $leading-snug;
+    letter-spacing: $tracking-wide;
 }
-
 
 /*----------  headline double  ----------*/
 .c-headline-double {
-	color: $color-black;
-	font-weight: 500;
+    color: $color-black;
+    font-weight: 500;
 
-	& [lang="ja"] {
-		display: block;
-		font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
-		line-height: $font-lineHeight-default;
-		letter-spacing: $tracking-widest;
-		@add-mixin lineHeightCrop $tracking-widest;
-	}
+    & [lang='ja'] {
+        display: block;
+        font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
+        line-height: $font-lineHeight-default;
+        letter-spacing: $tracking-widest;
+        @add-mixin lineHeightCrop $tracking-widest;
+    }
 
-	& [lang="en"] {
-		display: block;
-		color: $color-theme-primary;
-		font-family: $font-family-affogato;
-		font-size: $font-size-xs;
-		letter-spacing: $tracking-wide;
-	}
+    & [lang='en'] {
+        display: block;
+        color: $blue_cobalt;
+        font-family: $font-family-affogato;
+        font-size: $font-size-xs;
+        letter-spacing: $tracking-wide;
+    }
 }
 
 /*----------  lower level page titleArea  ----------*/
 .c-headline-titleArea {
-	font-size: 80px;
-	font-family: $font-family-affogato;
-	color: $color-white;
-	font-weight: normal;
+    font-size: 80px;
+    font-family: $font-family-affogato;
+    color: $color-white;
+    font-weight: normal;
 }
 
 .c-headline-single {
-	color: $color-theme-primary;
-	text-align: center;
-	width: 100%;
+    color: $blue_cobalt;
+    text-align: center;
+    width: 100%;
 }

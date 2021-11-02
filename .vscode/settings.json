@@ -1,7 +1,7 @@
 {
     "files.associations": {
-        "*.pcss": "postcss",
-        "*.css": "postcss"
+        "*.pcss": "css",
+        // "*.css": "postcss"
     },
     "emmet.includeLanguages": {
         "postcss": "css"
