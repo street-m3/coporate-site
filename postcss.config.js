@@ -3,6 +3,7 @@ module.exports = (ctx) => ({
         "postcss-import-ext-glob": {},
         "postcss-import": {},
         "postcss-mixins": {},
+        "postcss-nested": {},
         "postcss-preset-env": {
             stage: 1,
             autoprefixer: {
@@ -12,7 +13,6 @@ module.exports = (ctx) => ({
         "postcss-simple-vars": {
             silent: true,
         },
-        "postcss-nested": {},
         "postcss-extend-rule": {},
         "postcss-calc": {},
         "postcss-pxtorem": {
