@@ -42,13 +42,14 @@
 .c-headline-double {
     color: $color-black;
     font-weight: 500;
+    font-size: 0;
 
     & [lang='ja'] {
         display: block;
         font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
         line-height: $font-lineHeight-default;
         letter-spacing: $tracking-widest;
-        @add-mixin lineHeightCrop $tracking-widest;
+        @add-mixin lineHeightCrop $font-lineHeight-default;
     }
 
     & [lang='en'] {
@@ -57,6 +58,11 @@
         font-family: $font-family-affogato;
         font-size: $font-size-xs;
         letter-spacing: $tracking-wide;
+        line-height: $leading-tight;
+        margin-bottom: 8px;
+        @media (--sm) {
+            margin-bottom: 24px;
+        }
     }
 }
 
@@ -72,4 +78,31 @@
     color: $blue_cobalt;
     text-align: center;
     width: 100%;
+}
+
+.c-panel__headline {
+    & [lang="en"] {
+        display: inline-block;
+        width: 100%;
+    }
+
+    & [lang="ja"] {
+        line-height: 1.5;
+        letter-spacing: 0.08em;
+        font-size: clamp($font-size-md, 3.645vw, $font-size-xl);
+    }
+}
+
+[data-headline~="28"] {
+    margin-bottom: 28px;
+}
+
+[data-headline~="md:75"] {
+    @media (--md) {
+        margin-bottom: 75px;
+    }
+}
+
+[data-headline="40"] {
+    margin-bottom: 40px;
 }
