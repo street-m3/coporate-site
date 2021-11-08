@@ -11,6 +11,10 @@
 
 .c-picture-panel__details--text {
     color: $gray_dove;
-    line-height: $leading-x-loose;
+    line-height: $leading-relaxed;
     letter-spacing: 0.05em;
+
+    @media (--md) {
+        line-height: $leading-x-loose;
+    }
 }
