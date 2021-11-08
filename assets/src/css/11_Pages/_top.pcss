@@ -1,9 +1,9 @@
-/* MAIN VISUAL */
+/*----------  mainvisual  ----------*/
 .p-topMainvisual {
     width: 100%;
     height: 100vh;
     background-image: url(../images/mv_xs.jpg);
-    background-color: $color-any-background;
+    background-color: $gray_concrete;
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -36,12 +36,13 @@
 }
 
 .p-topMainvisual__title--main {
-    font-family: $medium;
+    font-family: $font-family-affogato;
     font-size: clamp(32px, calc(2rem + ((1vw - 4px) * 4.9689)), 80px);
+    @add-mixin lineHeightCrop 1.4;
 
     @media (--md) {
         line-height: 88px;
-        letter-spacing: $base-spacing;
+        letter-spacing: $tracking-wide;
     }
 }
 
@@ -50,20 +51,21 @@
     margin-top: clamp(27px, calc(1.6875rem + ((1vw - 4px) * -1.5528)), 12px);
     text-align: center;
     font-weight: 500;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.2em;
+    @add-mixin lineHeightCrop 1.4;
 }
 
-/* NEWSTICKER */
+/*----------  newsticker  ----------*/
 .p-newsticker {
     bottom: 0;
     position: absolute;
     right: 0;
 }
 
-/* declaration  */
+/*----------  declaration  ----------*/
 .p-declaration {
     width: 100%;
-    background-color: $color-any-background;
+    background-color: $gray_concrete;
 }
 
 .p-declaration__inner {
@@ -77,14 +79,15 @@
     font-size: 120px;
     color: $color-white;
     line-height: 1;
-    letter-spacing: $base-spacing;
+    letter-spacing: $tracking-wide;
     white-space: nowrap;
     display: block;
     text-align: left;
-    font-family: $medium;
+    font-family: $font-family-affogato;
     margin-top: -8px;
     position: relative;
     left: -40px;
+    @add-mixin lineHeightCrop 1;
 
     @media (--md) {
         font-size: 210px;
@@ -98,29 +101,31 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: $color-theme-primary;
+    color: $blue_cobalt;
     font-weight: 500;
     width: 100%;
+    @add-mixin lineHeightCrop 1.4;
 
     @media (--lg) {
         font-size: 28px;
     }
 }
 
-.p-picture-panel__inner {
-    position: relative;
+/*----------  summary  ----------*/
+.p-summary-panel {
+    osition: relative;
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
-    @add-mixin panelContainer 40px,
-    80px;
+    padding: 0 80px 0 40px;
 }
 
-.p-picture-panel__picture {
-    flex: 100%;
+.p-summary-panel__picture {
+    flex-basis: 100%;
     margin-left: -40px;
 
-    @media (--md) {
-        flex: 50%;
+    @media (--lg) {
+        flex-basis: 50%;
     }
 
     & picture>* {
@@ -128,61 +133,51 @@
     }
 }
 
-.p-picture-panel__details {
-    flex: 50%;
-    background-color: $color-white;
-    padding: 8%;
-    position: relative;
+.p-summary-panel__details {
     margin-right: -80px;
     margin-top: -80px;
+    padding: 50px 40px;
+
+    @media (--lg) {
+        margin-top: 47px;
+        padding: 8%;
+        flex-basis: 50%;
+    }
 
     @media (--md) {
-        margin-top: 47px;
+        margin-top: -33.334%;
+        width: 72%;
     }
 }
 
-.p-picture-panel__headline {
-    font-weight: 500;
-
-    & [lang="en"] {
-        margin-bottom: 10px;
-        display: inline-block;
-        line-height: 1.5;
-        width: 100%;
-    }
-
-    & [lang="ja"] {
-        line-height: 1.5;
-        letter-spacing: 0.08em;
-    }
-}
-
-.p-picture-panel__details--text {
+.p-summary-panel__details--text {
     margin-top: 20px;
-    color: $color-text-secondary;
-    line-height: 2;
-    letter-spacing: 0.05em;
 
     @media (--md) {
         margin-top: 42px;
     }
 }
 
-.p-picture-panel__link {
+.p-summary-panel__append {
     margin-top: 40px;
-    text-align: right;
+    text-align: center;
+
+    @media (--md) {
+        text-align: right;
+    }
 }
 
-.p-picture-panel__link--button {
-    @add-mixin buttonPrimary $color-theme-primary,
+.p-picture-panel__details--button {
+    @add-mixin buttonPrimary $blue_cobalt,
     14px,
     16px,
     50px,
     -25px;
 }
 
+/*----------  service  ----------*/
 .p-service-contents {
-    &.ly-sectionArea {
+    &.ly-section-Area {
         padding-top: 120px;
     }
 
@@ -191,65 +186,183 @@
     }
 }
 
-.p-service-contents__inner {
-    @add-mixin panelContainer 0,
-    0;
+.p-service-container {
+    padding-right: 0;
 
     @media (--md) {
-        @add-mixin panelContainer 0,
-        83px;
+        /* padding-right 1366pxの時84pxの比率を維持 84px/13.66(1vw)=6.14934vw  どちらか最大値を適用*/
+        padding-right: max(6.14934vw, 84px);
+    }
+}
+
+.p-service-content__inner {
+    @add-mixin createInnerWidth;
+    padding: 50px 40px;
+
+    /* 親要素の84px/2 */
+    @media (--md) {
+        padding: 8% 42px;
     }
 }
 
 .p-service-content {
-    padding: 8% 5%;
     background-color: $color-white;
-    margin-left: 0px;
 }
 
-.c-card-components {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: wrap;
+.p-service-cardWrap {
+    margin: -8.5px;
 }
 
-.c-card {
-    background-color: $color-white;
-    width: 100%;
+.p-service__card {
     padding: 8.5px;
-    margin-bottom: 40px;
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
 
     @media (--lg) {
-        width: 33.333333%;
         margin-bottom: 0;
     }
 
+    & .c-card__title {
+        text-align: center;
+        font-size: 21px;
+        margin-top: 16px;
+
+        @media (--sm) {
+            font-size: 24px;
+        }
+    }
+
+    & .c-card__text {
+        margin-top: 14px;
+    }
+}
+
+.p-fature-panel__list--item {
+    &+& {
+        margin-top: 40px;
+
+        @media (--md) {
+            margin-top: 60px;
+        }
+    }
+
     @media (--md) {
-        width: 50%;
+        display: flex;
+    }
+
+    &[data-post='odd'] {
+        & .p-fature-panel__details {
+            width: 100%;
+            right: -40px;
+            margin-top: -40px;
+            padding: 50px 40px;
+            max-width: 100%;
+
+            @media (--md) {
+                width: 683px;
+                margin-top: 50px;
+                right: 0;
+                margin-left: -118px;
+                padding: 8% 50px;
+            }
+        }
+    }
+
+    &[data-post='even'] {
+        flex-direction: row-reverse;
+        /* align-items: flex-end; */
+
+        & .p-fature-panel__details {
+            width: 100%;
+            left: -40px;
+            margin-top: -40px;
+            padding: 50px 40px;
+            max-width: 100%;
+
+            @media (--md) {
+                width: 683px;
+                margin-top: 0;
+                left: 0;
+                margin-right: -118px;
+                padding: 8% 50px;
+            }
+        }
+
+        & .p-fature-panel__picture {
+            margin-top: 50px;
+        }
     }
 }
 
-.c-card__image {
+.p-fature-panel__picture {
     width: 100%;
+}
 
-    &>img {
-        object-fit: cover;
-        width: 100%;
+.p-fature-panel__details--text {
+    margin-top: 16px;
+}
+
+/*----------  member  ----------*/
+.p-member__carousel__list {
+    margin: -25px -30px;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        height: 24px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #e4e4e4;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 5px solid transparent;
+        background-clip: content-box;
+        background-color: $blue_cobalt;
+    }
+
+    @media (--md) {
+        flex-wrap: wrap;
+        overflow-x: hidden;
     }
 }
 
-.c-card__title {
-    color: $color-text-primary;
-    text-align: center;
-    margin-top: 16px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+.p-member__carousel__list--item {
+    flex-shrink: 0;
+    background-color: transparent;
+    padding: 25px 30px;
 }
 
-.c-card__text {
-    color: $color-text-secondary;
-    margin-top: 14px;
-    letter-spacing: 0.05em;
-    line-height: 1.8em;
+.p-member-card__body {
+    margin-top: 30px;
+    padding-left: 20px;
+    border-left: 10px solid $blue_cobalt;
+
+    &>p:not([class]) {
+        margin-top: 13px;
+        line-height: $font-lineHeight-default;
+        letter-spacing: 0.04em;
+        font-weight: 400;
+    }
+}
+
+.p-member-card__title {
+    & [lang='en'] {
+        font-size: 14px;
+        font-family: $font-family-affogato;
+        color: $blue_cobalt;
+    }
+
+    & [lang='ja'] {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: $font-family-sansSerif;
+    }
 }

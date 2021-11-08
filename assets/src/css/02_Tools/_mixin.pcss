@@ -1,3 +1,4 @@
+/*----------  ClearFix Utility  ----------*/
 @define-mixin clearfix $args {
     &::after {
         content: "";
@@ -6,18 +7,8 @@
     }
 }
 
-
-@define-mixin panelContainer $left, $right {
-    & {
-        padding-left: $left;
-        padding-right: $right;
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-
-
-@define-mixin buttonPrimary $color, $fontSize, $space, $borderWidth, $minus  {
+/*----------  button Primary Mixin ----------*/
+@define-mixin buttonPrimary $color, $fontSize, $space, $borderWidth, $minus {
     & {
         border: 1px solid $color;
         color: $color;
@@ -41,7 +32,8 @@
     }
 }
 
-@define-mixin buttonSecondary $color, $fontSize, $space, $borderWidth, $minus  {
+/*----------  button Secondary Mixin  ----------*/
+@define-mixin buttonSecondary $color, $fontSize, $space, $borderWidth, $minus {
     & {
         color: $color;
         font-size: $fontSize;
@@ -53,6 +45,35 @@
     }
 }
 
+/*----------  line-height crop Mixin  ----------*/
+@define-mixin lineHeightCrop $line-height {
+    &::before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-top: calc((1 - $line-height) * .5em);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        margin-bottom: calc((1 - $line-height) * .5em);
+    }
+}
+
+/*----------  create inner width Mixin  ----------*/
+@define-mixin createInnerWidth {
+    & {
+        width: $layout-inner;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Sample// */
 /* .navigation {
     @add-mixin clearfix both;
 } */

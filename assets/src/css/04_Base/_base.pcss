@@ -3,24 +3,29 @@
 -------------------------------------------------------------------------- */
 :root {
     --font-size-default: 16px;
+    --font-size-mobile: 14.4px;
 }
 
 body {
-    background-color: $color-any-background;
-    color: $color-text-primary;
-    font-family: $font-family;
-    font-size: var(--font-size-default);
+    background-color: $gray_concrete;
+    color: $gray_tuatara;
+    font-family: $font-family-sansSerif;
+    font-size: var(--font-size-mobile);
     font-weight: normal;
     line-height: $font-lineHeight-default;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
+
+    @media (--sm) {
+        font-size: var(--font-size-default);
+    }
 }
 
 /**
- *
- * anchor 
- *
- */
+*
+* anchor
+*
+*/
 
 a {
     background-color: transparent;
@@ -42,10 +47,10 @@ a:hover {
 }
 
 /**
- *
- * abbr
- *
- */
+*
+* abbr
+*
+*/
 
 abbr[title],
 dfn[title] {
@@ -54,10 +59,10 @@ dfn[title] {
 }
 
 /**
- *
- * blockquote
- *
- */
+*
+* blockquote
+*
+*/
 
 blockquote,
 q {
@@ -73,10 +78,10 @@ q:after {
 }
 
 /**
- *
- * button
- *
- */
+*
+* button
+*
+*/
 
 button {
     appearance: none;
@@ -88,20 +93,20 @@ button {
 }
 
 /**
- *
- * del
- *
- */
+*
+* del
+*
+*/
 
 del {
     text-decoration: line-through;
 }
 
 /**
- *
- * heddings
- *
- */
+*
+* heddings
+*
+*/
 
 h1,
 h2,
@@ -118,41 +123,35 @@ h6 {
     margin-top: 0;
 }
 
-h1,
-.u-h1 {
+h1 {
     font-size: 2.5rem;
 }
 
-h2,
-.u-h2 {
+h2 {
     font-size: 2rem;
 }
 
-h3,
-.u-h3 {
+h3 {
     font-size: 1.75rem;
 }
 
-h4,
-.u-h4 {
+h4 {
     font-size: 1.5rem;
 }
 
-h5,
-.u-h5 {
+h5 {
     font-size: 1.25rem;
 }
 
-h6,
-.u-h6 {
+h6 {
     font-size: 1rem;
 }
 
 /**
- *
- * hr, italic, pre, code
- *
- */
+*
+* hr, italic, pre, code
+*
+*/
 
 hr {
     border-top: 1px solid #cccccc;
@@ -163,8 +162,8 @@ hr {
 }
 
 /**
- * 日本語では斜体を使用しないためリセット
- */
+* 日本語では斜体を使用しないためリセット
+*/
 i,
 cite,
 em,
@@ -188,10 +187,10 @@ code {
 }
 
 /**
- *
- * img
- *
- */
+*
+* img
+*
+*/
 
 img {
     border: none;
@@ -206,11 +205,15 @@ video {
     max-width: 100%;
 }
 
+picture > * {
+    width: 100%;
+}
+
 /**
- *
- * input
- *
- */
+*
+* input
+*
+*/
 
 input,
 select,
@@ -272,10 +275,10 @@ textarea {
 }
 
 /**
- *
- * ins
- *
- */
+*
+* ins
+*
+*/
 
 ins {
     background-color: #ffff99;
@@ -284,10 +287,10 @@ ins {
 }
 
 /**
- *
- * list
- *
- */
+*
+* list
+*
+*/
 
 li,
 ol {
@@ -296,20 +299,20 @@ ol {
 }
 
 /**
- *
- * legend
- *
- */
+*
+* legend
+*
+*/
 
 legend {
     color: #000000;
 }
 
 /**
- *
- * mark
- *
- */
+*
+* mark
+*
+*/
 
 mark {
     background-color: #ffff99;
@@ -319,10 +322,10 @@ mark {
 }
 
 /**
- *
- * table
- *
- */
+*
+* table
+*
+*/
 
 table {
     border-collapse: collapse;
@@ -330,10 +333,10 @@ table {
 }
 
 /**
- *
- * attribute
- *
- */
+*
+* attribute
+*
+*/
 
 [hidden] {
     display: none !important;

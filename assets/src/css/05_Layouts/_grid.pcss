@@ -1,0 +1,29 @@
+.ly-flex-grid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    &[data-column~="1"] {
+        &>* {
+            width: 100%;
+        }
+    }
+
+    @media (--lg) {
+        &[data-column~="lg:3"] {
+            &>* {
+                width: calc(100% / 3);
+            }
+        }
+    }
+
+    @media (--sm) {
+        &[data-column~="sm:2"] {
+            &>* {
+                width: calc(100% / 2);
+            }
+        }
+    }
+}

@@ -3,25 +3,23 @@ module.exports = (ctx) => ({
         "postcss-import-ext-glob": {},
         "postcss-import": {},
         "postcss-mixins": {},
-        "postcss-cssnext": {
-            features: {
-                customProperties: {
-                    warnings: false
-                }
-            }
+        "postcss-nested": {},
+        "postcss-preset-env": {
+            stage: 1,
+            autoprefixer: {
+                grid: true
+            },
         },
         "postcss-simple-vars": {
             silent: true,
         },
-        "postcss-nested": {},
-        "postcss-mixins": {},
-        "postcss-extend": {},
+        "postcss-extend-rule": {},
+        "postcss-calc": {},
         "postcss-pxtorem": {
             rootValue: 16,
             replace: true,
             exclude: /node_modules/i,
         },
-        "postcss-color-function": {},
         'postcss-sorting': {
             'order': [
                 'custom-properties',
