@@ -7,7 +7,7 @@
 }
 
 .s-drawer__button {
-    background-color: $blue_cobalt;
+    background-color: var(--color-main);
     cursor: pointer;
     display: inline-block;
     height: 70px;
@@ -15,7 +15,7 @@
     right: 0;
     top: 0;
     width: 70px;
-    z-index: 9;
+    z-index: var(--zindex-drawer-btn);
 
     &::after {
         color: $color-white;
@@ -27,12 +27,12 @@
         transform: translateX(-50%);
     }
 
-    &[aria-expanded="true"]::after {
-        content: "CLOSE";
+    &[aria-expanded='true']::after {
+        content: 'CLOSE';
     }
 
-    &[aria-expanded="false"]::after {
-        content: "MENU";
+    &[aria-expanded='false']::after {
+        content: 'MENU';
     }
 
     & .button-line {
@@ -56,12 +56,12 @@
         }
     }
 
-    &[aria-expanded="true"] .button-line--1 {
+    &[aria-expanded='true'] .button-line--1 {
         transform: translateY(10px) translateX(-50%) rotate(-45deg);
         top: 15px;
     }
 
-    &[aria-expanded="true"] .button-line--2 {
+    &[aria-expanded='true'] .button-line--2 {
         transform: translateY(-10px) translateX(-50%) rotate(45deg);
         top: 35px;
     }
@@ -79,13 +79,13 @@
     top: 0;
     transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
     width: 88%;
-    z-index: 8;
+    z-index: var(--zindex-drawer-nav);
 
-    &[aria-hidden="true"] {
+    &[aria-hidden='true'] {
         transform: translateX(100%);
     }
 
-    &[aria-hidden="false"] {
+    &[aria-hidden='false'] {
         transform: translateX(0);
     }
 }
@@ -126,9 +126,9 @@
     transition: opacity 0.4s ease 0s;
     visibility: hidden;
     width: 100%;
-    z-index: 7;
+    z-index: var(--zindex-drawer-overlay);
 
-    &[data-focus-visible="true"] {
+    &[data-focus-visible='true'] {
         opacity: 1;
         visibility: visible;
     }
@@ -141,7 +141,7 @@
         }
 
         a {
-            background-color: $blue_water;
+            background-color: var(--color-dropdown);
         }
     }
 }
