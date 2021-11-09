@@ -1,0 +1,47 @@
+.p-declaration {
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+.p-declaration__inner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 54px 0;
+}
+
+.p-declaration__large {
+    font-size: 120px;
+    color: $color-white;
+    line-height: 1;
+    letter-spacing: $tracking-wide;
+    white-space: nowrap;
+    display: block;
+    text-align: left;
+    font-family: $font-family-affogato;
+    margin-top: -8px;
+    position: relative;
+    left: -40px;
+    @add-mixin lineHeightCrop 1;
+
+    @media (--md) {
+        font-size: 210px;
+    }
+}
+
+.p-declaration__small {
+    position: absolute;
+    font-size: 21px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-main);
+    font-weight: 500;
+    width: 100%;
+    @add-mixin lineHeightCrop 1.4;
+
+    @media (--lg) {
+        font-size: 28px;
+    }
+}
