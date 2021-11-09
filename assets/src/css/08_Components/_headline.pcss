@@ -54,12 +54,13 @@
 
     & [lang='en'] {
         display: block;
-        color: $blue_cobalt;
+        color: var(--color-main);
         font-family: $font-family-affogato;
         font-size: $font-size-xs;
         letter-spacing: $tracking-wide;
         line-height: $leading-tight;
         margin-bottom: 8px;
+
         @media (--sm) {
             margin-bottom: 24px;
         }
@@ -68,41 +69,28 @@
 
 /*----------  lower level page titleArea  ----------*/
 .c-headline-titleArea {
-    font-size: 80px;
+    font-size: clamp(40px, 6.98vw, 80px);
     font-family: $font-family-affogato;
     color: $color-white;
     font-weight: normal;
 }
 
 .c-headline-single {
-    color: $blue_cobalt;
+    color: var(--color-main);
     text-align: center;
     width: 100%;
 }
 
-.c-panel__headline {
-    & [lang="en"] {
-        display: inline-block;
-        width: 100%;
-    }
-
-    & [lang="ja"] {
-        line-height: 1.5;
-        letter-spacing: 0.08em;
-        font-size: clamp($font-size-md, 3.645vw, $font-size-xl);
-    }
-}
-
-[data-headline~="28"] {
+[data-headline~='28'] {
     margin-bottom: 28px;
 }
 
-[data-headline~="md:75"] {
+[data-headline~='md:75'] {
     @media (--md) {
         margin-bottom: 75px;
     }
 }
 
-[data-headline="40"] {
+[data-headline='40'] {
     margin-bottom: 40px;
 }

@@ -15,7 +15,7 @@
     position: relative;
     margin-right: 10px;
     padding-right: 17px;
-    color: $blue_cobalt;
+    color: var(--color-main);
 
     &>* {
         display: block;
@@ -29,11 +29,11 @@
     }
 
     &:first-child {
-        color: $gray_tuatara;
+        color: var(--color-text);
     }
 
     &:not(:last-child)::after {
-        content: ">";
+        content: '>';
         display: inline-block;
         position: absolute;
         right: 0;
@@ -42,5 +42,3 @@
         color: #acacac;
     }
 }
-
-    {}

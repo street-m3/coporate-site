@@ -1,5 +1,4 @@
 .c-card {
-    background-color: $color-white;
     position: relative;
 }
 
@@ -14,7 +13,7 @@
 }
 
 .c-card__title {
-    color: $gray_tuatara;
+    color: var(--color-text);
     font-weight: 500;
     line-height: $leading-tight;
     letter-spacing: $tracking-relaxed;
@@ -22,7 +21,7 @@
 }
 
 .c-card__text {
-    color: $gray_dove;
+    color: var(--color-caption);
     line-height: $leading-relaxed;
     letter-spacing: $tracking-wide;
     @add-mixin lineHeightCrop $leading-relaxed;

@@ -141,8 +141,7 @@
                                 ご質問などありましたらお気軽にお問い合わせください
                             </p>
                             <div class="s-contact__link">
-                                <a href="./" class="c-button c-contact-button">お問い合わせフォームへ</a>
-                                <!-- c-button c-button-border op:vertical-right -->
+                                <a href="./" class="c-button c-button-border s-contact__button" data-op="vertical-right">お問い合わせフォームへ</a>
                             </div>
                             <div class="s-contact__tel">
                                 <p class="s-contact__tel--caption">お電話でのお問い合わせ</p>
@@ -166,7 +165,7 @@
                     <p class="p-topMainvisual__title--sub">新しい価値を創造する</p>
                 </div>
 
-                <div class="c-newsticker p-newsticker">
+                <div class="c-newsticker p-topMainvisual__underComponent">
                     <ol class="c-newsticker__list">
                         <li class="c-newsticker__list--item">
                             <a href="./" class="c-newsticker__news">
@@ -213,7 +212,7 @@
                             </a>
                         </li>
                     </ol>
-                    <a href="./" class="c-newsticker__link" title="全ての記事を見る">
+                    <a href="./" class="c-newsticker__view-button" title="全ての記事を見る">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
                             <g id="up-arrow" transform="translate(27) rotate(90)">
                                 <g id="グループ_10303" data-name="グループ 10303">
@@ -238,7 +237,7 @@
         </div>
 
         <main role="main" data-placement="home">
-            <!-- declaration -->
+            <!-- DECLARATION -->
             <div class="p-declaration">
                 <div class="p-declaration__inner">
                     <p class="p-declaration__large js-horizontal-move-text" lang="en" aria-hidden="true">
@@ -250,30 +249,33 @@
                 </div>
             </div>
 
-            <!-- summary -->
-            <section class="c-picture-panels p-summary">
+            <!-- SUMMARY -->
+            <section class="p-summary">
                 <div class="ly-inner-xl">
                     <div class="c-picture-panel p-summary-panel">
-                        <figure class="c-picture-panel__picture p-summary-panel__picture">
+                        <figure class="p-summary-panel__picture">
                             <picture>
                                 <source media="(min-width: 992px)" srcset="./images/message_pc.jpg">
                                 <img src="./images/message_sp.jpg" alt="行政書士がサポート">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel__details p-summary-panel__details">
-                            <h2 class="c-headline-double c-panel__headline">
+                        <div class="c-picture-panel-details p-summary-panel__details">
+                            <h2 class="c-headline-double c-picture-panel-headline">
                                 <span lang="en">MESSAGE</span>
                                 <span lang="ja">Webを通して人々の心や生活が豊かになるよう、法律の面からサポートいたします。</span>
                             </h2>
-                            <p class="c-picture-panel__details--text p-summary-panel__details--text">当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてwebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くwebに関する手続きのサポートを行ってまいります。</p>
+                            <div class="p-summary-panel__text-root">
+                                <p>当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてwebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くwebに関する手続きのサポートを行ってまいります。</p>
+                            </div>
                             <div class="p-summary-panel__append">
-                                <a href="" class="c-button p-picture-panel__details--button">View More</a>
+                                <a href="" class="c-button c-button-border c-picture-panel__button" data-op="vertical-right">View More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
+            
+            <!-- SERVICE -->
             <section class="p-service-contents ly-section-Area">
                 <div class="p-service-container">
                     <div class="p-service-content">
@@ -322,137 +324,144 @@
                 </div>
             </section>
 
-            <section class="p-fature-panels ly-section-Area">
+            <!-- FEATURE -->
+            <section class="p-feature-panels ly-section-Area">
                 <div class="ly-inner">
-                    <h2 class="c-headline-double" data-headline="40">
+                    <h2 class="c-headline-double c-picture-panel-headline" data-headline="40">
                         <span lang="en">FEATURE</span>
                         <span lang="ja">私たちの強み</span>
                     </h2>
-                    <ul class="p-fature-panel__list">
-                        <li class="p-fature-panel__list--item" data-post="odd">
-                            <figure class="p-fature-panel__picture">
-                                <picture>
-                                    <source media="(min-width: 768px)" srcset="./images/feature-01_pc.jpg">
-                                    <img src="./images/feature-01_sp.jpg" alt="サポートする行政書士">
-                                </picture>
+                </div>
+                <div class="p-feature-panels-container">
+                    <div class="c-picture-panel p-feature-panel" data-post="odd">
+                        <figure class="p-feature-panel__image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="./images/feature-01_pc.jpg">
+                                <img src="./images/feature-01_sp.jpg" alt="サポートする行政書士">
+                            </picture>
+                        </figure>
+                        <div class="c-picture-panel-details p-feature-panel__details">
+                            <h2 class="c-headline-double c-picture-panel-headline">
+                                <span lang="en">POINT.01</span>
+                                <span lang="ja">本社と現地法人の間の情報交換、交通整理をスムーズにします。</span>
+                            </h2>
+                            <div class="p-feature-panel__details--text-root">
+                                <p>従業員一人の給与にも満たない顧問料で，取締役会議事録の作 成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-picture-panel p-feature-panel" data-post="even">
+                        <figure class="p-feature-panel__image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="./images/feature-02_pc.jpg">
+                                <img src="./images/feature-02_sp.jpg" alt="サポートする行政書士">
+                            </picture>
+                        </figure>
+                        <div class="c-picture-panel-details p-feature-panel__details">
+                            <h2 class="c-headline-double c-picture-panel-headline">
+                                <span lang="en">POINT.02</span>
+                                <span lang="ja">情報の正確性、日本法との比較、スピード感は日本基準です。</span>
+                            </h2>
+                            <div class="p-feature-panel__details--text-root">
+                                <p>当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、M&Aを積極的に推し進めて参ります。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- picture panel item 3 -->
+                    <div class="c-picture-panel p-feature-panel" data-post="odd">
+                        <figure class="p-feature-panel__image">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="./images/feature-03_pc.jpg">
+                                <img src="./images/feature-03_sp.jpg" alt="サポートする行政書士">
+                            </picture>
+                        </figure>
+                        <div class="c-picture-panel-details p-feature-panel__details">
+                            <h2 class="c-headline-double c-picture-panel-headline">
+                                <span lang="en">POINT.03</span>
+                            <span lang="ja">最低限のコストで、高いパフォーマンスを発揮いたします。</span>
+                            </h2>
+                            <div class="p-feature-panel__details--text-root">
+                                <p>当弁護士事務所は，これまで国内最大級のサービサーの経験を生かし，通常は債務者が行う会社更生や民事再生の申立を，債権者の側から行い，スポンサーに入札させ，一挙に債権回収を図ることを手がけます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MEMBER -->
+            <section class="p-member ly-section-Area">
+                <div class="ly-inner">
+                    <h2 class="c-headline-double" data-headline="40">
+                        <span lang="en">MEMBER</span>
+                        <span lang="ja">スタッフメンバー</span>
+                    </h2>
+                    <ul class="p-member-card__grid p-member-card__carousel">
+                        <li class="c-card p-member-card">
+                            <figure class="c-card__image">
+                                <img src="./images/member-01.jpg" alt="行政書士:山下 剛">
                             </figure>
-                            <div class="c-picture-panel__details p-fature-panel__details">
-                                <h2 class="c-headline-double c-panel__headline">
-                                    <span lang="en">POINT.01</span>
-                                    <span lang="ja">本社と現地法人の間の情報交換、交通整理をスムーズにします。</span>
-                                </h2>
-                                <p class="c-picture-panel__details--text p-fature-panel__details--text">従業員一人の給与にも満たない顧問料で，取締役会議事録の作 成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。</p>
+                            <div class="p-member-card__body">
+                                <h3 class="p-member-card__title u-text-table">
+                                    <span lang="ja">山下 剛</span>
+                                    <span lang="en">Tsuyoshi Yamasita</span>
+                                </h3>
+                                <p class="p-member-card__text">法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
                             </div>
                         </li>
-                        <li class="p-fature-panel__list--item" data-post="even">
-                            <figure class="p-fature-panel__picture">
-                                <picture>
-                                    <source media="(min-width: 768px)" srcset="./images/feature-02_pc.jpg">
-                                    <img src="./images/feature-02_sp.jpg" alt="サポートする行政書士">
-                                </picture>
+                        <li class="c-card p-member-card">
+                            <figure class="c-card__image">
+                                <img src="./images/member-02.jpg" alt="行政書士:福井 貴明">
                             </figure>
-                            <div class="c-picture-panel__details p-fature-panel__details">
-                                <h2 class="c-headline-double c-panel__headline">
-                                    <span lang="en">POINT.02</span>
-                                    <span lang="ja">情報の正確性、日本法との比較、スピード感は日本基準です。</span>
-                                </h2>
-                                <p class="c-picture-panel__details--text p-fature-panel__details--text">当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、 M&Aを積極的に推し進めて参ります。</p>
+                            <div class="p-member-card__body">
+                                <h3 class="p-member-card__title u-text-table">
+                                    <span lang="ja">福井 貴明</span>
+                                    <span lang="en">Fukui Takaaki</span>
+                                </h3>
+                                <p class="p-member-card__text">法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
                             </div>
                         </li>
-                        <li class="p-fature-panel__list--item" data-post="odd">
-                            <figure class="p-fature-panel__picture">
-                                <picture>
-                                    <source media="(min-width: 768px)" srcset="./images/feature-03_pc.jpg">
-                                    <img src="./images/feature-03_sp.jpg" alt="サポートする行政書士">
-                                </picture>
+                        <li class="c-card p-member-card">
+                            <figure class="c-card__image">
+                                <img src="./images/member-03.jpg" alt="行政書士:木下 さゆり">
                             </figure>
-                            <div class="c-picture-panel__details p-fature-panel__details">
-                                <h2 class="c-headline-double c-panel__headline">
-                                    <span lang="en">POINT.03</span>
-                                    <span lang="ja">最低限のコストで、高いパフォーマンスを発揮いたします。</span>
-                                </h2>
-                                <p class="c-picture-panel__details--text p-fature-panel__details--text">当弁護士事務所は，これまで国内最大級のサービサーの経験を生かし，通常は債務者が行う会社更生や民事再生の申立を，債権者の側から行い，スポンサーに入札させ，一挙に債権回収を図ることを手がけます。</p>
+                            <div class="p-member-card__body">
+                                <h3 class="p-member-card__title u-text-table">
+                                    <span lang="ja">木下 さゆり</span>
+                                    <span lang="en">Sayuri Kinoshita</span>
+                                </h3>
+                                <p class="p-member-card__text">法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                            </div>
+                        </li>
+                        <li class="c-card p-member-card">
+                            <figure class="c-card__image">
+                                <img src="./images/member-04.jpg" alt="行政書士:武内 麻美">
+                            </figure>
+                            <div class="p-member-card__body">
+                                <h3 class="p-member-card__title u-text-table">
+                                    <span lang="ja">武内 麻美</span>
+                                    <span lang="en">Asami Takeuchi</span>
+                                </h3>
+                                <p class="p-member-card__text">法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
+                            </div>
+                        </li>
+                        <li class="c-card p-member-card">
+                            <figure class="c-card__image">
+                                <img src="./images/member-05.jpg" alt="行政書士:政田 健二">
+                            </figure>
+                            <div class="p-member-card__body">
+                                <h3 class="p-member-card__title u-text-table">
+                                    <span lang="ja">政田 健二</span>
+                                    <span lang="en">Kenji Masada</span>
+                                </h3>
+                                <p class="p-member-card__text">法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
                             </div>
                         </li>
                     </ul>
                 </div>
             </section>
-
-            <section class="p-member ly-section-Area">
-                <div class="p-member__inner ly-inner">
-                    <h2 class="c-headline-double" data-headline="40">
-                        <span lang="en">SERVICE</span>
-                        <span lang="ja">サービス内容</span>
-                    </h2>
-                    <div class="p-member__carousel">
-                        <ul class="p-member__carousel__list ly-flex-grid" data-column="1 sm:2 lg:3">
-                            <li class="c-card p-member__carousel__list--item">
-                                <figure class="c-card__image p-member-card__image">
-                                    <img src="./images/member-01.jpg" alt="">
-                                </figure>
-                                <div class="p-member-card__body">
-                                    <h3 class="c-card__title p-member-card__title">
-                                        <span lang="ja">山下 剛</span>
-                                        <span lang="en">- Tsuyoshi Yamasita -</span>
-                                    </h3>
-                                    <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
-                                </div>
-                            </li>
-                            <li class="c-card p-member__carousel__list--item">
-                                <figure class="c-card__image p-member-card__image">
-                                    <img src="./images/member-02.jpg" alt="">
-                                </figure>
-                                <div class="p-member-card__body">
-                                    <h3 class="c-card__title p-member-card__title">
-                                        <span lang="ja">福井 貴明</span>
-                                        <span lang="en">- Fukui Takaaki -</span>
-                                    </h3>
-                                    <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
-                                </div>
-                            </li>
-                            <li class="c-card p-member__carousel__list--item">
-                                <figure class="c-card__image p-member-card__image">
-                                    <img src="./images/member-03.jpg" alt="">
-                                </figure>
-                                <div class="p-member-card__body">
-                                    <h3 class="c-card__title p-member-card__title">
-                                        <span lang="ja">木下 さゆり</span>
-                                        <span lang="en">- Sayuri Kinoshita -</span>
-                                    </h3>
-                                    <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
-                                </div>
-                            </li>
-                            <li class="c-card p-member__carousel__list--item">
-                                <figure class="c-card__image p-member-card__image">
-                                    <img src="./images/member-04.jpg" alt="">
-                                </figure>
-                                <div class="p-member-card__body">
-                                    <h3 class="c-card__title p-member-card__title">
-                                        <span lang="ja">武内 麻美</span>
-                                        <span lang="en">- Asami Takeuchi -</span>
-                                    </h3>
-                                    <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
-                                </div>
-                            </li>
-                            <li class="c-card p-member__carousel__list--item">
-                                <figure class="c-card__image p-member-card__image">
-                                    <img src="./images/member-05.jpg" alt="">
-                                </figure>
-                                <div class="p-member-card__body">
-                                    <h3 class="c-card__title p-member-card__title">
-                                        <span lang="ja">政田 健二</span>
-                                        <span lang="en">- Kenji Masada -</span>
-                                    </h3>
-                                    <p>法的な観点のみではなく、実践的な観点から具体的なアドバイスを心がけています。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
         </main>
 
+        <!-- contact -->
         <aside class="s-contact">
             <div class="s-contact__inner">
                 <h2 class="s-contact__headline">
@@ -463,8 +472,7 @@
                     ご質問などありましたらお気軽にお問い合わせください
                 </p>
                 <div class="s-contact__link">
-                    <a href="./" class="c-button c-contact-button">お問い合わせフォームへ</a>
-                    <!-- c-button c-button-border data-op="vertical-right" -->
+                    <a href="./" class="c-button c-button-border s-contact__button" data-op="vertical-right">お問い合わせフォームへ</a>
                 </div>
                 <div class="s-contact__tel">
                     <p class="s-contact__tel--caption">お電話でのお問い合わせ</p>

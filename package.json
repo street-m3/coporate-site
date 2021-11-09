@@ -1,5 +1,5 @@
 {
-	"name": "20211005_coporate-site",
+	"name": "20211005_corporate-site",
 	"version": "1.0.0",
 	"description": "",
 	"main": "postcss.config.js",
@@ -29,15 +29,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/street-m3/coporate-site.git"
+		"url": "git+https://github.com/street-m3/corporate-site.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/street-m3/coporate-site/issues"
+		"url": "https://github.com/street-m3/corporate-site/issues"
 	},
-	"homepage": "https://github.com/street-m3/coporate-site#readme",
+	"homepage": "https://github.com/street-m3/corporate-site#readme",
 	"devDependencies": {
 		"@babel/cli": "^7.15.7",
 		"@babel/core": "^7.15.8",

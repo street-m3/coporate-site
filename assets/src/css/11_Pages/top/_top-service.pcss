@@ -1,0 +1,63 @@
+/*----------  service  ----------*/
+.p-service-contents {
+    &.ly-section-Area {
+        padding-top: 120px;
+    }
+
+    & .p-picture-panel__headline {
+        margin-bottom: 40px;
+    }
+}
+
+.p-service-container {
+    padding-right: 0;
+
+    @media (--md) {
+        /* padding-right 1366pxの時84pxの比率を維持 84px/13.66(1vw)=6.14934vw  どちらか最大値を適用*/
+        padding-right: max(6.14934vw, 84px);
+    }
+}
+
+.p-service-content__inner {
+    @add-mixin createInnerWidth;
+    padding: 50px 40px;
+
+    /* 親要素の84px/2 */
+    @media (--md) {
+        padding: 8% 42px;
+    }
+}
+
+.p-service-content {
+    background-color: $color-white;
+}
+
+.p-service-cardWrap {
+    margin: -8.5px;
+}
+
+.p-service__card {
+    padding: 8.5px;
+
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+
+    @media (--lg) {
+        margin-bottom: 0;
+    }
+
+    & .c-card__title {
+        text-align: center;
+        font-size: 21px;
+        margin-top: 16px;
+
+        @media (--sm) {
+            font-size: 24px;
+        }
+    }
+
+    & .c-card__text {
+        margin-top: 14px;
+    }
+}

@@ -1,16 +1,11 @@
 .s-header__contactArea--item a {
-    @add-mixin buttonSecondary $color-white,
-    14px,
-    16px,
-    0px,
-    0px;
-    background-color: $blue_cobalt;
-    font-weight: bold;
-    letter-spacing: $tracking-wide;
-    min-width: 200px;
+    background-color: var(--color-main);
+    color: $color-white;
+    font-size: 14px;
+    padding: 16px 0;
 }
 
-.s-header[role="banner"] {
+.s-header[role='banner'] {
     position: relative;
     width: 100%;
 }
@@ -25,7 +20,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: var(--zindex-header-brand);
 }
 
 .s-header__brand--title {
@@ -56,29 +51,29 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 2;
+    z-index: var(--zindex-Fixed-header);
     transition: all 0.3s ease 0s;
 }
 
-.s-header__inner[data-scroll="true"] {
+.s-header__inner[data-scroll='true'] {
     background-color: $color-white;
 }
 
-.s-header__inner[data-scroll="true"] .s-header__navlist {
-    color: $blue_cobalt;
+.s-header__inner[data-scroll='true'] .s-header__navlist {
+    color: var(--color-main);
 }
 
-.s-header__inner[data-hover="true"],
+.s-header__inner[data-hover='true'],
 .s-header__inner.active {
     background-color: $color-white;
 }
 
-.s-header__inner[data-hover="true"] .s-header__navlist {
-    color: $blue_cobalt;
+.s-header__inner[data-hover='true'] .s-header__navlist {
+    color: var(--color-main);
 }
 
 .s-header__inner.active .s-header__navlist {
-    color: $blue_cobalt;
+    color: var(--color-main);
 }
 
 .s-header-nav {
@@ -118,7 +113,7 @@
 }
 
 .s-header__navlist--item>*::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: 0;
@@ -176,7 +171,7 @@
         min-width: 100%;
         height: 130px;
         background-color: #dce5f4;
-        z-index: 100;
+        z-index: var(--zindex-dropdown-nav);
         padding-left: calc(4.612vw + 165px);
         padding-right: 3.66032vw;
         right: 0;
@@ -213,7 +208,7 @@
         margin-left: 10px;
     }
 
-    .s-header-dropdown[aria-hidden="true"] {
+    .s-header-dropdown[aria-hidden='true'] {
         display: none;
     }
 }
