@@ -69,7 +69,16 @@ class IntersectionObservers {
         }
     }
 
+    _scrollAnimateFadein = (element, isIntersecting) => {
+        if (isIntersecting) {
+            element.dataset.animate = 'true';
+        } else {
+            element.dataset.animate = 'false';
+        }
+    }
+
     _scrollInit() {
         this.setobservers = new ScrollObserver('.js-visual-offsetHeight', this._scrollFixedHeader, { once: false });
+        this.setobservers = new ScrollObserver('.js-observe', this._scrollAnimateFadein, { once: true, threshold: 0.25, });
     }
 }

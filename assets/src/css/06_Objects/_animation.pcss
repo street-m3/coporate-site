@@ -1,0 +1,40 @@
+.anim-fadein-up {
+    --duration: 0.8s;
+    --timing-function: ease;
+    --starting-position: 40px;
+    transition: opacity var(--duration) var(--timing-function), transform var(--duration) var(--timing-function);
+
+    &[data-animate="false"] {
+        opacity: 0;
+        transform: translateY(var(--starting-position));
+    }
+
+    &[data-animate="true"] {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    &:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+
+    &:nth-child(4) {
+        transition-delay: 0.6s;
+    }
+
+    &:nth-child(5) {
+        transition-delay: 0.8s;
+    }
+
+    &:nth-child(6) {
+        transition-delay: 1s;
+    }
+}
