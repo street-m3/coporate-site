@@ -6,7 +6,7 @@
 /* article headline h1 */
 .c-headline-lv1 {
     font-size: clamp($font-size-md, 3.645vw, $font-size-xxl);
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
     line-height: $font-lineHeight-default;
     letter-spacing: $tracking-wide;
     @add-mixin lineHeightCrop $tracking-wide;
@@ -15,7 +15,7 @@
 /* sections-title by top-page 21px ~ 28px */
 .c-headline-lv2 {
     font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
     line-height: $font-lineHeight-default;
     letter-spacing: $tracking-widest;
     @add-mixin lineHeightCrop $tracking-widest;
@@ -24,7 +24,7 @@
 /* headline-base picture-panels 18px ~ 28px */
 .c-headline-lv3 {
     font-size: clamp($font-size-md, 3.125vw, $font-size-xl);
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
     letter-spacing: $tracking-relaxed;
     line-height: $leading-x-tight;
     @add-mixin lineHeightCrop $leading-x-tight;
@@ -33,15 +33,15 @@
 /* news-list */
 .c-headline-lv4 {
     font-size: clamp($font-size-root, 2.777vw, $font-size-lg);
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
     line-height: $leading-snug;
     letter-spacing: $tracking-wide;
 }
 
-/*----------  headline double  ----------*/
-.c-headline-double {
+/*----------  headline two  ----------*/
+.c-headline-two {
     color: $color-black;
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
     font-size: 0;
 
     & [lang='ja'] {
@@ -64,6 +64,81 @@
         @media (--sm) {
             margin-bottom: 24px;
         }
+    }
+}
+
+/*----------  headline number  ----------*/
+/* 
+<h2 class="c-headline c-headline-number" data-headline="self">
+    <span class="c-headline-number-counters"></span>
+    <span class="c-headline-number-main c-headline-lv3">〇〇〇〇について</span>
+    <!-- <span class="c-headline-number-caption">IT法務顧問など継続的にリーガルチェック、法務サポートを行います。</span> -->
+</h2>
+<h2 class="c-headline c-headline-number" data-headline="full">
+    <span class="c-headline-number-counters"></span>
+    <span class="c-headline-number-main c-headline-lv3">〇〇〇〇について</span>
+    <span class="c-headline-number-caption">IT法務顧問など継続的にリーガルチェック、法務サポートを行います。</span>
+</h2> 
+*/
+
+.c-headline-number {
+    counter-increment: counters;
+}
+
+.c-headline-number-counters {
+    --counter-size: clamp(40px, 6.944vw, 60px);
+    display: inline-block;
+    width: var(--counter-size);
+    height: var(--counter-size);
+
+    &::before {
+        background-color: var(--color-main);
+        color: $color-white;
+        content: "0"counter(counters);
+        display: block;
+        line-height: var(--counter-size);
+        font-size: clamp(17px, 2.951vw, 25px);
+        font-family: $font-family-affogato;
+        font-weight: var(--font-weight-title);
+        position: relative;
+        text-align: center;
+    }
+}
+
+.c-headline-number-caption {
+    display: block;
+    line-height: initial;
+    color: #696969;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+[data-headline="full"] {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    column-gap: 30px;
+    row-gap: 8px;
+
+    & .c-headline-number-main {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    & .c-headline-number-caption {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    & .c-headline-number-counters {
+        grid-area: 1 / 1 / 3 / 2;
+    }
+}
+
+[data-headline="self"] {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 30px;
+
+    & .c-headline-number-main {
+        align-self: center;
     }
 }
 

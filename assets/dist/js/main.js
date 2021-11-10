@@ -12,18 +12,21 @@ class MicroMethod {
             headerNavClosest: "data-hover",
             dropdownMenu: "js-header-dropdown",
             drapdownMenuDetails: "s-header-dropdown",
+            paginationNavItem: "page-numbers",
         };
         this.scrollSlideText = document.querySelector(`.${o.scrollSlideText}`)
         this.headerNavListItem = document.querySelectorAll(`.${o.headerNavListItem}`);
         this.headerNavClosest = document.querySelector(`[${o.headerNavClosest}]`);
         this.dropdownMenu = document.querySelectorAll(`.${o.dropdownMenu}`);
         this.drapdownMenuDetails = document.querySelector(`.${o.drapdownMenuDetails}`);
+        this.paginationNavItem = document.querySelectorAll(`.${o.paginationNavItem}`);
         this.hoverEventStart = this.hoverEventStart();
         this.hoverEventEnd = this.hoverEventEnd();
         this.clickEventListeners = this.clickEventListeners();
         this._scrollSlideEffect();
         this._headerNavMenuHover();
         this._dropDownMenu();
+        this._paginationAriaLabel();
     }
 
     /**
@@ -65,6 +68,18 @@ class MicroMethod {
                 hoverAnchor.classList.remove("active");
             });
         });
+    }
+
+    _paginationAriaLabel() {
+        if (!this.paginationNavItem) return;
+        for (let i = 0; i < this.paginationNavItem.length; i++) {
+            const paginationCounter = this.paginationNavItem[i].textContent;
+            let pagination_set_string = "ページ" + paginationCounter;
+            if (this.paginationNavItem[i].getAttribute('aria-current') == 'page' && paginationCounter.match(/^(\d+)$/)) {
+                pagination_set_string = "現在のページは、" + paginationCounter + "ページ目です。";
+            }
+            this.paginationNavItem[i].setAttribute('aria-label', pagination_set_string);
+        }
     }
 
     hoverEventStart() {
