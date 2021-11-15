@@ -1,0 +1,104 @@
+/* [data-placement="faq"] .p-content-block-scope {
+    background-color: $color-white;
+} */
+
+[data-placement="faq"] .ly-scoped-Article {
+    background-color: $color-white;
+}
+
+.ly-content-block-spaced {
+    & + & {
+        margin-top: 60px;
+    }
+}
+
+.p-faq-accordion-item {
+    background-color: $color-white;
+    border-bottom: 1px solid var(--color-border-accordion);
+}
+
+.p-accordion-item+.p-accordion-item {
+    margin-top: 30px;
+}
+
+.p-accordion-tab {
+    display: flex;
+    align-items: center;
+    height: 105px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.p-accordion-tab::before {
+    content: 'Q';
+    display: block;
+    color: var(--color-main);
+    font-size: 35px;
+    font-weight: bold;
+    width: 34px;
+    line-height: 1;
+    margin-top: -0.2em;
+    margin-right: 15px;
+}
+
+.p-accordion-tabicon {
+    color: inherit;
+    display: inline-block;
+    height: 34px;
+    margin-left: auto;
+    pointer-events: none;
+    position: relative;
+    width: 34px;
+}
+
+.p-accordion-tabicon::before,
+.p-accordion-tabicon::after {
+    background-color: var(--color-main);
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.p-accordion-tabicon::after {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease-out 0s;
+}
+
+.p-accordion-header.is-open-panel .p-accordion-tabicon::after {
+    transform: rotate(180deg);
+}
+
+.p-accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.p-accordion-content {
+    padding: 4px 0 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 16px;
+}
+
+.p-accordion-content::before {
+    content: 'A';
+    color: var(--color-main);
+    font-size: 35px;
+    font-weight: bold;
+    width: 34px;
+    line-height: 1;
+    margin-right: 15px;
+}

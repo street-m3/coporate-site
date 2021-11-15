@@ -18,9 +18,10 @@
 
 <body data-focus-visible="false" data-animate-effect="false">
     <div class="wrapper">
+        <!-- header -->
         <header class="s-header" role="banner">
             <h1 class="s-header__brand">
-                <a href="#" class="s-header__brand--title">
+                <a href="./" class="s-header__brand--title">
                     <img src="../images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
                 </a>
             </h1>
@@ -29,7 +30,7 @@
                     <div class="s-header-nav__wrapper">
                         <ul class="s-header__navlist">
                             <li class="s-header__navlist--item">
-                                <a class="touch-hover" href="#">ホーム</a>
+                                <a class="touch-hover" href="./">ホーム</a>
                             </li>
                             <li class="s-header__navlist--item js-header-dropdown">
                                 <a class="touch-hover" href="#">サービス</a>
@@ -48,7 +49,8 @@
                                         </ul>
                                         <div class="m-header-dropdown__contact">
                                             <div class="c-contact-tel">
-                                                <a href="tel:0123-456-789​" class="c-contact-tel__number">0123-456-789​</a>
+                                                <a href="tel:0123-456-789​"
+                                                    class="c-contact-tel__number">0123-456-789​</a>
                                                 <p class="c-contact-tel__day">(平日00:00〜00:00)</p>
                                             </div>
                                         </div>
@@ -77,11 +79,9 @@
                 </nav>
             </div>
         </header>
-
         <!-- Drawer -->
-        <div class="s-drawer">
-            <button type="button" class="s-drawer__button" aria-controls="site:drawer-navMenu" aria-label="モバイルメニュー"
-                aria-expanded="false">
+        <div class="s-drawer"><button type="button" class="s-drawer__button" aria-controls="site:drawer-navMenu"
+                aria-label="モバイルメニュー" aria-expanded="false">
                 <span class="button-line button-line--1"></span>
                 <span class="button-line button-line--2"></span>
             </button>
@@ -125,7 +125,7 @@
                             <a href="#">よくある質問</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
-                            <a href="#">サイトマップ</a>
+                            <a href="./sitemap.html">サイトマップ</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
                             <a href="#">プライバシーポリシー</a>
@@ -141,7 +141,8 @@
                                 ご質問などありましたらお気軽にお問い合わせください
                             </p>
                             <div class="s-contact__link">
-                                <a href="#" class="c-button c-button-border s-contact__button" data-op="vertical-right">お問い合わせフォームへ</a>
+                                <a href="#" class="c-button c-button-border s-contact__button"
+                                    data-op="vertical-right">お問い合わせフォームへ</a>
                             </div>
                             <div class="s-contact__tel">
                                 <p class="s-contact__tel--caption">お電話でのお問い合わせ</p>
@@ -159,10 +160,12 @@
         <div class="p-topMainvisual js-visual-offsetHeight">
             <div class="p-topMainvisual__inner">
                 <div class="p-topMainvisual__title">
-                    <p class="p-topMainvisual__title--main">
-                        WEB INTEGRATION &<br>LEGAL AFFAIRS
+                    <p class="p-topMainvisual__title--01 anim-reveal-title js-slide-Animate-title">
+                        <span>WEB INTEGRATION &<br>LEGAL AFFAIRS</span>
                     </p>
-                    <p class="p-topMainvisual__title--sub">新しい価値を創造する</p>
+                    <p class="p-topMainvisual__title--02 anim-reveal-sentence js-slide-Animate-sentence">
+                        <span>新しい価値を創造する</span>
+                    </p>
                 </div>
 
                 <div class="c-newsticker p-topMainvisual__underComponent">
@@ -259,22 +262,25 @@
                                 <img src="./images/message_sp.jpg" alt="行政書士がサポート">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-summary-panel__details js-observe anim-fadein-up" data-animate="false">
+                        <div class="c-picture-panel-details p-summary-panel__details js-observe anim-fadein-up"
+                            data-animate="false">
                             <h2 class="c-headline-two c-picture-panel-headline">
                                 <span lang="en">MESSAGE</span>
                                 <span lang="ja">Webを通して人々の心や生活が豊かになるよう、法律の面からサポートいたします。</span>
                             </h2>
                             <div class="p-summary-panel__text-root">
-                                <p>当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてwebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くwebに関する手続きのサポートを行ってまいります。</p>
+                                <p>当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてwebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くwebに関する手続きのサポートを行ってまいります。
+                                </p>
                             </div>
                             <div class="p-summary-panel__append">
-                                <a href="" class="c-button c-button-border c-picture-panel__button" data-op="vertical-right">View More</a>
+                                <a href="" class="c-button c-button-border c-picture-panel__button"
+                                    data-op="vertical-right">View More</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
             <!-- SERVICE -->
             <section class="p-service-contents ly-section-Area">
                 <div class="p-service-container">
@@ -340,7 +346,8 @@
                                 <img src="./images/feature-01_sp.jpg" alt="サポートする行政書士">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up" data-animate="false">
+                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up"
+                            data-animate="false">
                             <h2 class="c-headline-two c-picture-panel-headline">
                                 <span lang="en">POINT.01</span>
                                 <span lang="ja">本社と現地法人の間の情報交換、交通整理をスムーズにします。</span>
@@ -357,13 +364,15 @@
                                 <img src="./images/feature-02_sp.jpg" alt="サポートする行政書士">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up" data-animate="false">
+                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up"
+                            data-animate="false">
                             <h2 class="c-headline-two c-picture-panel-headline">
                                 <span lang="en">POINT.02</span>
                                 <span lang="ja">情報の正確性、日本法との比較、スピード感は日本基準です。</span>
                             </h2>
                             <div class="p-feature-panel__details--text-root">
-                                <p>当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、M&Aを積極的に推し進めて参ります。</p>
+                                <p>当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、M&Aを積極的に推し進めて参ります。
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -375,13 +384,15 @@
                                 <img src="./images/feature-03_sp.jpg" alt="サポートする行政書士">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up" data-animate="false">
+                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up"
+                            data-animate="false">
                             <h2 class="c-headline-two c-picture-panel-headline">
                                 <span lang="en">POINT.03</span>
-                            <span lang="ja">最低限のコストで、高いパフォーマンスを発揮いたします。</span>
+                                <span lang="ja">最低限のコストで、高いパフォーマンスを発揮いたします。</span>
                             </h2>
                             <div class="p-feature-panel__details--text-root">
-                                <p>当弁護士事務所は，これまで国内最大級のサービサーの経験を生かし，通常は債務者が行う会社更生や民事再生の申立を，債権者の側から行い，スポンサーに入札させ，一挙に債権回収を図ることを手がけます。</p>
+                                <p>当弁護士事務所は，これまで国内最大級のサービサーの経験を生かし，通常は債務者が行う会社更生や民事再生の申立を，債権者の側から行い，スポンサーに入札させ，一挙に債権回収を図ることを手がけます。
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -395,7 +406,8 @@
                         <span lang="en">MEMBER</span>
                         <span lang="ja">スタッフメンバー</span>
                     </h2>
-                    <ul class="p-member-card__grid p-member-card__carousel js-observe anim-fadein-up" data-animate="false">
+                    <ul class="p-member-card__grid p-member-card__carousel js-observe anim-fadein-up"
+                        data-animate="false">
                         <li class="c-card p-member-card">
                             <figure class="c-card__image">
                                 <img src="./images/member-01.jpg" alt="行政書士:山下 剛">
@@ -472,7 +484,8 @@
                     ご質問などありましたらお気軽にお問い合わせください
                 </p>
                 <div class="s-contact__link">
-                    <a href="#" class="c-button c-button-border s-contact__button" data-op="vertical-right">お問い合わせフォームへ</a>
+                    <a href="#" class="c-button c-button-border s-contact__button"
+                        data-op="vertical-right">お問い合わせフォームへ</a>
                 </div>
                 <div class="s-contact__tel">
                     <p class="s-contact__tel--caption">お電話でのお問い合わせ</p>
@@ -500,7 +513,7 @@
                 <nav class="s-footer__nav">
                     <ul class="s-footer__navlist">
                         <li class="s-footer__navlist--item">
-                            <a class="touch-hover" href="#">ホーム</a>
+                            <a class="touch-hover" href="./">ホーム</a>
                         </li>
                         <li class="s-footer__navlist--item s-footer-dropdown">
                             <div class="s-footer-dropdown__header js-footer-dropdown-header">
@@ -535,7 +548,7 @@
                             <a class="touch-hover" href="#">よくある質問</a>
                         </li>
                         <li class="s-footer__navlist--item">
-                            <a class="touch-hover" href="#">サイトマップ</a>
+                            <a class="touch-hover" href="./sitemap.html">サイトマップ</a>
                         </li>
                         <li class="s-footer__navlist--item">
                             <a class="touch-hover" href="#">プライバシーポリシー</a>
@@ -550,6 +563,9 @@
             </div>
         </footer>
     </div>
+
+    <!--   -->
+    <script src="./js/screen-animate.js"></script>
     <script src="./js/viewport.js"></script>
     <script src="./js/scrollobserver.js"></script>
     <script src="./js/drawer.js"></script>

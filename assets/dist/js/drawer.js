@@ -1,14 +1,15 @@
 window.addEventListener('load', () => {
-    new Drawer(992);
+    new Drawer(992, true);
 });
 
 class Drawer {
 
     /**
      * @constructor ドロワーメニュー
-     * @param {Number} breakpoints 
+     * @param {Number} breakpoints PCヘッダーメニューをaria-hiddenさせる下限値を設定します。
+     * @param {Boolean} closed ドロワーメニューのリンクをクリックした時にメニューを閉じるかを設定します。初期値はfalse
      */
-    constructor(breakpoints) {
+    constructor(breakpoints, closed) {
         const o = {
             openVisibleSet: "data-focus-visible", //body && Overlay
             triggerButton: "s-drawer__button",
@@ -31,32 +32,32 @@ class Drawer {
         this.toggleOverlay = document.querySelector(`.${o.toggleOverlay}`);
         this.openMenuNavlist = document.querySelector(`.${o.openMenuNavlist}`);
         this.headerNavlist = document.querySelector(`.${o.headerNavlist}`);
-
+        this.openMenuNavlistItem = this.openMenuNavlist.querySelectorAll('a');
+        this.closed = closed;
         this.breakpoints = breakpoints;
         this.deviceConfig = window.matchMedia(`(min-width:${this.breakpoints}px)`).matches;
-
         this.touchEventListener = this.touchEventDetection(); //タッチイベントの分岐
-
         this.init();
     }
 
     init() {
-        this.clickEventListeners(this.triggerButton, this.touchEventListener);
-        this.clickEventListeners(this.toggleOverlay, this.touchEventListener);
-        this.deviceConfigSetAttribute();
+        this._clickEventListeners(this.triggerButton, this.touchEventListener);
+        this._clickEventListeners(this.toggleOverlay, this.touchEventListener);
+        this._deviceConfigSetAttribute();
+        this._autoClosedMenu();
     }
 
     // ボタンとオーバーレイがクリックされたらscriptを走らせる
-    clickEventListeners(multipleSelect, handler) {
+    _clickEventListeners(multipleSelect, handler) {
         multipleSelect.addEventListener(handler, (e) => {
             e.preventDefault();
-            this.defaultSetAttributes();
-            this.openMenuFocusVisibleToggle();
+            this._defaultSetAttributes();
+            this._openMenuFocusVisibleToggle();
         });
     }
 
     // ボタンがtrueならメニューはaria-hiddenをfalseにする
-    defaultSetAttributes() {
+    _defaultSetAttributes() {
         const isOpend = 'true';
         const isExpanded = this.triggerButton.getAttribute('aria-expanded') === isOpend;
         this.triggerButton.setAttribute('aria-expanded', !isExpanded);
@@ -64,7 +65,7 @@ class Drawer {
     }
 
     // trueでオーバーレイを表示、ウインドウの固定
-    openMenuFocusVisibleToggle() {
+    _openMenuFocusVisibleToggle() {
         this.openVisibleSet.forEach((element) => {
             if (element.getAttribute('data-focus-visible') === 'true') {
                 element.dataset.focusVisible = 'false';
@@ -77,9 +78,20 @@ class Drawer {
     }
 
     // PC表示の時はドロワーメニューを読み上げない
-    deviceConfigSetAttribute() {
+    _deviceConfigSetAttribute() {
         const ishidden = 'true';
         this.deviceConfig ? this.headerNavlist.setAttribute('aria-hidden', !ishidden) : this.headerNavlist.setAttribute('aria-hidden', ishidden);
+    }
+
+    _autoClosedMenu() {
+        if (this.closed) {
+            this.openMenuNavlistItem.forEach(element => {
+                element.addEventListener(this.touchEventListener, () => {
+                    this.triggerButton.click();
+                });
+            });
+        }
+        return false;
     }
 
     // PC: click, Tab&SP: touchstartを適用

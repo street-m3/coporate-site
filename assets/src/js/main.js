@@ -13,6 +13,11 @@ class MicroMethod {
             dropdownMenu: "js-header-dropdown",
             drapdownMenuDetails: "s-header-dropdown",
             paginationNavItem: "page-numbers",
+            textAnimatedTitle: "js-slide-Animate-title",
+            textAnimatedSentence: "js-slide-Animate-sentence",
+            textAnimatedAddCls: "-visible",
+            textAnimatedAddTime: "1500",
+            textAnimatedDelay: "100",
         };
         this.scrollSlideText = document.querySelector(`.${o.scrollSlideText}`)
         this.headerNavListItem = document.querySelectorAll(`.${o.headerNavListItem}`);
@@ -20,6 +25,11 @@ class MicroMethod {
         this.dropdownMenu = document.querySelectorAll(`.${o.dropdownMenu}`);
         this.drapdownMenuDetails = document.querySelector(`.${o.drapdownMenuDetails}`);
         this.paginationNavItem = document.querySelectorAll(`.${o.paginationNavItem}`);
+        this.textAnimatedTitle = document.querySelector(`.${o.textAnimatedTitle}`);
+        this.textAnimatedSentence = document.querySelector(`.${o.textAnimatedSentence}`);
+        this.textAnimatedAddCls = o.textAnimatedAddCls;
+        this.textAnimatedAddTime = o.textAnimatedAddTime;
+        this.textAnimatedDelay = o.textAnimatedDelay;
         this.hoverEventStart = this.hoverEventStart();
         this.hoverEventEnd = this.hoverEventEnd();
         this.clickEventListeners = this.clickEventListeners();
@@ -27,6 +37,7 @@ class MicroMethod {
         this._headerNavMenuHover();
         this._dropDownMenu();
         this._paginationAriaLabel();
+        this._textAnimated();
     }
 
     /**
@@ -48,7 +59,7 @@ class MicroMethod {
      */
     _scrollSlideEffect() {
         window.addEventListener('scroll', () => {
-            if(!this.scrollSlideText) return;
+            if (!this.scrollSlideText) return;
             this.scrollSlideText.style.transform = `translateX(${window.scrollY / 7}px)`;
         });
     }
@@ -80,6 +91,14 @@ class MicroMethod {
             }
             this.paginationNavItem[i].setAttribute('aria-label', pagination_set_string);
         }
+    }
+
+    _textAnimated() {
+        if(!(this.textAnimatedTitle && this.textAnimatedSentence)) return;
+        setTimeout(() => {
+            this.textAnimatedTitle.classList.add(this.textAnimatedAddCls);
+            setTimeout(() => { this.textAnimatedSentence.classList.add(this.textAnimatedAddCls); }, this.textAnimatedDelay);
+        }, this.textAnimatedAddTime);
     }
 
     hoverEventStart() {
