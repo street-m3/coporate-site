@@ -108,11 +108,11 @@
 .c-headline-number-caption {
     display: block;
     line-height: initial;
-    color: #696969;
+    color: var(--color-caption);
     font-size: clamp(12px, 2vw, 14px);
 }
 
-[data-headline="full"] {
+[data-headline~="full"] {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: repeat(2, auto);
@@ -132,7 +132,7 @@
     }
 }
 
-[data-headline="self"] {
+[data-headline~="self"] {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 30px;
@@ -160,12 +160,22 @@
     margin-bottom: 28px;
 }
 
+[data-headline~='20'] {
+    margin-bottom: 20px;
+}
+
+[data-headline~='40'] {
+    margin-bottom: 40px;
+}
+
+[data-headline~='md:40'] {
+    @media (--md) {
+        margin-bottom: 40px;
+    }
+}
+
 [data-headline~='md:75'] {
     @media (--md) {
         margin-bottom: 75px;
     }
-}
-
-[data-headline='40'] {
-    margin-bottom: 40px;
 }

@@ -19,22 +19,74 @@
     }
 
     &:nth-child(2) {
-        transition-delay: 0.2s;
+        transition-delay: 0.15s;
     }
 
     &:nth-child(3) {
-        transition-delay: 0.4s;
+        transition-delay: 0.25s;
     }
 
     &:nth-child(4) {
-        transition-delay: 0.6s;
+        transition-delay: 0.35s;
     }
 
     &:nth-child(5) {
-        transition-delay: 0.8s;
+        transition-delay: 0.45s;
     }
 
     &:nth-child(6) {
-        transition-delay: 1s;
+        transition-delay: 0.55s;
     }
+
+    &:nth-child(7) {
+        transition-delay: 0.65s;
+    }
+
+    &:nth-child(8) {
+        transition-delay: 0.75s;
+    }
+
+
+    &:nth-child(9) {
+        transition-delay: 0.85s;
+    }
+
+    &:nth-child(10) {
+        transition-delay: 0.95s;
+    }
+}
+
+.anim-reveal-title {
+    overflow: hidden;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
+}
+
+.anim-reveal-title > * {
+    display: block;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
+}
+
+body[data-animate-effect=true] .anim-reveal-title.-visible,
+body[data-animate-effect=true] .anim-reveal-title.-visible > * {
+    transform: translate(0, 0);
+}
+
+.anim-reveal-sentence {
+    overflow: hidden;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
+    text-align: center;
+}
+
+.anim-reveal-sentence > * {
+    display: block;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
+}
+
+body[data-animate-effect=true] .anim-reveal-sentence.-visible,
+body[data-animate-effect=true] .anim-reveal-sentence.-visible > * {
+    transform: translate(0, 0);
 }
