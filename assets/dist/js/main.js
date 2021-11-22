@@ -16,7 +16,7 @@ class MicroMethod {
             textAnimatedTitle: "js-slide-Animate-title",
             textAnimatedSentence: "js-slide-Animate-sentence",
             textAnimatedAddCls: "-visible",
-            textAnimatedAddTime: "1500",
+            textAnimatedAddTime: "3300",
             textAnimatedDelay: "100",
         };
         this.scrollSlideText = document.querySelector(`.${o.scrollSlideText}`)
@@ -113,3 +113,8 @@ class MicroMethod {
         return window.ontouchstart ? 'touchstart' : 'click';
     }
 }
+
+// ITCSS
+// スキンとなる構造の定義を行う部分>>> -o
+// ページで繰り返し利用するコンポーネントの定義 >>> -c
+// 汎用的に使うUIに対してスタイつを行う >>> -m
