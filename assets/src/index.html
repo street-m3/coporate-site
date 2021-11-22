@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- 【Font Awesome】 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 
@@ -67,7 +68,7 @@
                                 <a class="touch-hover" href="#">会社情報</a>
                             </li>
                             <li class="s-header__navlist--item">
-                                <a class="touch-hover" href="#">よくある質問</a>
+                                <a class="touch-hover" href="./faq.html">よくある質問</a>
                             </li>
                         </ul>
                         <ul class="s-header__contactArea">
@@ -157,7 +158,7 @@
             </div>
         </div>
 
-        <div class="p-topMainvisual js-visual-offsetHeight">
+        <div class="p-topMainvisual js-HeaderScroll-Target">
             <div class="p-topMainvisual__inner">
                 <div class="p-topMainvisual__title">
                     <p class="p-topMainvisual__title--01 anim-reveal-title js-slide-Animate-title">
@@ -215,7 +216,7 @@
                             </a>
                         </li>
                     </ol>
-                    <a href="#" class="c-newsticker__view-button" title="全ての記事を見る">
+                    <a href="./news.html" class="c-newsticker__view-button" title="全ての記事を見る">
                         <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
                             <g id="up-arrow" transform="translate(27) rotate(90)">
                                 <g id="グループ_10303" data-name="グループ 10303">
@@ -545,13 +546,13 @@
                             <a class="touch-hover" href="#">会社概要</a>
                         </li>
                         <li class="s-footer__navlist--item">
-                            <a class="touch-hover" href="#">よくある質問</a>
+                            <a class="touch-hover" href="./faq.html">よくある質問</a>
                         </li>
                         <li class="s-footer__navlist--item">
                             <a class="touch-hover" href="./sitemap.html">サイトマップ</a>
                         </li>
                         <li class="s-footer__navlist--item">
-                            <a class="touch-hover" href="#">プライバシーポリシー</a>
+                            <a class="touch-hover" href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
                 </nav>
@@ -565,7 +566,9 @@
     </div>
 
     <!--   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
     <script src="./js/screen-animate.js"></script>
+    <script src="./js/cursor.js"></script>
     <script src="./js/viewport.js"></script>
     <script src="./js/scrollobserver.js"></script>
     <script src="./js/drawer.js"></script>
