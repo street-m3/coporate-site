@@ -9,6 +9,7 @@ const backfaceFixed = (fixed) => {
      */
     const scrollbarWidth = window.innerWidth - document.body.clientWidth;
     document.body.style.paddingRight = fixed ? `${scrollbarWidth}px` : '';
+    document.documentElement.style.minHeight = fixed ? `100vh` : '';
 
     /**
      * スクロール位置を取得する要素を出力する(`html`or`body`)
@@ -59,9 +60,9 @@ class ScreenAnimate {
             dataEffectSetAttribute: 'data-animate-effect',
             animateTime: 2000,
             animateMax: 5000,
-            screenFirst: 'anim-motion-layer-01',
-            title: 'js-revealer-logo',
-            wrap: 'js-content-layer',
+            screenFirst: 'anim-MotionLayer_01',
+            title: 'js-ScreenAnimate-Routine',
+            wrap: 'js-ScreenAnimate-Context-Wrapper',
         };
             
         /**
@@ -111,13 +112,13 @@ class ScreenAnimateInnerHTML {
     };
 
     _initHTML() {
-        // st-screen-layer-wrap = アニメーションに必要なレイヤーをまとめる
-        // st-revealer-layer = スクリーンに表示するレイヤー
-        // bl-content-layer = bodyタグ直下、背景固定と不可視->可視にするレイヤー
+        // c-ScreenAnimate_Container = アニメーションに必要なレイヤーをまとめる
+        // c-ScreenAnimate_Layer = スクリーンに表示するレイヤー
+        // c-ScreenAnimate_Context-Wrapper = bodyタグ直下、背景固定と不可視->可視にするレイヤー
         document.body.outerHTML = `
-        <div class="st-revealer-wrap">
-            <div class="st-revealer-layer anim-motion-layer-01">
-                <div class="st-revealer-logo js-revealer-logo">
+        <div class="c-ScreenAnimate_Container">
+            <div class="c-ScreenAnimate_Layer anim-MotionLayer_01">
+                <div class="c-ScreenAnimate_Routine js-ScreenAnimate-Routine">
                     <svg xmlns="http://www.w3.org/2000/svg" width="99px" height="104.5px" viewBox="0 0 62.468 65.983">
                         <g id="sp_logo" transform="translate(0)">
                             <g id="グループ_10248" data-name="グループ 10248" transform="translate(6.276)">
@@ -141,10 +142,10 @@ class ScreenAnimateInnerHTML {
                     </svg>
                 </div>
             </div>
-            <div class="st-revealer-layer anim-motion-layer-02"></div>
-            <div class="st-revealer-layer anim-motion-layer-03"></div>
+            <div class="c-ScreenAnimate_Layer anim-MotionLayer_02"></div>
+            <div class="c-ScreenAnimate_Layer anim-MotionLayer_03"></div>
         </div>
-        <div class="bl-content-layer js-content-layer">${document.body.outerHTML}</div>
+        <div class="c-ScreenAnimate_Context-Wrapper js-ScreenAnimate-Context-Wrapper">${document.body.outerHTML}</div>
         `;
     };
 }
