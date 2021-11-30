@@ -1,0 +1,51 @@
+.c-mouseFollow_Center {
+    display: none;
+
+    @media (--lg) {
+        & {
+            --pointer-center-radius: 8px;
+            --pointer-center-position: -4px;
+            --pointer-before-radius: 72px;
+            --pointer-before-position: calc(-36px - -4px);
+            --pointer-transition: transform 0.3s ease-out 0s;
+            --pointer-frame-radius: 50%;
+            --pointer-translate: translate(0, 0);
+            background-color: var(--color-main);
+            border-radius: var(--pointer-frame-radius);
+            display: block;
+            height: var(--pointer-center-radius);
+            left: var(--pointer-center-position);
+            top: var(--pointer-center-position);
+            transform: var(--pointer-translate);
+            transition: var(--pointer-transition);
+            pointer-events: none;
+            position: fixed;
+            width: var(--pointer-center-radius);
+            z-index: var(--zindex-pointer);
+
+            &::before {
+                content: '';
+                border: 1px solid var(--color-main);
+                border-radius: var(--pointer-frame-radius);
+                display: block;
+                height: var(--pointer-before-radius);
+                left: var(--pointer-before-position);
+                pointer-events: none;
+                position: fixed;
+                top: var(--pointer-before-position);
+                transform: translate(0, 0);
+                width: var(--pointer-before-radius);
+                z-index: var(--zindex-pointer);
+            }
+
+            &.hover::before {
+                top: calc(-50px - -4px);
+                left: calc(-50px - -4px);
+                width: 100px;
+                height: 100px;
+                transition: 0.5s;
+                background: rgba(255, 0, 0, 0.4);
+            }
+        }
+    }
+}

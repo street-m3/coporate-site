@@ -7,17 +7,19 @@ window.addEventListener('load', () => {
 class MicroMethod {
     constructor() {
         const o = {
-            scrollSlideText: "js-horizontal-move-text",
+            scrollSlideText: "js-AutoScroll-MoveText",
             headerNavListItem: "s-header__navlist--item",
             headerNavClosest: "data-hover",
             dropdownMenu: "js-header-dropdown",
             drapdownMenuDetails: "s-header-dropdown",
             paginationNavItem: "page-numbers",
-            textAnimatedTitle: "js-slide-Animate-title",
-            textAnimatedSentence: "js-slide-Animate-sentence",
-            textAnimatedAddCls: "-visible",
-            textAnimatedAddTime: "1500",
-            textAnimatedDelay: "100",
+        };
+        const TextAnimationObjects = {
+            TextAnimateTitleMain: "js-slide-Animate-title",
+            TextAnimateSentence: "js-slide-Animate-sentence",
+            TextAnimateAddCls: "-visible",
+            TextAnimateTime: "3300",
+            TextAnimationDelay: "100",
         };
         this.scrollSlideText = document.querySelector(`.${o.scrollSlideText}`)
         this.headerNavListItem = document.querySelectorAll(`.${o.headerNavListItem}`);
@@ -25,19 +27,30 @@ class MicroMethod {
         this.dropdownMenu = document.querySelectorAll(`.${o.dropdownMenu}`);
         this.drapdownMenuDetails = document.querySelector(`.${o.drapdownMenuDetails}`);
         this.paginationNavItem = document.querySelectorAll(`.${o.paginationNavItem}`);
-        this.textAnimatedTitle = document.querySelector(`.${o.textAnimatedTitle}`);
-        this.textAnimatedSentence = document.querySelector(`.${o.textAnimatedSentence}`);
-        this.textAnimatedAddCls = o.textAnimatedAddCls;
-        this.textAnimatedAddTime = o.textAnimatedAddTime;
-        this.textAnimatedDelay = o.textAnimatedDelay;
+        // TextAnimation DOM
+        this.TextAnimateTitleMain = document.querySelector(`.${TextAnimationObjects.TextAnimateTitleMain}`);
+        this.TextAnimateSentence = document.querySelector(`.${TextAnimationObjects.TextAnimateSentence}`);
+        this.TextAnimateAddCls = TextAnimationObjects.TextAnimateAddCls;
+        this.TextAnimateTime = TextAnimationObjects.TextAnimateTime;
+        this.TextAnimationDelay = TextAnimationObjects.TextAnimationDelay;
+        // AddCustomEventListeners
         this.hoverEventStart = this.hoverEventStart();
         this.hoverEventEnd = this.hoverEventEnd();
         this.clickEventListeners = this.clickEventListeners();
+        // Fucntion init
+        this._CurrentPagePlacement();
         this._scrollSlideEffect();
         this._headerNavMenuHover();
         this._dropDownMenu();
         this._paginationAriaLabel();
         this._textAnimated();
+    }
+
+    _CurrentPagePlacement() {
+        const page = document.querySelector('main');
+        const attr = page.getAttribute('data-placement');
+        console.log(attr);
+        // console.log(page);
     }
 
     /**
@@ -94,11 +107,11 @@ class MicroMethod {
     }
 
     _textAnimated() {
-        if(!(this.textAnimatedTitle && this.textAnimatedSentence)) return;
+        if(!(this.TextAnimateTitleMain && this.TextAnimateSentence)) return;
         setTimeout(() => {
-            this.textAnimatedTitle.classList.add(this.textAnimatedAddCls);
-            setTimeout(() => { this.textAnimatedSentence.classList.add(this.textAnimatedAddCls); }, this.textAnimatedDelay);
-        }, this.textAnimatedAddTime);
+            this.TextAnimateTitleMain.classList.add(this.TextAnimateAddCls);
+            setTimeout(() => { this.TextAnimateSentence.classList.add(this.TextAnimateAddCls); }, this.TextAnimationDelay);
+        }, this.TextAnimateTime);
     }
 
     hoverEventStart() {
@@ -111,5 +124,28 @@ class MicroMethod {
 
     clickEventListeners() {
         return window.ontouchstart ? 'touchstart' : 'click';
+    }
+}
+
+// 別ページから遷移してきた時の処理
+document.addEventListener('DOMContentLoaded', (e) => {
+    new LocationController();
+});
+class LocationController {
+    constructor() {
+        this.anchors = document.querySelectorAll('header a');
+        this.drawerlink = document.querySelectorAll('.s-drawer a');
+        this.urlHash = location.hash;
+        this.urlTarget = document.getElementById(this.urlHash.replace('#', ''));
+        this.headerClientHeight = document.querySelector('.s-header__brand').clientHeight;
+        this.init();
+    }
+
+    init() {
+        if (!this.urlTarget) return;
+        if (this.urlHash) {
+            const targetPosition = this.urlTarget.offsetTop - this.headerClientHeight;
+            _smoothScroll(targetPosition);
+        }
     }
 }

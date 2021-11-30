@@ -82,7 +82,7 @@
 */
 
 .c-headline-number {
-    counter-increment: counters;
+    counter-reset: num;
 }
 
 .c-headline-number-counters {
@@ -94,7 +94,8 @@
     &::before {
         background-color: var(--color-main);
         color: $color-white;
-        content: "0"counter(counters);
+        counter-increment: num;
+        content: counter(num,decimal-leading-zero);
         display: block;
         line-height: var(--counter-size);
         font-size: clamp(17px, 2.951vw, 25px);

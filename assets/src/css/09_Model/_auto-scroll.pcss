@@ -1,0 +1,72 @@
+.m-autoScroll {
+    width: 100%;
+    position: relative;
+    padding: 54px 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.m-autoScroll_MoveText {
+    color: $color-white;
+    display: block;
+    font-size: 120px;
+    font-family: $font-family-affogato;
+    line-height: 1;
+    letter-spacing: $tracking-wide;
+    left: -40px;
+    margin-top: -8px;
+    position: absolute;
+    top: calc(50% - 0.5em);
+    text-align: left;
+    white-space: nowrap;
+    @add-mixin lineHeightCrop 1;
+    z-index: -1;
+
+    @media (--md) {
+        font-size: 210px;
+    }
+}
+
+.m-autoScroll_TextContent {
+    position: relative;
+}
+
+.m-autoScroll_TextContent-Append {
+    position: relative;
+    width: 800px;
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+.m-autoScroll_TextContent-Title {
+    text-align: center;
+
+    & > * {
+        display: inline-block;
+        color: var(--color-main);
+        font-size: 21px;
+        @add-mixin lineHeightCrop 1.4;
+
+        @media (--lg) {
+            font-size: 28px;
+        }
+    }
+}
+
+.p-service-autoScroll .m-autoScroll_MoveText {
+    top: .15em;
+    @media (--md) {
+        top: calc(50% - 0.5em);
+    }
+}
+
+.p-top-autoScroll .m-autoScroll_TextContent {
+    padding: 54px 0;
+}
+
+.p-service-autoScroll_TextContent-Sentence {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    line-height: $leading-x-loose;
+    @add-mixin lineHeightCrop $leading-x-loose;
+}

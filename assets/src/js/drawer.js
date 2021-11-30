@@ -16,15 +16,17 @@ class Drawer {
             toggleOverlay: "s-drawer__overlay",
             openMenuNavlist: "s-drawer-navMenu",
             headerNavlist: "s-header__navlist",
+            drawerNavlinks: "s-drawer a",
+            headerNavBrand: "s-header__brand"
         };
 
         /**
-         * * @type {object} ドロワー開閉を識別するdata属性
-         * * @type {object} ドロワーナビゲーションボタン
-         * * @type {object} メニューが開かれている時の背景を設定
-         * * @type {object} ドロワーメニューリスト
-         * * @type {object} ヘッダーメニューリスト
-         * * @type {number} ブレークポイントの値をインスタンスに設定 [ドロワーの非表示領域]
+         * * @type {Object} ドロワー開閉を識別するdata属性
+         * * @type {Object} ドロワーナビゲーションボタン
+         * * @type {Object} メニューが開かれている時の背景を設定
+         * * @type {Object} ドロワーメニューリスト
+         * * @type {Object} ヘッダーメニューリスト
+         * * @type {Number} ブレークポイントの値をインスタンスに設定 [ドロワーの非表示領域]
          */
 
         this.openVisibleSet = document.querySelectorAll(`[${o.openVisibleSet}]`);
@@ -32,11 +34,13 @@ class Drawer {
         this.toggleOverlay = document.querySelector(`.${o.toggleOverlay}`);
         this.openMenuNavlist = document.querySelector(`.${o.openMenuNavlist}`);
         this.headerNavlist = document.querySelector(`.${o.headerNavlist}`);
-        this.openMenuNavlistItem = this.openMenuNavlist.querySelectorAll('a');
+        this.headerNavBrand = document.querySelector(`.${o.headerNavBrand}`);
+        this.openMenuNavlistItem = this.openMenuNavlist.querySelectorAll('a[href^="#"]');
         this.closed = closed;
         this.breakpoints = breakpoints;
         this.deviceConfig = window.matchMedia(`(min-width:${this.breakpoints}px)`).matches;
         this.touchEventListener = this.touchEventDetection(); //タッチイベントの分岐
+        this.drawerNavlinks = document.querySelectorAll(`.${o.drawerNavlinks}`);
         this.init();
     }
 
