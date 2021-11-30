@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
     new Accordion('p-accordions', 'js-accordion-header');
     new Accordion('p-faq-accordions', 'js-accordion-header');
     new Accordion('s-drawer-dropdown', 'js-drawer-dropdown-header');
-    footerDropdownMenu('index.html');
+    footerDropdownMenu('service.html');
 });
 
 class Accordion {
