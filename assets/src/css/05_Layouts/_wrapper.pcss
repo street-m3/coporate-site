@@ -1,21 +1,29 @@
-.ly-inner-xxl {
-    margin: 0 auto;
-    max-width: 100%;
+.ly-xxl {
     width: $layout-inner-xxl;
-    padding: 0;
 }
 
-.ly-inner-xl {
-    margin: 0 auto;
-    max-width: 100%;
+.ly-xl {
     width: $layout-inner-xl;
-    padding: 0;
+}
+
+.ly-lg {
+    width: $layout-inner;
+}
+
+.ly-sm {
+    width: $layout-inner-sm;
+}
+
+.ly-xs {
+    width: $layout-inner-xs;
 }
 
 .ly-inner {
     margin: 0 auto;
     max-width: 100%;
-    width: $layout-inner;
+}
+
+.ly-column {
     padding: 0 40px;
 
     @media (--xl) {
@@ -23,34 +31,71 @@
     }
 }
 
-.ly-inner-sm {
-    width: $layout-inner-sm;
-    margin: 0 auto;
-    max-width: 100%;
-    padding: 0 40px;
-
-    @media (min-width: $layout-inner-sm) {
-        padding: 0;
-    }
-
-    &.ly-scoped-Article {
-        @media (min-width: $layout-inner-sm) {
-            padding: 0 55px;
-        }
-    }
-}
-
+/* 縦方向の余白に必要 <div class=“ly-content-Area”></div>  */
 .ly-content-Area {
     padding-top: 45px;
     padding-bottom: 190px;
 
     @media (--md) {
         padding-top: 60px;
-        padding-bottom: 200px;
+        padding-bottom: 188px;
     }
 }
 
 .ly-section-Area {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.ly-scoped-Article_Spacer {
+    &+& {
+        margin-top: 60px;
+    }
+}
+
+.ly-scoped-Article_Grid {
+    --mobile-column: clamp(20px, 3.472vw, 145px);
+    --large-column: clamp(20px, 10vw, 145px);
+    background-color: $color-white;
+    display: grid;
+    grid-template-columns: var(--mobile-column) 1fr var(--mobile-column);
+    grid-template-rows: clamp(40px, 6.944vw, 116px) 1fr clamp(58px, 10vw, 188px);
+
+    @media (--md) {
+        grid-template-columns: var(--large-column) 1fr var(--large-column);
+        grid-template-rows: clamp(40px, 8.491vw, 116px) 1fr clamp(58px,
+                13.762vw,
+                188px);
+    }
+
+    &>* {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}
+
+.ly-scoped-Page_Grid {
+    display: grid;
+    grid-template-columns: 0 1fr 0;
+    grid-template-rows: 1fr;
+    background-color: transparent;
+
+    @media (--md) {
+        grid-template-columns: 55px 1fr 55px;
+        grid-template-rows: 1fr;
+    }
+
+    &>* {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+}
+
+.ly-inner_ColumnSpaced {
+    width: $layout-inner-sm;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0 40px;
+
+    @media screen and (min-width: $layout-inner-sm) {
+        padding: 0;
+    }
 }
