@@ -18,6 +18,7 @@
 
 <body data-focus-visible="false" data-animate-effect="false">
     <div class="wrapper">
+        <div class="c-mouseFollow_Center js-mouseFollow-Center"></div>
         <!-- header -->
         <header class="s-header" role="banner">
             <h1 class="s-header__brand">
@@ -38,13 +39,13 @@
                                     <div class="s-header-dropdown__inner">
                                         <ul class="s-header-dropdown__list">
                                             <li class="s-header-dropdown__list--item">
-                                                <a href="#">IT法務</a>
+                                                <a href="./service.html#SERVICE:01">IT法務</a>
                                             </li>
                                             <li class="s-header-dropdown__list--item">
-                                                <a href="#">ビザ申請</a>
+                                                <a href="./service.html#SERVICE:02">ビザ申請</a>
                                             </li>
                                             <li class="s-header-dropdown__list--item">
-                                                <a href="#">民泊申請</a>
+                                                <a href="./service.html#SERVICE:03">民泊申請</a>
                                             </li>
                                         </ul>
                                         <div class="m-header-dropdown__contact">
@@ -101,13 +102,13 @@
                             <div class="s-drawer-dropdown__panel">
                                 <ul class="s-drawer-dropdown__list">
                                     <li class="s-drawer-navMenu__list--item">
-                                        <a href="#">IT法務</a>
+                                        <a href="./service.html#SERVICE:01">IT法務</a>
                                     </li>
                                     <li class="s-drawer-navMenu__list--item">
-                                        <a href="#">ビザ申請</a>
+                                        <a href="./service.html#SERVICE:02">ビザ申請</a>
                                     </li>
                                     <li class="s-drawer-navMenu__list--item">
-                                        <a href="#">民宿申請</a>
+                                        <a href="./service.html#SERVICE:03">民泊申請</a>
                                     </li>
                                 </ul>
                             </div>
@@ -164,7 +165,7 @@
 
         <!-- breadcrumb -->
         <div class="s-breadcrumb">
-            <div class="ly-inner">
+            <div class="ly-inner ly-lg ly-column">
                 <nav class="c-breadcrumb" aria-label="breadcrumb">
                     <ol class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
                         <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
@@ -186,7 +187,7 @@
         <!-- main -->
         <main role="main" data-placement="policy">
             <div class="ly-content-Area">
-                <div class="ts-ly-inner_ColumnSpaced">
+                <div class="ly-inner_ColumnSpaced">
                     <div class="ly-scoped-Page_Grid">
                         <div class="ly-scoped-Article_Grid-Block">
                             <h1 class="c-headline-lv2 c-headline-single" data-headline="28 md:75">プライバシーポリシー</h1>
@@ -353,13 +354,13 @@
                             <div class="s-footer-dropdown__panel">
                                 <ul class="s-footer-dropdown__list">
                                     <li class="s-footer-dropdown__list--item">
-                                        <a href="#">IT法務</a>
+                                        <a href="./service.html#SERVICE:01">IT法務</a>
                                     </li>
                                     <li class="s-footer-dropdown__list--item">
-                                        <a href="#">ビザ申請</a>
+                                        <a href="./service.html#SERVICE:02">ビザ申請</a>
                                     </li>
                                     <li class="s-footer-dropdown__list--item">
-                                        <a href="#">民宿申請</a>
+                                        <a href="./service.html#SERVICE:03">民泊申請</a>
                                     </li>
                                 </ul>
                             </div>
@@ -386,21 +387,23 @@
                 </nav>
             </div>
             <div class="s-footer__copyright">
-                <div class="ly-inner">
+                <div class="ly-inner ly-lg ly-column">
                     <small class="s-footer__copyright--text" translate="no">© 藤岡行政書士事務所 All Rights Reserved.</small>
                 </div>
             </div>
         </footer>
     </div>
 
-
-    <script src="./js/viewport.js"></script>
-    <script src="./js/scrollobserver.js"></script>
-    <script src="./js/drawer.js"></script>
-    <script src="./js/accordion.js"></script>
-    <script src="./js/tab.js"></script>
-    <script src="./js/responsive-movie.js"></script>
-    <script src="./js/hover.js"></script>
+    <!-- script -->
+    <script src="./js/utility.js"></script>
+    <script src="./js/pointer.js" type="module" async></script>
+    <script src="./js/viewport.js" type="module"></script>
+    <script src="./js/scrollobserver.js" type="module"></script>
+    <script src="./js/drawer.js" type="module"></script>
+    <script src="./js/accordion.js" type="module"></script>
+    <script src="./js/tab.js" type="module"></script>
+    <script src="./js/responsive-movie.js" type="module"></script>
+    <script src="./js/hover.js" type="module"></script>
     <script src="./js/main.js"></script>
 </body>
 
