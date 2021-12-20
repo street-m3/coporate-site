@@ -1,0 +1,51 @@
+.c-snsIcon-Component_List {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.c-snsIcon-Component_List-Item {
+    display: inline-block;
+    font-size: 0;
+    line-height: 1;
+
+    & + & {
+        margin-left: 10px;
+    }
+}
+
+.c-snsIcon-Component_Link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+
+    &.-twitter {
+        color: #1da1f2;
+    }
+
+    &.-facebook {
+        color: #1877f2;
+    }
+
+    &.-hatena {
+        color: #00a4de;
+    }
+
+    &.-line {
+        color: #00c300;
+    }
+}
+
+.c-snsIcon-Component_Icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    pointer-events: none;
+}
+
+.js-snsIcon-Component {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}

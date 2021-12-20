@@ -61,3 +61,54 @@
         margin-top: 14px;
     }
 }
+
+
+.p-feature_Service-Details_Container {
+    background-color: var(--color-bg);
+    padding: 36px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.p-feature_Service-Details_Title {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-main);
+    font-weight: 500;
+}
+
+.p-feature_Service-Details_Table-data {
+    display: block;
+    text-align: center;
+    padding: 0.3em 0;
+    @media (--md) {
+        display: table-cell;
+        text-align: left;
+    }
+}
+
+.p-feature_Service-Details_List {
+    margin-top: 10px;
+
+    @media (--md) {
+        display: flex;
+        flex-flow: row wrap;
+        & > * {
+            width: 50%;
+        }
+    }
+}
+
+.p-feature_Service-Details_List-Item {
+    padding: 0.3em 0;
+}
+
+.p-feature_Service-Details_underComponent {
+    margin-top: 30px;
+    text-align: center;
+    & > * {
+        padding: 1rem;
+        font-weight: 500;
+        color: var(--color-main);
+    }
+}

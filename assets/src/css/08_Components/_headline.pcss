@@ -72,7 +72,6 @@
 <h2 class="c-headline c-headline-number" data-headline="self">
     <span class="c-headline-number-counters"></span>
     <span class="c-headline-number-main c-headline-lv3">〇〇〇〇について</span>
-    <!-- <span class="c-headline-number-caption">IT法務顧問など継続的にリーガルチェック、法務サポートを行います。</span> -->
 </h2>
 <h2 class="c-headline c-headline-number" data-headline="full">
     <span class="c-headline-number-counters"></span>
@@ -111,6 +110,7 @@
     line-height: initial;
     color: var(--color-caption);
     font-size: clamp(12px, 2vw, 14px);
+    font-weight: var(--font-weight-normal);
 }
 
 [data-headline~="full"] {
@@ -155,6 +155,15 @@
     color: var(--color-main);
     text-align: center;
     width: 100%;
+
+    & > * {
+        font-size: 14px;
+        color: var(--color-caption);
+        line-height: $leading-snug;
+        display: inline-block;
+        width: 100%;
+        letter-spacing: 0.05em;
+    }
 }
 
 [data-headline~='28'] {

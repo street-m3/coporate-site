@@ -53,6 +53,16 @@
     }
 }
 
+.ly-scoped-Content_Spacer {
+    &+& {
+        margin-top: 50px;
+    }
+}
+
+.ly-scoped-ArticleSection_Container {
+    margin-top: clamp(60px, 8.3333vw, 100px);
+}
+
 .ly-scoped-Article_Grid {
     --mobile-column: clamp(20px, 3.472vw, 145px);
     --large-column: clamp(20px, 10vw, 145px);
@@ -70,6 +80,7 @@
 
     &>* {
         grid-area: 2 / 2 / 3 / 3;
+        overflow: hidden;
     }
 }
 
