@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    new ScreenAnimateInnerHTML();
-    new ScreenAnimate();
+    const defaultIndex = document.querySelector('[data-placement="home"]');
+    if (!defaultIndex) {
+        return document.body.removeAttribute('data-animate-effect');
+    } else {
+        new ScreenAnimateInnerHTML();
+        new ScreenAnimate();
+    }
 });
 
 const backfaceFixed = (fixed) => {
