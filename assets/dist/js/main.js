@@ -114,6 +114,14 @@ class MicroMethod {
         }, this.TextAnimateTime);
     }
 
+    _contentLinkAll() {
+        const anchor = document.querySelectorAll('a');
+        anchor.forEach((element) => {
+            if (element.hasAttribute('target') === false || element.getAttribute('target') !== '_blank') return;
+            element.setAttribute('rel', 'noopener noreferrer');
+        });
+    }
+
     hoverEventStart() {
         return window.ontouchstart ? 'touchstart' : 'mouseover';
     }
