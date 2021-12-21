@@ -1,13 +1,11 @@
 .p-definition__list {
     font-weight: var(--font-weight-text);
-    margin-top: 40px;
 }
 
 .p-definition__title {
     font-size: 1rem;
     color: var(--color-main);
     letter-spacing: 0.08em;
-    margin-bottom: 10px;
 
     @media (--md) {
         font-size: 21px;
@@ -30,4 +28,10 @@
             margin-bottom: 2em;
         }
     }
+}
+
+/* margin-top: clamp(20px, 3.4722vw, 40px); */
+
+[data-placement="policy"] .p-definition__text {
+    margin-top: 10px;
 }

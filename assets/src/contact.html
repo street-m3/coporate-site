@@ -31,10 +31,10 @@
                     <div class="s-header-nav__wrapper">
                         <ul class="s-header__navlist">
                             <li class="s-header__navlist--item">
-                                <a class="touch-hover" href="./">ホーム</a>
+                                <a class="touch-hover" href="./index.html">ホーム</a>
                             </li>
                             <li class="s-header__navlist--item js-header-dropdown">
-                                <a class="touch-hover" href="#">サービス</a>
+                                <a class="touch-hover" href="./service.html">サービス</a>
                                 <div class="s-header-dropdown" aria-hidden="true">
                                     <div class="s-header-dropdown__inner">
                                         <ul class="s-header-dropdown__list">
@@ -59,13 +59,13 @@
                                 </div>
                             </li>
                             <li class="s-header__navlist--item">
-                                <a class="touch-hover" href="#">価格</a>
+                                <a class="touch-hover" href="./price.html">価格</a>
                             </li>
                             <li class="s-header__navlist--item">
                                 <a class="touch-hover" href="./news.html">お知らせ</a>
                             </li>
                             <li class="s-header__navlist--item">
-                                <a class="touch-hover" href="#">会社情報</a>
+                                <a class="touch-hover" href="./company.html">会社情報</a>
                             </li>
                             <li class="s-header__navlist--item">
                                 <a class="touch-hover" href="./faq.html">よくある質問</a>
@@ -73,7 +73,7 @@
                         </ul>
                         <ul class="s-header__contactArea">
                             <li class="s-header__contactArea--item">
-                                <a href="#" class="c-button">CONTACT</a>
+                                <a href="./contact.html" class="c-button">CONTACT</a>
                             </li>
                         </ul>
                     </div>
@@ -92,7 +92,7 @@
                 <nav class="s-drawer-navMenu__content" role="navigation">
                     <ul class="s-drawer-navMenu__list">
                         <li class="s-drawer-navMenu__list--item">
-                            <a href="#">ホーム</a>
+                            <a href="./index.html">ホーム</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item s-drawer-dropdown">
                             <div class="s-drawer-dropdown__header js-drawer-dropdown-header">
@@ -115,22 +115,22 @@
                             </div>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
-                            <a href="#">価格</a>
+                            <a href="./price.html">価格</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
                             <a href="./news.html">お知らせ</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
-                            <a href="#">会社情報</a>
+                            <a href="./company.html">会社情報</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
-                            <a href="#">よくある質問</a>
+                            <a href="./faq.html">よくある質問</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
                             <a href="./sitemap.html">サイトマップ</a>
                         </li>
                         <li class="s-drawer-navMenu__list--item">
-                            <a href="#">プライバシーポリシー</a>
+                            <a href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
                     <aside class="s-contact">
@@ -143,7 +143,7 @@
                                 ご質問などありましたらお気軽にお問い合わせください
                             </p>
                             <div class="s-contact__link">
-                                <a href="#" class="c-button c-button-border s-contact__button"
+                                <a href="./contact.html" class="c-button c-button-border s-contact__button"
                                     data-op="vertical-right">お問い合わせフォームへ</a>
                             </div>
                             <div class="s-contact__tel">
@@ -161,7 +161,7 @@
 
         <!-- header visual -->
         <div class="s-titleArea-header js-HeaderScroll-Target">
-            <h1 class="c-headline c-headline-titleArea">NEWS</h1>
+            <h1 class="c-headline c-headline-titleArea">CONTACT</h1>
         </div>
 
         <!-- breadcrumb -->
@@ -176,7 +176,7 @@
                         </li>
                         <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
                             itemtype="http://schema.org/ListItem">
-                            <a href="https://example.com" itemprop="item"><span itemprop="name">NEWS</span></a>
+                            <a href="https://example.com" itemprop="item"><span itemprop="name">CONTACT</span></a>
                             <meta itemprop="position" content="2" />
                         </li>
                     </ol>
@@ -185,50 +185,69 @@
         </div>
 
         <!-- main -->
-        <main role="main" data-placement="news">
+        <main role="main" data-placement="contact">
             <div class="ly-content-Area">
                 <div class="ly-inner_ColumnSpaced">
                     <div class="">
-                        <h1 class="c-headline-lv2 c-headline-single" data-headline="28 md:75">お気軽にお申込みください</h1>
-                        <p>※すべて必須記入となっています</p>
+                        <h1 class="c-headline-lv2 c-headline-single p-contact-headline" data-headline="28 md:75">
+                            お気軽にお申込みください
+                            <span>※すべて必須記入となっています</span>
+                        </h1>
                         <div class="ly-scoped-Article_Spacer">
-                            
+                            <form action="" class="p-contactForm">
+                                <!-- 氏名入力欄 -->
+                                <div class="p-contactForm_Group">
+                                    <p class="p-contactForm_Header">
+                                        <label for="full-name" class="p-contactForm_Label">お名前</label>
+                                    </p>
+                                    <div class="p-contactForm_Group-Content">
+                                        <p class="p-contactForm_textField">
+                                            <input id="full-name" class="o-input p-contactForm_Input" type="text" neme="full-name" placeholder="" title="お名前の入力は必須です" required aria-required="true">
+                                        </p>
+                                        <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                                    </div>
+                                </div>
+                                <!-- 電話番号入力欄 -->
+                                <div class="p-contactForm_Group">
+                                    <p class="p-contactForm_Header">
+                                        <label for="tel" class="p-contactForm_Label">連絡先電話番号</label>
+                                    </p>
+                                    <div class="p-contactForm_Group-Content">
+                                        <p class="p-contactForm_textField">
+                                            <input id="tel" class="o-input p-contactForm_Input" type="tel" name="tel" placeholder="" title="電話番号の入力は必須です" required aria-required="true">
+                                        </p>
+                                        <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                                    </div>
+                                </div>
+                                <!-- メールアドレス入力欄 -->
+                                <div class="p-contactForm_Group">
+                                    <p class="p-contactForm_Header">
+                                        <label for="email" class="p-contactForm_Label">メールアドレス</label>
+                                    </p>
+                                    <div class="p-contactForm_Group-Content">
+                                        <p class="p-contactForm_textField">
+                                            <input id="email" class="o-input p-contactForm_Input" type="email" name="email" placeholder="" title="メールアドレスの入力は必須です" required aria-required="true">
+                                        </p>
+                                        <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                                    </div>
+                                </div>
+                                <!-- お問い合せ内容入力欄 -->
+                                <div class="p-contactForm_Group">
+                                    <p class="p-contactForm_Header">
+                                        <label for="message" class="p-contactForm_Label">メッセージ</label>
+                                    </p>
+                                    <div class="p-contactForm_Group-Content">
+                                        <p class="p-contactForm_textField">
+                                            <textarea id="message" class="o-textarea p-contactForm_textarea" type="text" name="message" placeholder="" title="お問い合せ内容の入力は必須です" required aria-required="true"></textarea>
+                                        </p>
+                                        <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                                    </div>
+                                </div>
+                                <div class="p-contactForm_underComponent">
+                                    <button type="submit" class="c-button c-button-border" data-op="vertical-right">SEND</button>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <div class="m-post-underComponent">
-                        <nav class="m-post-pagination__nav c-pagination__nav" role="navigation"
-                            aria-label="投稿記事ナビゲーション">
-                            <ol class="c-pagination__navlist">
-                                <li>
-                                    <span class="c-pagination__nav--item">
-                                        <i class="c-pagination-icon --prev" aria-hidden="true"></i>
-                                    </span>
-                                </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers">1</a>
-                                </li>
-                                <li>
-                                    <span class="c-pagination__nav--item p-dotted">...</span>
-                                </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers">3</a>
-                                </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers" aria-current="page">4</a>
-                                </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers">5</a>
-                                </li>
-                                <li>
-                                    <span class="c-pagination__nav--item p-dotted">...</span>
-                                </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item" title="次のページ">
-                                        <i class="c-pagination-icon --next" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ol>
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -245,7 +264,7 @@
                     ご質問などありましたらお気軽にお問い合わせください
                 </p>
                 <div class="s-contact__link">
-                    <a href="#" class="c-button c-button-border s-contact__button"
+                    <a href="./contact.html" class="c-button c-button-border s-contact__button"
                         data-op="vertical-right">お問い合わせフォームへ</a>
                 </div>
                 <div class="s-contact__tel">
@@ -274,7 +293,7 @@
                 <nav class="s-footer__nav">
                     <ul class="s-footer__navlist">
                         <li class="s-footer__navlist--item">
-                            <a class="touch-hover" href="./">ホーム</a>
+                            <a class="touch-hover" href="./index.html">ホーム</a>
                         </li>
                         <li class="s-footer__navlist--item s-footer-dropdown">
                             <div class="s-footer-dropdown__header js-footer-dropdown-header">
@@ -297,7 +316,7 @@
                             </div>
                         </li>
                         <li class="s-footer__navlist--item">
-                            <a class="touch-hover" href="#">価格</a>
+                            <a class="touch-hover" href="./price.html">価格</a>
                         </li>
                         <li class="s-footer__navlist--item">
                             <a class="touch-hover" href="./news.html">お知らせ</a>
@@ -327,6 +346,7 @@
 
     <!-- script -->
     <script src="./js/utility.js"></script>
+    <script src="./js/screen-animate.js" type="module"></script>
     <script src="./js/pointer.js" type="module" async></script>
     <script src="./js/viewport.js" type="module"></script>
     <script src="./js/scrollobserver.js" type="module"></script>

@@ -1,0 +1,184 @@
+.p-priceDetail_Container {
+    @media(--lg) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+.p-priceDetail_Child {
+    border: 2px solid var(--color-main);
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.p-priceDetail_Child-Overlap {
+    width: max-content;
+}
+
+.p-priceDetail_Child-text.-price {
+    color: var(--color-main);
+    font-size: 41px;
+    font-weight: 500;
+    text-align: center;
+
+    &::after {
+        content: "円";
+        font-size: 12px;
+        text-indent: 4px;
+        color: var(--color-text);
+        display: inline-block;
+    }
+}
+
+.p-priceDetail_Child-text.-use {
+    text-align: center;
+}
+
+.p-priceDetail_Child-taxt.-tax {
+    text-align: right;
+}
+
+.p-priceDetail_Child-plusIcon {
+    height: 50px;
+    display: block;
+    text-align: center;
+    position: relative;
+
+    @media (--lg) {
+        width: 50px;
+    }
+
+    &>* {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--color-main);
+        font-size: 20px;
+    }
+}
+
+.p-responsive-Container {
+    padding: 1px;
+    overflow-x: auto;
+}
+
+.p-price-Table {
+    width: 100%;
+    min-width: 768px;
+    border-bottom: 1px solid var(--color-table-border);
+    font-family: $font-family-affogato;
+
+    & .p-price-Table_BodyRow-Data:not(:nth-of-type(2)) {
+        border-right: 1px solid var(--color-table-border);
+        border-left: 1px solid var(--color-table-border);
+        border-bottom: 1px solid var(--color-table-border);
+    }
+
+    & .p-price-Table_BodyRow-Data:nth-of-type(2) {
+        text-align: center;
+    }
+
+    & .p-price-Table_BodyRow-Data:nth-of-type(3) {
+        text-align: right;
+    }
+
+    & .p-price-Table_BodyRow-Data:nth-of-type(2),
+    & .p-price-Table_BodyRow-Data:nth-of-type(3) {
+        font-size: 30px;
+        color: var(--color-main);
+    }
+
+    & .-price-unit {
+        &::after {
+            content: "円";
+            font-size: 14px;
+            color: var(--color-text);
+            text-indent: 4px;
+            color: var(--color-text);
+            display: inline-block;
+        }
+    }
+
+    & .-single-price {
+        position: relative;
+        top: -1.2em;
+    }
+}
+
+.p-price-Table_BodyRow {
+    &:nth-child(odd) {
+        background: var(--color-bg);
+    }
+}
+
+.p-price-Table_HeaderRow-Title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: var(--font-weight-title);
+    border-bottom: 9px solid var(--color-main);
+    padding-bottom: 18px;
+}
+
+.p-price-Table_Body {
+    & .p-price-Table_BodyRow-Data {
+        padding: 12px 30px;
+    }
+}
+
+.p-price-Table02_headline {
+    font-size: clamp(18px, 1.75vw, 21px);
+    font-weight: var(--font-weight-title);
+    letter-spacing: 0.08em;
+}
+
+.p-price-Table02_Body {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.p-price-Table02_BodyRow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--color-table-border);
+    padding: 20px 0;
+}
+
+.p-price-Table02_BodyRow-Data-Container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+    @media (--md) {
+        flex-basis: 50%;
+    }
+}
+
+.p-price-Table02_BodyRow-Data_Price-Total {
+    color: var(--color-main);
+    font-size: 30px;
+    text-align: right;
+    border-top: 1px solid var(--color-table-border);
+    padding-top: 20px;
+
+    &::before, &::after {
+        font-size: 14px;
+        color: var(--color-text);
+        display: inline-block;
+    }
+
+    &::before{
+        content: "合計";
+    }
+
+    &::after{
+        content: "円";
+    }
+}

@@ -48,8 +48,17 @@ class MouseFollow {
     }
 
     unSelectablePointer() {
-        this.unSelectable.forEach((element) => {
-            return console.log(element);
-        }); 
+        this.unSelectable.forEach((element, index) => {
+            element.addEventListener('mouseover', (e) => {
+                this.mouseCenter.style.visiblity = 'hidden';
+                this.mouseCenter.style.opacity = 0;
+                this.mouseCenter.style.transition = 'opacity 0.3s ease 0s';
+            });
+            element.addEventListener('mouseout', (e) => {
+                this.mouseCenter.style.visiblity = 'visible';
+                this.mouseCenter.style.opacity = 1;
+                // this.mouseCenter.style.transition = 'opacity 0.3s ease 0s'
+            });
+        });
     }
 }
