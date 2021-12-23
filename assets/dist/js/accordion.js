@@ -63,7 +63,7 @@ function footerDropdownMenu(destination) {
         new Accordion('s-footer-dropdown', 'js-footer-dropdown-header');
     } else {
         footerDropdown.addEventListener('click', () => {
-            location.href = destination;
+            location.href = encodeURIComponent(destination);
         });
     }
 }
