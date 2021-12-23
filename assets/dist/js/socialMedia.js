@@ -26,6 +26,8 @@ class SocialMediaSharing {
             line: false,
             hatena: false,
             pocket: false,
+            // pinterest: false,
+            // youtube: false,
         }
         // parameter, defaultOptions/options marged.
         this.options = Object.assign(defaultOptions, options);
@@ -70,8 +72,8 @@ class SocialMediaSharing {
         if (this.options.line) this.#RenderHTML('line', 'LINEに送る');
         if (this.options.hatena) this.#RenderHTML('hatena', 'はてなブックマークに登録');
         if (this.options.pocket) this.#RenderHTML('pocket', 'Pocketに保存する');
-        if (this.options.pinterest) this.#RenderHTML('pinterest', 'Pocketに保存する');
-        if (this.options.youtube) this.#RenderHTML('youtube', 'Pocketに保存する');
+        // if (this.options.pinterest) this.#RenderHTML('pinterest', 'Pocketに保存する');
+        // if (this.options.youtube) this.#RenderHTML('youtube', 'Pocketに保存する');
     }
 
     /**

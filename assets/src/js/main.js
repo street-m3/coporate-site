@@ -50,7 +50,6 @@ class MicroMethod {
         const page = document.querySelector('main');
         const attr = page.getAttribute('data-placement');
         console.log(attr);
-        // console.log(page);
     }
 
     /**

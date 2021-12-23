@@ -38,6 +38,14 @@
     letter-spacing: $tracking-wide;
 }
 
+.c-headline-lv5 {
+    font-size: clamp($font-size-root, 2.777vw, $font-size-xl);
+    font-weight: var(--font-weight-title);
+    line-height: $font-lineHeight-default;
+    letter-spacing: $tracking-relaxed;
+    @add-mixin lineHeightCrop $font-lineHeight-default;
+}
+
 /*----------  headline two  ----------*/
 .c-headline-two {
     color: $color-black;

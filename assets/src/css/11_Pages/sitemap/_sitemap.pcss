@@ -1,19 +1,8 @@
 [data-placement='sitemap'] {
     & .p-content-block-scope {
-        width: 687px;
-        margin: 0 auto;
-        max-width: 100%;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-.p-sitemap-block {
-    flex-basis: 100%;
-
-    @media (--md) {
-        flex-basis: calc(100% / 3);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 43.5px;
     }
 }
 

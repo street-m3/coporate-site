@@ -78,7 +78,7 @@ class IntersectionObservers {
     }
 
     _scrollInit() {
-        this.setobservers = new ScrollObserver('.js-HeaderScroll-Target', this._scrollFixedHeader, { once: false });
+        this.setobservers = new ScrollObserver('.js-headerScroll-Target', this._scrollFixedHeader, { once: false });
         this.setobservers = new ScrollObserver('.js-observe', this._scrollAnimateFadein, { once: true, threshold: 0.25, });
     }
 }
