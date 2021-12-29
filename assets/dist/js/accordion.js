@@ -5,6 +5,23 @@ window.addEventListener('load', () => {
     footerDropdownMenu('service.html');
 });
 
+/**
+ * モバイル端末時: ドロップダウンメニュー, PC端末: location.hrefにて遷移させる
+ * @param {string} destination 遷移先のリンクを文字列で記述
+ * @returns 
+ */
+
+ function footerDropdownMenu(destination) {
+    const footerDropdown = document.querySelector('.s-footer-dropdown_Tab');
+    if (window.matchMedia(`(max-width: 992px)`).matches) {
+        new Accordion('s-footer-dropdown', 'js-footer-dropdown-header');
+    } else {
+        footerDropdown.addEventListener('click', () => {
+            location.href = encodeURIComponent(destination);
+        });
+    }
+}
+
 class Accordion {
     constructor(container, tab) {
         this.accordionContainer = document.querySelector(`.${container}`);
@@ -48,22 +65,5 @@ class Accordion {
 
     touchEventDetection() {
         return window.ontouchstart ? "touchstart" : "click";
-    }
-}
-
-/**
- * モバイル端末時: ドロップダウンメニュー, PC端末: location.hrefにて遷移させる
- * @param {string} destination 遷移先のリンクを文字列で記述
- * @returns 
- */
-
-function footerDropdownMenu(destination) {
-    const footerDropdown = document.querySelector('.s-footer-dropdown__tab');
-    if (window.matchMedia(`(max-width: 992px)`).matches) {
-        new Accordion('s-footer-dropdown', 'js-footer-dropdown-header');
-    } else {
-        footerDropdown.addEventListener('click', () => {
-            location.href = encodeURIComponent(destination);
-        });
     }
 }
