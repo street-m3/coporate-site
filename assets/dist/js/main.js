@@ -8,7 +8,7 @@ class MicroMethod {
     constructor() {
         const o = {
             scrollSlideText: "js-AutoScroll-MoveText",
-            headerNavListItem: "s-header__navlist--item",
+            headerNavListItem: "s-header_navList-Item",
             headerNavClosest: "data-hover",
             dropdownMenu: "js-header-dropdown",
             drapdownMenuDetails: "s-header-dropdown",
@@ -144,7 +144,7 @@ class LocationController {
         this.drawerlink = document.querySelectorAll('.s-drawer a');
         this.urlHash = location.hash;
         this.urlTarget = document.getElementById(this.urlHash.replace('#', ''));
-        this.headerClientHeight = document.querySelector('.s-header__brand').clientHeight;
+        this.headerClientHeight = document.querySelector('.s-header_Brand').clientHeight;
         this.init();
     }
 

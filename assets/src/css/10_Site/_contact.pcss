@@ -9,8 +9,7 @@
         margin-top: 140px;
     }
 }
-
-.s-contact__inner {
+.s-contact_Inner {
     padding: 60px 0;
     text-align: center;
 
@@ -20,8 +19,7 @@
         margin: 0 auto;
     }
 }
-
-.s-contact__headline {
+.s-contact_Headline {
     text-align: center;
     font-family: $font-family-affogato;
     font-weight: normal;
@@ -44,8 +42,9 @@
         }
     }
 }
-
-.s-contact__caption {
+.s-contact_Wrapper {
+}
+.s-contact_Caption {
     font-size: 10px;
     margin-top: 10px;
 
@@ -53,8 +52,7 @@
         font-size: 14px;
     }
 }
-
-.s-contact__link {
+.s-contact_ContactLink {
     display: block;
     text-align: center;
     margin-top: 24px;
@@ -63,44 +61,7 @@
         margin-top: 50px;
     }
 }
-
-.s-contact__tel {
-    margin-top: 32px;
-    display: block;
-
-    @media (--md) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-}
-
-.s-contact__tel--caption {
-    font-size: 16px;
-}
-
-.s-contact__tel__wrapper {
-    display: inline-block;
-}
-
-.s-contact__tel--number {
-    font-size: 34px;
-    margin-top: 10px;
-
-    &::before {
-        content: url(../images/tel.svg);
-        display: inline-block;
-        margin-right: 8px;
-    }
-}
-
-.s-contact__tel--day {
-    text-align: right;
-    font-size: 14px;
-}
-
-.s-contact__button {
+.s-contact_ContactLink-Button {
     font-size: 15px;
     font-weight: normal;
     padding: 23px 0;
@@ -111,4 +72,35 @@
         width: 100%;
         font-size: 22px;
     }
+}
+.s-contact_ContactTel {
+    margin-top: 32px;
+    display: block;
+
+    @media (--md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+.s-contact_ContactTel-Caption {
+    font-size: 16px;
+}
+.s-contact_ContactTel_Wrapper {
+    display: inline-block;
+}
+.s-contact_ContactTel-Number {
+    font-size: 34px;
+    margin-top: 10px;
+
+    &::before {
+        content: url(../images/tel.svg);
+        display: inline-block;
+        margin-right: 8px;
+    }
+}
+.s-contact_ContactTel-Date {
+    text-align: right;
+    font-size: 14px;
 }

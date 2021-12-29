@@ -1,26 +1,20 @@
-.c-contact-tel {
+.c-contactComponent-Tel {
     display: inline-block;
     font-family: "Affogato-Medium", sans-serif;
 }
 
-.c-contact-tel__number {
+.s-contact_ContactTel-Number {
     display: block;
     font-size: 34px;
     position: relative;
+
+    &::before {
+        display: inline-block;
+        margin-right: 8px;
+    }
 }
 
-.c-contact-tel__number::before {
-    display: inline-block;
-    margin-right: 8px;
-}
-
-.c-contact-tel__day {
+.s-contact_ContactTel-Date {
     font-size: 14px;
     text-align: right;
 }
-
-
-/* <div class="c-contact-tel">
-    <a href="tel:0123-456-789​" class="c-contact-tel__number">0123-456-789​</a>
-    <p class="c-contact-tel__day">(平日00:00〜00:00)</p>
-</div> */
