@@ -4,7 +4,7 @@
     }
 }
 
-.s-footer__inner {
+.s-footer_Inner {
     font-weight: var(--font-weight-title);
     padding: 0;
 
@@ -17,7 +17,7 @@
     }
 }
 
-.s-footer__address--brand {
+.s-footer_Address-Brand {
     display: none;
 
     @media (--lg) {
@@ -25,11 +25,11 @@
     }
 }
 
-.s-footer__addresslist {
+.s-footer_AddressList {
     margin-top: 19.6px;
 }
 
-.s-footer__addresslist--item {
+.s-footer_Address-List-Item {
     color: var(--color-text);
     font-size: 14px;
     line-height: 25px;
@@ -40,7 +40,7 @@
     }
 }
 
-.s-footer__nav {
+.s-footer_nav {
     width: 100%;
 
     @media (--lg) {
@@ -48,7 +48,7 @@
     }
 }
 
-.s-footer__navlist {
+.s-footer_navList {
     @media (--lg) {
         display: flex;
         justify-content: flex-end;
@@ -57,7 +57,7 @@
     }
 }
 
-.s-footer__navlist--item {
+.s-footer_navList-Item {
     @media (--lg) {
         margin-bottom: 13px;
     }
@@ -66,26 +66,24 @@
         a {
             @media (--lg) {
                 padding: 0 0 0 18px;
-            }
 
-            &::after {
-                content: '';
+                &::after {
+                    content: '';
+                }
             }
         }
     }
 }
 
-.s-footer-dropdown__list--item {
-    &:last-child {
-        border-bottom: none;
-    }
-
-    a {
-        background-color: var(--color-dropdown);
+.s-footer-dropdown_Header {
+    &.is-open-panel .s-footer-dropdown_Tab {
+        &::after {
+            transform: rotate(90deg);
+        }
     }
 }
 
-.s-footer-dropdown__panel {
+.s-footer-dropdown_Container {
     @media (--lg) {
         display: none;
     }
@@ -95,13 +93,19 @@
     transition: max-height 0.3s ease-out;
 }
 
-.s-footer-dropdown__header.is-open-panel .s-footer-dropdown__tab::after {
-    transform: rotate(90deg);
+.s-footer-dropdown_List-Item {
+    &:last-child {
+        border-bottom: none;
+    }
+
+    a {
+        background-color: var(--color-dropdown);
+    }
 }
 
-.s-footer__navlist--item>a,
-.s-footer-dropdown__tab,
-.s-footer-dropdown__list--item>a {
+.s-footer_navList-Item>a,
+.s-footer-dropdown_Tab,
+.s-footer-dropdown_List-Item>a {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,7 +130,7 @@
         content: url(../images/right-arrow-sm.svg);
         display: inline-block;
         position: relative;
-        wodth: 20px;
+        width: 20px;
         height: 20px;
 
         @media (--lg) {
@@ -134,11 +138,12 @@
             position: absolute;
             right: 0;
             top: 0;
+            text-align: right;
         }
     }
 }
 
-.s-footer__copyright {
+.s-footer_Copyright {
     width: 100%;
     text-align: center;
     color: var(--color-main);
