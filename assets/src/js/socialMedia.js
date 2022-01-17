@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    new SocialMediaSharing (
-        document.querySelector('.js-snsIcon-Component'),
-        {
+    new SocialMedia(
+        document.querySelector('.js-snsIcon-Component'), {
             facebook: true,
             twitter: true,
         }
     );
 });
 
-class SocialMediaSharing {
+class SocialMedia {
     /**
      * 
-     * @constructor SocialMediaSharing
+     * @constructor SocialMedia
      * @param {String} root JSで生成したHTMLを格納するコンテナーのクラス名を設定します。 
      * @param {Boolean} options 使用するSocialMediaをBooleanで有効化させます。(初期値はfalse)
      * @returns 
@@ -20,31 +19,42 @@ class SocialMediaSharing {
         this.root = root;
         if (!this.root) return;
 
-        const defaultOptions = {
+        this.defaultOptions = {
+            popup: true,
             facebook: false,
             twitter: false,
             line: false,
             hatena: false,
             pocket: false,
-            // pinterest: false,
-            // youtube: false,
-        }
+            instagram: false,
+            youtube: false,
+            pinterest: false,
+        };
         // parameter, defaultOptions/options marged.
-        this.options = Object.assign(defaultOptions, options);
-        // href
+        this.options = Object.assign(this.defaultOptions, options);
+        
+        /**
+         * this.href Object that stores the URL of the SNS
+         * currentHref Get the current URL.
+         * currentTitle Get the current page title.
+         * currentImage Set the image to be displayed when it is shared. The default setting is to display the OGP.
+         */
         const currentHref = location.href;
         const currentTitle = document.title;
+        const currentImage = document.querySelector('meta[property="og:image"]');
         this.href = {
             facebook: `https://www.facebook.com/share.php?u=${encodeURIComponent(currentHref)}`,
             twitter: `https://twitter.com/share?url=${encodeURIComponent(currentHref)}&text=${encodeURIComponent(currentTitle)}`,
             line: `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(currentHref)}`,
             hatena: `https://b.hatena.ne.jp/entry/panel/?url=${encodeURIComponent(currentHref)}&btitle=${encodeURIComponent(currentTitle)}`,
             pocket: `https://getpocket.com/edit?url=${encodeURIComponent(currentHref)}&title=${encodeURIComponent(currentTitle)}`,
-            // pinterest: `https://getpocket.com/edit?url=${encodeURIComponent(currentHref)}&title=${encodeURIComponent(currentTitle)}`,
-            // youtube: `https://getpocket.com/edit?url=${encodeURIComponent(currentHref)}&title=${encodeURIComponent(currentTitle)}`,
+            instagram: `https://www.instagram.com/instagram/`,
+            youtube: `https://www.youtube.com/user/YouTubeJapan/channels`,
+            pinterest: `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(currentHref)}&media=${encodeURIComponent(currentImage)}&description=${encodeURIComponent(currentTitle)}`,
         }
+
         /**
-         * SVG(path)
+         * SVG Paths 40x40
          */
         this.paths = {
             facebook: 'M 39.375 20 C 39.375 9.296875 30.703125 0.625 20 0.625 C 9.296875 0.625 0.625 9.296875 0.625 20 C 0.625 29.671875 7.710938 37.6875 16.972656 39.140625 L 16.972656 25.601562 L 12.050781 25.601562 L 12.050781 20 L 16.972656 20 L 16.972656 15.730469 C 16.972656 10.875 19.863281 8.195312 24.289062 8.195312 C 26.410156 8.195312 28.628906 8.570312 28.628906 8.570312 L 28.628906 13.335938 L 26.183594 13.335938 C 23.777344 13.335938 23.027344 14.832031 23.027344 16.363281 L 23.027344 20 L 28.402344 20 L 27.542969 25.601562 L 23.027344 25.601562 L 23.027344 39.140625 C 32.289062 37.6875 39.375 29.671875 39.375 20 Z M 39.375 20',
@@ -53,11 +63,10 @@ class SocialMediaSharing {
             hatena: 'M 4.761719 0 C 2.132812 0 0 2.132812 0 4.761719 L 0 35.238281 C 0 37.867188 2.132812 40 4.761719 40 L 35.238281 40 C 37.867188 40 40 37.867188 40 35.238281 L 40 4.761719 C 40 2.132812 37.867188 0 35.238281 0 Z M 10.421875 11.429688 L 18.546875 11.429688 C 21.019531 11.429688 23.019531 13.230469 23.019531 15.457031 C 23.019531 17.265625 21.675781 18.78125 19.847656 19.285156 C 22.097656 19.664062 23.808594 21.582031 23.808594 23.898438 C 23.808594 26.476562 21.664062 28.570312 19.027344 28.570312 L 10.421875 28.570312 Z M 25.652344 11.429688 L 29.523438 11.429688 L 29.523438 22.855469 L 25.652344 22.855469 Z M 14.484375 15.191406 L 14.484375 18.664062 L 16.78125 18.664062 C 17.773438 18.664062 18.582031 17.882812 18.582031 16.910156 C 18.582031 16.019531 17.875 15.285156 16.972656 15.191406 Z M 14.484375 21.714844 L 14.484375 25.535156 L 17.34375 25.535156 C 18.429688 25.535156 19.300781 24.679688 19.300781 23.628906 C 19.300781 22.570312 18.429688 21.714844 17.34375 21.714844 Z M 27.589844 24.761719 C 28.65625 24.761719 29.523438 25.617188 29.523438 26.667969 C 29.523438 27.714844 28.65625 28.570312 27.589844 28.570312 C 26.523438 28.570312 25.652344 27.714844 25.652344 26.667969 C 25.652344 25.617188 26.523438 24.761719 27.589844 24.761719 Z M 27.589844 24.761719',
             pocket: 'M 36.394531 3.125 L 3.625 3.125 C 1.652344 3.125 0 4.75 0 6.695312 L 0 18.578125 C 0 29.535156 8.902344 38.28125 20.019531 38.28125 C 31.089844 38.28125 40 29.535156 40 18.578125 L 40 6.695312 C 40 4.722656 38.417969 3.125 36.394531 3.125 Z M 21.929688 26.722656 C 20.820312 27.761719 19.125 27.699219 18.144531 26.722656 C 7.992188 17.152344 7.882812 17.484375 7.882812 15.894531 C 7.882812 14.410156 9.117188 13.199219 10.625 13.199219 C 12.144531 13.199219 12.0625 13.53125 20.019531 21.046875 C 28.105469 13.410156 27.929688 13.199219 29.4375 13.199219 C 30.945312 13.199219 32.179688 14.410156 32.179688 15.894531 C 32.179688 17.460938 31.917969 17.273438 21.929688 26.722656 Z M 21.929688 26.722656',
             pinterest: 'M 40 20 C 40 31.046875 31.046875 40 20 40 C 17.933594 40 15.953125 39.683594 14.082031 39.105469 C 14.894531 37.773438 16.113281 35.597656 16.566406 33.863281 C 16.804688 32.925781 17.804688 29.105469 17.804688 29.105469 C 18.460938 30.347656 20.363281 31.402344 22.386719 31.402344 C 28.417969 31.402344 32.765625 25.855469 32.765625 18.960938 C 32.765625 12.355469 27.371094 7.410156 20.433594 7.410156 C 11.804688 7.410156 7.21875 13.203125 7.21875 19.515625 C 7.21875 22.453125 8.78125 26.105469 11.273438 27.265625 C 11.652344 27.445312 11.855469 27.363281 11.945312 27 C 12.007812 26.726562 12.347656 25.363281 12.5 24.734375 C 12.546875 24.53125 12.523438 24.355469 12.363281 24.160156 C 11.546875 23.152344 10.886719 21.316406 10.886719 19.597656 C 10.886719 15.183594 14.226562 10.917969 19.917969 10.917969 C 24.832031 10.917969 28.273438 14.265625 28.273438 19.054688 C 28.273438 24.46875 25.539062 28.21875 21.984375 28.21875 C 20.023438 28.21875 18.546875 26.597656 19.023438 24.605469 C 19.589844 22.226562 20.675781 19.660156 20.675781 17.945312 C 20.675781 16.410156 19.855469 15.128906 18.144531 15.128906 C 16.136719 15.128906 14.523438 17.203125 14.523438 19.984375 C 14.523438 21.757812 15.121094 22.953125 15.121094 22.953125 C 15.121094 22.953125 13.144531 31.324219 12.78125 32.886719 C 12.378906 34.613281 12.539062 37.046875 12.710938 38.628906 C 5.273438 35.71875 0 28.476562 0 20 C 0 8.953125 8.953125 0 20 0 C 31.046875 0 40 8.953125 40 20 Z M 40 20',
+            instagram: 'M 20.008,9.891c-5.676,-0 -10.258,4.511 -10.258,10.101c0,5.59 4.582,10.098 10.258,10.098c5.68,-0 10.262,-4.508 10.262,-10.098c-0,-5.59 -4.582,-10.101 -10.262,-10.101Zm-0,16.668c-3.668,-0 -6.668,-2.946 -6.668,-6.567c-0,-3.621 2.992,-6.566 6.668,-6.566c3.68,-0 6.672,2.945 6.672,6.566c-0,3.621 -3,6.567 -6.672,6.567Zm13.074,-17.079c0,1.309 -1.074,2.356 -2.395,2.356c-1.332,-0 -2.394,-1.055 -2.394,-2.356c-0,-1.3 1.074,-2.355 2.395,-2.355c1.32,-0 2.394,1.055 2.394,2.355Zm6.793,2.391c-0.152,-3.156 -0.883,-5.949 -3.23,-8.254c-2.34,-2.305 -5.18,-3.023 -8.387,-3.183c-3.301,-0.184 -13.203,-0.184 -16.508,-0c-3.195,0.152 -6.035,0.871 -8.383,3.175c-2.347,2.301 -3.074,5.098 -3.234,8.25c-0.188,3.254 -0.188,13 -0,16.254c0.152,3.153 0.887,5.949 3.234,8.254c2.348,2.301 5.176,3.024 8.383,3.18c3.305,0.183 13.207,0.183 16.508,-0c3.207,-0.149 6.047,-0.871 8.387,-3.18c2.335,-2.305 3.07,-5.097 3.23,-8.254c0.188,-3.254 0.188,-12.992 0,-16.242Zm-4.27,19.731c-0.695,1.722 -2.042,3.05 -3.8,3.742c-2.637,1.031 -8.887,0.793 -11.797,0.793c-2.91,-0 -9.168,0.23 -11.793,-0.793c-1.75,-0.684 -3.098,-2.012 -3.805,-3.742c-1.043,-2.594 -0.805,-8.747 -0.805,-11.61c0,-2.867 -0.23,-9.027 0.805,-11.609c0.695,-1.723 2.047,-3.051 3.805,-3.746c2.633,-1.028 8.883,-0.789 11.793,-0.789c2.91,-0 9.172,-0.231 11.797,0.789c1.75,0.687 3.097,2.011 3.8,3.746c1.047,2.59 0.805,8.742 0.805,11.609c0,2.863 0.242,9.028 -0.805,11.61Z',
             youtube: 'M 39.167969 10.335938 C 38.707031 8.601562 37.351562 7.238281 35.632812 6.777344 C 32.511719 5.933594 20 5.933594 20 5.933594 C 20 5.933594 7.488281 5.933594 4.367188 6.777344 C 2.648438 7.238281 1.292969 8.601562 0.832031 10.335938 C -0.00390625 13.476562 -0.00390625 20.027344 -0.00390625 20.027344 C -0.00390625 20.027344 -0.00390625 26.582031 0.832031 29.722656 C 1.292969 31.453125 2.648438 32.761719 4.367188 33.222656 C 7.488281 34.066406 20 34.066406 20 34.066406 C 20 34.066406 32.511719 34.066406 35.632812 33.222656 C 37.351562 32.761719 38.707031 31.453125 39.167969 29.722656 C 40.003906 26.582031 40.003906 20.027344 40.003906 20.027344 C 40.003906 20.027344 40.003906 13.476562 39.167969 10.335938 Z M 15.90625 25.976562 L 15.90625 14.078125 L 26.363281 20.027344 Z M 15.90625 25.976562',
         }
-        /**
-         *  Create List: [ul.c-snsIcon-Component_List]
-         */
+        // Generate HTML list tags to store components.
         this.classPrefix = 'c-snsIcon-Component';
         this.snsList = document.createElement('ul');
         this.snsList.setAttribute('class', `${this.classPrefix}_List`);
@@ -67,21 +76,23 @@ class SocialMediaSharing {
     }
 
     init() {
-        if (this.options.facebook) this.#RenderHTML('facebook', 'Facebookでシェア');
-        if (this.options.twitter) this.#RenderHTML('twitter', 'Twitterでシェア');
-        if (this.options.line) this.#RenderHTML('line', 'LINEに送る');
-        if (this.options.hatena) this.#RenderHTML('hatena', 'はてなブックマークに登録');
-        if (this.options.pocket) this.#RenderHTML('pocket', 'Pocketに保存する');
-        // if (this.options.pinterest) this.#RenderHTML('pinterest', 'Pocketに保存する');
-        // if (this.options.youtube) this.#RenderHTML('youtube', 'Pocketに保存する');
+        if (this.options.facebook) this.renderComponent('facebook', 'Facebookでシェア');
+        if (this.options.twitter) this.renderComponent('twitter', 'Twitterでシェア');
+        if (this.options.line) this.renderComponent('line', 'LINEに送る');
+        if (this.options.hatena) this.renderComponent('hatena', 'はてなブックマークに登録');
+        if (this.options.pocket) this.renderComponent('pocket', 'Pocketに保存する');
+        if (this.options.instagram) this.renderComponent('instagram', '公式instagram');
+        if (this.options.youtube) this.renderComponent('youtube', '公式youtube');
+        if (this.options.pinterest) this.renderComponent('pinterest', 'Pintarestに保存する');
+        if (this.options.popup) this.popup();
     }
 
     /**
      * 
-     * @param {String} name サービス名を文字列を設定します。
+     * @param {String} name サービス名を文字列で設定します。
      * @param {String} label aira-labelの設定を文字列で設定します。
      */
-    #RenderHTML(name, label) {
+    renderComponent(name, label) {
         const snsListItem = document.createElement('li');
         const snsListLink = document.createElement('a');
         snsListItem.setAttribute('class', `${this.classPrefix}_List-Item`);
@@ -106,7 +117,23 @@ class SocialMediaSharing {
         svg.setAttribute('aria-hidden', 'true');
         svg.appendChild(path);
         path.setAttribute('d', this.paths[name]);
-        // path.setAttribute('fill', 'black');
         snsListLink.appendChild(svg);
+    }
+
+    /**
+     * Function for opening a popup window.
+     * @returns
+     */
+    popup() {
+        const snsLinks = this.root.querySelectorAll('a');
+        snsLinks.forEach((element) => {
+            element.addEventListener('click', (e) => {
+                const target = e.currentTarget;
+                e.preventDefault();
+                const url = target.getAttribute('href');
+                const popupSize = 'width=580,height=400,menubar=no,toolbar=no,scrollbars=yes';
+                window.open(url, '', popupSize);
+            });
+        });
     }
 }

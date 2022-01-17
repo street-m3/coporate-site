@@ -1,13 +1,11 @@
-[data-placement='sitemap'] {
-    & .p-content-block-scope {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 43.5px;
-    }
+.p-sitemap_Cotainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 43.5px;
 }
 
-.p-sitemap__list {
-    &--item {
+.p-sitemap_List {
+    & .p-sitemap_List-Item {
         a {
             display: block;
             position: relative;
@@ -31,6 +29,6 @@
     }
 }
 
-.p-sitemap__nested {
+.p-sitemap_List-Nested {
     margin-left: 40px;
 }
