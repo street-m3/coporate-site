@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         new ScreenAnimateInnerHTML();
         new ScreenAnimate();
+        new TextAnimation();
     }
 });
 
@@ -155,6 +156,29 @@ class ScreenAnimateInnerHTML {
         </div>
         <div class="c-ScreenAnimate_Context-Wrapper js-ScreenAnimate-Context-Wrapper">${document.body.outerHTML}</div>
         `;
+    }
+}
+
+class TextAnimation extends ScreenAnimate {
+    constructor() {
+        super();
+        const o = {
+            title: 'js-slide-Animate-title',
+            sentence: 'js-slide-Animate-sentence',
+            layer: 'anim-MotionLayer_03',
+            classLists: '-visible',
+        }
+        this.title = document.querySelector(`.${o.title}`);
+        this.sentence = document.querySelector(`.${o.sentence}`);
+        this.layer = document.querySelector(`.${o.layer}`);
+        this.classLists = o.classLists;
+        this.slideAnimation();
+    }
+
+    slideAnimation() {
+        this.layer.addEventListener('animationstart', (e) => {
+            this.title.parentNode.getAttribute('aria-hidden', true) ? this.title.parentNode.setAttribute('aria-hidden', false) : false; 
+        });
     }
 }
 
