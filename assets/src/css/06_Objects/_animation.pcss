@@ -59,34 +59,35 @@
 .anim-reveal-title {
     overflow: hidden;
     transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+
+    & > * {
+        display: block;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+    }
 }
 
-.anim-reveal-title > * {
-    display: block;
-    transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-
-body[data-animate-effect=true] .anim-reveal-title.-visible,
-body[data-animate-effect=true] .anim-reveal-title.-visible > * {
+.p-topMainvisual_Title[aria-hidden="false"] .anim-reveal-title,
+.p-topMainvisual_Title[aria-hidden="false"] .anim-reveal-title > * {
     transform: translate(0, 0);
 }
 
 .anim-reveal-sentence {
     overflow: hidden;
     transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
     text-align: center;
+
+
+    &  > * {
+        display: block;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+    }
 }
 
-.anim-reveal-sentence > * {
-    display: block;
-    transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
-}
-
-body[data-animate-effect=true] .anim-reveal-sentence.-visible,
-body[data-animate-effect=true] .anim-reveal-sentence.-visible > * {
+.p-topMainvisual_Title[aria-hidden="false"] .anim-reveal-sentence,
+.p-topMainvisual_Title[aria-hidden="false"] .anim-reveal-sentence > * {
     transform: translate(0, 0);
 }
