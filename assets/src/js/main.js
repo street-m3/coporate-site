@@ -7,19 +7,13 @@ window.addEventListener('load', () => {
 class MicroMethod {
     constructor() {
         const o = {
-            scrollSlideText: "js-AutoScroll-MoveText",
+            scrollSlideText: "js-autoScroll-String",
             headerNavListItem: "s-header_navList-Item",
             headerNavClosest: "data-hover",
             dropdownMenu: "js-header-dropdown",
             drapdownMenuDetails: "s-header-dropdown",
             paginationNavItem: "page-numbers",
-        };
-        const TextAnimationObjects = {
-            TextAnimateTitleMain: "js-slide-Animate-title",
-            TextAnimateSentence: "js-slide-Animate-sentence",
-            TextAnimateAddCls: "-visible",
-            TextAnimateTime: "3300",
-            TextAnimationDelay: "100",
+            newsTicker: "data-first-visible"
         };
         this.scrollSlideText = document.querySelector(`.${o.scrollSlideText}`)
         this.headerNavListItem = document.querySelectorAll(`.${o.headerNavListItem}`);
@@ -27,26 +21,22 @@ class MicroMethod {
         this.dropdownMenu = document.querySelectorAll(`.${o.dropdownMenu}`);
         this.drapdownMenuDetails = document.querySelector(`.${o.drapdownMenuDetails}`);
         this.paginationNavItem = document.querySelectorAll(`.${o.paginationNavItem}`);
-        // TextAnimation DOM
-        this.TextAnimateTitleMain = document.querySelector(`.${TextAnimationObjects.TextAnimateTitleMain}`);
-        this.TextAnimateSentence = document.querySelector(`.${TextAnimationObjects.TextAnimateSentence}`);
-        this.TextAnimateAddCls = TextAnimationObjects.TextAnimateAddCls;
-        this.TextAnimateTime = TextAnimationObjects.TextAnimateTime;
-        this.TextAnimationDelay = TextAnimationObjects.TextAnimationDelay;
+        this.newsTicker = document.querySelector(`[${o.newsTicker}]`);
         // AddCustomEventListeners
-        this.hoverEventStart = this.hoverEventStart();
-        this.hoverEventEnd = this.hoverEventEnd();
+        this.hoverEventListenersStart = this.hoverEventListenersStart();
+        this.hoverEventListenersEnded = this.hoverEventListenersEnded();
         this.clickEventListeners = this.clickEventListeners();
         // Fucntion init
-        this._CurrentPagePlacement();
-        this._scrollSlideEffect();
+        this._currentGetPlacement();
+        this._scrollAnimationString();
         this._headerNavMenuHover();
         this._dropDownMenu();
         this._paginationAriaLabel();
-        this._textAnimated();
+        this._anchorSetAttributes();
+        this._newsTickerStart();
     }
 
-    _CurrentPagePlacement() {
+    _currentGetPlacement() {
         const page = document.querySelector('main');
         const attr = page.getAttribute('data-placement');
         console.log(attr);
@@ -57,10 +47,10 @@ class MicroMethod {
      */
     _dropDownMenu() {
         this.dropdownMenu.forEach(element => {
-            element.addEventListener(this.hoverEventStart, () => {
+            element.addEventListener(this.hoverEventListenersStart, () => {
                 this.drapdownMenuDetails.setAttribute('aria-hidden', 'false');
             });
-            element.addEventListener(this.hoverEventEnd, () => {
+            element.addEventListener(this.hoverEventListenersEnded, () => {
                 this.drapdownMenuDetails.setAttribute('aria-hidden', 'true');
             });
         });
@@ -69,7 +59,7 @@ class MicroMethod {
     /**
      * スクロールイベント検知したらテキストをスライドさせる
      */
-    _scrollSlideEffect() {
+    _scrollAnimationString() {
         window.addEventListener('scroll', () => {
             if (!this.scrollSlideText) return;
             this.scrollSlideText.style.transform = `translateX(${window.scrollY / 7}px)`;
@@ -82,11 +72,11 @@ class MicroMethod {
     _headerNavMenuHover() {
         this.headerNavListItem.forEach(element => {
             const hoverAnchor = element.querySelector('a');
-            element.addEventListener(this.hoverEventStart, () => {
+            element.addEventListener(this.hoverEventListenersStart, () => {
                 this.headerNavClosest.dataset.hover = "true";
                 hoverAnchor.classList.add("active");
             });
-            element.addEventListener(this.hoverEventEnd, () => {
+            element.addEventListener(this.hoverEventListenersEnded, () => {
                 this.headerNavClosest.dataset.hover = "false";
                 hoverAnchor.classList.remove("active");
             });
@@ -105,15 +95,7 @@ class MicroMethod {
         }
     }
 
-    _textAnimated() {
-        if(!(this.TextAnimateTitleMain && this.TextAnimateSentence)) return;
-        setTimeout(() => {
-            this.TextAnimateTitleMain.classList.add(this.TextAnimateAddCls);
-            setTimeout(() => { this.TextAnimateSentence.classList.add(this.TextAnimateAddCls); }, this.TextAnimationDelay);
-        }, this.TextAnimateTime);
-    }
-
-    _contentLinkAll() {
+    _anchorSetAttributes() {
         const anchor = document.querySelectorAll('a');
         anchor.forEach((element) => {
             if (element.hasAttribute('target') === false || element.getAttribute('target') !== '_blank') return;
@@ -121,11 +103,17 @@ class MicroMethod {
         });
     }
 
-    hoverEventStart() {
+    _newsTickerStart() {
+        document.querySelector('.anim-MotionLayer_03').addEventListener('animationstart', () => {
+            this.newsTicker.dataset.firstVisible = 'false' ? 'true' : '';
+        })
+    }
+
+    hoverEventListenersStart() {
         return window.ontouchstart ? 'touchstart' : 'mouseover';
     }
 
-    hoverEventEnd() {
+    hoverEventListenersEnded() {
         return window.ontouchstart ? 'touchend' : 'mouseout';
     }
 
@@ -135,7 +123,7 @@ class MicroMethod {
 }
 
 // 別ページから遷移してきた時の処理
-document.addEventListener('DOMContentLoaded', (e) => {
+window.addEventListener('load', (e) => {
     new LocationController();
 });
 class LocationController {
