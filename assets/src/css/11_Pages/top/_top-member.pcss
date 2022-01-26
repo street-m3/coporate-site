@@ -58,7 +58,7 @@
     display: block;
 
     & [lang='ja'] {
-        line-height: 1.6;
+        line-height: $leading-snug;
         font-size: clamp(18px, 3vw, 21px);
         letter-spacing: 0.03em;
     }
@@ -67,7 +67,7 @@
         color: var(--color-main);
         font-size: clamp(12px, 2vw, 14px);
         letter-spacing: 0.03em;
-        line-height: 1.3;
+        line-height: $leading-relaxed;
         margin-left: clamp(5px, 0.86vw, 10px);
         position: relative;
         white-space: nowrap;
@@ -88,8 +88,8 @@
 }
 
 .p-member-card__text {
-    line-height: 1.5;
-    height: calc(1.5em * 2);
+    line-height: $leading-default;
+    height: calc($leading-default * 2);
     margin-top: 12px;
     overflow: hidden;
     display: -webkit-box;

@@ -1,0 +1,36 @@
+.c-section-Nav_List {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--color-table-border);
+    padding-bottom: 15px;
+}
+
+.c-section-Nav_List-Item {
+    text-align: center;
+
+    &>* {
+        display: inline-block;
+        font-size: clamp($font-size-root, 2.777vw, $font-size-xl);
+        color: var(--color-main);
+
+        &>.c-section-Nav-Link-Icon {
+            position: relative;
+            height: 26px;
+            width: 100%;
+            display: block;
+
+            &::after {
+                content: "";
+                width: 16px;
+                height: 16px;
+                display: block;
+                border-bottom: 2px solid var(--color-text);
+                border-right: 2px solid var(--color-text);
+                transform: rotate(45deg) translate(-50%, -50%);
+                position: absolute;
+                left: calc(50% - 8px);
+                top: 50%;
+            }
+        }
+    }
+}

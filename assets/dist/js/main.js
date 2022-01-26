@@ -13,7 +13,6 @@ class MicroMethod {
             dropdownMenu: "js-header-dropdown",
             drapdownMenuDetails: "s-header-dropdown",
             paginationNavItem: "page-numbers",
-            newsTicker: "data-first-visible"
         };
         this.scrollSlideText = document.querySelector(`.${o.scrollSlideText}`)
         this.headerNavListItem = document.querySelectorAll(`.${o.headerNavListItem}`);
@@ -21,7 +20,6 @@ class MicroMethod {
         this.dropdownMenu = document.querySelectorAll(`.${o.dropdownMenu}`);
         this.drapdownMenuDetails = document.querySelector(`.${o.drapdownMenuDetails}`);
         this.paginationNavItem = document.querySelectorAll(`.${o.paginationNavItem}`);
-        this.newsTicker = document.querySelector(`[${o.newsTicker}]`);
         // AddCustomEventListeners
         this.hoverEventListenersStart = this.hoverEventListenersStart();
         this.hoverEventListenersEnded = this.hoverEventListenersEnded();
@@ -33,7 +31,6 @@ class MicroMethod {
         this._dropDownMenu();
         this._paginationAriaLabel();
         this._anchorSetAttributes();
-        this._newsTickerStart();
     }
 
     _currentGetPlacement() {
@@ -101,12 +98,6 @@ class MicroMethod {
             if (element.hasAttribute('target') === false || element.getAttribute('target') !== '_blank') return;
             element.setAttribute('rel', 'noopener noreferrer');
         });
-    }
-
-    _newsTickerStart() {
-        document.querySelector('.anim-MotionLayer_03').addEventListener('animationstart', () => {
-            this.newsTicker.dataset.firstVisible = 'false' ? 'true' : '';
-        })
     }
 
     hoverEventListenersStart() {

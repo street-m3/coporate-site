@@ -1,8 +1,8 @@
-.p-definition__list {
+.p-privacy-Definition_List {
     font-weight: var(--font-weight-text);
 }
 
-.p-definition__title {
+.p-privacy-Definition_Title {
     font-size: 1rem;
     color: var(--color-main);
     letter-spacing: 0.08em;
@@ -12,9 +12,10 @@
     }
 }
 
-.p-definition__text {
-    line-height: 2.5;
+.p-privacy-Definition_Text {
+    line-height: $leading-x-loose;
     font-size: 14px;
+    margin-top: 10px;
 
     @media (--md) {
         font-size: 1rem;
@@ -28,10 +29,4 @@
             margin-bottom: 2em;
         }
     }
-}
-
-/* margin-top: clamp(20px, 3.4722vw, 40px); */
-
-[data-placement="policy"] .p-definition__text {
-    margin-top: 10px;
 }

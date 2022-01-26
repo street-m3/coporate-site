@@ -18,7 +18,7 @@
     z-index: var(--zindex-drawer-btn);
 
     &::after {
-        color: $color-white;
+        color: var(--color-white);
         font-size: 10px;
         font-family: $font-family-affogato;
         position: absolute;
@@ -36,7 +36,7 @@
     }
 
     & .button-line {
-        background-color: $color-white;
+        background-color: var(--color-white);
         display: inline-block;
         height: 1px;
         left: 50%;
@@ -87,7 +87,7 @@
 }
 
 .s-drawer-navMenu {
-    background-color: $color-white;
+    background-color: var(--color-white);
     font-size: 14px;
     font-weight: normal;
     height: 100vh;
@@ -115,7 +115,7 @@
 
 .s-drawer-navMenu_List {
     & .s-drawer-navMenu_List-item {
-        border-bottom: 1px solid #707070;
+        border-bottom: 1px solid var(--color-border-base);
 
         & a,
         & button {
@@ -153,7 +153,7 @@
 
 .s-drawer-dropdown_navList {
     & .s-drawer-dropdown_navList-item {
-        border-bottom: 1px solid #707070;
+        border-bottom: 1px solid var(--color-border-base);
         &:last-child {
             border-bottom: none;
         }

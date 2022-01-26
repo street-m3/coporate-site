@@ -92,12 +92,9 @@ class ScreenAnimate {
     init() {
         if (!this.dataEffectSetAttribute) return;
         this.screenAnimateSettings();
-        setTimeout(() => {
-            this.screenAnimateLoaded();
-        }, this.animateTime);
-        setTimeout(() => {
-            backfaceFixed(false);
-        }, this.animateTime + 1000);
+        setTimeout(() => { this.screenAnimateLoaded(); }, this.animateTime);
+        setTimeout(() => { backfaceFixed(false); }, this.animateTime + 1000);
+        return;
     }
 
     screenAnimateLoaded() {
@@ -124,7 +121,7 @@ class ScreenAnimateInnerHTML {
         // c-ScreenAnimate_Container = アニメーションに必要なレイヤーをまとめる
         // c-ScreenAnimate_Layer = スクリーンに表示するレイヤー
         // c-ScreenAnimate_Context-Wrapper = bodyタグ直下、背景固定と不可視->可視にするレイヤー
-        document.body.outerHTML = `
+        return document.body.outerHTML = `
         <div class="c-ScreenAnimate_Container">
             <div class="c-ScreenAnimate_Layer anim-MotionLayer_01">
                 <div class="c-ScreenAnimate_Routine js-ScreenAnimate-Routine">
@@ -159,6 +156,10 @@ class ScreenAnimateInnerHTML {
     }
 }
 
+
+// スクリーンアニメーション終了する時にテキストアニメーションを動作させる。
+// animationendに関わる処理(ニュースティッカー)もここに格納する
+
 class TextAnimation extends ScreenAnimate {
     constructor() {
         super();
@@ -166,19 +167,30 @@ class TextAnimation extends ScreenAnimate {
             title: 'js-slide-Animate-title',
             sentence: 'js-slide-Animate-sentence',
             layer: 'anim-MotionLayer_03',
-            classLists: '-visible',
+            newsTicker: "data-first-visible"
         }
         this.title = document.querySelector(`.${o.title}`);
         this.sentence = document.querySelector(`.${o.sentence}`);
         this.layer = document.querySelector(`.${o.layer}`);
-        this.classLists = o.classLists;
+        this.newsTicker = document.querySelector(`[${o.newsTicker}]`);
+        this.init();
+    }
+
+    init() {
+        if(!this.layer) return;
         this.slideAnimation();
     }
 
     slideAnimation() {
         this.layer.addEventListener('animationstart', (e) => {
             this.title.parentNode.getAttribute('aria-hidden', true) ? this.title.parentNode.setAttribute('aria-hidden', false) : false; 
+            this._newsTickerStart();
         });
+        return;
+    }
+
+    _newsTickerStart() {
+        return this.newsTicker.dataset.firstVisible = 'false' ? 'true' : '';
     }
 }
 

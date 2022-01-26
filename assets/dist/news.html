@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>藤岡行政書士事務所</title>
     <meta name="description" content="ディスクリプション">
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="apple-touch-icon" href="./img/favicon.ico" sizes="180x180">
     <!-- 【JP Fonts】-- Noto Sans JP, sans-serif -->
@@ -50,9 +49,9 @@
                                             </li>
                                         </ul>
                                         <div class="s-header-dropdown_Contact">
-                                            <div class="c-contactComponent-Tel">
-                                                <a href="tel:0123-456-789​" class="c-contactComponent-Tel_Number">0123-456-789​</a>
-                                                <p class="c-contactComponent-Tel_Date">(平日00:00〜00:00)</p>
+                                            <div class="c-telephone-Number">
+                                                <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                                <p class="c-telephone-Number_Date">(平日00:00〜00:00)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -79,8 +78,7 @@
 
         <!-- Drawer -->
         <div class="s-drawer">
-            <button type="button" class="s-drawer_Button js-drawer-button" aria-controls="site:drawer-navMenu"
-                aria-label="モバイルメニュー" aria-expanded="false">
+            <button type="button" class="s-drawer_Button js-drawer-button" aria-controls="site:drawer-navMenu" aria-label="モバイルメニュー" aria-expanded="false">
                 <span class="button-line button-line--1"></span>
                 <span class="button-line button-line--2"></span>
             </button>
@@ -130,28 +128,28 @@
                             <a href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
-                    <aside class="s-contact" role="complementary">
-                        <div class="s-contact_Inner">
-                            <h2 class="s-contact_Headline">
+                    <aside class="s-contactBanner" role="complementary">
+                        <div class="s-contactBanner_Inner">
+                            <h2 class="s-contactBanner_Headline">
                                 <span lang="en">CONTACT</span>
                                 <span lang="ja">お問い合わせ</span>
                             </h2>
-                            <div class="s-contact_Wrapper">
-                                <p class="s-contact_Caption">
+                            <div class="s-contactBanner_Wrapper">
+                                <p class="s-contactBanner_Caption">
                                     ご質問などありましたらお気軽にお問い合わせください
                                 </p>
-                                <div class="s-contact_ContactLink">
-                                    <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                                <div class="s-contactBanner_ContactLink">
+                                    <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                                         お問い合わせフォームへ
                                     </a>
                                 </div>
-                                <div class="s-contact_ContactTel">
-                                    <p class="s-contact_ContactTel-Caption">
+                                <div class="s-contactBanner_Tel">
+                                    <p class="s-contactBanner_Tel-Caption">
                                         お電話でのお問い合わせ
                                     </p>
-                                    <div class="s-contact_ContactTel_Wrapper">
-                                        <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                                        <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                                    <div class="c-telephone-Number">
+                                        <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                        <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                                     </div>
                                 </div>
                             </div>
@@ -168,16 +166,14 @@
 
         <!-- breadcrumb -->
         <div class="s-breadcrumb">
-            <div class="ly-inner ly-lg ly-column">
+            <div class="ly-inner_Grid -lg">
                 <nav class="c-breadcrumb" aria-label="breadcrumb">
-                    <ol class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
-                            itemtype="http://schema.org/ListItem">
+                    <ol class="c-breadcrumb_List" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li class="c-breadcrumb_List-Item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a href="https://example.com" itemprop="item"><span itemprop="name">TOP</span></a>
                             <meta itemprop="position" content="1" />
                         </li>
-                        <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
-                            itemtype="http://schema.org/ListItem">
+                        <li class="c-breadcrumb_List-Item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a href="https://example.com" itemprop="item"><span itemprop="name">NEWS</span></a>
                             <meta itemprop="position" content="2" />
                         </li>
@@ -189,155 +185,149 @@
         <!-- main -->
         <main role="main" data-placement="news">
             <div class="ly-content-Area">
-                <div class="ly-inner_ColumnSpaced">
-                    <div class="ly-scoped-Page_Grid">
-                        <div class="ly-scoped-Article_Grid-Block">
-                            <h1 class="c-headline-lv2 c-headline-Primary" data-headline="28 md:75">お知らせ一覧</h1>
-                            <div class="ly-scoped-Article_Spacer">
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
-                                    <a href="#">
-                                        <div class="c-horizontal-Card_Meta">
-                                            <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
-                                            <span class="c-category-Label">ニュース</span>
-                                        </div>
-                                        <div class="c-horizontal-Card_Title">
-                                            <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
-                                        </div>
-                                    </a>
-                                </article>
-                            </div>
-                        </div>
+                <div class="ly-inner_Grid -xs">
+                    <h1 class="c-headline-lv2 c-headline-Primary" data-headline="28 md:75">お知らせ一覧</h1>
+                    <div class="ly-scoped-Article_Spacer">
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="c-card c-horizontal-Card js-observe anim-fadein-up" data-animate="false" data-thumbnail="no">
+                            <a href="#">
+                                <div class="c-horizontal-Card_Meta">
+                                    <time class="c-horizontal-Card_Meta-Date c-headline-lv4">2020.3.4（水）</time>
+                                    <span class="c-category-Label">ニュース</span>
+                                </div>
+                                <div class="c-horizontal-Card_Title">
+                                    <h2 class="c-headline-lv4">ニュースのタイトルが入りますニュースのタイトルが入りますニュース…</h2>
+                                </div>
+                            </a>
+                        </article>
                     </div>
                     <div class="m-post-underComponent">
-                        <nav class="m-post-pagination__nav c-pagination__nav" role="navigation"
-                            aria-label="投稿記事ナビゲーション">
-                            <ol class="c-pagination__navlist">
-                                <li>
-                                    <span class="c-pagination__nav--item">
-                                        <i class="c-pagination-icon --prev" aria-hidden="true"></i>
+                        <nav class="c-pagination_Nav" role="navigation" aria-label="投稿記事ナビゲーション">
+                            <ol class="c-pagination_navList">
+                                <li class="c-pagination_navList-Item">
+                                    <span class="c-pagination_Nav-Link">
+                                        <i class="c-pagination-Nav_Icon --prev" aria-hidden="true"></i>
                                     </span>
                                 </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers">1</a>
+                                <li class="c-pagination_navList-Item">
+                                    <a href="http://" class="c-pagination_Nav-Link  page-numbers">1</a>
                                 </li>
-                                <li>
-                                    <span class="c-pagination__nav--item p-dotted">...</span>
+                                <li class="c-pagination_navList-Item">
+                                    <span class="c-pagination_Nav-Link dotted">...</span>
                                 </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers">3</a>
+                                <li class="c-pagination_navList-Item">
+                                    <a href="http://" class="c-pagination_Nav-Link page-numbers">3</a>
                                 </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers"
-                                        aria-current="page">4</a>
+                                <li class="c-pagination_navList-Item">
+                                    <a href="http://" class="c-pagination_Nav-Link page-numbers" aria-current="page">4</a>
                                 </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item page-numbers">5</a>
+                                <li class="c-pagination_navList-Item">
+                                    <a href="http://" class="c-pagination_Nav-Link page-numbers">5</a>
                                 </li>
-                                <li>
-                                    <span class="c-pagination__nav--item p-dotted">...</span>
+                                <li class="c-pagination_navList-Item">
+                                    <span class="c-pagination_Nav-Link dotted">...</span>
                                 </li>
-                                <li>
-                                    <a href="http://" class="c-pagination__nav--item" title="次のページ">
-                                        <i class="c-pagination-icon --next" aria-hidden="true"></i>
+                                <li class="c-pagination_navList-Item">
+                                    <a href="http://" class="c-pagination_Nav-Link" title="次のページ">
+                                        <i class="c-pagination-Nav_Icon --next" aria-hidden="true"></i>
                                     </a>
                                 </li>
                             </ol>
@@ -348,28 +338,28 @@
         </main>
 
         <!-- contact -->
-        <aside class="s-contact" role="complementary">
-            <div class="s-contact_Inner">
-                <h2 class="s-contact_Headline">
+        <aside class="s-contactBanner" role="complementary">
+            <div class="s-contactBanner_Inner">
+                <h2 class="s-contactBanner_Headline">
                     <span lang="en">CONTACT</span>
                     <span lang="ja">お問い合わせ</span>
                 </h2>
-                <div class="s-contact_Wrapper">
-                    <p class="s-contact_Caption">
+                <div class="s-contactBanner_Wrapper">
+                    <p class="s-contactBanner_Caption">
                         ご質問などありましたらお気軽にお問い合わせください
                     </p>
-                    <div class="s-contact_ContactLink">
-                        <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                    <div class="s-contactBanner_ContactLink">
+                        <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                             お問い合わせフォームへ
                         </a>
                     </div>
-                    <div class="s-contact_ContactTel">
-                        <p class="s-contact_ContactTel-Caption">
+                    <div class="s-contactBanner_Tel">
+                        <p class="s-contactBanner_Tel-Caption">
                             お電話でのお問い合わせ
                         </p>
-                        <div class="s-contact_ContactTel_Wrapper">
-                            <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                            <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                        <div class="c-telephone-Number">
+                            <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                            <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                         </div>
                     </div>
                 </div>
@@ -438,7 +428,7 @@
                 </nav>
             </div>
             <div class="s-footer_Copyright" role="">
-                <div class="ly-inner ly-lg ly-column">
+                <div class="ly-inner_Grid -lg">
                     <small class="s-footer_Copyright-Text" translate="no">© 藤岡行政書士事務所 All Rights Reserved.</small>
                 </div>
             </div>

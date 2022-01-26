@@ -7,7 +7,7 @@
 .c-headline-lv1 {
     font-size: clamp($font-size-md, 3.645vw, $font-size-xxl);
     font-weight: var(--font-weight-title);
-    line-height: $font-lineHeight-default;
+    line-height: $leading-default;
     letter-spacing: $tracking-wide;
     @add-mixin lineHeightCrop $tracking-wide;
 }
@@ -16,7 +16,7 @@
 .c-headline-lv2 {
     font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
     font-weight: var(--font-weight-title);
-    line-height: $font-lineHeight-default;
+    line-height: $leading-default;
     letter-spacing: $tracking-widest;
     @add-mixin lineHeightCrop $tracking-widest;
 }
@@ -41,9 +41,9 @@
 .c-headline-lv5 {
     font-size: clamp($font-size-root, 2.777vw, $font-size-xl);
     font-weight: var(--font-weight-title);
-    line-height: $font-lineHeight-default;
+    line-height: $leading-default;
     letter-spacing: $tracking-relaxed;
-    @add-mixin lineHeightCrop $font-lineHeight-default;
+    @add-mixin lineHeightCrop $leading-default;
 }
 
 /*----------  headline primary  ----------*/
@@ -71,9 +71,9 @@
     & [lang="ja"] {
         display: block;
         font-size: clamp($font-size-lg, 3.645vw, $font-size-xl);
-        line-height: var(--font-lineHeight-default);
+        line-height: $leading-default;
         letter-spacing: $tracking-widest;
-        @add-mixin lineHeightCrop var(--font-lineHeight-default);
+        @add-mixin lineHeightCrop $leading-default;
     }
 
     & [lang="en"] {
@@ -116,7 +116,7 @@
 
     &::before {
         background-color: var(--color-main);
-        color: $color-white;
+        color: var(--color-white);
         counter-increment: num;
         content: counter(num,decimal-leading-zero);
         display: block;
@@ -172,7 +172,7 @@
 .c-headline-titleArea {
     font-size: clamp(40px, 6.98vw, 80px);
     font-family: $font-family-affogato;
-    color: $color-white;
+    color: var(--color-white);
     font-weight: normal;
 }
 

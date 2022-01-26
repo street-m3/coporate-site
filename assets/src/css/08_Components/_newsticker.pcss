@@ -4,7 +4,7 @@
     --ticker-size: clamp(320px, 50vw, 683px);
     --mobile-height: 75px;
     --laptop-height: 100px;
-    background-color: #fff;
+    background-color: var(--color-white);
     display: grid;
     grid-template-columns: 1fr minmax(60px, var(--anchor-position));
     grid-template-rows: 1fr;
@@ -74,7 +74,7 @@
     width: calc(100% - 50px);
 
     &>* {
-        line-height: 1.3;
+        line-height: $leading-tight;
     }
 
     @media (--lg) {
@@ -87,13 +87,13 @@
     display: block;
     font-family: $font-family-affogato;
     font-size: 12px;
-    line-height: 1.3;
+    line-height: $leading-tight;
     margin-bottom: 5.8px;
 
     @media (--lg) {
         flex-grow: 1;
         font-size: 14px;
-        line-height: 1.2;
+        line-height: $leading-x-tight;
         margin-bottom: 6.5px;
     }
 }
@@ -102,9 +102,9 @@
     display: block;
     font-family: $font-family-affogato;
     font-size: 11px;
-    max-height: calc(1.3em * 2);
+    max-height: calc($leading-tight * 2);
     overflow: hidden;
-    line-height: 1.3;
+    line-height: $leading-tight;
     
     @media (--lg) {
         font-size: 16px;

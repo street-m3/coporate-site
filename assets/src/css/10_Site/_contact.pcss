@@ -1,6 +1,6 @@
-.s-contact {
+.s-contactBanner {
     background-color: var(--color-main);
-    color: $color-white;
+    color: var(--color-white);
     font-family: $font-family-affogato;
     width: 100%;
     margin-top: 60px;
@@ -9,7 +9,8 @@
         margin-top: 140px;
     }
 }
-.s-contact_Inner {
+
+.s-contactBanner_Inner {
     padding: 60px 0;
     text-align: center;
 
@@ -19,7 +20,8 @@
         margin: 0 auto;
     }
 }
-.s-contact_Headline {
+
+.s-contactBanner_Headline {
     text-align: center;
     font-family: $font-family-affogato;
     font-weight: normal;
@@ -42,9 +44,10 @@
         }
     }
 }
-.s-contact_Wrapper {
-}
-.s-contact_Caption {
+
+.s-contactBanner_Wrapper {}
+
+.s-contactBanner_Caption {
     font-size: 10px;
     margin-top: 10px;
 
@@ -52,7 +55,8 @@
         font-size: 14px;
     }
 }
-.s-contact_ContactLink {
+
+.s-contactBanner_ContactLink {
     display: block;
     text-align: center;
     margin-top: 24px;
@@ -61,7 +65,8 @@
         margin-top: 50px;
     }
 }
-.s-contact_ContactLink-Button {
+
+.s-contactBanner_ContactLink-Button {
     font-size: 15px;
     font-weight: normal;
     padding: 23px 0;
@@ -73,7 +78,8 @@
         font-size: 22px;
     }
 }
-.s-contact_ContactTel {
+
+.s-contactBanner_Tel {
     margin-top: 32px;
     display: block;
 
@@ -83,24 +89,12 @@
         align-items: center;
         flex-wrap: wrap;
     }
-}
-.s-contact_ContactTel-Caption {
-    font-size: 16px;
-}
-.s-contact_ContactTel_Wrapper {
-    display: inline-block;
-}
-.s-contact_ContactTel-Number {
-    font-size: 34px;
-    margin-top: 10px;
 
-    &::before {
-        content: url(../images/tel.svg);
-        display: inline-block;
-        margin-right: 8px;
+    & .s-contactBanner_Tel-Caption {
+        font-size: 16px;
     }
-}
-.s-contact_ContactTel-Date {
-    text-align: right;
-    font-size: 14px;
+
+    & .c-telephone-Number_Link {
+        margin-top: 10px;
+    }
 }

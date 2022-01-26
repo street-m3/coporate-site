@@ -1,0 +1,28 @@
+.s-breadcrumb {
+    margin-top: 38px;
+
+    & .c-breadcrumb_List-Item {
+        font-size: 14px;
+        margin-right: 10px;
+        padding-right: 17px;
+        color: var(--color-main);
+
+        & > * {
+            line-height: inherit;
+        }
+
+        &:first-child {
+            color: var(--color-text);
+        }
+
+        &:not(:last-child)::after {
+            content: '>';
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-breadcrumb);
+        }
+    }
+}

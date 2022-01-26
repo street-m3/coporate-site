@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>藤岡行政書士事務所</title>
     <meta name="description" content="ディスクリプション">
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <link rel="apple-touch-icon" href="./img/favicon.ico" sizes="180x180">
     <!-- 【JP Fonts】-- Noto Sans JP, sans-serif -->
@@ -51,9 +50,9 @@
                                             </li>
                                         </ul>
                                         <div class="s-header-dropdown_Contact">
-                                            <div class="c-contactComponent-Tel">
-                                                <a href="tel:0123-456-789​" class="c-contactComponent-Tel_Number">0123-456-789​</a>
-                                                <p class="c-contactComponent-Tel_Date">(平日00:00〜00:00)</p>
+                                            <div class="c-telephone-Number">
+                                                <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                                <p class="c-telephone-Number_Date">(平日00:00〜00:00)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -80,8 +79,7 @@
 
         <!-- Drawer -->
         <div class="s-drawer">
-            <button type="button" class="s-drawer_Button js-drawer-button" aria-controls="site:drawer-navMenu"
-                aria-label="モバイルメニュー" aria-expanded="false">
+            <button type="button" class="s-drawer_Button js-drawer-button" aria-controls="site:drawer-navMenu" aria-label="モバイルメニュー" aria-expanded="false">
                 <span class="button-line button-line--1"></span>
                 <span class="button-line button-line--2"></span>
             </button>
@@ -131,28 +129,28 @@
                             <a href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
-                    <aside class="s-contact" role="complementary">
-                        <div class="s-contact_Inner">
-                            <h2 class="s-contact_Headline">
+                    <aside class="s-contactBanner" role="complementary">
+                        <div class="s-contactBanner_Inner">
+                            <h2 class="s-contactBanner_Headline">
                                 <span lang="en">CONTACT</span>
                                 <span lang="ja">お問い合わせ</span>
                             </h2>
-                            <div class="s-contact_Wrapper">
-                                <p class="s-contact_Caption">
+                            <div class="s-contactBanner_Wrapper">
+                                <p class="s-contactBanner_Caption">
                                     ご質問などありましたらお気軽にお問い合わせください
                                 </p>
-                                <div class="s-contact_ContactLink">
-                                    <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                                <div class="s-contactBanner_ContactLink">
+                                    <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                                         お問い合わせフォームへ
                                     </a>
                                 </div>
-                                <div class="s-contact_ContactTel">
-                                    <p class="s-contact_ContactTel-Caption">
+                                <div class="s-contactBanner_Tel">
+                                    <p class="s-contactBanner_Tel-Caption">
                                         お電話でのお問い合わせ
                                     </p>
-                                    <div class="s-contact_ContactTel_Wrapper">
-                                        <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                                        <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                                    <div class="c-telephone-Number">
+                                        <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                        <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                                     </div>
                                 </div>
                             </div>
@@ -169,16 +167,14 @@
 
         <!-- breadcrumb -->
         <div class="s-breadcrumb">
-            <div class="ly-inner ly-lg ly-column">
+            <div class="ly-inner_Grid -lg">
                 <nav class="c-breadcrumb" aria-label="breadcrumb">
-                    <ol class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
-                            itemtype="http://schema.org/ListItem">
+                    <ol class="c-breadcrumb_List" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li class="c-breadcrumb_List-Item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a href="https://example.com" itemprop="item"><span itemprop="name">TOP</span></a>
                             <meta itemprop="position" content="1">
                         </li>
-                        <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
-                            itemtype="http://schema.org/ListItem">
+                        <li class="c-breadcrumb_List-Item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a href="https://example.com" itemprop="item"><span itemprop="name">COMPANY</span></a>
                             <meta itemprop="position" content="2">
                         </li>
@@ -190,15 +186,28 @@
         <!-- main -->
         <main role="main" data-placement="company">
             <div class="ly-content-Area">
-                <div class="ly-inner ly-lg ly-column">
-                    <nav class="s-section-nav">
-                        <div class="ly-inner-sm">
-                            <ul class="s-section-nav__list">
-                                <li class="s-section-nav__list--item"><a href="" class="s-section-nav--item__link">代表ご挨拶</a><div class="s-section-nav--item__link--arrow"></div></li>
-                                <li class="s-section-nav__list--item"><a href="" class="s-section-nav--item__link">会社概要</a><div class="s-section-nav--item__link--arrow"></div></li>
-                                <li class="s-section-nav__list--item"><a href="" class="s-section-nav--item__link">沿革</a><div class="s-section-nav--item__link--arrow"></div></li>
-                            </ul>
-                        </div>
+                <div class="ly-inner_Grid -lg">
+                    <nav class="c-section-Nav">
+                        <ul class="c-section-Nav_List">
+                            <li class="c-section-Nav_List-Item">
+                                <a href="" class="c-section-Nav_Link">
+                                    代表ご挨拶
+                                    <span class="c-section-Nav-Link-Icon"></span>
+                                </a>
+                            </li>
+                            <li class="c-section-Nav_List-Item">
+                                <a href="" class="c-section-Nav_Link">
+                                    会社概要
+                                    <span class="c-section-Nav-Link-Icon"></span>
+                                </a>
+                            </li>
+                            <li class="c-section-Nav_List-Item">
+                                <a href="" class="c-section-Nav_Link">
+                                    沿革
+                                    <span class="c-section-Nav-Link-Icon"></span>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                     <div class="ly-scoped-Article_Grid">
                         <div class="ly-scoped-Article_Grid-Block">
@@ -207,7 +216,7 @@
                                     <h2 class="c-headline-Number" data-headline="self 20 md:40">
                                         <span class="c-headline-Number_Index"></span>
                                         <span class="c-headline-Number_Main c-headline-lv3">代表ご挨拶</span>
-                                    </h2> 
+                                    </h2>
                                     <div class="p-companyProfile">
                                         <div class="p-companyProfile_Details">
                                             <p class="p-companyProfile_Details-JobTitle">代表</p>
@@ -338,28 +347,28 @@
         </main>
 
         <!-- contact -->
-        <aside class="s-contact" role="complementary">
-            <div class="s-contact_Inner">
-                <h2 class="s-contact_Headline">
+        <aside class="s-contactBanner" role="complementary">
+            <div class="s-contactBanner_Inner">
+                <h2 class="s-contactBanner_Headline">
                     <span lang="en">CONTACT</span>
                     <span lang="ja">お問い合わせ</span>
                 </h2>
-                <div class="s-contact_Wrapper">
-                    <p class="s-contact_Caption">
+                <div class="s-contactBanner_Wrapper">
+                    <p class="s-contactBanner_Caption">
                         ご質問などありましたらお気軽にお問い合わせください
                     </p>
-                    <div class="s-contact_ContactLink">
-                        <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                    <div class="s-contactBanner_ContactLink">
+                        <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                             お問い合わせフォームへ
                         </a>
                     </div>
-                    <div class="s-contact_ContactTel">
-                        <p class="s-contact_ContactTel-Caption">
+                    <div class="s-contactBanner_Tel">
+                        <p class="s-contactBanner_Tel-Caption">
                             お電話でのお問い合わせ
                         </p>
-                        <div class="s-contact_ContactTel_Wrapper">
-                            <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                            <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                        <div class="c-telephone-Number">
+                            <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                            <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                         </div>
                     </div>
                 </div>
@@ -428,7 +437,7 @@
                 </nav>
             </div>
             <div class="s-footer_Copyright">
-                <div class="ly-inner ly-lg ly-column">
+                <div class="ly-inner_Grid -lg">
                     <small class="s-footer_Copyright-Text" translate="no">© 藤岡行政書士事務所 All Rights Reserved.</small>
                 </div>
             </div>
