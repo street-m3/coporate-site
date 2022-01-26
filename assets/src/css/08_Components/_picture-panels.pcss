@@ -1,36 +1,36 @@
-.c-picture-panel {
+.c-picture-Panel {
     position: relative;
 }
 
-.c-picture-panel-headline {
+.c-picture-Panel_Headline {
     & [lang='en'] {
         display: inline-block;
         width: 100%;
     }
 
     & [lang='ja'] {
-        line-height: 1.5;
+        line-height: $leading-base;
         letter-spacing: 0.08em;
         font-size: clamp($font-size-md, 3.645vw, $font-size-xl);
     }
 }
 
-.c-picture-panel-details {
-    background-color: $color-white;
+.c-picture-Panel_Details {
+    background-color: var(--color-white);
     position: relative;
-}
 
-.c-picture-panel-details p:not([class]) {
-    color: var(--color-caption);
-    line-height: $leading-relaxed;
-    letter-spacing: 0.05em;
+    & p:not([class]) {
+        color: var(--color-caption);
+        line-height: $leading-relaxed;
+        letter-spacing: 0.05em;
 
-    @media (--md) {
-        line-height: $leading-x-loose;
+        @media (--md) {
+            line-height: $leading-x-loose;
+        }
     }
 }
 
-.c-picture-panel__button {
+.c-picture-Panel_Button {
     color: var(--color-main);
     font-size: 14px;
     padding: 16px;

@@ -6,7 +6,7 @@
 .s-header_Brand {
     width: 120px;
     height: 120px;
-    background-color: #fff;
+    background-color: var(--color-white);
     transition: all 0.5s ease 0s;
     overflow: hidden;
     flex-shrink: 0;
@@ -65,7 +65,7 @@
     }
 
     &[data-scroll='true'] {
-        background-color: $color-white;
+        background-color: var(--color-white);
     }
 
     &[data-scroll='true'] .s-header_navList {
@@ -74,7 +74,7 @@
 
     &[data-hover='true'],
     &.active {
-        background-color: $color-white;
+        background-color: var(--color-white);
     }
 
     &[data-hover='true'] .s-header_navList {
@@ -92,7 +92,7 @@
 }
 
 .s-header_nav-Wrapper {
-    color: #fff;
+    color: var(--color-white);
     display: none;
     font-size: 14px;
     height: 100%;
@@ -152,7 +152,7 @@
     @media (--lg) {
         align-items: center;
         background-color: #dce5f4;
-        color: #393939;
+        color: var(--color-text);
         display: flex;
         height: 130px;
         justify-content: flex-start;
@@ -216,13 +216,15 @@
 
 .s-header_Contact-Button {
     background: var(--color-main);
-    color: $color-white;
+    color: var(--color-white);
     font-size: .875rem;
     padding: 16px 0;
 }
 
 .s-header-dropdown_Contact {
-    & .c-contactComponent-Tel_Number::before {
-        content: url(../images/tel@black.svg);
+    & .c-telephone-Number_Link {
+        &::before {
+            content: url(../images/tel@black.svg);
+        }
     }
 }

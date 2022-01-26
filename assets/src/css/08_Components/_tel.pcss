@@ -1,20 +1,21 @@
-.c-contactComponent-Tel {
+.c-telephone-Number {
     display: inline-block;
     font-family: "Affogato-Medium", sans-serif;
 }
 
-.s-contact_ContactTel-Number {
-    display: block;
+.c-telephone-Number_Link {
     font-size: 34px;
-    position: relative;
+    display: block;
+    line-height: $leading-x-tight;
 
     &::before {
+        content: url(../images/tel.svg);
         display: inline-block;
         margin-right: 8px;
     }
 }
 
-.s-contact_ContactTel-Date {
-    font-size: 14px;
+.c-telephone-Number_Date {
     text-align: right;
+    font-size: 14px;
 }

@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <title>藤岡行政書士事務所</title>
     <meta name="description" content="ディスクリプション" />
-    <meta name="viewport"
-        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <link rel="apple-touch-icon" href="./img/favicon.ico" sizes="180x180" />
     <!-- 【JP Fonts】-- Noto Sans JP, sans-serif -->
@@ -50,9 +49,9 @@
                                             </li>
                                         </ul>
                                         <div class="s-header-dropdown_Contact">
-                                            <div class="c-contactComponent-Tel">
-                                                <a href="tel:0123-456-789​" class="c-contactComponent-Tel_Number">0123-456-789​</a>
-                                                <p class="c-contactComponent-Tel_Date">(平日00:00〜00:00)</p>
+                                            <div class="c-telephone-Number">
+                                                <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                                <p class="c-telephone-Number_Date">(平日00:00〜00:00)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -76,11 +75,10 @@
                 </nav>
             </div>
         </header>
-        
+
         <!-- Drawer -->
         <div class="s-drawer">
-            <button type="button" class="s-drawer_Button js-drawer-button" aria-controls="site:drawer-navMenu"
-                aria-label="モバイルメニュー" aria-expanded="false">
+            <button type="button" class="s-drawer_Button js-drawer-button" aria-controls="site:drawer-navMenu" aria-label="モバイルメニュー" aria-expanded="false">
                 <span class="button-line button-line--1"></span>
                 <span class="button-line button-line--2"></span>
             </button>
@@ -130,28 +128,28 @@
                             <a href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
-                    <aside class="s-contact" role="complementary">
-                        <div class="s-contact_Inner">
-                            <h2 class="s-contact_Headline">
+                    <aside class="s-contactBanner" role="complementary">
+                        <div class="s-contactBanner_Inner">
+                            <h2 class="s-contactBanner_Headline">
                                 <span lang="en">CONTACT</span>
                                 <span lang="ja">お問い合わせ</span>
                             </h2>
-                            <div class="s-contact_Wrapper">
-                                <p class="s-contact_Caption">
+                            <div class="s-contactBanner_Wrapper">
+                                <p class="s-contactBanner_Caption">
                                     ご質問などありましたらお気軽にお問い合わせください
                                 </p>
-                                <div class="s-contact_ContactLink">
-                                    <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                                <div class="s-contactBanner_ContactLink">
+                                    <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                                         お問い合わせフォームへ
                                     </a>
                                 </div>
-                                <div class="s-contact_ContactTel">
-                                    <p class="s-contact_ContactTel-Caption">
+                                <div class="s-contactBanner_Tel">
+                                    <p class="s-contactBanner_Tel-Caption">
                                         お電話でのお問い合わせ
                                     </p>
-                                    <div class="s-contact_ContactTel_Wrapper">
-                                        <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                                        <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                                    <div class="c-telephone-Number">
+                                        <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                        <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                                     </div>
                                 </div>
                             </div>
@@ -168,16 +166,14 @@
 
         <!-- breadcrumb -->
         <div class="s-breadcrumb">
-            <div class="ly-inner ly-lg ly-column">
+            <div class="ly-inner_Grid -lg">
                 <nav class="c-breadcrumb" aria-label="breadcrumb">
-                    <ol class="c-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
-                            itemtype="http://schema.org/ListItem">
+                    <ol class="c-breadcrumb_List" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li class="c-breadcrumb_List-Item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a href="https://example.com" itemprop="item"><span itemprop="name">TOP</span></a>
                             <meta itemprop="position" content="1" />
                         </li>
-                        <li class="c-breadcrumb__list--item" itemprop="itemListElement" itemscope
-                            itemtype="http://schema.org/ListItem">
+                        <li class="c-breadcrumb_List-Item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                             <a href="https://example.com" itemprop="item"><span itemprop="name">PRIVACY
                                     POLICY</span></a>
                             <meta itemprop="position" content="2" />
@@ -190,146 +186,143 @@
         <!-- main -->
         <main role="main" data-placement="policy">
             <div class="ly-content-Area">
-                <div class="ly-inner_ColumnSpaced">
-                    <div class="ly-scoped-Page_Grid">
-                        <div class="ly-scoped-Article_Grid-Block">
-                            <h1 class="c-headline-lv2 c-headline-Primary" data-headline="28 md:75">プライバシーポリシー</h1>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">1.個人情報の定義</dt>
-                                    <dd class="p-definition__text">
-                                        「個人情報」とは、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日その他の記述等により特定の個人を識別することができるもの、及び他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものをいいます。
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">2.個人情報の収集</dt>
-                                    <dd class="p-definition__text">
-                                        当サービスではサービスのご契約、お問合せをされた際にお客様の個人情報を収集することがございます。収集するにあたっては利用目的を明記の上、適法かつ公正な手段によります。<br />当サービスで収集する個人情報は以下の通りです。
-                                        <ol>
-                                            <li>A)お名前、フリガナ</li>
-                                            <li>B)ご住所</li>
-                                            <li>C)お電話番号</li>
-                                            <li>D)メールアドレス</li>
-                                            <li>E)パスワード</li>
-                                            <li>F)当サービスとのお取引履歴及びその内容</li>
-                                            <li>
-                                                G)上記を組み合わせることで特定の個人が識別できる情報
-                                            </li>
-                                        </ol>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">3.個人情報の利用</dt>
-                                    <dd class="p-definition__text">
-                                        当サービスではお客様からお預かりした個人情報の利用目的は以下の通りです。
-                                        <ol>
-                                            <li>A)ご注文の確認、照会</li>
-                                            <li>B)お問合せの返信時</li>
-                                        </ol>
-                                        当サービスでは、下記の場合を除いてはお客様の断りなく第三者に個人情報を開示・提供することはいたしません。
-                                        <ol>
-                                            <li>
-                                                A)法令に基づく場合、及び国の機関若しくは地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合
-                                            </li>
-                                            <li>
-                                                B)人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難である場合
-                                            </li>
-                                            <li>
-                                                C)当サービスを運営する会社の関連会社で個人データを交換する場合
-                                            </li>
-                                        </ol>
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">4.個人情報の安全管理</dt>
-                                    <dd class="p-definition__text">
-                                        お客様よりお預かりした個人情報の安全管理はサービス提供会社によって合理的、組織的、物理的、人的、技術的施策を講じるとともに、当サービスでは関連法令に準じた適切な取扱いを行うことで個人データへの不正な侵入、個人情報の紛失、改ざん、漏えい等の危険防止に努めます。
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">5.個人情報の訂正、削除</dt>
-                                    <dd class="p-definition__text">
-                                        お客様からお預かりした個人情報の訂正・削除は下記の問合せ先よりお知らせ下さい。
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">
-                                        6.cookie(クッキー)の使用について
-                                    </dt>
-                                    <dd class="p-definition__text">
-                                        当社は、お客様によりよいサービスを提供するため、cookie
-                                        （クッキー）を使用することがありますが、これにより個人を特定できる情報の収集を行えるものではなく、お客様のプライバシーを侵害することはございません。<br />※cookie
-                                        （クッキー）とは、サーバーコンピュータからお客様のブラウザに送信され、お客様が使用しているコンピュータのハードディスクに蓄積される情報です。
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">7.SSLの使用について</dt>
-                                    <dd class="p-definition__text">
-                                        個人情報の入力時には、セキュリティ確保のため、これらの情報が傍受、妨害または改ざんされることを防ぐ目的でSSL（Secure
-                                        Sockets
-                                        Layer）技術を使用しております。<br />※SSLは情報を暗号化することで、盗聴防止やデータの改ざん防止送受信する機能のことです。SSLを利用する事でより安全に情報を送信する事が可能となります。
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">8.お問合せ先</dt>
-                                    <dd class="p-definition__text">
-                                        こちらよりお問い合わせください。
-                                    </dd>
-                                </dl>
-                            </div>
-                            <div class="ly-scoped-Article_Spacer">
-                                <dl class="p-definition__list">
-                                    <dt class="p-definition__title">
-                                        9.プライバシーポリシーの変更
-                                    </dt>
-                                    <dd class="p-definition__text">
-                                        当サービスでは、収集する個人情報の変更、利用目的の変更、またはその他プライバシーポリシーの変更を行う際は、当ページへの変更をもって公表とさせていただきます。
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
+                <div class="ly-inner_Grid -xs">
+                    <h1 class="c-headline-lv2 c-headline-Primary" data-headline="28 md:75">プライバシーポリシー</h1>
+                    <!-- コンテンツを配置するためのブロック -->
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">1.個人情報の定義</dt>
+                            <dd class="p-privacy-Definition_Text">
+                                「個人情報」とは、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日その他の記述等により特定の個人を識別することができるもの、及び他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものをいいます。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">2.個人情報の収集</dt>
+                            <dd class="p-privacy-Definition_Text">
+                                当サービスではサービスのご契約、お問合せをされた際にお客様の個人情報を収集することがございます。収集するにあたっては利用目的を明記の上、適法かつ公正な手段によります。<br />当サービスで収集する個人情報は以下の通りです。
+                                <ol>
+                                    <li>A)お名前、フリガナ</li>
+                                    <li>B)ご住所</li>
+                                    <li>C)お電話番号</li>
+                                    <li>D)メールアドレス</li>
+                                    <li>E)パスワード</li>
+                                    <li>F)当サービスとのお取引履歴及びその内容</li>
+                                    <li>
+                                        G)上記を組み合わせることで特定の個人が識別できる情報
+                                    </li>
+                                </ol>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">3.個人情報の利用</dt>
+                            <dd class="p-privacy-Definition_Text">
+                                当サービスではお客様からお預かりした個人情報の利用目的は以下の通りです。
+                                <ol>
+                                    <li>A)ご注文の確認、照会</li>
+                                    <li>B)お問合せの返信時</li>
+                                </ol>
+                                当サービスでは、下記の場合を除いてはお客様の断りなく第三者に個人情報を開示・提供することはいたしません。
+                                <ol>
+                                    <li>
+                                        A)法令に基づく場合、及び国の機関若しくは地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合
+                                    </li>
+                                    <li>
+                                        B)人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難である場合
+                                    </li>
+                                    <li>
+                                        C)当サービスを運営する会社の関連会社で個人データを交換する場合
+                                    </li>
+                                </ol>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">4.個人情報の安全管理</dt>
+                            <dd class="p-privacy-Definition_Text">
+                                お客様よりお預かりした個人情報の安全管理はサービス提供会社によって合理的、組織的、物理的、人的、技術的施策を講じるとともに、当サービスでは関連法令に準じた適切な取扱いを行うことで個人データへの不正な侵入、個人情報の紛失、改ざん、漏えい等の危険防止に努めます。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">5.個人情報の訂正、削除</dt>
+                            <dd class="p-privacy-Definition_Text">
+                                お客様からお預かりした個人情報の訂正・削除は下記の問合せ先よりお知らせ下さい。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">
+                                6.cookie(クッキー)の使用について
+                            </dt>
+                            <dd class="p-privacy-Definition_Text">
+                                当社は、お客様によりよいサービスを提供するため、cookie
+                                （クッキー）を使用することがありますが、これにより個人を特定できる情報の収集を行えるものではなく、お客様のプライバシーを侵害することはございません。<br />※cookie
+                                （クッキー）とは、サーバーコンピュータからお客様のブラウザに送信され、お客様が使用しているコンピュータのハードディスクに蓄積される情報です。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">7.SSLの使用について</dt>
+                            <dd class="p-privacy-Definition_Text">
+                                個人情報の入力時には、セキュリティ確保のため、これらの情報が傍受、妨害または改ざんされることを防ぐ目的でSSL（Secure
+                                Sockets
+                                Layer）技術を使用しております。<br />※SSLは情報を暗号化することで、盗聴防止やデータの改ざん防止送受信する機能のことです。SSLを利用する事でより安全に情報を送信する事が可能となります。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">8.お問合せ先</dt>
+                            <dd class="p-privacy-Definition_Text">
+                                こちらよりお問い合わせください。
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ly-scoped-Article_Spacer">
+                        <dl class="p-privacy-Definition_List">
+                            <dt class="p-privacy-Definition_Title">
+                                9.プライバシーポリシーの変更
+                            </dt>
+                            <dd class="p-privacy-Definition_Text">
+                                当サービスでは、収集する個人情報の変更、利用目的の変更、またはその他プライバシーポリシーの変更を行う際は、当ページへの変更をもって公表とさせていただきます。
+                            </dd>
+                        </dl>
                     </div>
                 </div>
             </div>
         </main>
 
         <!-- contact -->
-        <aside class="s-contact" role="complementary">
-            <div class="s-contact_Inner">
-                <h2 class="s-contact_Headline">
+        <aside class="s-contactBanner" role="complementary">
+            <div class="s-contactBanner_Inner">
+                <h2 class="s-contactBanner_Headline">
                     <span lang="en">CONTACT</span>
                     <span lang="ja">お問い合わせ</span>
                 </h2>
-                <div class="s-contact_Wrapper">
-                    <p class="s-contact_Caption">
+                <div class="s-contactBanner_Wrapper">
+                    <p class="s-contactBanner_Caption">
                         ご質問などありましたらお気軽にお問い合わせください
                     </p>
-                    <div class="s-contact_ContactLink">
-                        <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                    <div class="s-contactBanner_ContactLink">
+                        <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                             お問い合わせフォームへ
                         </a>
                     </div>
-                    <div class="s-contact_ContactTel">
-                        <p class="s-contact_ContactTel-Caption">
+                    <div class="s-contactBanner_Tel">
+                        <p class="s-contactBanner_Tel-Caption">
                             お電話でのお問い合わせ
                         </p>
-                        <div class="s-contact_ContactTel_Wrapper">
-                            <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                            <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                        <div class="c-telephone-Number">
+                            <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                            <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                         </div>
                     </div>
                 </div>
@@ -398,7 +391,7 @@
                 </nav>
             </div>
             <div class="s-footer_Copyright">
-                <div class="ly-inner ly-lg ly-column">
+                <div class="ly-inner_Grid -lg">
                     <small class="s-footer_Copyright-Text" translate="no">© 藤岡行政書士事務所 All Rights Reserved.</small>
                 </div>
             </div>

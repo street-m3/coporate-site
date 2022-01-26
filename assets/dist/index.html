@@ -18,9 +18,6 @@
 
 <body data-focus-visible="false" data-animate-effect="false">
     <div class="SiteWrapper">
-        <!-- <div class="c-MouseFollow_Container js-MouseFollow-Container">
-            <img src="./images/movie-icon.png" alt="動画再生アイコン">
-        </div> -->
         <div class="c-mouseFollow_Center js-mouseFollow-Center">
             <span aria-label="クリック" lang="en" class="c-mouseFollow_Text">CLICK</span>
         </div>
@@ -54,9 +51,9 @@
                                             </li>
                                         </ul>
                                         <div class="s-header-dropdown_Contact">
-                                            <div class="c-contactComponent-Tel">
-                                                <a href="tel:0123-456-789​" class="c-contactComponent-Tel_Number">0123-456-789​</a>
-                                                <p class="c-contactComponent-Tel_Date">(平日00:00〜00:00)</p>
+                                            <div class="c-telephone-Number">
+                                                <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                                <p class="c-telephone-Number_Date">(平日00:00〜00:00)</p>
                                             </div>
                                         </div>
                                     </div>
@@ -134,28 +131,28 @@
                             <a href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
-                    <aside class="s-contact" role="complementary">
-                        <div class="s-contact_Inner">
-                            <h2 class="s-contact_Headline">
+                    <aside class="s-contactBanner" role="complementary">
+                        <div class="s-contactBanner_Inner">
+                            <h2 class="s-contactBanner_Headline">
                                 <span lang="en">CONTACT</span>
                                 <span lang="ja">お問い合わせ</span>
                             </h2>
-                            <div class="s-contact_Wrapper">
-                                <p class="s-contact_Caption">
+                            <div class="s-contactBanner_Wrapper">
+                                <p class="s-contactBanner_Caption">
                                     ご質問などありましたらお気軽にお問い合わせください
                                 </p>
-                                <div class="s-contact_ContactLink">
-                                    <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                                <div class="s-contactBanner_ContactLink">
+                                    <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                                         お問い合わせフォームへ
                                     </a>
                                 </div>
-                                <div class="s-contact_ContactTel">
-                                    <p class="s-contact_ContactTel-Caption">
+                                <div class="s-contactBanner_Tel">
+                                    <p class="s-contactBanner_Tel-Caption">
                                         お電話でのお問い合わせ
                                     </p>
-                                    <div class="s-contact_ContactTel_Wrapper">
-                                        <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                                        <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                                    <div class="c-telephone-Number">
+                                        <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                                        <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                                     </div>
                                 </div>
                             </div>
@@ -261,26 +258,26 @@
 
             <!-- SUMMARY -->
             <section class="p-summary">
-                <div class="ly-inner ly-xl">
-                    <div class="c-picture-panel p-summary-panel">
-                        <figure class="p-summary-panel__picture js-observe anim-fadein-up" data-animate="false">
+                <div class="ly-inner_Grid -xl">
+                    <div class="c-picture-Panel p-summary-Panel">
+                        <figure class="p-summary-Panel_Picture js-observe anim-fadein-up" data-animate="false">
                             <picture>
                                 <source media="(min-width: 992px)" srcset="./images/message_pc.jpg">
                                 <img src="./images/message_sp.jpg" alt="行政書士がサポート">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-summary-panel__details js-observe anim-fadein-up"
+                        <div class="c-picture-Panel_Details p-summary-Panel_Details js-observe anim-fadein-up"
                             data-animate="false">
-                            <h2 class="c-headline-Secondary c-picture-panel-headline">
+                            <h2 class="c-headline-Secondary c-picture-Panel_Headline">
                                 <span lang="en">MESSAGE</span>
                                 <span lang="ja">Webを通して人々の心や生活が豊かになるよう、法律の面からサポートいたします。</span>
                             </h2>
-                            <div class="p-summary-panel__text-root">
+                            <div class="p-summary-Panel_Details-Text">
                                 <p>当事務所ではIT法務（契約書作成や各種許認可手続きなど）を中心に、海外技術者のビザ手続き、そしてwebを介した新たなビジネスモデルとして評判の民泊（登録手続き）など、広くwebに関する手続きのサポートを行ってまいります。
                                 </p>
                             </div>
-                            <div class="p-summary-panel__append">
-                                <a href="" class="c-button c-button-border c-picture-panel__button"
+                            <div class="p-summary-Panel_Details-Component">
+                                <a href="" class="c-button c-button-border c-picture-Panel_Button"
                                     data-op="vertical-right">View More</a>
                             </div>
                         </div>
@@ -289,7 +286,7 @@
             </section>
 
             <!-- SERVICE -->
-            <section class="p-service-contents ly-section-Area">
+            <!-- <section class="p-service-contents ly-section-Area">
                 <div class="p-service-container">
                     <div class="p-service-content">
                         <div class="p-service-content__inner">
@@ -335,71 +332,109 @@
                         </div>
                     </div>
                 </div>
+            </section> -->
+
+            <!-- SERVICE -->
+            <section class="p-service-Contents ly-section-Area">
+                <div class="ly-inner_Grid -lg">
+                    <div class="p-service-Content_Placement">
+                        <h2 class="c-headline-Secondary" data-headline="40">
+                            <span lang="en">SERVICE</span>
+                            <span lang="ja">サービス内容</span>
+                        </h2>
+                        <div class="ly-postModule_Grid" data-column="1 sm:2 lg:3">
+                            <div class="o-postModule-Card p-service_Card js-observe anim--fadein-up" data-animate="false">
+                                <figure class="o-postModule-Card_Image">
+                                    <img src="./images/service-01.jpg" alt="">
+                                </figure>
+                                <div class="o-postModule-Card_Body">
+                                    <h3 class="o-postModule-Card_Body-Title">IT法務</h3>
+                                    <p class="o-postModule-Card_Body-Text">当事務所では、新規サービスの適法性判断、利用規約の作成、主要契約書の作成・レビュー、紛争対応などの総合的な法務サービスを提供しています。まずは気軽にご相談ください。</p>
+                                </div>
+                            </div>
+                            <div class="o-postModule-Card p-service_Card js-observe anim--fadein-up" data-animate="false">
+                                <figure class="o-postModule-Card_Image">
+                                    <img src="./images/service-02.jpg" alt="">
+                                </figure>
+                                <div class="o-postModule-Card_Body">
+                                    <h3 class="o-postModule-Card_Body-Title">ビザ申請</h3>
+                                    <p class="o-postModule-Card_Body-Text">初めに無料相談を受けてから、後は全て私どもが手続きをさせていただきます。ビザ申請時の入局管理局面接の立会いもご依頼があればお受けいたします。</p>
+                                </div>
+                            </div>
+                            <div class="o-postModule-Card p-service_Card js-observe anim--fadein-up" data-animate="false">
+                                <figure class="o-postModule-Card_Image">
+                                    <img src="./images/service-03.jpg" alt="">
+                                </figure>
+                                <div class="o-postModule-Card_Body">
+                                    <h3 class="o-postModule-Card_Body-Title">民泊申請</h3>
+                                    <p class="o-postModule-Card_Body-Text">住宅宿泊管理業者の登録を受けようとする者は、住宅宿泊管理業者登録申請書に必要事項を記入の上、必要な添付書類と合わせて、国土交通大臣に提出する必要があります。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- FEATURE -->
-            <section class="p-feature-panels ly-section-Area">
-                <div class="ly-inner ly-lg ly-column">
-                    <h2 class="c-headline-Secondary c-picture-panel-headline" data-headline="40">
+            <section class="p-feature-Panels ly-section-Area">
+                <div class="ly-inner_Grid -lg">
+                    <h2 class="c-headline-Secondary c-picture-Panel-headline" data-headline="40">
                         <span lang="en">FEATURE</span>
                         <span lang="ja">私たちの強み</span>
                     </h2>
                 </div>
-                <div class="p-feature-panels-container">
-                    <div class="c-picture-panel p-feature-panel" data-post="odd">
-                        <figure class="p-feature-panel__image js-observe anim-fadein-up" data-animate="false">
+                <div class="ly-inner_Grid -lg">
+                    <div class="c-picture-Panel p-feature-Panel" data-picture-grid="odd">
+                        <figure class="p-feature-Panel_Images js-observe anim-fadein-up" data-animate="false">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="./images/feature-01_pc.jpg">
                                 <img src="./images/feature-01_sp.jpg" alt="サポートする行政書士">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up"
+                        <div class="c-picture-Panel_Details p-feature-Panel_Details js-observe anim-fadein-up"
                             data-animate="false">
-                            <h2 class="c-headline-Secondary c-picture-panel-headline">
+                            <h2 class="c-headline-Secondary c-picture-Panel_Headline">
                                 <span lang="en">POINT.01</span>
                                 <span lang="ja">本社と現地法人の間の情報交換、交通整理をスムーズにします。</span>
                             </h2>
-                            <div class="p-feature-panel__details--text-root">
+                            <div class="p-feature-Panel_Details-Text">
                                 <p>従業員一人の給与にも満たない顧問料で、取締役会議事録の作 成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。</p>
                             </div>
                         </div>
                     </div>
-                    <div class="c-picture-panel p-feature-panel" data-post="even">
-                        <figure class="p-feature-panel__image js-observe anim-fadein-up" data-animate="false">
+                    <div class="c-picture-Panel p-feature-Panel" data-picture-grid="even">
+                        <figure class="p-feature-Panel_Images js-observe anim-fadein-up" data-animate="false">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="./images/feature-02_pc.jpg">
                                 <img src="./images/feature-02_sp.jpg" alt="サポートする行政書士">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up"
+                        <div class="c-picture-Panel_Details p-feature-Panel_Details js-observe anim-fadein-up"
                             data-animate="false">
-                            <h2 class="c-headline-Secondary c-picture-panel-headline">
-                                <span lang="en">POINT.02</span>
-                                <span lang="ja">情報の正確性、日本法との比較、スピード感は日本基準です。</span>
+                            <h2 class="c-headline-Secondary c-picture-Panel_Headline">
+                                <span lang="en">POINT.01</span>
+                                <span lang="ja">本社と現地法人の間の情報交換、交通整理をスムーズにします。</span>
                             </h2>
-                            <div class="p-feature-panel__details--text-root">
-                                <p>当事務所は、M&Aの中でも特殊な病院・社会福祉法人・介護事業等の買収・事業承継等を成功に導いた実績を有します。その他、学校法人や宗教法人等のM&Aも扱っており、弁護士が直接、承継先の選定からDDやクロージング等を統括して、M&Aを積極的に推し進めて参ります。
-                                </p>
+                            <div class="p-feature-Panel_Details-Text">
+                                <p>従業員一人の給与にも満たない顧問料で、取締役会議事録の作 成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。</p>
                             </div>
                         </div>
                     </div>
-                    <!-- picture panel item 3 -->
-                    <div class="c-picture-panel p-feature-panel" data-post="odd">
-                        <figure class="p-feature-panel__image js-observe anim-fadein-up" data-animate="false">
+                    <div class="c-picture-Panel p-feature-Panel" data-picture-grid="odd">
+                        <figure class="p-feature-Panel_Images js-observe anim-fadein-up" data-animate="false">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="./images/feature-03_pc.jpg">
                                 <img src="./images/feature-03_sp.jpg" alt="サポートする行政書士">
                             </picture>
                         </figure>
-                        <div class="c-picture-panel-details p-feature-panel__details js-observe anim-fadein-up"
+                        <div class="c-picture-Panel_Details p-feature-Panel_Details js-observe anim-fadein-up"
                             data-animate="false">
-                            <h2 class="c-headline-Secondary c-picture-panel-headline">
-                                <span lang="en">POINT.03</span>
-                                <span lang="ja">最低限のコストで、高いパフォーマンスを発揮いたします。</span>
+                            <h2 class="c-headline-Secondary c-picture-Panel_Headline">
+                                <span lang="en">POINT.01</span>
+                                <span lang="ja">本社と現地法人の間の情報交換、交通整理をスムーズにします。</span>
                             </h2>
-                            <div class="p-feature-panel__details--text-root">
-                                <p>当弁護士事務所は、これまで国内最大級のサービサーの経験を生かし、通常は債務者が行う会社更生や民事再生の申立を債権者の側から行い、スポンサーに入札させ、一挙に債権回収を図ることを手がけます。
-                                </p>
+                            <div class="p-feature-Panel_Details-Text">
+                                <p>従業員一人の給与にも満たない顧問料で、取締役会議事録の作 成からコンプライアンス委員会の役目まで覆う戦略的な法務部を提供致します。</p>
                             </div>
                         </div>
                     </div>
@@ -408,7 +443,7 @@
 
             <!-- MEMBER -->
             <section class="p-member ly-section-Area">
-                <div class="ly-inner ly-lg ly-column">
+                <div class="ly-inner_Grid -lg">
                     <h2 class="c-headline-Secondary" data-headline="40">
                         <span lang="en">MEMBER</span>
                         <span lang="ja">スタッフメンバー</span>
@@ -480,28 +515,28 @@
             </section>
         </main>
 
-        <aside class="s-contact" role="complementary">
-            <div class="s-contact_Inner">
-                <h2 class="s-contact_Headline">
+        <aside class="s-contactBanner" role="complementary">
+            <div class="s-contactBanner_Inner">
+                <h2 class="s-contactBanner_Headline">
                     <span lang="en">CONTACT</span>
                     <span lang="ja">お問い合わせ</span>
                 </h2>
-                <div class="s-contact_Wrapper">
-                    <p class="s-contact_Caption">
+                <div class="s-contactBanner_Wrapper">
+                    <p class="s-contactBanner_Caption">
                         ご質問などありましたらお気軽にお問い合わせください
                     </p>
-                    <div class="s-contact_ContactLink">
-                        <a href="./contact.html" class="c-button c-button-border s-contact_ContactLink-Button" data-op="vertical-right">
+                    <div class="s-contactBanner_ContactLink">
+                        <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
                             お問い合わせフォームへ
                         </a>
                     </div>
-                    <div class="s-contact_ContactTel">
-                        <p class="s-contact_ContactTel-Caption">
+                    <div class="s-contactBanner_Tel">
+                        <p class="s-contactBanner_Tel-Caption">
                             お電話でのお問い合わせ
                         </p>
-                        <div class="s-contact_ContactTel_Wrapper">
-                            <a href="tel:0123-456-789​" class="s-contact_ContactTel-Number">0123-456-789​</a>
-                            <p class="s-contact_ContactTel-Date">（平日00:00〜00:00）</p>
+                        <div class="c-telephone-Number">
+                            <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
+                            <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
                         </div>
                     </div>
                 </div>
@@ -570,7 +605,7 @@
                 </nav>
             </div>
             <div class="s-footer_Copyright">
-                <div class="ly-inner ly-lg ly-column">
+                <div class="ly-inner_Grid -lg">
                     <small class="s-footer_Copyright-Text" translate="no">© 藤岡行政書士事務所 All Rights Reserved.</small>
                 </div>
             </div>
