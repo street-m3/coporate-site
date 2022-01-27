@@ -2,10 +2,16 @@
     & .p-accordion-item {
         background-color: var(--color-white);
         border-bottom: 1px solid var(--color-border-accordion);
+        position: relative;
     }
 }
 
+.p-accordion-header {
+    z-index: 0;
+}
+
 .p-accordion-tab {
+    z-index: 1;
     align-items: center;
     display: flex;
     font-size: 1rem;

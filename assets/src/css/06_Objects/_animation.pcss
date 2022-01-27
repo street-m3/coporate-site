@@ -2,15 +2,17 @@
     --duration: 0.8s;
     --timing-function: ease;
     --starting-position: 40px;
-    transition: opacity var(--duration) var(--timing-function), transform var(--duration) var(--timing-function);
+    transition: opacity var(--duration) var(--timing-function), transform var(--duration) var(--timing-function), visibility var(--duration) var(--timing-function);
 
     &[data-animate="false"] {
         opacity: 0;
+        visibility: hidden;
         transform: translateY(var(--starting-position));
     }
 
     &[data-animate="true"] {
         opacity: 1;
+        visibility: visible;
         transform: translateY(0);
     }
 
