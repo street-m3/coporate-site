@@ -1,11 +1,12 @@
-.c-section-Nav_List {
+.c-section-nav_List {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-bottom: 1px solid var(--color-table-border);
     padding-bottom: 15px;
+    column-gap: 1em;
 }
 
-.c-section-Nav_List-Item {
+.c-section-nav_List-Item {
     text-align: center;
 
     &>* {
@@ -13,7 +14,7 @@
         font-size: clamp($font-size-root, 2.777vw, $font-size-xl);
         color: var(--color-main);
 
-        &>.c-section-Nav-Link-Icon {
+        &>.c-section-nav-Link-Icon {
             position: relative;
             height: 26px;
             width: 100%;

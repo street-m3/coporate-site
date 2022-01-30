@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {Object} position ターゲットとなるDOMを設定する
+ */
+
 function _smoothScroll(position) {
     let targetPosition = position;
     let startPosition = window.pageYOffset;
@@ -21,3 +26,18 @@ function easeInOutCubic(t, b, c, d) {
     t -= 2;
     return c / 2 * (t * t * t + 2) + b;
 };
+
+/**
+ * 
+ * @param {String} e (e).currentTarget イベントが現在登録されているターゲットへの参照
+ * @param {Object} clientX 高さを差し引くためのDOMを設定
+ * @returns 
+ */
+
+function targetPosition(e, clientX) {
+    const targetId = e.currentTarget.getAttribute('href') == "#" ? "header" : e.currentTarget.getAttribute("href");
+    const targetElementId = targetId.substr(targetId.indexOf('#'));
+    const targetPoint = document.querySelector(targetElementId);
+    if (!targetPoint) return console.warn('対象のDOMがありません。');
+    return _smoothScroll(targetPoint.offsetTop - clientX);
+}

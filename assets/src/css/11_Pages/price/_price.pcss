@@ -1,4 +1,4 @@
-.p-priceDetail_Container {
+.p-Price-Content_Grid {
     @media(--lg) {
         display: flex;
         align-items: center;
@@ -7,7 +7,7 @@
     }
 }
 
-.p-priceDetail_Child {
+.p-Price-Content_Grid-Item {
     border: 2px solid var(--color-main);
     height: 160px;
     display: flex;
@@ -17,168 +17,202 @@
     flex: 1;
 }
 
-.p-priceDetail_Child-Overlap {
+.p-Price-Description {
     width: max-content;
 }
 
-.p-priceDetail_Child-text.-price {
-    color: var(--color-main);
-    font-size: 41px;
-    font-weight: 500;
-    text-align: center;
-
-    &::after {
-        content: "円";
-        font-size: 12px;
-        text-indent: 4px;
-        color: var(--color-text);
-        display: inline-block;
-    }
-}
-
-.p-priceDetail_Child-text.-use {
-    text-align: center;
-}
-
-.p-priceDetail_Child-taxt.-tax {
-    text-align: right;
-}
-
-.p-priceDetail_Child-plusIcon {
-    height: 50px;
-    display: block;
-    text-align: center;
-    position: relative;
-
-    @media (--lg) {
-        width: 50px;
-    }
-
-    &>* {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: var(--color-main);
-        font-size: 20px;
-    }
-}
-
-.p-responsive-Container {
-    padding: 1px;
-    overflow-x: auto;
-}
-
-.p-price-Table {
-    width: 100%;
-    min-width: 768px;
-    border-bottom: 1px solid var(--color-table-border);
-    font-family: $font-family-affogato;
-
-    & .p-price-Table_BodyRow-Data:not(:nth-of-type(2)) {
-        border-right: 1px solid var(--color-table-border);
-        border-left: 1px solid var(--color-table-border);
-        border-bottom: 1px solid var(--color-table-border);
-    }
-
-    & .p-price-Table_BodyRow-Data:nth-of-type(2) {
+.p-Price-Purpose {
+    &.UseCase {
         text-align: center;
     }
 
-    & .p-price-Table_BodyRow-Data:nth-of-type(3) {
-        text-align: right;
-    }
-
-    & .p-price-Table_BodyRow-Data:nth-of-type(2),
-    & .p-price-Table_BodyRow-Data:nth-of-type(3) {
-        font-size: 30px;
+    &.Value {
         color: var(--color-main);
-    }
+        font-size: 41px;
+        font-weight: 500;
+        text-align: center;
 
-    & .-price-unit {
         &::after {
             content: "円";
-            font-size: 14px;
-            color: var(--color-text);
+            font-size: 12px;
             text-indent: 4px;
             color: var(--color-text);
             display: inline-block;
         }
     }
 
-    & .-single-price {
+    &.Taxes {
+        text-align: right;
+    }
+}
+
+.p-Price-Plus_Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    @media (--lg) {
+        width: 50px;
+    }
+
+    &>* {
         position: relative;
-        top: -1.2em;
-    }
-}
-
-.p-price-Table_BodyRow {
-    &:nth-child(odd) {
-        background: var(--color-bg);
-    }
-}
-
-.p-price-Table_HeaderRow-Title {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: var(--font-weight-title);
-    border-bottom: 9px solid var(--color-main);
-    padding-bottom: 18px;
-}
-
-.p-price-Table_Body {
-    & .p-price-Table_BodyRow-Data {
-        padding: 12px 30px;
-    }
-}
-
-.p-price-Table02_headline {
-    font-size: clamp(18px, 1.75vw, 21px);
-    font-weight: var(--font-weight-title);
-    letter-spacing: 0.08em;
-}
-
-.p-price-Table02_Body {
-    margin-top: 30px;
-    width: 100%;
-}
-
-.p-price-Table02_BodyRow {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-top: 1px solid var(--color-table-border);
-    padding: 20px 0;
-}
-
-.p-price-Table02_BodyRow-Data-Container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    flex-basis: 100%;
-    @media (--md) {
-        flex-basis: 50%;
-    }
-}
-
-.p-price-Table02_BodyRow-Data_Price-Total {
-    color: var(--color-main);
-    font-size: 30px;
-    text-align: right;
-    border-top: 1px solid var(--color-table-border);
-    padding-top: 20px;
-
-    &::before, &::after {
-        font-size: 14px;
-        color: var(--color-text);
+        color: inherit;
         display: inline-block;
-    }
+        height: 20px;
+        pointer-events: none;
+        width: 20px;
 
-    &::before{
-        content: "合計";
-    }
+        &::before,
+        &::after {
+            content: "";
+            bottom: 0;
+            background-color: var(--color-main);
+            display: inline-block;
+            height: 3px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            left: 0;
+            width: 100%;
+        }
 
-    &::after{
-        content: "円";
+        &::after {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.c-responsive-table-components {
+    &.scroll {
+        padding: 1px;
+        overflow-x: auto;
+    }
+}
+
+[data-placement="price"] {
+    & .c-responsive-table-components {
+        & .c-table {
+            width: 100%;
+            min-width: 768px;
+            border-bottom: 1px solid var(--color-table-border);
+            font-family: $font-family-affogato;
+        }
+
+        & .c-teble-component-header {
+            & .c-teble-component-header-title {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: var(--font-weight-title);
+                border-bottom: 9px solid var(--color-main);
+                padding-bottom: 18px;
+            }
+        }
+
+        & .c-teble-component-body {
+            & .c-teble-component-body-row {
+                &:nth-child(odd) {
+                    background: var(--color-bg);
+                }
+            }
+
+            & .c-teble-component-body-row-data {
+                padding: 12px 30px;
+
+                &:not(:nth-of-type(2)) {
+                    border-right: 1px solid var(--color-table-border);
+                    border-left: 1px solid var(--color-table-border);
+                    border-bottom: 1px solid var(--color-table-border);
+                }
+
+                &:nth-of-type(2) {
+                    text-align: center;
+                    font-size: 30px;
+                    color: var(--color-main);
+                }
+
+                &:nth-of-type(3) {
+                    text-align: right;
+                    font-size: 30px;
+                    color: var(--color-main);
+                }
+
+                &[data-unut]::after {
+                    color: var(--color-text);
+                    content: attr(data-unut) "";
+                    display: inline-block;
+                    font-size: 14px;
+                    text-indent: 4px;
+                }
+
+                &[data-blanks="false"] {
+                    position: relative;
+                    top: -1.2em;
+                }
+            }
+        }
+    }
+}
+
+[data-placement="price"] {
+    & .c-liststyle-info-components {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & .c-liststyle-Component {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        & .c-liststyle-Component-Item {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--color-table-border);
+            padding: 20px 0;
+        }
+
+        & .c-liststyle-Component-nested {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            flex-basis: 100%;
+
+            @media (--md) {
+                flex-basis: 50%;
+            }
+
+            &.total {
+                flex-basis: 100%;
+                justify-content: end;
+
+                &>* {
+                    color: var(--color-main);
+                    font-size: 30px;
+                    text-align: right;
+
+                    &::before,
+                    &::after {
+                        font-size: 14px;
+                        color: var(--color-text);
+                        display: inline-block;
+                    }
+
+                    &::before {
+                        content: "合計";
+                        margin-right: 0.5em;
+                    }
+
+                    &::after {
+                        content: "円";
+                        margin-left: 0.5em;
+                    }
+                }
+            }
+        }
     }
 }

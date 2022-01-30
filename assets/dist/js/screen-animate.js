@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const defaultIndex = document.querySelector('[data-placement="home"]');
+    const defaultIndex = document.querySelector('[data-placement="top"]');
     if (!defaultIndex) {
         return document.body.removeAttribute('data-animate-effect');
     } else {
