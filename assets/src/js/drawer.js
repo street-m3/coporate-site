@@ -11,43 +11,45 @@ class Drawer {
      */
     constructor(breakpoints, closed) {
         const o = {
-            openVisibleSet: "data-focus-visible", //body && Overlay
-            triggerButton: "js-drawer-button",
-            toggleOverlay: "js-drawer-overlay",
-            openMenuNavlist: "s-drawer-navMenu",
-            headerNavlist: "s-header_navList",
-            drawerNavlinks: "s-drawer a",
-            headerNavBrand: "s-header_Brand"
+            focusvisible: "data-focus-visible", //body && Overlay
+            triggerbutton: "js-drawer-button",
+            overlay: "js-drawer-overlay",
+            drawerList: "s-drawer-navMenu",
+            headerList: "s-header_navList",
+            headerTitle: "s-header_Brand"
         };
 
         /**
-         * * @type {Object} ドロワー開閉を識別するdata属性
-         * * @type {Object} ドロワーナビゲーションボタン
-         * * @type {Object} メニューが開かれている時の背景を設定
-         * * @type {Object} ドロワーメニューリスト
-         * * @type {Object} ヘッダーメニューリスト
-         * * @type {Number} ブレークポイントの値をインスタンスに設定 [ドロワーの非表示領域]
+         * * @type {Object} focusvisible ドロワー開閉を識別するdata属性
+         * * @type {Object} triggerbutton ドロワーナビゲーションボタン
+         * * @type {Object} overlay メニュー表示時の背景を設定
+         * * @type {Object} drawerList ドロワーナビメニューリスト
+         * * @type {Object} drawerListItem ドロワーナビメニューリンク
+         * * @type {Object} headerList ヘッダーナビメニューリスト
+         * * @type {Object} headerTitle ヘッダーの高さを取得
+         * * @type {Boolean} closed ドロワーナビメニューをクリックしたら自動的にドロワーを閉じるかを真偽値を設定
+         * * @type {Number} breakpoints ブレークポイントの値をインスタンスに設定 [ドロワーの非表示領域]
+         * * @type {Object} devicesize タッチデバイスが有効な場合、PCのメニューを読み上げない
          */
 
-        this.openVisibleSet = document.querySelectorAll(`[${o.openVisibleSet}]`);
-        this.triggerButton = document.querySelector(`.${o.triggerButton}`);
-        this.toggleOverlay = document.querySelector(`.${o.toggleOverlay}`);
-        this.openMenuNavlist = document.querySelector(`.${o.openMenuNavlist}`);
-        this.headerNavlist = document.querySelector(`.${o.headerNavlist}`);
-        this.headerNavBrand = document.querySelector(`.${o.headerNavBrand}`);
-        this.openMenuNavlistItem = this.openMenuNavlist.querySelectorAll('a[href^="#"]');
+        this.focusvisible = document.querySelectorAll(`[${o.focusvisible}]`);
+        this.triggerbutton = document.querySelector(`.${o.triggerbutton}`);
+        this.overlay = document.querySelector(`.${o.overlay}`);
+        this.drawerList = document.querySelector(`.${o.drawerList}`);
+        this.drawerListItem = this.drawerList.querySelectorAll('a[href*="#"]');
+        this.headerList = document.querySelector(`.${o.headerList}`);
+        this.headerTitle = document.querySelector(`.${o.headerTitle}`);
         this.closed = closed;
         this.breakpoints = breakpoints;
-        this.deviceConfig = window.matchMedia(`(min-width:${this.breakpoints}px)`).matches;
-        this.touchEventListener = this.touchEventDetection(); //タッチイベントの分岐
-        this.drawerNavlinks = document.querySelectorAll(`.${o.drawerNavlinks}`);
+        this.devicesize = window.matchMedia(`(min-width:${this.breakpoints}px)`).matches;
+        this.touchEventListener = this.touchEventListener();
         this.init();
     }
 
     init() {
-        this._clickEventListeners(this.triggerButton, this.touchEventListener);
-        this._clickEventListeners(this.toggleOverlay, this.touchEventListener);
-        this._deviceConfigSetAttribute();
+        this._clickEventListeners(this.triggerbutton, this.touchEventListener);
+        this._clickEventListeners(this.overlay, this.touchEventListener);
+        this._devicesizeSetAttribute();
         this._autoClosedMenu();
     }
 
@@ -56,21 +58,21 @@ class Drawer {
         multipleSelect.addEventListener(handler, (e) => {
             e.preventDefault();
             this._defaultSetAttributes();
-            this._openMenuFocusVisibleToggle();
+            this._focusvisibleToggler();
         });
     }
 
     // ボタンがtrueならメニューはaria-hiddenをfalseにする
     _defaultSetAttributes() {
         const isOpend = 'true';
-        const isExpanded = this.triggerButton.getAttribute('aria-expanded') === isOpend;
-        this.triggerButton.setAttribute('aria-expanded', !isExpanded);
-        this.openMenuNavlist.setAttribute('aria-hidden', isExpanded);
+        const isExpanded = this.triggerbutton.getAttribute('aria-expanded') === isOpend;
+        this.triggerbutton.setAttribute('aria-expanded', !isExpanded);
+        this.drawerList.setAttribute('aria-hidden', isExpanded);
     }
 
     // trueでオーバーレイを表示、ウインドウの固定
-    _openMenuFocusVisibleToggle() {
-        this.openVisibleSet.forEach((element) => {
+    _focusvisibleToggler() {
+        this.focusvisible.forEach((element) => {
             if (element.getAttribute('data-focus-visible') === 'true') {
                 element.dataset.focusVisible = 'false';
                 document.body.style.overflow = '';
@@ -82,16 +84,17 @@ class Drawer {
     }
 
     // PC表示の時はドロワーメニューを読み上げない
-    _deviceConfigSetAttribute() {
+    _devicesizeSetAttribute() {
         const ishidden = 'true';
-        this.deviceConfig ? this.headerNavlist.setAttribute('aria-hidden', !ishidden) : this.headerNavlist.setAttribute('aria-hidden', ishidden);
+        return this.devicesize ? this.headerList.setAttribute('aria-hidden', !ishidden) : this.headerList.setAttribute('aria-hidden', ishidden);
     }
 
     _autoClosedMenu() {
         if (this.closed) {
-            this.openMenuNavlistItem.forEach(element => {
-                element.addEventListener(this.touchEventListener, () => {
-                    this.triggerButton.click();
+            this.drawerListItem.forEach(element => {
+                element.addEventListener(this.touchEventListener, (e) => {
+                    targetPosition(e, this.headerTitle.clientHeight)
+                    this.triggerbutton.click();
                 });
             });
         }
@@ -99,7 +102,7 @@ class Drawer {
     }
 
     // PC: click, Tab&SP: touchstartを適用
-    touchEventDetection() {
+    touchEventListener() {
         return window.ontouchstart ? 'touchstart' : 'click';
     }
 }
