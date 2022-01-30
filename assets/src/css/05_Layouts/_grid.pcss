@@ -1,29 +1,48 @@
-.ly-flex-grid {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: wrap;
-    overflow: hidden;
+.ly-inner_Grid {
+    display: grid;
+    grid-template-columns: 40px minmax(0, auto) 40px;
 
-    &[data-column~="1"] {
-        &>* {
-            width: 100%;
+    & > * ,
+    &::before,
+    &::after {
+        grid-column: 2;
+    }
+
+    &.-xl {
+        @media (--xl) {
+            grid-template-columns: minmax(40px, 1fr) minmax(auto, $layout-inner-xl) minmax(40px, 1fr);
         }
     }
 
-    @media (--lg) {
-        &[data-column~="lg:3"] {
-            &>* {
-                width: calc(100% / 3);
-            }
+    &.-lg {
+        @media (--lg) {
+            grid-template-columns: minmax(40px, 1fr) minmax(auto, $layout-inner-lg) minmax(40px, 1fr);
         }
+    }
+
+    &.-sm {
+        @media (--lg) {
+            grid-template-columns: minmax(40px, 1fr) minmax(auto, $layout-inner-md) minmax(40px, 1fr);
+        }
+    }
+
+    &.-xs {
+        @media (--md) {
+            grid-template-columns: minmax(40px, 1fr) minmax(auto, $layout-inner-sm) minmax(40px, 1fr);
+        }
+    }
+}
+
+.ly-postModule_Grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+
+    @media (--lg) {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     @media (--sm) {
-        &[data-column~="sm:2"] {
-            &>* {
-                width: calc(100% / 2);
-            }
-        }
+        grid-template-columns: repeat(2, 1fr);
     }
 }
