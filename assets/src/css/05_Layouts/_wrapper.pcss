@@ -145,22 +145,6 @@
     }
 }
 
-.ly-scoped-Page_Grid {
-    display: grid;
-    grid-template-columns: 0 1fr 0;
-    grid-template-rows: 1fr;
-    background-color: transparent;
-
-    @media (--md) {
-        grid-template-columns: 55px 1fr 55px;
-        grid-template-rows: 1fr;
-    }
-
-    &>* {
-        grid-area: 1 / 2 / 2 / 3;
-    }
-}
-
 .ly-inner_ColumnSpaced {
     width: $layout-inner-md;
     margin: 0 auto;
