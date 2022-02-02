@@ -7,10 +7,10 @@ class Ellipsis {
         this.sectence = document.querySelectorAll(`.${str}`);
         this.after = '...';
         this.num = num;
-        this.trim();
+        this.slice();
     }
 
-    trim() {
+    slice() {
         this.sectence.forEach(element => {
             const concat = element.textContent.trim();
             if (concat.length > this.num) {
