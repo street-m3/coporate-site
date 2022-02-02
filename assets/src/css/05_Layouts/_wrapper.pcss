@@ -1,3 +1,4 @@
+/* body直下に全てのhtmlを格納する */
 .SiteWrapper {
     overflow: hidden;
     display: flex;
@@ -10,29 +11,35 @@
     }
 }
 
+/* メインコンテンツに配置するスペーサー */
 .ly-content-Area {
     padding-top: clamp(45px, 4.3339vw, 60px);
     padding-bottom: clamp(188px, 13.9vw, 190px);
 }
 
-.ly-section-Spaced {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.ly-article-Section {
-    & + & {
+/* セクション毎に配置するスペーサー */
+.ly-blocks-Space-Normal {
+    & > * {
         margin-top: 60px;
+    }
+
+    & > :first-child {
+        margin-top: 0 !important;
     }
 }
 
-.ly-block-Adjacent {
-    margin-top: clamp(60px, 8.3333vw, 100px);
+/* セクション毎に配置するスペーサー2 */
+.ly-blocks-Space-Large {
+    & > *  {
+        margin-top: clamp(60px, 8.3333vw, 100px);
+    }
+
+    & > :first-child {
+        margin-top: 0 !important;
+    }
 }
 
-.ly-scoped-Article {
-    --max-size-y: clamp(20px, calc(1.25rem + ((1vw - 4px) * 12.94)), 145px);
-    --max-size-x: clamp(40px, 7.7vw, 116px);
-    background-color: var(--color-white);
-    padding: var(--max-size-x) var(--max-size-y);
+.ly-section-Spaced {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
