@@ -8,10 +8,11 @@
 
 /* ブログ投稿記事テンプレート */
 .th-user-article-Template {
-    --max-size-y: clamp(50px, 4.392vw, 60px);
+    --max-size-y-top: clamp(50px, 4.392vw, 60px);
+    --max-size-y-bottom: clamp(75px, 18.75vw, 122px);
     --max-size-x: clamp(20px, 3vw, 40px);
     background-color: var(--color-white);
-    padding: var(--max-size-y) var(--max-size-x);
+    padding: var(--max-size-y-top) var(--max-size-x) var(--max-size-y-bottom);
 }
 
 /* ブログ投稿記事テンプレート メタデータ */
@@ -19,6 +20,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 

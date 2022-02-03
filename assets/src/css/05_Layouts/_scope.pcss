@@ -58,13 +58,38 @@
         }
 
         & p:not([class]) {
-            font-size: 1rem;
             line-height: $leading-x-loose;
             letter-spacing: $tracking-wide;
         }
     }
 }
 
+[data-placement="article"] {
+    & .sc-user-writing-Area {
+        &>* {
+            margin-top: clamp(1.5em, 3.5vw, 2em);
+        }
+
+        &> :first-child {
+            margin-top: 0 !important;
+        }
+    
+        &> :last-child {
+            margin-bottom: 0 !important;
+        }
+
+        & h2 {
+            border-bottom: 2px solid var(--color-main);
+            padding-bottom: 14px;
+        }
+
+        & p:not([class]) {
+            line-height: $leading-relaxed;
+            letter-spacing: $tracking-wide;
+            /* margin-top: 1.5em; */
+        }
+    }
+}
 
 .user-writing-Area {
     &>* {
