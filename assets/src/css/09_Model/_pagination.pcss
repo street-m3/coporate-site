@@ -1,9 +1,15 @@
-.m-post-underComponent {
-    & > * {
+.m-pager-Component {
+    & .c-pagination_nav {
         margin-top: clamp(50px, 8.680vw, 70px);
     }
 
-    & .c-pagination_Nav-Link {
+    & .c-pagination_navList {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    & .c-pagination_nav-Link {
         font-size: clamp(1em, 1.8vw, 25px);
         line-height: $leading-none;
         font-family: Affogato-Medium;
@@ -11,13 +17,17 @@
         height: clamp(48px, 8.333vw, 75px);
         width: clamp(36px, 6.25vw, 60px);
         margin-left: -1px;
+        align-items: center;
+        display: flex;
+        font-weight: var(--font-weight-title);
+        justify-content: center;
 
         &.dotted {
             border: none;
         }
     }
 
-    & .c-pagination-Nav_Icon {
+    & .c-pagination-nav_Icon {
         display: block;
         position: relative;
         height: 1em;
@@ -35,12 +45,12 @@
             transform: translate(-50%, -50%);
         }
 
-        &.--prev {
+        &.-prev {
             transform: rotate(-45deg);
             margin-right: -6px;
         }
 
-        &.--next {
+        &.-next {
             transform: rotate(135deg);
             margin-left: -6px;
         }
@@ -49,5 +59,66 @@
     [aria-current="page"] {
         background-color: var(--color-main);
         color: var(--color-white);
+    }
+}
+
+.m-pager-Component {
+    & .c-pagination-Post-nav {
+        margin-top: clamp(50px, 8.680vw, 70px);
+        margin-bottom: clamp(50px, 8.680vw, 70px);
+
+        @media (--lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    & .c-pagination-Post-navList {
+        align-items: center;
+        display: flex;
+        font-weight: var(--font-weight-title);
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    & .c-pagination-Post-navList-Item {
+        text-align: center;
+        line-height: 0;
+        font-size: 0;
+    }
+
+    & .c-pagination-Post-navLink {
+        font-size: clamp(20px, 3vw, 30px);
+        line-height: $leading-none;
+        color: var(--color-main);
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+
+        &.-next {
+            &::after {
+                content: url(../images/arrow.svg);
+                display: block;
+                margin-left: clamp(15px, 3vw, 28.5px);
+            }
+        }
+
+        &.-prev {
+            &::before {
+                content: url(../images/arrow.svg);
+                display: block;
+                transform: rotate(180deg);
+                margin-right: clamp(15px, 3vw, 28.5px);
+            }
+        }
+
+        &.-next {
+            /* transform: rotate(-45deg); */
+            
+        }
+
+        &.-prev {
+            /* transform: rotate(135deg); */
+            
+        }
     }
 }
