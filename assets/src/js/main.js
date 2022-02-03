@@ -1,11 +1,8 @@
 'use strict';
-// 別ページから遷移してきた時の処理
-document.addEventListener('DOMContentLoaded', () => {
-    new LocationController();
-});
 
 window.addEventListener('load', () => {
     new MicroMethod();
+    new LocationController();
 });
 
 class MicroMethod {
@@ -61,7 +58,6 @@ class MicroMethod {
                 this.header_dropdown_menu.setAttribute('aria-hidden', 'true');
             });
         });
-
         return;
     }
 
@@ -73,7 +69,6 @@ class MicroMethod {
             if (!this.scroll_trigger_string) return;
             this.scroll_trigger_string.style.transform = `translateX(${window.scrollY / 7}px)`;
         });
-
         return;
     }
 
@@ -92,7 +87,6 @@ class MicroMethod {
                 hoverAnchor.classList.remove("active");
             });
         });
-
         return;
     }
 
@@ -106,7 +100,6 @@ class MicroMethod {
             }
             this.pagination[i].setAttribute('aria-label', pagination_set_string);
         }
-
         return;
     }
 
@@ -115,7 +108,6 @@ class MicroMethod {
             if (element.hasAttribute('target') === false || element.getAttribute('target') !== '_blank') return;
             element.setAttribute('rel', 'noopener noreferrer');
         });
-
         return;
     }
 
@@ -126,7 +118,6 @@ class MicroMethod {
                 targetPosition(e, this.header.clientHeight);
             });
         });
-
         return;
     }
 

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const defaultIndex = document.querySelector('[data-placement="top"]');
+    const defaultIndex = document.querySelector('[data-placement="index"]');
     if (!defaultIndex) {
         return document.body.removeAttribute('data-animate-effect');
     } else {
@@ -149,7 +149,6 @@ class ScreenAnimateInnerHTML {
                 </div>
             </div>
             <div class="c-ScreenAnimate_Layer anim-MotionLayer_02"></div>
-            <div class="c-ScreenAnimate_Layer anim-MotionLayer_03"></div>
         </div>
         <div class="c-ScreenAnimate_Context-Wrapper js-ScreenAnimate-Context-Wrapper">${document.body.outerHTML}</div>
         `;
@@ -166,7 +165,7 @@ class TextAnimation extends ScreenAnimate {
         const o = {
             title: 'js-slide-Animate-title',
             sentence: 'js-slide-Animate-sentence',
-            layer: 'anim-MotionLayer_03',
+            layer: 'anim-MotionLayer_02',
             newsTicker: "data-first-visible"
         }
         this.title = document.querySelector(`.${o.title}`);
