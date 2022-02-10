@@ -60,3 +60,67 @@
     position: absolute;
     right: 0;
 }
+
+/*----------  modalwindow  ----------*/
+.p-topMainvisual_Modal {
+    position: relative;
+}
+
+.p-topMainvisual_Modal-Overlay {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: var(--zindex-modal-container);
+}
+
+.p-topMainvisual_Modal[aria-hidden="false"] .p-topMainvisual_Modal-Overlay {
+    display: flex;
+}
+
+.p-topMainvisual_Modal-Container {
+    width: 560px;
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 40px 0;
+    position: relative;
+}
+
+.p-topMainvisual_Modal-Movie {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+
+    &>* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.p-topMainvisual_Modal-Close-Button {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    &::before {
+        content: url(../images/close.svg);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(45deg);
+    }
+}
