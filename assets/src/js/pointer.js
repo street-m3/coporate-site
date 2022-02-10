@@ -6,16 +6,17 @@ window.addEventListener('load', () => {
 /**
  * 非表示にしたいセレクターや領域(class)を文字列で記述します。
  */
-const FOCUSABLE = 'area, input, select, option, textarea, output, summary, video, audio, object, embed, iframe, .s-header, .c-newsticker';
+const FOCUSABLE = 'area, input, select, option, textarea, output, summary, video, audio, object, embed, iframe, .s-header, .c-newsTicker';
 class MouseFollow {
     constructor(breakpoints) {
         this.o = {
             mouseCenter: 'js-mouseFollow-Center',
             mouseHoverSelecter: 'a, button[type="button"]',
-            mouseHoverPlay: '.p-topMainvisual',
+            mouseHoverPlay: '.p-topMainvisual_Title',
         };
         this.mouseCenter = document.querySelector(`.${this.o.mouseCenter}`);
-        this.mouseHoverTargets = document.querySelectorAll(`${[this.o.mouseHoverSelecter, this.o.mouseHoverPlay]}`);
+        this.mouseHoverTargets = document.querySelectorAll(`${[this.o.mouseHoverSelecter]}`);
+        this.impressive = document.querySelectorAll(`${[this.o.mouseHoverPlay]}`);
         this.unSelectable = document.querySelectorAll(FOCUSABLE);
         this.hoverbool = false;
         this.breakpoints = breakpoints;
@@ -26,42 +27,41 @@ class MouseFollow {
     init() {
         if (!this.motion) return;
         this.movePointer();
-        this.selectablePointer();
+        this.selectablePointer(this.mouseHoverTargets, 'hover');
+        this.selectablePointer(this.impressive, 'play');
         this.unSelectablePointer();
     }
 
     movePointer() {
         document.addEventListener('mousemove', (e) => {
-            this.mouseCenter.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-            this.mouseCenter.style.transition = `transform 0.3s ease-out 0s`;
+            const browser = window.navigator.userAgent.toLowerCase();
+            if (browser.indexOf('webkit')) return this.mouseCenter.style.setProperty('-webkit-transform', `translate3d(${e.clientX}px, ${e.clientY}px, 0)`);
+            this.mouseCenter.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
         });
     }
 
-    selectablePointer() {
-        for (let i = 0; i < this.mouseHoverTargets.length; i++) {
-            const element = this.mouseHoverTargets[i];
+    selectablePointer(targets, suffix) {
+        targets.forEach((element) => {
             // hover
-            element.addEventListener('mouseover', (e) => {
-                this.mouseCenter.classList.add('hover'); 
+            element.addEventListener('mouseover', () => {
+                this.mouseCenter.classList.add(suffix);
             });
             // not hover
-            element.addEventListener('mouseout', (e) => {
-                this.mouseCenter.classList.remove('hover');
+            element.addEventListener('mouseout', () => {
+                this.mouseCenter.classList.remove(suffix);
             });
-        }
+        });
     }
 
     unSelectablePointer() {
-        this.unSelectable.forEach((element, index) => {
-            element.addEventListener('mouseover', (e) => {
+        this.unSelectable.forEach((element) => {
+            element.addEventListener('mouseover', () => {
                 this.mouseCenter.style.visiblity = 'hidden';
                 this.mouseCenter.style.opacity = 0;
-                this.mouseCenter.style.transition = 'opacity 0.3s ease 0s';
             });
-            element.addEventListener('mouseout', (e) => {
+            element.addEventListener('mouseout', () => {
                 this.mouseCenter.style.visiblity = 'visible';
                 this.mouseCenter.style.opacity = 1;
-                // this.mouseCenter.style.transition = 'opacity 0.3s ease 0s'
             });
         });
     }
