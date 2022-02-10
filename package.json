@@ -20,7 +20,7 @@
 		"sharp-png": "sharp -i ./assets/src/images/*.png -o ./assets/dist/images/",
 		"dev:images:sharp": "npm run sharp-webp & npm run sharp-png & npm run sharp-jpg",
 		"build:images": "npm run clean:images && npm-run-all -s dev:images:*",
-		"watch:server": "browser-sync start -s ./assets/dist/ -f 'src, **/*.html'",
+		"watch:server": "browser-sync start --config \"./bs-config.js\"",
 		"watch:html": "watch 'npm run build:html' ./assets/src/",
 		"watch:css": "watch 'npm run build:css' ./assets/src/css/",
 		"watch:scripts": "watch 'npm run build:js' ./assets/src/js/",
