@@ -17,6 +17,9 @@
     <div class="SiteWrapper">
         <div class="c-mouseFollow_Center js-mouseFollow-Center">
             <span aria-label="クリック" lang="en" class="c-mouseFollow_Text">CLICK</span>
+            <span aria-label="動画を再生" class="c-mouseFollow_playIcon">
+                <img src="./images/movie-icon.png" alt="" width="30px" height="35px">
+            </span>
         </div>
         <!-- header -->
         <header class="s-header" role="banner">
@@ -160,7 +163,7 @@
 
         <div class="p-topMainvisual js-headerScroll-Target">
             <div class="p-topMainvisual_Inner">
-                <div class="p-topMainvisual_Title" aria-hidden="true">
+                <div class="p-topMainvisual_Title" aria-hidden="true" data-modal-target="modal-index_1">
                     <p class="p-topMainvisual_Title-Primary anim-reveal-title js-slide-Animate-title">
                         <span>WEB INTEGRATION &<br>LEGAL AFFAIRS</span>
                     </p>
@@ -172,7 +175,7 @@
                 <div class="c-newsTicker p-topMainvisual-Placement" data-first-visible="false">
                     <ol class="c-newsTicker_List">
                         <li class="c-newsTicker_List-Item">
-                            <a href="" class="c-newsTicker_Item-Link">
+                            <a href="./blog.html" class="c-newsTicker_Item-Link">
                                 <div class="c-newsTicker_Item-Category">
                                     News
                                 </div>
@@ -187,7 +190,7 @@
                             </a>
                         </li>
                         <li class="c-newsTicker_List-Item">
-                            <a href="" class="c-newsTicker_Item-Link">
+                            <a href="./blog.html" class="c-newsTicker_Item-Link">
                                 <div class="c-newsTicker_Item-Category">
                                     News
                                 </div>
@@ -202,7 +205,7 @@
                             </a>
                         </li>
                         <li class="c-newsTicker_List-Item">
-                            <a href="" class="c-newsTicker_Item-Link">
+                            <a href="./blog.html" class="c-newsTicker_Item-Link">
                                 <div class="c-newsTicker_Item-Category">
                                     News
                                 </div>
@@ -217,7 +220,7 @@
                             </a>
                         </li>
                         <li class="c-newsTicker_List-Item">
-                            <a href="" class="c-newsTicker_Item-Link">
+                            <a href="./blog.html" class="c-newsTicker_Item-Link">
                                 <div class="c-newsTicker_Item-Category">
                                     News
                                 </div>
@@ -235,6 +238,17 @@
                     <a href="./news.html" class="c-newsTicker-Link" title="全ての記事を見る">
                         <span class="c-newsTicker-Link_Icon"></span>
                     </a>
+                </div>
+            </div>
+            <div id="modal-index_1" aria-hidden="true" class="p-topMainvisual_Modal js-modal">
+                <div class="p-topMainvisual_Modal-Overlay" role="dialog" data-modal-close="true">
+                    <div class="p-topMainvisual_Modal-Container" aria-modal="true" aria-labelledby="modal-1-title">
+                        <p id="modal-1-title" class="u-visual-hidden">弊社のコンセプトムービーをご覧いただけます。</p>
+                        <button type="button" data-modal-close="true" class="p-topMainvisual_Modal-Close-Button" aria-label="動画を閉じる"></button>
+                        <div class="p-topMainvisual_Modal-Movie">
+                            <video src="./images/business.mp4" controls webkit-playsinline="" playsinline="" muted="" preload="auto"></video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -273,7 +287,7 @@
                                 </p>
                             </div>
                             <div class="p-summary-Panel_Details-Component">
-                                <a href="" class="c-button c-button-border c-picture-Panel_Button" data-op="vertical-right">View More</a>
+                                <a href="./company.html" class="c-button c-button-border c-picture-Panel_Button" data-op="vertical-right">View More</a>
                             </div>
                         </div>
                     </div>
@@ -325,6 +339,9 @@
                                     <p class="o-postModule-Card_Body-Text">住宅宿泊管理業者の登録を受けようとする者は、住宅宿泊管理業者登録申請書に必要事項を記入の上、必要な添付書類と合わせて、国土交通大臣に提出する必要があります。</p>
                                 </div>
                             </div>
+                        </div>
+                        <div class="p-service-Content_underCompoent">
+                            <a href="./service.html" class="c-button c-button-border p-service-Content_Button" data-op="vertical-right">View More</a>
                         </div>
                     </div>
                 </div>
@@ -589,11 +606,13 @@
 
     <!--  script -->
     <script src="./js/utility.js"></script>
+    <script src="./js/backfaceFixed.js"></script>
     <script src="./js/screen-animate.js" type="module"></script>
     <script src="./js/pointer.js" type="module" async></script>
     <script src="./js/viewport.js" type="module"></script>
     <script src="./js/scrollobserver.js" type="module"></script>
     <script src="./js/drawer.js" type="module"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/accordion.js" type="module"></script>
     <script src="./js/tab.js" type="module"></script>
     <script src="./js/responsive-movie.js" type="module"></script>

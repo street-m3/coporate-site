@@ -6,15 +6,15 @@ class ResponsiveMovies {
         this.defaultMediaQuery = {
             mobile: matchMedia("(max-width: 575px)"),
             tablet: matchMedia("(min-width: 576px)"),
-            desktop:matchMedia("(min-width: 992px)"),
+            desktop: matchMedia("(min-width: 992px)"),
         };
-        
+
         this.rootMovie = document.querySelectorAll('.js-responsiveMovies');
         this.init();
     }
 
     init() {
-        if(!this.rootMovie) return;
+        if (!this.rootMovie) return;
         for (let i = 0; i < this.rootMovie.length; i++) {
             let sourceArray = this.rootMovie[i].querySelectorAll('source');
             this.responsiveMovieController(sourceArray);

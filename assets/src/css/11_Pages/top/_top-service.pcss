@@ -7,7 +7,7 @@
 
             @media (--md) {
                 grid-column: 1 / 3;
-                padding: 8% clamp(40px, 7.320vw, 100px);
+                padding: 8% clamp(40px, 7.320vw, 120px);
             }
         }
     }
@@ -36,5 +36,15 @@
         margin-top: 14px;
         line-height: $leading-relaxed;
         color: var(--color-caption);
+    }
+}
+
+.p-service-Content_underCompoent {
+    margin-top: clamp(40px, 10vw, 60px);
+    text-align: center;
+    
+    & > * {
+        color: var(--color-main);
+        padding: 16px 0;
     }
 }

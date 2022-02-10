@@ -3,12 +3,13 @@
 
     @media (--lg) {
         & {
+            /* Circle */
             --pointer-center-radius: 8px;
             --pointer-center-position: -4px;
             --pointer-before-diameter: 72px;
             --pointer-after-diameter: 120px;
             --pointer-before-position: calc(-36px - -4px);
-            /* --pointer-transition: transform 0.3s ease-out 0s; */
+            --pointer-transition: all 0.1s ease-out 0s;
             --pointer-border-radius: 50%;
             --pointer-translate: translate(0, 0);
             background-color: var(--color-main);
@@ -18,16 +19,19 @@
             left: var(--pointer-center-position);
             top: var(--pointer-center-position);
             transform: var(--pointer-translate);
-            /* transition: var(--pointer-transition); */
+            transition: var(--pointer-transition);
             pointer-events: none;
             position: fixed;
             width: var(--pointer-center-radius);
             z-index: var(--zindex-pointer);
 
+            /* hoverしたときは、背景色を透明にする */
+            &.play,
             &.hover {
                 background-color: transparent;
             }
 
+            /* 外側の線 */
             &::before {
                 content: '';
                 border: 1px solid var(--color-main);
@@ -39,20 +43,40 @@
                 position: fixed;
                 top: var(--pointer-before-position);
                 transform: translate(0, 0);
+                transition: all 0.3s ease 0s;
                 width: var(--pointer-before-diameter);
                 z-index: var(--zindex-pointer);
             }
-
+            
+            /* hoverさせたときにサイズを大きく */
+            &.play::before,
             &.hover::before {
                 top: -55px;
                 left: -55px;
                 width: var(--pointer-after-diameter);
                 height: var(--pointer-after-diameter);
-                transition: all 0.3s ease 0s;
+            }
+
+            /* 動画再生エリアでは、線の色を変える */
+            &.play::before {
+                border: 1px solid var(--color-white);
             }
         }
     }
 
+    /* 動画再生アイコン */
+    & .c-mouseFollow_playIcon {
+        display: inline-block;
+        width: 30px;
+        height: 35px;
+        position: absolute;
+        top: calc(50%);
+        left: calc(50% + 5px);
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+    }
+
+    /* Clickテキスト */
     & .c-mouseFollow_Text {
         visibility: hidden;
         position: absolute;
@@ -64,9 +88,16 @@
     }
 
     &.hover {
+        /* hoverクラスが付与されたらテキストを表示 */
         & .c-mouseFollow_Text {
             visibility: visible;
         }
     }
-}
 
+    &.play {
+        /* playクラスが付与されたらアイコンを表示 */
+        & .c-mouseFollow_playIcon {
+            visibility: visible;
+        }
+    }
+}
