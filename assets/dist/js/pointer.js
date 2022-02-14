@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 /**
  * 非表示にしたいセレクターや領域(class)を文字列で記述します。
  */
-const FOCUSABLE = 'area, input, select, option, textarea, output, summary, video, audio, object, embed, iframe, .s-header, .c-newsTicker';
+const FOCUSABLE = 'area, input, select, option, textarea, output, summary, video, audio, object, embed, iframe, .s-Header, .c-newsTicker';
 class MouseFollow {
     constructor(breakpoints) {
         this.o = {

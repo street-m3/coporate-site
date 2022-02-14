@@ -12,11 +12,11 @@ class Drawer {
     constructor(breakpoints, closed) {
         const o = {
             focusvisible: "data-focus-visible", //body && Overlay
-            triggerbutton: "js-drawer-button",
-            overlay: "js-drawer-overlay",
-            drawerList: "s-drawer-navMenu",
-            headerList: "s-header_navList",
-            headerTitle: "s-header_Brand"
+            triggerbutton: "js-Drawer-Button",
+            overlay: "js-Drawer-Overlay",
+            drawerList: "s-Drawer_Content",
+            headerList: "s-Header_navList",
+            headerTitle: "s-Header_Brand"
         };
 
         /**
