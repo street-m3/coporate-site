@@ -9,12 +9,12 @@ class MicroMethod {
     constructor() {
         const o = {
             scroll_trigger_string: "data-scroll-trigger",
-            header_hover_trigger: "s-header_navList-Item",
+            header_hover_trigger: "s-Header_navList-Item",
             header_wrapper: "data-hover",
-            header_dropdown: "js-header-dropdown",
-            header_dropdown_menu: "s-header-dropdown",
+            header_dropdown: "js-Header-Dropdown",
+            header_dropdown_menu: "s-Header-Dropdown",
             pagination: "page-numbers",
-            header: 's-header_Brand',
+            header: 's-Header_Brand',
             smoothscroll_anchors: 'data-smooth-scroll',
         };
         this.scroll_trigger_string = document.querySelector(`[${o.scroll_trigger_string}]`)
@@ -138,7 +138,7 @@ class LocationController {
     constructor() {
         this.urlHash = location.hash;
         this.urlTarget = document.getElementById(this.urlHash.replace('#', ''));
-        this.headerClientHeight = document.querySelector('.s-header_Brand').clientHeight;
+        this.headerClientHeight = document.querySelector('.s-Header_Brand').clientHeight;
         this.init();
     }
 

@@ -1,4 +1,4 @@
-.s-drawer {
+.s-Drawer {
     position: relative;
 
     @media (--lg) {
@@ -6,7 +6,7 @@
     }
 }
 
-.s-drawer_Button {
+.s-Drawer_Button {
     background-color: var(--color-main);
     cursor: pointer;
     display: inline-block;
@@ -35,7 +35,7 @@
         content: 'MENU';
     }
 
-    & .button-line {
+    & .Button-Line {
         background-color: var(--color-white);
         display: inline-block;
         height: 1px;
@@ -47,27 +47,27 @@
         user-select: none;
         width: 28px;
 
-        &.button-line--1 {
+        &.Button-Line--1 {
             top: 25px;
         }
 
-        &.button-line--2 {
+        &.Button-Line--2 {
             top: 30px;
         }
     }
 
-    &[aria-expanded='true'] .button-line--1 {
+    &[aria-expanded='true'] .Button-Line--1 {
         transform: translateY(10px) translateX(-50%) rotate(-45deg);
         top: 15px;
     }
 
-    &[aria-expanded='true'] .button-line--2 {
+    &[aria-expanded='true'] .Button-Line--2 {
         transform: translateY(-10px) translateX(-50%) rotate(45deg);
         top: 35px;
     }
 }
 
-.s-drawer_Overlay {
+.s-Drawer_Overlay {
     background-color: rgba(0, 0, 0, 0.1);
     cursor: pointer;
     height: 100vh;
@@ -86,7 +86,7 @@
     }
 }
 
-.s-drawer-navMenu {
+.s-Drawer_Content {
     background-color: var(--color-white);
     font-size: 14px;
     font-weight: normal;
@@ -113,52 +113,52 @@
     }
 }
 
-.s-drawer-navMenu_List {
-    & .s-drawer-navMenu_List-item {
+.s-Drawer_navList {
+    & .s-Drawer_navList-Item {
         border-bottom: 1px solid var(--color-border-base);
+    }
 
-        & a,
-        & button {
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 23.5px 39.5px;
-            text-align: left;
-            width: 100%;
+    & a,
+    & button {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 23.5px 39.5px;
+        text-align: left;
+        width: 100%;
 
-            &::after {
-                content: url(../images/right-arrow-sm.svg);
-                display: inline-block;
-                pointer-events: none;
-                width: 20px;
-                height: 20px;
-            }
+        &::after {
+            content: url(../images/right-arrow-sm.svg);
+            display: inline-block;
+            pointer-events: none;
+            width: 20px;
+            height: 20px;
         }
     }
 }
 
-
-.s-drawer-dropdown_Header {
+.s-Drawer-Dropdown_Header {
     &.is-open-panel button::after {
         transform: rotate(90deg);
     }
 }
 
-.s-drawer-dropdown_Container {
+.s-Drawer-Dropdown_nav {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
 
-.s-drawer-dropdown_navList {
-    & .s-drawer-dropdown_navList-item {
+.s-Drawer-Dropdown_navList {
+    & .s-Drawer-Dropdown_navList-Item {
         border-bottom: 1px solid var(--color-border-base);
+
         &:last-child {
             border-bottom: none;
         }
 
-        a {
+        & a {
             background-color: var(--color-dropdown);
         }
     }

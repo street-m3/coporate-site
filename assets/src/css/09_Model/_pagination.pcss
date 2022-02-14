@@ -1,68 +1,4 @@
 .m-pager-Component {
-    & .c-pagination_nav {
-        margin-top: clamp(50px, 8.680vw, 70px);
-    }
-
-    & .c-pagination_navList {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    & .c-pagination_nav-Link {
-        font-size: clamp(1em, 1.8vw, 25px);
-        line-height: $leading-none;
-        font-family: Affogato-Medium;
-        border: 1px solid var(--color-border-base);
-        height: clamp(48px, 8.333vw, 75px);
-        width: clamp(36px, 6.25vw, 60px);
-        margin-left: -1px;
-        align-items: center;
-        display: flex;
-        font-weight: var(--font-weight-title);
-        justify-content: center;
-
-        &.dotted {
-            border: none;
-        }
-    }
-
-    & .c-pagination-nav_Icon {
-        display: block;
-        position: relative;
-        height: 1em;
-    
-        &::after {
-            content: "";
-            display: inline-block;
-            border-top: 2px solid var(--color-text);
-            border-left: 2px solid var(--color-text);
-            width: 12px;
-            height: 12px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &.-prev {
-            transform: rotate(-45deg);
-            margin-right: -6px;
-        }
-
-        &.-next {
-            transform: rotate(135deg);
-            margin-left: -6px;
-        }
-    }
-
-    [aria-current="page"] {
-        background-color: var(--color-main);
-        color: var(--color-white);
-    }
-}
-
-.m-pager-Component {
     & .c-pagination-Post-nav {
         margin-top: clamp(50px, 8.680vw, 70px);
         margin-bottom: clamp(50px, 8.680vw, 70px);
@@ -113,12 +49,48 @@
 
         &.-next {
             /* transform: rotate(-45deg); */
-            
+
         }
 
         &.-prev {
             /* transform: rotate(135deg); */
-            
+
+        }
+    }
+}
+
+
+.m-Pagination-Component {
+    & .c-Pagination_nav.-Number {
+        margin-top: clamp(50px, 8.680vw, 70px);
+    
+        & .c-Pagination_navList {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        & .c-Pagination_nav-Link {
+            font-size: clamp(1em, 1.8vw, 25px);
+            line-height: $leading-none;
+            font-family: Affogato-Medium;
+            border: 1px solid var(--color-border-base);
+            height: clamp(48px, 8.333vw, 75px);
+            width: clamp(36px, 6.25vw, 60px);
+            margin-left: -1px;
+            align-items: center;
+            display: flex;
+            font-weight: var(--font-weight-title);
+            justify-content: center;
+        
+            &.-Dotted {
+                border: none;
+            }
+        
+            &[aria-current="page"] {
+                background-color: var(--color-main);
+                color: var(--color-white);
+            }
         }
     }
 }

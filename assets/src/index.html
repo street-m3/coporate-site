@@ -21,137 +21,136 @@
                 <img src="./images/movie-icon.png" alt="" width="30px" height="35px">
             </span>
         </div>
-        <!-- header -->
-        <header class="s-header" role="banner">
-            <h1 class="s-header_Brand">
-                <a href="./" class="s-header_Brand-Title touch-hover">
+        <!-- Site Header -->
+        <header class="s-Header" role="banner">
+            <div class="s-Header_Brand">
+                <a href="./" class="s-Header_Brand-Title">
                     <img src="../images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
                 </a>
-            </h1>
-            <div class="s-header_Inner" data-scroll="false" data-hover="false">
-                <nav class="s-header_nav">
-                    <div class="s-header_nav-Wrapper">
-                        <ul class="s-header_navList">
-                            <li class="s-header_navList-Item">
+            </div>
+            <div class="s-Header_Inner" data-scroll="false" data-hover="false">
+                <nav class="s-Header_nav" role="navigation">
+                    <div class="s-Header_nav-Wrapper">
+                        <ul class="s-Header_navList">
+                            <li class="s-Header_navList-Item">
                                 <a class="touch-hover" href="./index.html">ホーム</a>
                             </li>
-                            <li class="s-header_navList-Item js-header-dropdown">
+                            <li class="s-Header_navList-Item js-Header-Dropdown">
                                 <a class="touch-hover" href="./service.html">サービス</a>
-                                <div class="s-header-dropdown" aria-hidden="true">
-                                    <div class="s-header-dropdown_Inner">
-                                        <ul class="s-header-dropdown_List">
-                                            <li class="s-header-dropdown_List-Item">
+                                <div class="s-Header-Dropdown" aria-hidden="true">
+                                    <div class="s-Header-Dropdown_Inner">
+                                        <ul class="s-Header-Dropdown_List">
+                                            <li class="s-Header-Dropdown_List-Item">
                                                 <a href="./service.html#index_id1" data-smooth-scroll="true">IT法務</a>
                                             </li>
-                                            <li class="s-header-dropdown_List-Item">
+                                            <li class="s-Header-Dropdown_List-Item">
                                                 <a href="./service.html#index_id2" data-smooth-scroll="true">ビザ申請</a>
                                             </li>
-                                            <li class="s-header-dropdown_List-Item">
+                                            <li class="s-Header-Dropdown_List-Item">
                                                 <a href="./service.html#index_id3" data-smooth-scroll="true">民泊申請</a>
                                             </li>
                                         </ul>
-                                        <div class="s-header-dropdown_Contact">
-                                            <div class="c-telephone-Number">
-                                                <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
-                                                <p class="c-telephone-Number_Date">(平日00:00〜00:00)</p>
+                                        <div class="s-Header-Dropdown_Contact">
+                                            <div class="c-Telephone-Number">
+                                                <a href="tel:0123-456-789​" class="c-Telephone-Number_Link">0123-456-789​</a>
+                                                <p class="c-Telephone-Number_Date">(平日00:00〜00:00)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="s-header_navList-Item">
+                            <li class="s-Header_navList-Item">
                                 <a href="./price.html">価格</a>
                             </li>
-                            <li class="s-header_navList-Item">
+                            <li class="s-Header_navList-Item">
                                 <a href="./news.html">お知らせ</a>
                             </li>
-                            <li class="s-header_navList-Item">
+                            <li class="s-Header_navList-Item">
                                 <a href="./company.html">会社情報</a>
                             </li>
-                            <li class="s-header_navList-Item">
+                            <li class="s-Header_navList-Item">
                                 <a href="./faq.html">よくある質問</a>
                             </li>
                         </ul>
-                        <a href="./contact.html" class="c-button s-header_Contact-Button">CONTACT</a>
+                        <a href="./contact.html" class="c-button s-Header_nav-ContactLink">CONTACT</a>
                     </div>
                 </nav>
             </div>
         </header>
-
-        <!-- Drawer -->
-        <div class="s-drawer">
-            <button type="button" class="s-drawer_Button js-drawer-button" aria-controls="site:drawer-navMenu" aria-label="モバイルメニュー" aria-expanded="false">
-                <span class="button-line button-line--1"></span>
-                <span class="button-line button-line--2"></span>
+        <!-- Site Drawer -->
+        <div class="s-Drawer">
+            <button type="button" class="s-Drawer_Button js-Drawer-Button" aria-controls="site:drawer-nav" aria-label="モバイルメニュー" aria-expanded="false">
+                <span class="Button-Line Button-Line--1"></span>
+                <span class="Button-Line Button-Line--2"></span>
             </button>
-            <div class="s-drawer_Overlay js-drawer-overlay" data-focus-visible="false"></div>
-            <div id="site:drawer-navMenu" class="s-drawer-navMenu" aria-hidden="true">
-                <nav class="s-drawer-navMenu_Content" role="navigation">
-                    <ul class="s-drawer-navMenu_List">
-                        <li class="s-drawer-navMenu_List-item">
+            <div class="s-Drawer_Overlay js-Drawer-Overlay" data-focus-visible="false"></div>
+            <div id="site:drawer-nav" class="s-Drawer_Content" aria-hidden="true">
+                <nav class="s-Drawer_nav" role="navigation">
+                    <ul class="s-Drawer_navList">
+                        <li class="s-Drawer_navList-Item">
                             <a href="./index.html">ホーム</a>
                         </li>
-                        <li class="s-drawer-navMenu_List-item s-drawer-dropdown">
-                            <div class="s-drawer-dropdown_Header js-drawer-dropdown-header">
-                                <button type="button" class="s-drawer-dropdown_Tab">
+                        <li class="s-Drawer_navList-Item s-Drawer-Dropdown">
+                            <div class="s-Drawer-Dropdown_Header js-Drawer-Dropdown-Header">
+                                <button type="button" class="s-Drawer-Dropdown_Tab">
                                     サービス
                                 </button>
                             </div>
-                            <div class="s-drawer-dropdown_Container">
-                                <ul class="s-drawer-dropdown_navList">
-                                    <li class="s-drawer-dropdown_navList-item">
+                            <div class="s-Drawer-Dropdown_nav">
+                                <ul class="s-Drawer-Dropdown_navList">
+                                    <li class="s-Drawer-Dropdown_navList-Item">
                                         <a href="./service.html#index_id1">IT法務</a>
                                     </li>
-                                    <li class="s-drawer-dropdown_navList-item">
+                                    <li class="s-Drawer-Dropdown_navList-Item">
                                         <a href="./service.html#index_id2">ビザ申請</a>
                                     </li>
-                                    <li class="s-drawer-dropdown_navList-item">
+                                    <li class="s-Drawer-Dropdown_navList-Item">
                                         <a href="./service.html#index_id3">民泊申請</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="s-drawer-navMenu_List-item">
+                        <li class="s-Drawer_navList-Item">
                             <a href="./price.html">価格</a>
                         </li>
-                        <li class="s-drawer-navMenu_List-item">
+                        <li class="s-Drawer_navList-Item">
                             <a href="./news.html">お知らせ</a>
                         </li>
-                        <li class="s-drawer-navMenu_List-item">
+                        <li class="s-Drawer_navList-Item">
                             <a href="./company.html">会社情報</a>
                         </li>
-                        <li class="s-drawer-navMenu_List-item">
+                        <li class="s-Drawer_navList-Item">
                             <a href="./faq.html">よくある質問</a>
                         </li>
-                        <li class="s-drawer-navMenu_List-item">
+                        <li class="s-Drawer_navList-Item">
                             <a href="./sitemap.html">サイトマップ</a>
                         </li>
-                        <li class="s-drawer-navMenu_List-item">
+                        <li class="s-Drawer_navList-Item">
                             <a href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
-                    <aside class="s-contactBanner" role="complementary">
-                        <div class="s-contactBanner_Inner">
-                            <h2 class="s-contactBanner_Headline">
+                    <aside class="s-Contact-Banner" role="complementary">
+                        <div class="s-Contact-Banner_Inner">
+                            <h2 class="s-Contact-Banner_Headline">
                                 <span lang="en">CONTACT</span>
                                 <span lang="ja">お問い合わせ</span>
                             </h2>
-                            <div class="s-contactBanner_Wrapper">
-                                <p class="s-contactBanner_Caption">
+                            <div class="s-Contact-Banner_Wrapper">
+                                <p class="s-Contact-Banner_Caption">
                                     ご質問などありましたらお気軽にお問い合わせください
                                 </p>
-                                <div class="s-contactBanner_ContactLink">
-                                    <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
+                                <div class="s-Contact-Banner_Component">
+                                    <a href="./contact.html" class="c-button c-button-border s-Contact-Banner_ContactLink" data-op="vertical-right">
                                         お問い合わせフォームへ
                                     </a>
                                 </div>
-                                <div class="s-contactBanner_Tel">
-                                    <p class="s-contactBanner_Tel-Caption">
+                                <div class="s-Contact-Banner_Telephone">
+                                    <p class="s-Contact-Banner_Telephone-Text">
                                         お電話でのお問い合わせ
                                     </p>
-                                    <div class="c-telephone-Number">
-                                        <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
-                                        <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
+                                    <div class="c-Telephone-Number">
+                                        <a href="tel:0123-456-789​" class="c-Telephone-Number_Link">0123-456-789​</a>
+                                        <p class="c-Telephone-Number_Date">（平日00:00〜00:00）</p>
                                     </div>
                                 </div>
                             </div>
@@ -254,17 +253,27 @@
         </div>
 
         <main role="main" data-placement="index">
-            <!-- DECLARATION -->
-            <div class="c-scroll-Trigger m-top-Message">
+            <div class="c-scroll-Trigger m-topMessage">
                 <p class="c-trigger-String" lang="en" aria-hidden="true" data-scroll-trigger="vertical-left">
                     WEB INTEGRATION WEB INTEGRATION WEB INTEGRATION
                 </p>
-                <div class="m-top-Message_Title">
+                <div class="m-topMessage_Title">
                     <p>制作会社での経歴を活かした<br>ご提案ができます</p>
                 </div>
             </div>
 
             <!-- SUMMARY -->
+            <!-- <p-Executive-Summary>
+                <p-Executive-Summary_Panel>
+                    <p-Executive-Summary_Panel-Picture></p-Executive-Summary_Panel-Picture>
+                    <p-Executive-Summary_Panel-Details>
+                        <p-Executive-Summary_Panel-Text></p-Executive-Summary_Panel-Text>
+                        <p-Executive-Summary_Panel-Component>
+                            <p-Executive-Summary_Panel-Link></p-Executive-Summary_Panel-Link>
+                        </p-Executive-Summary_Panel-Component>
+                    </p-Executive-Summary_Panel-Details>
+                </p-Executive-Summary_Panel>
+            </p-Executive-Summary> -->
             <section class="p-summary">
                 <div class="ly-inner_Grid -xl">
                     <div class="c-picture-Panel p-summary-Panel">
@@ -295,6 +304,19 @@
             </section>
 
             <!-- SERVICE -->
+            <!-- <p-Service-Contents>
+                <p-Service-Contents_Container>
+                    <p-Service-Contents_Grid>
+                        <p-Service-Contents_Card>
+                            <p-Service-Contents_Card_Image></p-Service-Contents_Card_Image>
+                            <p-Service-Contents_Card-Body>
+                                <p-Service-Contents_Card-Title></p-Service-Contents_Card-Title>
+                                <p-Service-Contents_Card-Text></p-Service-Contents_Card-Text>
+                            </p-Service-Contents_Card-Body>
+                        </p-Service-Contents_Card>
+                    </p-Service-Contents_Grid>
+                </p-Service-Contents_Container>
+            </p-Service-Contents> -->
             <section class="p-service-Contents ly-section-Spaced">
                 <div class="ly-inner_Grid -lg">
                     <div class="p-service-Content_Placement">
@@ -348,6 +370,13 @@
             </section>
 
             <!-- FEATURE -->
+            <!-- <p-Feature-Panels>
+                <c-Picture-Panel class="p-Feature-Panel">
+                    <p-Feature-Panel_Frame></p-Feature-Panel_Frame>
+                    <p-Feature-Panel_Details></p-Feature-Panel_Details>
+                    <p-Feature-Panel_Details-Text></p-Feature-Panel_Details-Text>
+                </c-Picture-Panel>
+            </p-Feature-Panels> -->
             <section class="p-feature-Panels ly-section-Spaced">
                 <div class="ly-inner_Grid -lg">
                     <h2 class="c-headline-Secondary c-picture-Panel-headline" data-headline="40">
@@ -420,6 +449,17 @@
             </section>
 
             <!-- MEMBER -->
+            <!-- <p-Members>
+                <p-Members-Carousel>
+                    <p-Members-Carousel_Card>
+                        <p-Members-Carousel_Card-Photo></p-Members-Carousel_Card-Photo>
+                        <p-Members-Carousel_Card-Body>
+                            <p-Members-Carousel_Card-Name></p-Members-Carousel_Card-Name>
+                            <p-Members-Carousel_Card-Text></p-Members-Carousel_Card-Text>
+                        </p-Members-Carousel_Card-Body>
+                    </p-Members-Carousel_Card>
+                </p-Members-Carousel>
+            </p-Members> -->
             <!-- <section class="p-member ly-section-Spaced">
                 <div class="ly-inner_Grid -lg">
                     <h2 class="c-headline-Secondary" data-headline="40">
@@ -507,98 +547,100 @@
             </section> -->
         </main>
 
-        <aside class="s-contactBanner" role="complementary">
-            <div class="s-contactBanner_Inner">
-                <h2 class="s-contactBanner_Headline">
+        <!-- Site Contact-Banner -->
+        <aside class="s-Contact-Banner" role="complementary">
+            <div class="s-Contact-Banner_Inner">
+                <h2 class="s-Contact-Banner_Headline">
                     <span lang="en">CONTACT</span>
                     <span lang="ja">お問い合わせ</span>
                 </h2>
-                <div class="s-contactBanner_Wrapper">
-                    <p class="s-contactBanner_Caption">
+                <div class="s-Contact-Banner_Wrapper">
+                    <p class="s-Contact-Banner_Caption">
                         ご質問などありましたらお気軽にお問い合わせください
                     </p>
-                    <div class="s-contactBanner_ContactLink">
-                        <a href="./contact.html" class="c-button c-button-border s-contactBanner_ContactLink-Button" data-op="vertical-right">
+                    <div class="s-Contact-Banner_Component">
+                        <a href="./contact.html" class="c-button c-button-border s-Contact-Banner_ContactLink" data-op="vertical-right">
                             お問い合わせフォームへ
                         </a>
                     </div>
-                    <div class="s-contactBanner_Tel">
-                        <p class="s-contactBanner_Tel-Caption">
+                    <div class="s-Contact-Banner_Telephone">
+                        <p class="s-Contact-Banner_Telephone-Text">
                             お電話でのお問い合わせ
                         </p>
-                        <div class="c-telephone-Number">
-                            <a href="tel:0123-456-789​" class="c-telephone-Number_Link">0123-456-789​</a>
-                            <p class="c-telephone-Number_Date">（平日00:00〜00:00）</p>
+                        <div class="c-Telephone-Number">
+                            <a href="tel:0123-456-789​" class="c-Telephone-Number_Link">0123-456-789​</a>
+                            <p class="c-Telephone-Number_Date">（平日00:00〜00:00）</p>
                         </div>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <footer class="s-footer" role="contentinfo">
-            <div class="s-footer_Inner">
-                <address class="s-footer_Address">
-                    <div class="s-footer_Address-Brand">
+        <!-- Site Footer -->
+        <footer class="s-Footer" role="contentinfo">
+            <div class="s-Footer_Inner">
+                <address class="s-Footer_Address">
+                    <div class="s-Footer_Address-Brand">
                         <img src="./images/logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
-                        <ul class="s-footer_AddressList">
-                            <li class="s-footer_Address-List-Item">
+                        <ul class="s-Footer_AddressList">
+                            <li class="s-Footer_AddressList-Item">
                                 〒234-0013
                             </li>
-                            <li class="s-footer_Address-List-Item">
+                            <li class="s-Footer_AddressList-Item">
                                 京都府京都市伏見区淀水垂町509-16
                             </li>
                         </ul>
                     </div>
                 </address>
-                <nav class="s-footer_nav">
-                    <ul class="s-footer_navList">
-                        <li class="s-footer_navList-Item">
+                <nav class="s-Footer_nav">
+                    <ul class="s-Footer_navList">
+                        <li class="s-Footer_navList-Item">
                             <a class="touch-hover" href="./">ホーム</a>
                         </li>
-                        <li class="s-footer_navList-Item s-footer-dropdown">
-                            <div class="s-footer-dropdown_Header js-footer-dropdown-header">
-                                <button type="button" class="s-footer-dropdown_Tab">
+                        <li class="s-Footer_navList-Item s-Footer-Dropdown">
+                            <div class="s-Footer-Dropdown_Header js-Footer-Dropdown-Header">
+                                <button type="button" class="s-Footer-Dropdown_Tab">
                                     サービス一覧
                                 </button>
                             </div>
-                            <div class="s-footer-dropdown_Container">
-                                <ul class="s-footer-dropdown_List">
-                                    <li class="s-footer-dropdown_List-Item">
+                            <div class="s-Footer-Dropdown_nav">
+                                <ul class="s-Footer-Dropdown_navList">
+                                    <li class="s-Footer-Dropdown_navList-Item">
                                         <a href="./service.html#index_id1">IT法務</a>
                                     </li>
-                                    <li class="s-footer-dropdown_List-Item">
+                                    <li class="s-Footer-Dropdown_navList-Item">
                                         <a href="./service.html#index_id2">ビザ申請</a>
                                     </li>
-                                    <li class="s-footer-dropdown_List-Item">
+                                    <li class="s-Footer-Dropdown_navList-Item">
                                         <a href="./service.html#index_id3">民泊申請</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="s-footer_navList-Item">
+                        <li class="s-Footer_navList-Item">
                             <a class="touch-hover" href="./price.html">価格</a>
                         </li>
-                        <li class="s-footer_navList-Item">
+                        <li class="s-Footer_navList-Item">
                             <a class="touch-hover" href="./news.html">お知らせ</a>
                         </li>
-                        <li class="s-footer_navList-Item">
+                        <li class="s-Footer_navList-Item">
                             <a class="touch-hover" href="#">会社概要</a>
                         </li>
-                        <li class="s-footer_navList-Item">
+                        <li class="s-Footer_navList-Item">
                             <a class="touch-hover" href="./faq.html">よくある質問</a>
                         </li>
-                        <li class="s-footer_navList-Item">
+                        <li class="s-Footer_navList-Item">
                             <a class="touch-hover" href="./sitemap.html">サイトマップ</a>
                         </li>
-                        <li class="s-footer_navList-Item">
+                        <li class="s-Footer_navList-Item">
                             <a class="touch-hover" href="./policy.html">プライバシーポリシー</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div class="s-footer_Copyright">
-                <div class="ly-inner_Grid -lg">
-                    <small class="s-footer_Copyright-Text" translate="no">© 藤岡行政書士事務所 All Rights Reserved.</small>
+            <div class="s-Footer_Copyright">
+                <div class="ly-inner_Grid">
+                    <small translate="no">© 藤岡行政書士事務所 All Rights Reserved.</small>
                 </div>
             </div>
         </footer>
