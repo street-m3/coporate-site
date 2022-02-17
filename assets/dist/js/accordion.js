@@ -1,5 +1,4 @@
 window.addEventListener('load', () => {
-    new Accordion('p-accordions', 'js-accordion-header');
     new Accordion('p-faq-accordions', 'js-accordion-header');
     new Accordion('s-Drawer-Dropdown', 'js-Drawer-Dropdown-Header');
     footerDropdownMenu('service.html');
@@ -11,7 +10,7 @@ window.addEventListener('load', () => {
  * @returns 
  */
 
- function footerDropdownMenu(destination) {
+function footerDropdownMenu(destination) {
     const footerDropdown = document.querySelector('.s-Footer-Dropdown_Tab');
     if (window.matchMedia(`(max-width: 992px)`).matches) {
         new Accordion('s-Footer-Dropdown', 'js-Footer-Dropdown-Header');

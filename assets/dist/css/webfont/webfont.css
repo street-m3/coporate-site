@@ -1,42 +1,63 @@
 @font-face {
-    font-family: 'Affogato-Black';
-    src:url('webfont/Affogato-Black.woff') format('woff'),
-        url('webfont/Affogato-Black.woff2') format('woff2'),
-        url('webfont/Affogato-Black.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Affogato';
+    src: url('webfont/Affogato-Black.woff') format('woff'),
+        url('webfont/Affogato-Black.woff2') format('woff2');
+    font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Affogato-Bold';
-    src:url('webfont/Affogato-Bold.woff') format('woff'),
-        url('webfont/Affogato-Bold.woff2') format('woff2'),
-        url('webfont/Affogato-Bold.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Affogato';
+    src: url('webfont/Affogato-Bold.woff') format('woff'),
+        url('webfont/Affogato-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Affogato-Medium';
-    src:url('webfont/Affogato-Medium.woff') format('woff'),
-        url('webfont/Affogato-Medium.woff2') format('woff2'),
-        url('webfont/Affogato-Medium.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Affogato';
+    src: url('webfont/Affogato-Medium.woff') format('woff'),
+        url('webfont/Affogato-Medium.woff2') format('woff2');
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Affogato-Regular';
-    src:url('webfont/Affogato-Regular.woff') format('woff'),
-        url('webfont/Affogato-Regular.woff2') format('woff2'),
-        url('webfont/Affogato-Regular.ttf') format('truetype');
+    font-family: 'Affogato';
+    src: url('webfont/Affogato-Regular.woff') format('woff'),
+        url('webfont/Affogato-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Affogato-Light';
-    src:url('webfont/Affogato-Light.woff') format('woff'),
-        url('webfont/Affogato-Light.woff2') format('woff2'),
-        url('webfont/Affogato-Light.ttf') format('truetype');
-    font-weight: normal;
+    font-family: 'Affogato';
+    src: url('webfont/Affogato-Light.woff') format('woff'),
+        url('webfont/Affogato-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('webfont/NotoSansJP-Bold.woff') format('woff'),
+        url('webfont/NotoSansJP-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('webfont/NotoSansJP-Medium.woff') format('woff'),
+        url('webfont/NotoSansJP-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('webfont/NotoSansJP-Regular.woff') format('woff'),
+        url('webfont/NotoSansJP-Regular.woff2') format('woff2');
+    font-weight: 4 00;
     font-style: normal;
 }
