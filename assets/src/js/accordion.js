@@ -53,7 +53,7 @@ class Accordion {
     }
 
     multiSelectable(tabitem) {
-        if (this.multiSelectDefault == true) {
+        if (this.multiSelectDefault === true) {
             const currentlyPanel = this.accordionContainer.querySelector('.js-accordion-header.is-open-panel');
             if (currentlyPanel && currentlyPanel !== tabitem) {
                 currentlyPanel.classList.remove(this.accordionAddCls);
