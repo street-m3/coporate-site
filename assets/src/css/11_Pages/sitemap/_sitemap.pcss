@@ -1,22 +1,21 @@
-
 /* column-gap 56.5px min 190 grid-container 687 */
 
-.p-sitemap {
-    & > .ly-inner_Grid {
+.p-Sitemap {
+    &>.ly-Inner_Grid {
         @media (--sm) {
             grid-template-columns: minmax(40px, 1fr) minmax(auto, 687px) minmax(40px, 1fr);
         }
     }
 }
 
-.p-sitemap_Contents {
+.p-Sitemap_Contents {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 40px;
 }
 
-.p-sitemap_List {
-    & .p-sitemap_List-Item {
+.p-Sitemap-navList {
+    & .p-Sitemap-navList-Item {
         & a {
             display: block;
             position: relative;
@@ -40,6 +39,6 @@
     }
 }
 
-.p-sitemap_List-Nested {
+.p-Sitemap-navList-Nested {
     margin-left: 40px;
 }

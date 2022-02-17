@@ -1,5 +1,5 @@
 [data-placement="policy"] {
-    & .sc-user-writing-Area {
+    & .sc-userWriting-Area {
         font-weight: var(--font-weight-text);
 
         &>* {
@@ -46,7 +46,7 @@
 }
 
 [data-placement="completed"] {
-    & .sc-user-writing-Area {
+    & .sc-userWriting-Area {
         &>* {
             margin-top: clamp(1.5em, 3.5vw, 2em);
         }
@@ -67,7 +67,7 @@
 }
 
 [data-placement="article"] {
-    & .sc-user-writing-Area {
+    & .sc-userWriting-Area {
         &>* {
             margin-top: clamp(1.5em, 3.5vw, 2em);
         }
@@ -88,53 +88,6 @@
         & p:not([class]) {
             line-height: $leading-relaxed;
             letter-spacing: $tracking-wide;
-            /* margin-top: 1.5em; */
         }
-    }
-}
-
-.user-writing-Area {
-    &>* {
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    &> :first-child {
-        margin-top: 0 !important;
-    }
-
-    &> :last-child {
-        margin-bottom: 0 !important;
-    }
-
-    & p:not([class]) {
-        /* // p要素のスタイル */
-        margin-top: 2.8em;
-        font-size: 14px;
-        line-height: $leading-relaxed;
-        letter-spacing: $tracking-wide;
-    }
-
-    & h1 {
-        margin-bottom: 0.5rem;
-    }
-
-    & h2 {
-        padding-bottom: 14px;
-        border-bottom: 2px solid var(--color-main);
-        margin-top: 60px;
-        margin-bottom: 30px;
-    }
-
-    & h3:not([class]) {
-        /* // p要素のスタイル */
-    }
-
-    & ul:not([class]) {
-        /* // p要素のスタイル */
-    }
-
-    & ol:not([class]) {
-        /* // p要素のスタイル */
     }
 }

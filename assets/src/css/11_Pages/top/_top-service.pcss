@@ -1,7 +1,6 @@
-/*----------  service  ----------*/
-.p-service-Contents {
-    & > .ly-inner_Grid {
-        & > * {
+.p-Service-Contents {
+    &>.ly-Inner_Grid {
+        &>* {
             grid-column: 1 / -1;
             padding: 50px 40px;
 
@@ -13,11 +12,11 @@
     }
 }
 
-.p-service-Content_Placement {
+.p-Service-Contents_Container {
     background-color: var(--color-white);
 }
 
-.p-service_Card {
+.p-Service-Contents_Card {
     &:not(:last-child) {
         margin-bottom: 40px;
     }
@@ -26,24 +25,24 @@
         margin-bottom: 0;
     }
 
-    & .o-postModule-Card_Body-Title {
+    & .p-Service-Contents_Card-Title {
         font-size: clamp(21px, 1.756vw, 24px);
         margin-top: 16px;
         text-align: center;
     }
 
-    & .o-postModule-Card_Body-Text {
+    & .p-Service-Contents_Card-Text {
         margin-top: 14px;
         line-height: $leading-relaxed;
         color: var(--color-caption);
     }
 }
 
-.p-service-Content_underCompoent {
+.p-Service-Contents_Component {
     margin-top: clamp(40px, 10vw, 60px);
     text-align: center;
-    
-    & > * {
+
+    &>* {
         color: var(--color-main);
         padding: 16px 0;
     }
