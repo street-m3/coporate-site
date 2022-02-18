@@ -1,75 +1,13 @@
-.m-pager-Component {
-    & .c-pagination-Post-nav {
-        margin-top: clamp(50px, 8.680vw, 70px);
-        margin-bottom: clamp(50px, 8.680vw, 70px);
-
-        @media (--lg) {
-            margin-bottom: 0;
-        }
-    }
-
-    & .c-pagination-Post-navList {
-        align-items: center;
-        display: flex;
-        font-weight: var(--font-weight-title);
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    & .c-pagination-Post-navList-Item {
-        text-align: center;
-        line-height: 0;
-        font-size: 0;
-    }
-
-    & .c-pagination-Post-navLink {
-        font-size: clamp(20px, 3vw, 30px);
-        line-height: $leading-none;
-        color: var(--color-main);
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-
-        &.-next {
-            &::after {
-                content: url(../images/arrow.svg);
-                display: block;
-                margin-left: clamp(15px, 3vw, 28.5px);
-            }
-        }
-
-        &.-prev {
-            &::before {
-                content: url(../images/arrow.svg);
-                display: block;
-                transform: rotate(180deg);
-                margin-right: clamp(15px, 3vw, 28.5px);
-            }
-        }
-
-        &.-next {
-            /* transform: rotate(-45deg); */
-
-        }
-
-        &.-prev {
-            /* transform: rotate(135deg); */
-
-        }
-    }
-}
-
-
 .m-Pagination-Component {
     & .c-Pagination_nav.-Number {
         margin-top: clamp(50px, 8.680vw, 70px);
-    
+
         & .c-Pagination_navList {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-    
+
         & .c-Pagination_nav-Link {
             font-size: clamp(1em, 1.8vw, 25px);
             line-height: $leading-none;
@@ -82,15 +20,78 @@
             display: flex;
             font-weight: var(--font-weight-title);
             justify-content: center;
-        
+
             &.-Dotted {
                 border: none;
             }
-        
+
             &[aria-current="page"] {
                 background-color: var(--color-main);
                 color: var(--color-white);
             }
         }
+    }
+}
+
+.m-Pagination-Component {
+    & .c-Pagination_nav.-Turn {
+        margin-top: clamp(50px, 8.680vw, 70px);
+        margin-bottom: clamp(50px, 8.680vw, 70px);
+
+        @media (--lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    & .c-Pagination_navList {
+        align-items: center;
+        display: flex;
+        font-weight: var(--font-weight-title);
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    & .c-Pagination_navList-Item {
+        text-align: center;
+        line-height: 0;
+        font-size: 0;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+
+        &:first-child>* {
+            padding-left: clamp(calc(14px + 15px), 3vw, calc(14px + 28.5px));
+
+            &::before {
+                content: url(../images/arrow.svg);
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                transform: scale(-1, 1);
+                width: 14px;
+            }
+        }
+
+        &:last-child>* {
+            padding-right: clamp(calc(14px + 15px), 3vw, calc(14px + 28.5px));
+
+            &::after {
+                content: url(../images/arrow.svg);
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    & .c-Pagination_nav-Link {
+        font-size: clamp(20px, 3vw, 30px);
+        line-height: $leading-none;
+        color: var(--color-main);
+        position: relative;
+        display: inline-flex;
+        align-items: center;
     }
 }

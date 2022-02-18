@@ -3,7 +3,6 @@
 window.addEventListener('load', () => {
     new MicroMethod();
     new LocationController();
-    new DecordingSizer();
 });
 
 class MicroMethod {
@@ -150,40 +149,5 @@ class LocationController {
             _smoothScroll(targetPosition);
         }
         return;
-    }
-}
-
-class DecordingSizer {
-    constructor() {
-        this.images = document.querySelectorAll('img');
-        this._sizeSettings();
-    }
-
-    _promiseLoader(src) {
-        return new Promise((resolve, reject) => {
-            const image = new Image();
-            image.src = src;
-            image.onload = () => resolve(image);
-            image.onerror = () => reject(error);
-        });
-    }
-
-    _sizeSettings() {
-        Array.prototype.forEach.call(this.images, element => {
-            const fileReader = element.getAttribute('src');
-            this._promiseLoader(fileReader)
-                .then((res) => {
-                    element.setAttribute('width', res.width);
-                    element.setAttribute('height', res.height);
-                    if (!element.hasAttribute('alt')) {
-                        element.setAttribute('alt', '');
-                    }
-                    if (!element.hasAttribute('decoding') || !element.hasAttribute('loading')) {
-                        element.setAttribute('loading', 'lazy');
-                    }
-                }).catch((err) => {
-                    console.log(err);
-                });
-        });
     }
 }

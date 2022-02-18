@@ -11,8 +11,8 @@ class SocialMedia {
     /**
      * 
      * @constructor SocialMedia
-     * @param {String} root JSで生成したHTMLを格納するコンテナーのクラス名を設定します。 
-     * @param {Boolean} options 使用するSocialMediaをBooleanで有効化させます。(初期値はfalse)
+     * @param {string} root JSで生成したHTMLを格納するコンテナーのクラス名を設定します。 
+     * @param {boolean} options 使用するSocialMediaをBooleanで有効化させます。(初期値はfalse)
      * @returns 
      */
     constructor(root, options) {
