@@ -1,28 +1,12 @@
 .m-Pagination-Component {
-    & .c-Pagination_nav.-Number {
-        margin-top: clamp(50px, 8.680vw, 70px);
-
-        & .c-Pagination_navList {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        & .c-Pagination_nav-Link {
-            font-size: clamp(1em, 1.8vw, 25px);
-            line-height: $leading-none;
-            font-family: $font-family-affogato;
-            border: 1px solid var(--color-border-base);
-            height: clamp(48px, 8.333vw, 75px);
-            width: clamp(36px, 6.25vw, 60px);
-            margin-left: -1px;
-            align-items: center;
-            display: flex;
-            font-weight: var(--font-weight-title);
-            justify-content: center;
-
-            &.-Dotted {
-                border: none;
+    &.-Number {
+        & .c-Pagination_nav {
+            margin-top: clamp(50px, 8.680vw, 70px);
+    
+            & .c-Pagination_navList {
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
     
             & .c-Pagination_nav-Link {
@@ -52,42 +36,13 @@
 }
 
 .m-Pagination-Component {
-    & .c-Pagination_nav.-Turn {
-        margin-top: clamp(50px, 8.680vw, 70px);
-        margin-bottom: clamp(50px, 8.680vw, 70px);
-
-        @media (--lg) {
-            margin-bottom: 0;
-        }
-    }
-
-    & .c-Pagination_navList {
-        align-items: center;
-        display: flex;
-        font-weight: var(--font-weight-title);
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    & .c-Pagination_navList-Item {
-        text-align: center;
-        line-height: 0;
-        font-size: 0;
-        display: inline-flex;
-        align-items: center;
-        position: relative;
-
-        &:first-child>* {
-            padding-left: clamp(calc(14px + 15px), 3vw, calc(14px + 28.5px));
-
-            &::before {
-                content: url(../images/arrow.svg);
-                display: inline-block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                transform: scale(-1, 1);
-                width: 14px;
+    &.-Turn {
+        & .c-Pagination_nav {
+            margin-top: clamp(50px, 8.680vw, 70px);
+            margin-bottom: clamp(50px, 8.680vw, 70px);
+    
+            @media (--lg) {
+                margin-bottom: 0;
             }
         }
     
