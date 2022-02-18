@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 class MicroModal {
     /**
      * 
-     * @param {String} eventTarget (NodeList) トリガーとなるDOMのクラス名を文字列で設定します。
+     * @param {string} eventTarget (NodeList) トリガーとなるDOMのクラス名を文字列で設定します。
      */
     constructor(eventTarget) {
         /**

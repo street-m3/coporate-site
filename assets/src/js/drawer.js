@@ -20,16 +20,16 @@ class Drawer {
         };
 
         /**
-         * * @type {Object} focusvisible ドロワー開閉を識別するdata属性
-         * * @type {Object} triggerbutton ドロワーナビゲーションボタン
-         * * @type {Object} overlay メニュー表示時の背景を設定
-         * * @type {Object} drawerList ドロワーナビメニューリスト
-         * * @type {Object} drawerListItem ドロワーナビメニューリンク
-         * * @type {Object} headerList ヘッダーナビメニューリスト
-         * * @type {Object} headerTitle ヘッダーの高さを取得
-         * * @type {Boolean} closed ドロワーナビメニューをクリックしたら自動的にドロワーを閉じるかを真偽値を設定
-         * * @type {Number} breakpoints ブレークポイントの値をインスタンスに設定 [ドロワーの非表示領域]
-         * * @type {Object} devicesize タッチデバイスが有効な場合、PCのメニューを読み上げない
+         * * @type {object} focusvisible ドロワー開閉を識別するdata属性
+         * * @type {object} triggerbutton ドロワーナビゲーションボタン
+         * * @type {object} overlay メニュー表示時の背景を設定
+         * * @type {object} drawerList ドロワーナビメニューリスト
+         * * @type {object} drawerListItem ドロワーナビメニューリンク
+         * * @type {object} headerList ヘッダーナビメニューリスト
+         * * @type {object} headerTitle ヘッダーの高さを取得
+         * * @type {boolean} closed ドロワーナビメニューをクリックしたら自動的にドロワーを閉じるかを真偽値を設定
+         * * @type {number} breakpoints ブレークポイントの値をインスタンスに設定 [ドロワーの非表示領域]
+         * * @type {boolean} devicesize タッチデバイスが有効な場合、PCのメニューを読み上げない
          */
 
         this.focusvisible = document.querySelectorAll(`[${o.focusvisible}]`);
