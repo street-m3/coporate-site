@@ -1,0 +1,218 @@
+.p-Price-Content_Grid {
+    @media(--lg) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+.p-Price-Content_Grid-Item {
+    border: 2px solid var(--color-main);
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.p-Price-Description {
+    width: max-content;
+}
+
+.p-Price-Purpose {
+    &.UseCase {
+        text-align: center;
+    }
+
+    &.Value {
+        color: var(--color-main);
+        font-size: 41px;
+        font-weight: 500;
+        text-align: center;
+
+        &::after {
+            content: "円";
+            font-size: 12px;
+            text-indent: 4px;
+            color: var(--color-text);
+            display: inline-block;
+        }
+    }
+
+    &.Taxes {
+        text-align: right;
+    }
+}
+
+.p-Price-Plus_Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+
+    @media (--lg) {
+        width: 50px;
+    }
+
+    &>* {
+        position: relative;
+        color: inherit;
+        display: inline-block;
+        height: 20px;
+        pointer-events: none;
+        width: 20px;
+
+        &::before,
+        &::after {
+            content: "";
+            bottom: 0;
+            background-color: var(--color-main);
+            display: inline-block;
+            height: 3px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            left: 0;
+            width: 100%;
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.c-responsive-table-components {
+    &.scroll {
+        padding: 1px;
+        overflow-x: auto;
+    }
+}
+
+[data-placement="price"] {
+    & .c-responsive-table-components {
+        & .c-table {
+            width: 100%;
+            min-width: 768px;
+            border-bottom: 1px solid var(--color-table-border);
+            font-family: var(--font-sans-en);
+        }
+
+        & .c-teble-component-header {
+            & .c-teble-component-header-title {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: var(--font-weight-title);
+                border-bottom: 9px solid var(--color-main);
+                padding-bottom: 18px;
+            }
+        }
+
+        & .c-teble-component-body {
+            & .c-teble-component-body-row {
+                &:nth-child(odd) {
+                    background: var(--color-bg);
+                }
+            }
+
+            & .c-teble-component-body-row-data {
+                padding: 12px 30px;
+
+                &:not(:nth-of-type(2)) {
+                    border-right: 1px solid var(--color-table-border);
+                    border-left: 1px solid var(--color-table-border);
+                    border-bottom: 1px solid var(--color-table-border);
+                }
+
+                &:nth-of-type(2) {
+                    text-align: center;
+                    font-size: 30px;
+                    color: var(--color-main);
+                }
+
+                &:nth-of-type(3) {
+                    text-align: right;
+                    font-size: 30px;
+                    color: var(--color-main);
+                }
+
+                &[data-unut]::after {
+                    color: var(--color-text);
+                    content: attr(data-unut) "";
+                    display: inline-block;
+                    font-size: 14px;
+                    text-indent: 4px;
+                }
+
+                &[data-blanks="false"] {
+                    position: relative;
+                    top: -1.2em;
+                }
+            }
+        }
+    }
+}
+
+[data-placement="price"] {
+    & .c-liststyle-info-components {
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & .c-liststyle-Component {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        & .c-liststyle-Component-Item {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--color-table-border);
+            padding: 20px 0;
+        }
+
+        & .c-liststyle-Component-nested {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            flex-basis: 100%;
+
+            @media (--md) {
+                flex-basis: 50%;
+            }
+
+            &.total {
+                flex-basis: 100%;
+                justify-content: end;
+
+                &>* {
+                    color: var(--color-main);
+                    font-size: 30px;
+                    text-align: right;
+
+                    &::before,
+                    &::after {
+                        font-size: 14px;
+                        color: var(--color-text);
+                        display: inline-block;
+                    }
+
+                    &::before {
+                        content: "合計";
+                        margin-right: 0.5em;
+                    }
+
+                    &::after {
+                        content: "円";
+                        margin-left: 0.5em;
+                    }
+                }
+            }
+        }
+    }
+}

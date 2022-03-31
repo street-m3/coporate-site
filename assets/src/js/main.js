@@ -1,153 +1,96 @@
 'use strict';
 
-window.addEventListener('load', () => {
-    new MicroMethod();
-    new LocationController();
+// envオブジェクト
+import { globalvariables } from './env/env.js';
+
+// APIモジュール
+import { newsContentsMainFunctions } from './api.js';
+import { Form } from './modules/form.js';
+
+// サイトの共通テンプレートモジュール
+import { Header } from './site/header.js';
+import { Footer } from './site/footer.js';
+import { DrawerComponents } from './site/drawer.js';
+import { ContactBanner } from './site/contact.js';
+import { Breadcrumb } from './site/breadcrumb.js';
+import { TitleArea } from './site/titlearea.js';
+import { Button } from './components/button.js';
+import { PointerDOM } from './components/pointer.js';
+
+// UIモジュール
+import { Drawer } from './ui/drawer.js';
+import { Accordion } from './ui/accordion.js';
+import { Megamenu, HoverHeader } from './ui/megamenu.js';
+import { MicroModal } from './ui/modal.js';
+import { MouseFollow } from './ux/pointer.js';
+import { SocialMedia } from './ui/socialMedia.js';
+
+// UXモジュール
+import { IntersectionObservers } from './ux/scrollobserver.js';
+import { ScrollString } from './ux/scrollstring.js';
+import { SmoothScrollNavigation } from './ux/scroll-nav.js'
+import { History } from './ux/history.js';
+
+// Utiils
+import { ResponsiveMovies } from './utils/responsive-movie.js';
+import { DecodingSizer } from './utils/decodingSizer.js';
+import { Ellipsis } from './utils/ellipsis.js';
+import { noopener } from './utils/anchor.js';
+import { LocationController } from './utils/location.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    contentAPIasyncFunction();
+    new Header();
+    new Footer();
+    new DrawerComponents();
+    new Button();
+    new ContactBanner();
+    new Breadcrumb();
+    new TitleArea();
+    new PointerDOM();
+    new SocialMedia();
+    new DecodingSizer();
+    new LocationController('s-Header_Brand');
+    new ResponsiveMovies();
 });
 
-class MicroMethod {
-    constructor() {
-        const o = {
-            scroll_trigger_string: "data-scroll-trigger",
-            header_hover_trigger: "s-Header_navList-Item",
-            header_wrapper: "data-hover",
-            header_dropdown: "js-Header-Dropdown",
-            header_dropdown_menu: "s-Header-Dropdown",
-            pagination: "page-numbers",
-            header: 's-Header_Brand',
-            smoothscroll_anchors: 'data-smooth-scroll',
-        };
-        this.scroll_trigger_string = document.querySelector(`[${o.scroll_trigger_string}]`)
-        this.header_hover_trigger = document.querySelectorAll(`.${o.header_hover_trigger}`);
-        this.header_wrapper = document.querySelector(`[${o.header_wrapper}]`);
-        this.header_dropdown = document.querySelectorAll(`.${o.header_dropdown}`);
-        this.header_dropdown_menu = document.querySelector(`.${o.header_dropdown_menu}`);
-        this.pagination = document.querySelectorAll(`.${o.pagination}`);
-        this.smoothscroll_anchors = document.querySelectorAll(`[${o.smoothscroll_anchors}]`);
-        this.header = document.querySelector(`.${o.header}`);
-        this.anchors = document.querySelectorAll('a');
-        // AddCustomEventListeners
-        this.hoverEventListenersStart = this.hoverEventListenersStart();
-        this.hoverEventListenersEnded = this.hoverEventListenersEnded();
-        this.clickEventListeners = this.clickEventListeners();
-        // Fucntion init
-        this._currentGetPlacement();
-        this._scroll_animation_string();
-        this._header_nav_hover();
-        this._header_dropdown();
-        this._pagination_arialabel();
-        this._anchor_noopener();
-        this._smoothScrollToggler();
-    }
+window.addEventListener('load', () => {
+    new MouseFollow(992);
+    new Drawer(992, true);
+    new Megamenu();
+    new HoverHeader();
+    new MicroModal('.p-topMainvisual_Title');
+    DropdowninitFunctions();
+    new ScrollString();
+    new Accordion('p-faq-accordions', 'js-accordion-header');
+    new Accordion('s-Drawer-Dropdown', 'js-Drawer-Dropdown-Header');
+    new SmoothScrollNavigation();
+    new History();
+    noopener();
+    new Form(document.querySelector('.contactform'));
+});
 
-    _currentGetPlacement() {
-        const page = document.querySelector('main');
-        const attr = page.getAttribute('data-placement');
-        console.log(attr);
-    }
-
-    /**
-     * ドロップダウンメニュー
-     */
-    _header_dropdown() {
-        this.header_dropdown.forEach(element => {
-            element.addEventListener(this.hoverEventListenersStart, () => {
-                this.header_dropdown_menu.setAttribute('aria-hidden', 'false');
-            });
-            element.addEventListener(this.hoverEventListenersEnded, () => {
-                this.header_dropdown_menu.setAttribute('aria-hidden', 'true');
-            });
-        });
-        return;
-    }
-
-    /**
-     * スクロールイベント検知したらテキストをスライドさせる
-     */
-    _scroll_animation_string() {
-        window.addEventListener('scroll', () => {
-            if (!this.scroll_trigger_string) return;
-            this.scroll_trigger_string.style.transform = `translateX(${window.scrollY / 7}px)`;
-        });
-        return;
-    }
-
-    /**
-     * グローバルナビゲーションをホバーさせたらコンテナのdata属性を更新する
-     */
-    _header_nav_hover() {
-        this.header_hover_trigger.forEach(element => {
-            const hoverAnchor = element.querySelector('a');
-            element.addEventListener(this.hoverEventListenersStart, () => {
-                this.header_wrapper.dataset.hover = "true";
-                hoverAnchor.classList.add("active");
-            });
-            element.addEventListener(this.hoverEventListenersEnded, () => {
-                this.header_wrapper.dataset.hover = "false";
-                hoverAnchor.classList.remove("active");
-            });
-        });
-        return;
-    }
-
-    _pagination_arialabel() {
-        if (!this.pagination) return;
-        for (let i = 0; i < this.pagination.length; i++) {
-            const paginationCounter = this.pagination[i].textContent;
-            let pagination_set_string = "ページ" + paginationCounter;
-            if (this.pagination[i].getAttribute('aria-current') == 'page' && paginationCounter.match(/^(\d+)$/)) {
-                pagination_set_string = "現在のページは、" + paginationCounter + "ページ目です。";
-            }
-            this.pagination[i].setAttribute('aria-label', pagination_set_string);
-        }
-        return;
-    }
-
-    _anchor_noopener() {
-        this.anchors.forEach((element) => {
-            if (element.hasAttribute('target') === false || element.getAttribute('target') !== '_blank') return;
-            element.setAttribute('rel', 'noopener noreferrer');
-        });
-        return;
-    }
-
-    _smoothScrollToggler() {
-        this.smoothscroll_anchors.forEach(anchor => {
-            if (anchor.dataset.smoothScroll == 'false') return;
-            anchor.addEventListener('click', (e) => {
-                targetPosition(e, this.header.clientHeight);
-            });
-        });
-        return;
-    }
-
-    hoverEventListenersStart() {
-        return window.ontouchstart ? 'touchstart' : 'mouseover';
-    }
-
-    hoverEventListenersEnded() {
-        return window.ontouchstart ? 'touchend' : 'mouseout';
-    }
-
-    clickEventListeners() {
-        return window.ontouchstart ? 'touchstart' : 'click';
-    }
+async function contentAPIasyncFunction() {
+    await new Promise((resolve) => {
+        newsContentsMainFunctions();
+        resolve();
+    });
+    setTimeout(() => {
+        Ellipsis('js-trim', 25);
+        new IntersectionObservers();
+    }, 300);
 }
 
-class LocationController {
-    constructor() {
-        this.urlHash = location.hash;
-        this.urlTarget = document.getElementById(this.urlHash.replace('#', ''));
-        this.headerClientHeight = document.querySelector('.s-Header_Brand').clientHeight;
-        this.init();
-    }
-
-    init() {
-        if (!this.urlTarget) return;
-        if (this.urlHash) {
-            const targetPosition = this.urlTarget.offsetTop - this.headerClientHeight;
-            _smoothScroll(targetPosition);
-        }
-        return;
+// ドロップダウンメニューを条件付きで実行・遷移する
+function DropdowninitFunctions() {
+    const FooterDropdown = document.querySelector('.s-Footer-Dropdown_Tab');
+    const matchMediaCtrl = window.matchMedia(`(max-width: 992px)`).matches;
+    if (!FooterDropdown) return;
+    if (matchMediaCtrl) {
+        new Accordion('s-Footer-Dropdown', 'js-Footer-Dropdown-Header');
+    } else {
+        FooterDropdown.addEventListener('click', () => { 
+            location.href = `${globalvariables.siteUrl}service`;
+        });
     }
 }

@@ -1,0 +1,146 @@
+.p-companyProfile_Details-Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.p-companyProfile {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+
+    @media (--md) {
+        flex-direction: row;
+    }
+
+    & > * {
+        flex: 1;
+    }
+}
+
+.p-companyProfile_Details {
+    margin-top: 20px;
+
+    @media (--md) {
+        margin-top: 0;
+    }
+}
+
+.p-companyProfile_Details-JobTitle{
+    font-size: 14px;
+    display: block;
+    letter-spacing: var(--tracking-wide);
+    line-height: var(--leading-relaxed);
+    @add-mixin lineHeightCrop var(--leading-relaxed);
+}
+
+.p-companyProfile_Photo {
+    @media (--md) {
+        margin-left: 7vw;
+    }
+}
+
+.p-companyProfile_Details-Content {
+    margin-top: 5px;
+}
+
+.p-companyProfile_Details-Text {
+    margin-top: 20px;
+
+    & > p:not([class]) {
+        letter-spacing: var(--tracking-wide);
+        line-height: var(--leading-relaxed);
+        color: var(--color-caption);
+        font-size: var(--font-size-sm);
+    }
+}
+
+.p-companyProfile_Details_List {
+    margin-top: 40px;
+
+    & > * {
+        letter-spacing: var(--tracking-wide);
+        line-height: var(--leading-relaxed);
+    }
+}
+
+.p-companySummary {
+    width: 700px;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+.p-companySummary_List-Item {
+    padding: clamp(15px, 2.6vw, 30px) 0;
+    border-bottom: 1px solid var(--color-border-list);
+
+    @media (--md) {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+.p-companySummary_List-Title {
+    color: var(--color-main);
+    font-size: 1rem;
+    white-space: nowrap;
+
+    @media (--md) {
+        width: 20%;
+        min-width: 150px;
+    }
+}
+
+.p-companySummary_List-Text {
+    text-align: right;
+    font-size: 1rem;
+}
+
+.p-companyHistory {
+    width: 700px;
+    margin-left: auto;
+    max-width: 100%;
+}
+
+.p-companyHistory_TimelineList-Item {
+    display: flex;
+    & > * {
+        padding-bottom: 30px;
+    }
+}
+
+.p-companyHistory_Timeline-Date {
+    min-width: 60px;
+    line-height: var(--leading-loose);
+    /* @add-mixin lineHeightCrop $leading-loose; */
+    flex-basis: 60px;
+    @media (--md) {
+        flex-basis: 135px;
+    }
+    & > * {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+}
+
+.p-companyHistory_Timeline-Text {
+    border-left: 1px solid var(--color-border-list);
+    flex: 1;
+    line-height: var(--leading-loose);
+    position: relative;
+    padding-left: clamp(1rem, 2.4vw, 28.5px);
+
+    &::before {
+        --circle-size: 13px;
+        content: "";
+        display: block;
+        width: var(--circle-size);
+        height: var(--circle-size);
+        border-radius: 50%;
+        background-color: var(--color-main);
+        position: absolute;
+        top: 0.5em;
+        left: -6.5px;
+    }
+}
