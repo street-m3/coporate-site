@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>藤岡行政書士事務所</title>
-    <meta name="description" content="ディスクリプション">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link rel="apple-touch-icon" href="./img/favicon.ico" sizes="180x180"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.svg" sizes="180x180"> 
     <link rel="stylesheet" href="./css/style.css" type="text/css">
 </head>
 
@@ -182,75 +181,131 @@
             </div>
         </div>
 
-        <!-- <p-ContactForm>
-            <p-ContactForm_Group>
-                <p-ContactForm_Header></p-ContactForm_Header>
-                <p-ContactForm_Content>
-                    <p-ContactForm_Content-Field>
-                        <p-ContactForm_Content-Field-Input></p-ContactForm_Content-Field-Input>
-                    </p-ContactForm_Content-Field>
-                </p-ContactForm_Content>
-            </p-ContactForm_Group>
-        </p-ContactForm> -->
         <!-- main -->
         <main role="main" data-placement="contact">
             <div class="ly-Main-Container">
                 <div class="ly-Inner_Grid -sm">
-                    <h1 class="c-headline-lv2 c-headline-Primary p-contact-headline" data-headline="28 md:75">
+                    <h1 class="c-headline-lv2 c-headline-Primary" data-headline="28 md:75">
                         お気軽にお申込みください
                         <span>※すべて必須記入となっています</span>
                     </h1>
-                    <form action="" class="p-contactForm">
-                        <!-- 氏名入力欄 -->
-                        <div class="p-contactForm_Group">
-                            <p class="p-contactForm_Header">
-                                <label for="full-name" class="p-contactForm_Label">お名前</label>
+                    <form action="./completed.html" id="contact-form" class="contact-FlexInline-Valid-Form" method="post" novalidate="novalidate" autocomplete="off">
+                    <!-- name -->
+                        <div class="contact-FlexInline-Valid-Form_Group">
+                            <p class="contact-FlexInline-Valid-Form_Header">
+                                <label for="name" class="contact-FlexInline-Valid-Form_Label">
+                                    お名前
+                                </label>
                             </p>
-                            <div class="p-contactForm_Group-Content">
-                                <p class="p-contactForm_textField">
-                                    <input id="full-name" class="o-input p-contactForm_Input" type="text" neme="full-name" placeholder="" title="お名前の入力は必須です" required aria-required="true">
-                                </p>
-                                <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                            <div class="contact-FlexInline-Valid-Form_Container">
+                                <div class="contact-FlexInline-Valid-Form_Field">
+                                    <!-- 
+                                        format: text email tel etc...
+                                        id: name (<label>forと一致させる)
+                                        title: hoverさせたときのtooltipsを表示させる
+                                        required:入力を強制する
+                                        aria-required: (アクセシビリティ)入力を強制する
+                                        tabindex: tabフォーカスの優先度を指定する
+                                        autofocus: 自動フォーカスを有効にする
+                                        name: 名前
+                                        pattern: 空白だけで送信されることを防止する
+                                    -->
+                                    <input 
+                                    type="text"
+                                    id="name"
+                                    class="o-input contact-FlexInline-Valid-Form_Field-Input"
+                                    placeholder=""
+                                    title="お名前の入力は必須です"
+                                    required
+                                    aria-required="true"
+                                    tabindex="1"
+                                    autofocus
+                                    name="name"
+                                    pattern=".*\S+.*"
+                                    minlength="2"
+                                    maxlength="40"
+                                    >
+                                    <strong class="contact-FlexInline-Valid-Form_Field-Valid" aria-hidden="true">
+                                        すべて必須記入となっています
+                                    </strong>
+                                </div>
                             </div>
                         </div>
-                        <!-- 電話番号入力欄 -->
-                        <div class="p-contactForm_Group">
-                            <p class="p-contactForm_Header">
-                                <label for="tel" class="p-contactForm_Label">連絡先電話番号</label>
+                    <!-- telphone -->
+                        <div class="contact-FlexInline-Valid-Form_Group">
+                            <p class="contact-FlexInline-Valid-Form_Header">
+                                <label for="tel" class="contact-FlexInline-Valid-Form_Label">
+                                    連絡先電話番号
+                                </label>
                             </p>
-                            <div class="p-contactForm_Group-Content">
-                                <p class="p-contactForm_textField">
-                                    <input id="tel" class="o-input p-contactForm_Input" type="tel" name="tel" placeholder="" title="電話番号の入力は必須です" required aria-required="true">
-                                </p>
-                                <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                            <div class="contact-FlexInline-Valid-Form_Container">
+                                <div class="contact-FlexInline-Valid-Form_Field">
+                                    <input 
+                                    type="tel"
+                                    id="tel"
+                                    class="o-input contact-FlexInline-Valid-Form_Field-Input"
+                                    placeholder=""
+                                    title="電話番号の入力は必須です"
+                                    required
+                                    aria-required="true"
+                                    tabindex="2"
+                                    autofocus
+                                    name="tel"
+                                    pattern="\d{2,4}-?\d{2,4}-?\d{3,4}"
+                                    >
+                                    <strong class="contact-FlexInline-Valid-Form_Field-Valid" aria-hidden="true">
+                                        すべて必須記入となっています
+                                    </strong>
+                                </div>
                             </div>
                         </div>
-                        <!-- メールアドレス入力欄 -->
-                        <div class="p-contactForm_Group">
-                            <p class="p-contactForm_Header">
-                                <label for="email" class="p-contactForm_Label">メールアドレス</label>
+                    <!-- email -->
+                        <div class="contact-FlexInline-Valid-Form_Group">
+                            <p class="contact-FlexInline-Valid-Form_Header">
+                                <label for="email" class="contact-FlexInline-Valid-Form_Label">
+                                    メールアドレス
+                                </label>
                             </p>
-                            <div class="p-contactForm_Group-Content">
-                                <p class="p-contactForm_textField">
-                                    <input id="email" class="o-input p-contactForm_Input" type="email" name="email" placeholder="" title="メールアドレスの入力は必須です" required aria-required="true">
-                                </p>
-                                <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                            <div class="contact-FlexInline-Valid-Form_Container">
+                                <div class="contact-FlexInline-Valid-Form_Field">
+                                    <input 
+                                    type="email"
+                                    id="email"
+                                    class="o-input contact-FlexInline-Valid-Form_Field-Input"
+                                    placeholder=""
+                                    title="メールアドレスの入力は必須です"
+                                    required
+                                    aria-required="true"
+                                    tabindex="3"
+                                    autofocus
+                                    name="email"
+                                    pattern="^[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-_\.]+$"
+                                    >
+                                    <strong class="contact-FlexInline-Valid-Form_Field-Valid" aria-hidden="true">
+                                        すべて必須記入となっています
+                                    </strong>
+                                </div>
                             </div>
                         </div>
-                        <!-- お問い合せ内容入力欄 -->
-                        <div class="p-contactForm_Group">
-                            <p class="p-contactForm_Header">
-                                <label for="message" class="p-contactForm_Label">メッセージ</label>
+                    <!-- Message -->
+                        <div class="contact-FlexInline-Valid-Form_Group">
+                            <p class="contact-FlexInline-Valid-Form_Header">
+                                <label for="message" class="contact-FlexInline-Valid-Form_Label">
+                                    メッセージ
+                                </label>
                             </p>
-                            <div class="p-contactForm_Group-Content">
-                                <p class="p-contactForm_textField">
-                                    <textarea id="message" class="o-textarea p-contactForm_textarea" type="text" name="message" placeholder="" title="お問い合せ内容の入力は必須です" required aria-required="true"></textarea>
-                                </p>
-                                <strong class="p-contactForm_Input-validate">すべて必須記入となっています</strong>
+                            <div class="contact-FlexInline-Valid-Form_Container">
+                                <div class="contact-FlexInline-Valid-Form_Field">
+                                    <textarea id="message" class="o-input contact-FlexInline-Valid-Form_Field-Textarea" title="お問い合せ内容の入力は必須です" required aria-required="true" name="message" tabindex="4"></textarea>
+                                    <strong class="contact-FlexInline-Valid-Form_Field-Valid" aria-hidden="true">
+                                        すべて必須記入となっています
+                                    </strong>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-contactForm_underComponent">
-                            <button type="submit" class="c-button c-button-border" data-op="vertical-right">SEND</button>
+                        <div class="contact-FlexInline-Valid-Form_Submit">
+                            <button class="contact-FlexInline-Valid-Form_Submit-Button c-button c-button-border u-uppercase" type="submit" data-op="vertical-right" tabindex="5" aria-disabled="true">Send</button>
+                            <!-- <p class="contact-FlexInline-Valid-Form_Alert-Text" data-alert="true">未入力の必須事項をご入力ください。</p> -->
                         </div>
                     </form>
                 </div>
@@ -371,6 +426,7 @@
     <script src="./js/responsive-movie.js" type="module"></script>
     <script src="./js/hover.js" type="module"></script>
     <script src="./js/ellipsis.js" type="module"></script>
+    <script src="./js/contactform.js" type="module"></script>
     <script src="./js/main.js"></script>
 </body>
 

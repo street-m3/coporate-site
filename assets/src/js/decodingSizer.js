@@ -12,7 +12,7 @@ class DecodingSizer {
 
     /**
      * 
-     * @param {string} src ソースのパスを設定
+     * @param {string} src getAttributeで取得してきた値を設定します。
      * @returns 
      */
     _promiseLoader(src) {
@@ -26,7 +26,7 @@ class DecodingSizer {
 
     /**
      * 
-     * @param {object} mediaNode ターゲットのDOMを設定
+     * @param {object} mediaNode NodeListを設定します。
      */
     _sizeSettings(mediaNode) {
         Array.prototype.forEach.call(mediaNode, element => {
@@ -50,17 +50,15 @@ class DecodingSizer {
 
     /**
      * 
-     * @param {object} target NodeListの各要素を設定する
-     * @param {string} url メディアファイルのパスを取得する
+     * @param {object} target NodeListの各要素を設定します。
+     * @param {string} url 各要素のメディアファイルのパスを取得します。
      */
     _fileSizeRender(target, url) {
-        this._promiseLoader(url)
-            .then((res) => {
+        this._promiseLoader(url).then((res) => {
                 target.setAttribute('width', res.width);
                 target.setAttribute('height', res.height);
-            })
-            .catch((err) => {
+        }).catch((err) => {
                 console.log(err);
-            });
+        });
     }
 }

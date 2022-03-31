@@ -11,7 +11,7 @@ class MouseFollow {
     constructor(breakpoints) {
         this.o = {
             mouseCenter: 'js-mouseFollow-Center',
-            mouseHoverSelecter: 'a, button[type="button"]',
+            mouseHoverSelecter: 'a, [type="button"]',
             mouseHoverPlay: '.p-topMainvisual_Title',
         };
         this.mouseCenter = document.querySelector(`.${this.o.mouseCenter}`);

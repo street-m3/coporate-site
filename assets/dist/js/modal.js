@@ -55,15 +55,16 @@ class MicroModal {
     _modalsetAttribute(modal) {
         const currentEventModal = document.getElementById(modal);
         if (currentEventModal.getAttribute('aria-hidden') == 'true') {
+            currentEventModal.setAttribute('inert', "");
             currentEventModal.setAttribute('aria-hidden', 'false');
             currentEventModal.classList.add('is-open');
             backfaceFixed(true);
         } else {
+            currentEventModal.removeAttribute('inert', "");
             currentEventModal.setAttribute('aria-hidden', 'true');
             currentEventModal.classList.remove('is-open');
             backfaceFixed(false);
         }
-
         return currentEventModal;
     }
 
