@@ -1,5 +1,5 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     new IntersectionObservers();
 });
 
