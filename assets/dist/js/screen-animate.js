@@ -77,7 +77,7 @@ class ScreenAnimateInnerHTML {
         return document.body.outerHTML = `
         <div class="c-ScreenAnimate_Container">
             <div class="c-ScreenAnimate_Layer anim-MotionLayer_01">
-                <div class="c-ScreenAnimate_Routine js-ScreenAnimate-Routine">
+                <div class="c-ScreenAnimate_Routine js-ScreenAnimate-Routine" style="visiblity: hidden; opacity: 0;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="99px" height="104.5px" viewBox="0 0 62.468 65.983">
                         <g id="sp_logo" transform="translate(0)">
                             <g id="グループ_10248" data-name="グループ 10248" transform="translate(6.276)">
@@ -158,9 +158,11 @@ class TextAnimation extends ScreenAnimate {
 function fadeIn(element, duration, transition, displayIn) {
     if (!element) return;
     element.style.opacity = 0;
+    element.visibility = 'hidden';
     element.style.transition = `opacity ${transition}ms ease`;
     setTimeout(() => {
         element.style.opacity = 1;
+        element.visibility = 'visible';
     }, duration);
     setTimeout(() => {
         element.style.display = 'block';

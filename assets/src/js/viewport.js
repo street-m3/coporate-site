@@ -5,7 +5,7 @@
     function switchViewport() {
         const value =
             window.outerWidth > viewportWidth ?
-            'width=device-width,initial-scale=1' :
+            'width=device-width,initial-scale=1.0' :
             `width=${viewportWidth}`;
         if (viewport.getAttribute('content') !== value) {
             viewport.setAttribute('content', value);
