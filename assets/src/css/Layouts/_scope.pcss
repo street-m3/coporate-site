@@ -1,0 +1,93 @@
+[data-placement="policy"] {
+    & .sc-userWriting-Area {
+        font-weight: var(--font-weight-text);
+
+        &>* {
+            margin-top: clamp(28px, 3vw, 40px);
+        }
+
+        &> :first-child {
+            margin-top: 0 !important;
+        }
+
+        &> :last-child {
+            margin-bottom: 0 !important;
+        }
+
+        & h2:not([class]) {
+            color: var(--color-main);
+            font-size: clamp(var(--font-size-default), 2.5vw, var(--font-size-lg));
+            font-weight: var(--font-weight-title);
+            letter-spacing: var(--tracking-relaxed);
+        }
+
+        & p:not([class]),
+        & ol:not([class]),
+        & ul:not([class]) {
+            line-height: var(--leading-x-loose);
+            font-size: car(--font-size-sm);
+            margin-top: 20px;
+
+            @media (--md) {
+                font-size: 1rem;
+                margin-top: 10px;
+            }
+        }
+
+        & ol:not([class]),
+        & ul:not([class]) {
+            margin-top: 2em;
+
+            &:first-child {
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
+[data-placement="completed"] {
+    & .sc-userWriting-Area {
+        &>* {
+            margin-top: clamp(1.5em, 3.5vw, 2em);
+        }
+
+        &> :first-child {
+            margin-top: 0 !important;
+        }
+
+        &> :last-child {
+            margin-bottom: 0 !important;
+        }
+
+        & p:not([class]) {
+            line-height: var(--leading-x-loose);
+            letter-spacing: var(--tracking-wide);
+        }
+    }
+}
+
+[data-placement="article"] {
+    & .sc-userWriting-Area {
+        &>* {
+            margin-top: clamp(1.5em, 3.5vw, 2em);
+        }
+
+        &> :first-child {
+            margin-top: 0 !important;
+        }
+    
+        &> :last-child {
+            margin-bottom: 0 !important;
+        }
+
+        & h2 {
+            border-bottom: 2px solid var(--color-main);
+            padding-bottom: 14px;
+        }
+
+        & p:not([class]) {
+            line-height: var(--leading-relaxed);
+            letter-spacing: var(--tracking-wide);
+        }
+    }
+}

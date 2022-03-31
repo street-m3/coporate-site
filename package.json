@@ -7,13 +7,13 @@
 		"clean:fontcss": "rimraf ./assets/dist/webfont/ && mkdirp ./assets/dist/webfont/",
 		"clean:js": "rimraf ./assets/dist/js/ && mkdirp ./assets/dist/js/",
 		"clean:images": "rimraf ./assets/dist/images/ && mkdirp ./assets/dist/images/",
-		"dev:html:cpx": "cpx './assets/src/**/*.html' './assets/dist/'",
+		"dev:html:cpx": "cpx './assets/src/*.html' './assets/dist/' && cpx './assets/src/pages/**/*.html' './assets/dist/'",
 		"build:html": "npm-run-all dev:html:*",
 		"dev:css:postcss": "postcss -c ./postcss.config.js ./assets/src/css/style.pcss -o ./assets/dist/css/style.css",
 		"dev:css:fontcss": "cpx './assets/src/css/webfont/*' './assets/dist/css/webfont/'",
 		"build:css": "npm-run-all -s dev:css:*",
-		"dev:js:cpx":"cpx './assets/src/js/*.js' './assets/dist/js/'",
-		"build:js": "npm run clean:js && npm-run-all -s dev:js:*",
+		"dev:js:cpx": "cpx './assets/src/js/*.js' './assets/dist/js/'",
+		"build:js": "npm run clean:js && webpack",
 		"dev:images:cpx": "cpx './assets/src/images/*.{jpg,jpeg,png,gif,svg,webp,mp4,ico}' './assets/dist/images/'",
 		"sharp-webp": "sharp -i ./assets/src/images/*.jpg ./src/images/**/*.png -f webp -o ./assets/dist/images/",
 		"sharp-jpg": "sharp -i ./assets/src/images/*.jpg -o ./assets/dist/images/",
@@ -27,21 +27,14 @@
 		"watch:images": "onchange ./assets/src/images/ -e '**/*.DS_Store' -- npm run build:images",
 		"watch": "npm-run-all -p watch:*"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/street-m3/corporate-site.git"
-	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/street-m3/corporate-site/issues"
-	},
-	"homepage": "https://github.com/street-m3/corporate-site#readme",
 	"devDependencies": {
 		"@babel/cli": "^7.15.7",
 		"@babel/core": "^7.15.8",
 		"@babel/preset-env": "^7.15.8",
+		"babel-loader": "^8.2.4",
 		"braces": "^3.0.2",
 		"browser-sync": "^2.27.7",
 		"cpx": "^1.5.0",
@@ -69,6 +62,8 @@
 		"postcss-sorting": "^7.0.1",
 		"rimraf": "^3.0.2",
 		"sharp-cli": "^1.15.0",
-		"watch": "^1.0.2"
+		"watch": "^1.0.2",
+		"webpack": "^5.70.0",
+		"webpack-cli": "^4.9.2"
 	}
 }

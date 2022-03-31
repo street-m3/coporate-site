@@ -1,0 +1,83 @@
+.s-Sidebar-Content_Title {
+    font-size: 21px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.p-Sidebar-List-Card {
+    --thumb-size-x: 36%;
+    --thumb-size-y: 80px;
+    width: 100%;
+
+    & + & {
+        margin-top: 20px;
+    }
+
+    & > a {
+        position: relative;
+        display: flex;
+    }
+
+    & .p-Sidebar-List-Card_Body {
+        width: calc(100% - var(--thumb-size-x));
+        padding-right: 10px;
+    }
+
+    & .p-Sidebar-List-Card_Image {
+        width: var(--thumb-size-x);
+        position: relative;
+
+        &::before {
+            content: "";
+            padding-top: 61.8%;
+            display: block;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+        }
+
+        & > * {
+            height: 100%;
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    & .p-Sidebar-List-Card_Meta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    & .p-Sidebar-List-Card_Meta-Date {
+        font-size: clamp(12px, 2vw, 15px);
+        font-family: var(--font-sans-en);
+        color: var(--color-caption);
+        white-space: nowrap;
+        margin-right: 10px;
+    }
+
+    & .p-Sidebar-List-Card_Title {
+        --title-height: 1.4em;
+        font-size: 14px;
+        color: var(--color-main);
+        margin-top: 0.5rem;
+        line-height: var(--title-height);
+        letter-spacing: var(--tracking-wide);
+        max-height: calc(var(--title-height) * 2);
+        overflow: hidden;
+        font-weight: 500;
+
+        @media (--lg) {
+            max-height: calc(var(--title-height) * 3);
+        }
+    }
+}

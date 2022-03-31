@@ -1,0 +1,31 @@
+.c-picture-Panel {
+    position: relative;
+}
+
+.c-picture-Panel_Headline {
+    & [lang='en'] {
+        display: inline-block;
+        width: 100%;
+    }
+
+    & [lang='ja'] {
+        line-height: var(--leading-base);
+        letter-spacing: 0.08em;
+        font-size: clamp(var(--font-size-md), 3.645vw, var(--font-size-xl));
+    }
+}
+
+.c-picture-Panel_Details {
+    background-color: var(--color-white);
+    position: relative;
+
+    & p:not([class]) {
+        color: var(--color-caption);
+        line-height: var(--leading-relaxed);
+        letter-spacing: 0.05em;
+
+        @media (--md) {
+            line-height: var(--leading-x-loose);
+        }
+    }
+}
