@@ -12,6 +12,7 @@ const NEWS_TICKER_TOPIC = `&limit=${NEWS_TICKER_LIMIT}&offset=${NEWS_TICKER_CALC
 const REQUEST_KEY_ORDER = 'news?orders-=publishedAt';
 const GET_PARAMETER = location.search.substring(1).split('=')[1];
 
+
 /**
  * responseFetchContents: 
  * microCMSからデータを取得し成功すればJSONを返却します。追加の処理は.then()を用いて記述します。
