@@ -21,19 +21,19 @@ const GET_PARAMETER = location.search.substring(1).split('=')[1];
  */
 const responseFetchContents = async (url) => {
     const response = await fetch(url, {
-        method: 'GET',
-        mode: 'cors',
-        cache: 'default',
-        credentials: 'same-origin', 
-        headers: {
-            'X-MICROCMS-API-KEY': `${process.env.XMICROCMS_API_KEY}`,
-        },
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer-when-downgrade',
-    })
-    .catch(error => {
-        console.warn(error);
-    })
+            method: 'GET',
+            mode: 'cors',
+            cache: 'default',
+            credentials: 'same-origin',
+            headers: {
+                'X-MICROCMS-API-KEY': `${process.env.XMICROCMS_API_KEY}`,
+            },
+            redirect: 'follow',
+            referrerPolicy: 'no-referrer-when-downgrade',
+        })
+        .catch(error => {
+            console.warn(error);
+        })
     return response.json();
 }
 
