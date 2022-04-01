@@ -48,7 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     new Breadcrumb();
     new TitleArea();
     new PointerDOM();
-    new SocialMedia();
+    new SocialMedia(document.querySelector('.js-snsIcon-Component'), {
+        facebook: true,
+        twitter: true,
+    });
     new DecodingSizer();
     new LocationController('s-Header_Brand');
     new ResponsiveMovies();

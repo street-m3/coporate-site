@@ -2,7 +2,7 @@
 function noopener() {
     const anchors = document.querySelectorAll('a');
     anchors.forEach((anchor) => {
-        if (anchor.hasAttribute('target') === false || element.getAttribute('target') !== '_blank') return;
+        if (anchor.hasAttribute('target') === false || anchor.getAttribute('target') !== '_blank') return;
         anchor.setAttribute('rel', 'noopener noreferrer');
     });
 }
