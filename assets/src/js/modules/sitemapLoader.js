@@ -10,6 +10,7 @@ const xmlAsynchronousLorder = async () => {
         ).catch(error => {
             console.log(error);
         })
+        console.log(response)
     return response.text();
 }
 
