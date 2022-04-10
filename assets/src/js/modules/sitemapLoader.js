@@ -3,7 +3,7 @@ import { globalvariables } from "../env/env";
 import { Breadcrumb } from "../site/breadcrumb";
 
 const xmlAsynchronousLorder = async () => {
-    const XMLresource = `${globalvariables.siteUrl}/sitemap.xml`;
+    const XMLresource = `${globalvariables.siteUrl}sitemap.xml`;
     const response = await fetch(XMLresource)
         .then(
             new Breadcrumb()
