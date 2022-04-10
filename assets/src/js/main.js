@@ -76,6 +76,9 @@ window.addEventListener('load', () => {
     noopener();
     new Form(document.querySelector('.contactform'));
     sample();
+    setTimeout(() => {
+        new SitemapLoader();
+    }, 300);
 });
 
 async function contentAPIasyncFunction() {
@@ -86,7 +89,6 @@ async function contentAPIasyncFunction() {
     setTimeout(() => {
         Ellipsis('js-trim', 25);
         new IntersectionObservers();
-        new SitemapLoader();
     }, 300);
 }
 
