@@ -3,14 +3,20 @@ import { globalvariables } from "../env/env";
 // import { Breadcrumb } from "../site/breadcrumb";
 
 const xmlAsynchronousLorder = async () => {
-    const XMLresource = `${globalvariables.siteUrl}sitemap.xml`;
-    const response = await fetch(XMLresource)
-        .then(
+    // const XMLresource = `${globalvariables.siteUrl}sitemap.xml`;
+    const response = await fetch('https://reverent-volhard-d99d5d.netlify.app/sitemap.xml', {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default',
+        credentials: 'same-origin',
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer-when-downgrade',
+    })
+    .then(
             console.log('I was able to reference the xml file')
-        ).catch(error => {
-            console.log(error);
-        })
-        console.log(response)
+    ).catch(error => {
+        console.log(error);
+    })
     return response.text();
 }
 
