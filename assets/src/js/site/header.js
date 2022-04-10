@@ -12,7 +12,7 @@ export class Header extends HTMLElement {
             <header class="s-Header" role="banner">
                 <div class="s-Header_Brand">
                     <a href="https://reverent-volhard-d99d5d.netlify.app/" class="s-Header_Brand-Title">
-                        <img src="${this.getAttribute('media')}logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
+                        <img src="${globalvariables.siteUrl}${globalvariables.images}logo.svg" width="99px" height="83.41px" alt="${globalvariables.siteName}">
                     </a>
                 </div>
                 <div class="s-Header_Inner" data-scroll="false" data-hover="false">

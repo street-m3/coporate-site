@@ -13,7 +13,7 @@ export class Footer extends HTMLElement {
                 <div class="s-Footer_Inner">
                     <address class="s-Footer_Address">
                         <div class="s-Footer_Address-Brand">
-                            <img src="${this.getAttribute('media')}logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
+                            <img src="${globalvariables.siteUrl}${globalvariables.images}logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
                             <ul class="s-Footer_AddressList">
                                 <li class="s-Footer_AddressList-Item">
                                     〒234-0013
