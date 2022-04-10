@@ -1,5 +1,8 @@
-export { testSampleApplication };
+'use strict';
+import { globalvariables } from '../env/env';
 
-function testSampleApplication() {
-    return;
+const sample = () => {
+    return console.log(`Welcome ${globalvariables.siteName}`);
 }
+
+export { sample };

@@ -1,12 +1,12 @@
 'use strict';
 import { globalvariables } from "../env/env";
-import { Breadcrumb } from "../site/breadcrumb";
+// import { Breadcrumb } from "../site/breadcrumb";
 
 const xmlAsynchronousLorder = async () => {
     const XMLresource = `${globalvariables.siteUrl}sitemap.xml`;
     const response = await fetch(XMLresource)
         .then(
-            new Breadcrumb()
+            console.log('I was able to reference the xml file')
         ).catch(error => {
             console.log(error);
         })
@@ -61,7 +61,6 @@ export class SitemapLoader {
             }
         }
         if (urlShortPath == this.defaultOptions.bloginfo) {
-            console.log('match!!!');
             const bloginfoHeadline = document.querySelector('.c-headline-lv1');
             const mainHeadline = bloginfoHeadline.textContent;
             this._createListItem(mainHeadline);
