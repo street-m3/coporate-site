@@ -32,7 +32,6 @@ export class SitemapLoader {
 
     _xmlsitemapCreateElement() {
         xmlAsynchronousLorder().then(xml => {
-            console.log(xml);
             let parser = new DOMParser();
             const dom = parser.parseFromString(xml, "application/xml");
             const url = dom.querySelectorAll('url');
