@@ -9,14 +9,14 @@ import { Form } from './modules/form.js';
 import { SitemapLoader } from './modules/sitemapLoader.js';
 
 // テストモジュール
-import { testSampleApplication } from './test/test';
+import { sample } from './test/test';
 
 // サイトの共通テンプレートモジュール
 import { Header } from './site/header.js';
 import { Footer } from './site/footer.js';
 import { DrawerComponents } from './site/drawer.js';
 import { ContactBanner } from './site/contact.js';
-// import { Breadcrumb } from './site/breadcrumb.js';
+import { Breadcrumb } from './site/breadcrumb.js';
 import { TitleArea } from './site/titlearea.js';
 import { Button } from './components/button.js';
 import { PointerDOM } from './components/pointer.js';
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new Button();
     new ContactBanner();
     new TitleArea();
+    new Breadcrumb()
     new PointerDOM();
     new SocialMedia(document.querySelector('.js-snsIcon-Component'), {
         facebook: true,
@@ -74,7 +75,7 @@ window.addEventListener('load', () => {
     new History();
     noopener();
     new Form(document.querySelector('.contactform'));
-    testSampleApplication();
+    sample();
 });
 
 async function contentAPIasyncFunction() {
