@@ -20,6 +20,7 @@ import { Breadcrumb } from './site/breadcrumb.js';
 import { TitleArea } from './site/titlearea.js';
 import { Button } from './components/button.js';
 import { PointerDOM } from './components/pointer.js';
+import { ScreenAnimateInnerHTML } from './template/screenAnimate';
 
 // UIモジュール
 import { Drawer } from './ui/drawer.js';
@@ -34,7 +35,7 @@ import { IntersectionObservers } from './ux/scrollobserver.js';
 import { ScrollString } from './ux/scrollstring.js';
 import { SmoothScrollNavigation } from './ux/scroll-nav.js'
 import { History } from './ux/history.js';
-import { ScreenAnimate } from './ux/screenAnimate.js';
+import { ScreenAnimate, EndAnimationMethod } from './ux/screenAnimate.js';
 
 // Utiils
 import { ResponsiveMovies } from './utils/responsive-movie.js';
@@ -44,6 +45,7 @@ import { noopener } from './utils/anchor.js';
 import { LocationController } from './utils/location.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    new ScreenAnimateInnerHTML();
     new ScreenAnimate();
     contentAPIasyncFunction();
     new Header();
@@ -64,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', () => {
     new MouseFollow(992);
+    new EndAnimationMethod();
     new Drawer(992, true);
     new Megamenu();
     new HoverHeader();
