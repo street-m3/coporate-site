@@ -1,6 +1,6 @@
 const Dotenv = require('dotenv-webpack');
 module.exports = {
-    mode: 'development', //production or development
+    mode: 'production', //production or development
     entry: `./assets/src/js/main.js`,
     plugins: [
         new Dotenv()

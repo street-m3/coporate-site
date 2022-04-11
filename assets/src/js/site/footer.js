@@ -65,7 +65,7 @@ export class Footer extends HTMLElement {
                                 <a class="touch-hover" href="${globalvariables.siteUrl}sitemap">サイトマップ</a>
                             </li>
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="policy">プライバシーポリシー</a>
+                                <a class="touch-hover" href="${globalvariables.siteUrl}policy">プライバシーポリシー</a>
                             </li>
                         </ul>
                     </nav>
