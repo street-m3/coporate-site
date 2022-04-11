@@ -44,7 +44,6 @@ import { LocationController } from './utils/location.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     contentAPIasyncFunction();
-    new Breadcrumb();
     new Header();
     new Footer();
     new DrawerComponents();
@@ -75,21 +74,17 @@ window.addEventListener('load', () => {
     new History();
     noopener();
     new Form(document.querySelector('.contactform'));
-    sample();
-    setTimeout(() => {
-        new SitemapLoader();
-    }, 1000)
 });
 
-// async function BreadcrumbRenderFunction() {
-//     await new Promise(resolve => {
-//         resolve();
-//         new Breadcrumb();
-//     })
-//     .then(
-//         new SitemapLoader()
-//     )
-// }
+async function BreadcrumbRenderFunction() {
+    await new Promise(resolve => {
+        resolve();
+        new Breadcrumb();
+    })
+    .then(
+        new SitemapLoader()
+    )
+}
 
 async function contentAPIasyncFunction() {
     await new Promise((resolve) => {
@@ -99,6 +94,7 @@ async function contentAPIasyncFunction() {
     setTimeout(() => {
         Ellipsis('js-trim', 25);
         new IntersectionObservers();
+        BreadcrumbRenderFunction();
     }, 300);
 }
 
