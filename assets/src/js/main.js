@@ -44,13 +44,13 @@ import { LocationController } from './utils/location.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     contentAPIasyncFunction();
+    new Breadcrumb();
     new Header();
     new Footer();
     new DrawerComponents();
     new Button();
     new ContactBanner();
     new TitleArea();
-    new Breadcrumb()
     new PointerDOM();
     new SocialMedia(document.querySelector('.js-snsIcon-Component'), {
         facebook: true,
@@ -78,13 +78,23 @@ window.addEventListener('load', () => {
     sample();
     setTimeout(() => {
         new SitemapLoader();
-    }, 300);
+    }, 1000)
 });
+
+// async function BreadcrumbRenderFunction() {
+//     await new Promise(resolve => {
+//         resolve();
+//         new Breadcrumb();
+//     })
+//     .then(
+//         new SitemapLoader()
+//     )
+// }
 
 async function contentAPIasyncFunction() {
     await new Promise((resolve) => {
-        newsContentsMainFunctions();
         resolve();
+        newsContentsMainFunctions();
     });
     setTimeout(() => {
         Ellipsis('js-trim', 25);
