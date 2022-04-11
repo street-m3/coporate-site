@@ -10,7 +10,7 @@ const xmlAsynchronousLorder = async () => {
         credentials: 'same-origin',
         })
         .then(
-            console.log('参照できました。')
+            console.info(`ようこそ ${globalvariables.siteName}へ!`)
         ).catch(error => {
             console.log(error);
         })

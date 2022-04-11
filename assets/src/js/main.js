@@ -34,6 +34,7 @@ import { IntersectionObservers } from './ux/scrollobserver.js';
 import { ScrollString } from './ux/scrollstring.js';
 import { SmoothScrollNavigation } from './ux/scroll-nav.js'
 import { History } from './ux/history.js';
+import { ScreenAnimate } from './ux/screenAnimate.js';
 
 // Utiils
 import { ResponsiveMovies } from './utils/responsive-movie.js';
@@ -43,6 +44,7 @@ import { noopener } from './utils/anchor.js';
 import { LocationController } from './utils/location.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    new ScreenAnimate();
     contentAPIasyncFunction();
     new Header();
     new Footer();
