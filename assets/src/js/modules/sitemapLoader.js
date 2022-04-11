@@ -1,22 +1,19 @@
 'use strict';
 import { globalvariables } from "../env/env";
-// import { Breadcrumb } from "../site/breadcrumb";
 
 const xmlAsynchronousLorder = async () => {
-    // const XMLresource = `${globalvariables.siteUrl}sitemap.xml`;
-    const response = await fetch('https://reverent-volhard-d99d5d.netlify.app/sitemap.xml', {
+    const XMLresource = `../sitemap.xml`;
+    const response = await fetch(XMLresource, {
         method: 'GET',
         mode: 'cors',
         cache: 'default',
         credentials: 'same-origin',
-        redirect: 'follow',
-        referrerPolicy: 'no-referrer-when-downgrade',
-    })
-    .then(
-            console.log('I was able to reference the xml file')
-    ).catch(error => {
-        console.log(error);
-    })
+        })
+        .then(
+            console.log('参照できました。')
+        ).catch(error => {
+            console.log(error);
+        })
     return response.text();
 }
 
@@ -27,6 +24,7 @@ export class SitemapLoader {
             ignore: ["403"],
             bloginfo: `${globalvariables.siteUrl}blog`,
         };
+        Object.assign(this.defaultOptions, options);
         this.rootNav = document.querySelector('.c-Breadcrumb_navList');
         this.val = [];
         this.init();
@@ -75,13 +73,13 @@ export class SitemapLoader {
     }
 
     _createListItem(element) {
-        if (!this.rootNav) return;
+        if (!this.rootNav) return console.warn('対象のDOMが見つかりません。');
         const item = document.createElement('li');
         item.setAttribute('itemprop', 'itemListElement');
         item.setAttribute('itemtype', 'http://schema.org/ListItem');
         item.setAttribute('itemscope', '');
         item.setAttribute('class', 'c-Breadcrumb_navList-Item u-uppercase');
-        typeof element === 'string' ? item.innerText = element : item.appendChild(element);
+        typeof element == 'string' ? item.innerText = element : item.appendChild(element);
         this.rootNav.appendChild(item);
     }
 }
