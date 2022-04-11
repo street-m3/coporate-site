@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app</loc>
 		<priority>0.80</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Home</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/sitemap/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/sitemap</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Sitemap</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/service/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/service</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Service</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/price/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/price</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Price</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/policy/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/policy</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Policy</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/news/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/news</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>News</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/faq/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/faq</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Faq</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/contact/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/contact</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Contact</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/company/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/company</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Company</name>
 	</url>
 	<url>
-		<loc>https://www.reverent-volhard-d99d5d.netlify.app/blog/</loc>
+		<loc>https://www.reverent-volhard-d99d5d.netlify.app/blog</loc>
 		<priority>0.70</priority>
 		<lastmod>2022-04-04</lastmod>
 		<name>Blog</name>
