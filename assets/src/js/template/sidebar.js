@@ -6,7 +6,7 @@ const sidebarTemplate = (post) => {
     const getday = published.getDay();
     const pageURL = 'index.html';
     return `
-        <a href="${globalvariables.siteUrl}/blog/${pageURL}?id=${post.id}">
+        <a href="${globalvariables.siteUrl}blog/${pageURL}?id=${post.id}">
             <div class="p-Sidebar-List-Card_Body">
                 <div class="p-Sidebar-List-Card_Meta">
                     <time class="p-Sidebar-List-Card_Meta-Date c-headline-lv4">${published.toLocaleDateString() + '(' + weekLabel[getday] + ')'}</time>
