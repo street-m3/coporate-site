@@ -1,5 +1,6 @@
 'use strict';
 import { globalvariables } from '../env/env.js';
+
 const sidebarTemplate = (post) => {
     const weekLabel = ['日','月','火','水','木','金','土'];
     const published = new Date(post.publishedAt);
