@@ -11,14 +11,14 @@
 .c-Breadcrumb_navList-Item {
     font-weight: var(--font-weight-title);
     position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    white-space: nowrap;
 
     &>* {
-        display: block;
-        max-width: 200px;
-        overflow: hidden;
+        display: inline-block;
         padding: 0;
-        text-overflow: ellipsis;
-        text-transform: capitalize;
-        white-space: nowrap;
     }
 }
