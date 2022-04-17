@@ -52,11 +52,11 @@ export class MouseFollow {
     unSelectablePointer() {
         this.unSelectable.forEach((element) => {
             element.addEventListener('mouseover', () => {
-                this.mouseCenter.style.visiblity = 'hidden';
+                this.mouseCenter.style.visibility = 'hidden';
                 this.mouseCenter.style.opacity = 0;
             });
             element.addEventListener('mouseout', () => {
-                this.mouseCenter.style.visiblity = 'visible';
+                this.mouseCenter.style.visibility = 'visible';
                 this.mouseCenter.style.opacity = 1;
             });
         });
