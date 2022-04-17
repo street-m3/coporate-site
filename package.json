@@ -42,7 +42,6 @@
 		"cssnano": "^5.0.8",
 		"dotenv-webpack": "^7.1.0",
 		"follow-redirects": "^1.14.7",
-		"glob-parent": ">=5.1.2",
 		"merge": ">=2.1.1",
 		"mkdirp": "^1.0.4",
 		"netlify-lambda": "^2.0.15",
