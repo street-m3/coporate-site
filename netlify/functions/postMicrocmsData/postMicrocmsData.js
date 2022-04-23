@@ -1,6 +1,5 @@
 'use strict';
 const fetch = require("node-fetch");
-require('dotenv').config()
 
 const headers = {
     "Access-Control-Allow-Origin": "*", //デプロイ後のサイトURLを指定する
