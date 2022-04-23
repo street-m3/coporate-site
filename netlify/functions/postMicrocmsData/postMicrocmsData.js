@@ -36,7 +36,7 @@ exports.handler = async (event, context) => {
     // 結果を返す
     const responceData = await dataResponse.json();
     return {
-        statusCode: 200,
+        statusCode: 222,
         body: JSON.stringify(responceData),
         headers
     };
