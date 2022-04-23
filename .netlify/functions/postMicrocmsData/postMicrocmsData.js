@@ -37,7 +37,8 @@ exports.handler = async (event, context) => {
     const responceData = await dataResponse.json();
     return {
         statusCode: 200,
-        body: JSON.stringify(responceData),
+        // body: JSON.stringify(responceData),
+        body: JSON.stringify({ message: "Hello World" }),
         headers
     };
 }
