@@ -2,7 +2,7 @@
 const fetch = require("node-fetch");
 
 const headers = {
-    "Access-Control-Allow-Origin": "*", //デプロイ後のサイトURLを指定する
+    "Access-Control-Allow-Origin": "https://reverent-volhard-d99d5d.netlify.app/", //デプロイ後のサイトURLを指定する
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Allow-Methods": "POST",
 };
