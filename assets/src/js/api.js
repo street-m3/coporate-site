@@ -1,7 +1,7 @@
 import { singularTemplate } from './template/singular';
 import { newsTicker } from './site/newsticker.js';
 import { sidebarTemplate } from './template/sidebar.js';
-import { globalvariables } from './env/env.js';
+import { presets } from './env/env.js';
 const NEWS_TICKER_LIMIT = 4; //ニュースティッカーを表示する件数
 const SIDEBAR_CARD_LIST = 5; //サイドバーに表示する件数
 const GET_PAGING_PARAMS = parseInt(new URLSearchParams(window.location.search).get("page")) || 1; //整数値を返す変数
@@ -74,7 +74,7 @@ function newsContentsMainFunctions() {
             const published = new Date(d.publishedAt);
             const getday = published.getDay();
             article.insertAdjacentHTML('afterbegin', `
-                <a href="${globalvariables.siteUrl}blog/index.html?id=${d.id}">
+                <a href="${presets.siteUrl}blog/index.html?id=${d.id}">
                     <div class="p-PostList-Block-Card_Meta">
                         <time class="p-PostList-Block-Card_Meta-Date c-headline-lv4">${published.toLocaleDateString() + '(' + weekLabel[getday] + ')'}</time>
                         <span class="c-category-Label">${d.category}</span>

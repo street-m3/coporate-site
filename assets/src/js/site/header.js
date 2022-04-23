@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables } from '../env/env.js';
+import { presets } from '../env/env.js';
 export class Header extends HTMLElement {
     constructor() {
         super();
@@ -12,7 +12,7 @@ export class Header extends HTMLElement {
             <header class="s-Header" role="banner">
                 <div class="s-Header_Brand">
                     <a href="https://reverent-volhard-d99d5d.netlify.app/" class="s-Header_Brand-Title">
-                        <img src="${globalvariables.siteUrl}${globalvariables.images}logo.svg" width="99px" height="83.41px" alt="${globalvariables.siteName}">
+                        <img src="${presets.siteUrl}${presets.images}logo.svg" width="99px" height="83.41px" alt="${presets.siteName}">
                     </a>
                 </div>
                 <div class="s-Header_Inner" data-scroll="false" data-hover="false">
@@ -20,21 +20,21 @@ export class Header extends HTMLElement {
                         <div class="s-Header_nav-Wrapper">
                             <ul class="s-Header_navList">
                                 <li class="s-Header_navList-Item">
-                                    <a class="touch-hover" href="${globalvariables.siteUrl}">ホーム</a>
+                                    <a class="touch-hover" href="${presets.siteUrl}">ホーム</a>
                                 </li>
                                 <li class="s-Header_navList-Item js-Header-Dropdown">
-                                    <a class="touch-hover" href="${globalvariables.siteUrl}service">サービス</a>
+                                    <a class="touch-hover" href="${presets.siteUrl}service">サービス</a>
                                     <div class="s-Header-Dropdown" aria-hidden="true">
                                         <div class="s-Header-Dropdown_Inner">
                                             <ul class="s-Header-Dropdown_List">
                                                 <li class="s-Header-Dropdown_List-Item">
-                                                    <a href="${globalvariables.siteUrl}service/index.html${globalvariables.prefixid}1" data-smooth-scroll="true">IT法務</a>
+                                                    <a href="${presets.siteUrl}service/index.html${presets.prefixid}1" data-smooth-scroll="true">IT法務</a>
                                                 </li>
                                                 <li class="s-Header-Dropdown_List-Item">
-                                                    <a href="${globalvariables.siteUrl}service/index.html${globalvariables.prefixid}2" data-smooth-scroll="true">ビザ申請</a>
+                                                    <a href="${presets.siteUrl}service/index.html${presets.prefixid}2" data-smooth-scroll="true">ビザ申請</a>
                                                 </li>
                                                 <li class="s-Header-Dropdown_List-Item">
-                                                    <a href="${globalvariables.siteUrl}service/index.html${globalvariables.prefixid}3" data-smooth-scroll="true">民泊申請</a>
+                                                    <a href="${presets.siteUrl}service/index.html${presets.prefixid}3" data-smooth-scroll="true">民泊申請</a>
                                                 </li>
                                             </ul>
                                             <div class="s-Header-Dropdown_Contact">
@@ -47,19 +47,19 @@ export class Header extends HTMLElement {
                                     </div>
                                 </li>
                                 <li class="s-Header_navList-Item">
-                                    <a href="${globalvariables.siteUrl}price">価格</a>
+                                    <a href="${presets.siteUrl}price">価格</a>
                                 </li>
                                 <li class="s-Header_navList-Item">
-                                    <a href="${globalvariables.siteUrl}news">お知らせ</a>
+                                    <a href="${presets.siteUrl}news">お知らせ</a>
                                 </li>
                                 <li class="s-Header_navList-Item">
-                                    <a href="${globalvariables.siteUrl}company">会社情報</a>
+                                    <a href="${presets.siteUrl}company">会社情報</a>
                                 </li>
                                 <li class="s-Header_navList-Item">
-                                    <a href="${globalvariables.siteUrl}faq">よくある質問</a>
+                                    <a href="${presets.siteUrl}faq">よくある質問</a>
                                 </li>
                             </ul>
-                            <a href="${globalvariables.siteUrl}contact" class="o-button s-Header_nav-ContactLink">CONTACT</a>
+                            <a href="${presets.siteUrl}contact" class="o-button s-Header_nav-ContactLink">CONTACT</a>
                         </div>
                     </nav>
                 </div>

@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables } from '../env/env';
+import { presets } from '../env/env';
 export class Footer extends HTMLElement {
     constructor() {
         super();
@@ -13,7 +13,7 @@ export class Footer extends HTMLElement {
                 <div class="s-Footer_Inner">
                     <address class="s-Footer_Address">
                         <div class="s-Footer_Address-Brand">
-                            <img src="${globalvariables.siteUrl}${globalvariables.images}logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
+                            <img src="${presets.siteUrl}${presets.images}logo.svg" width="99px" height="83.41px" alt="藤岡行政書士事務所">
                             <ul class="s-Footer_AddressList">
                                 <li class="s-Footer_AddressList-Item">
                                     〒234-0013
@@ -27,7 +27,7 @@ export class Footer extends HTMLElement {
                     <nav class="s-Footer_nav">
                         <ul class="s-Footer_navList">
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="${globalvariables.siteUrl}">ホーム</a>
+                                <a class="touch-hover" href="${presets.siteUrl}">ホーム</a>
                             </li>
                             <li class="s-Footer_navList-Item s-Footer-Dropdown">
                                 <div class="s-Footer-Dropdown_Header js-Footer-Dropdown-Header">
@@ -38,34 +38,34 @@ export class Footer extends HTMLElement {
                                 <div class="s-Footer-Dropdown_nav">
                                     <ul class="s-Footer-Dropdown_navList">
                                         <li class="s-Footer-Dropdown_navList-Item">
-                                            <a href="${globalvariables.siteUrl}service/index.html${globalvariables.prefixid}1">IT法務</a>
+                                            <a href="${presets.siteUrl}service/index.html${presets.prefixid}1">IT法務</a>
                                         </li>
                                         <li class="s-Footer-Dropdown_navList-Item">
-                                            <a href="${globalvariables.siteUrl}service/index.html${globalvariables.prefixid}2">ビザ申請</a>
+                                            <a href="${presets.siteUrl}service/index.html${presets.prefixid}2">ビザ申請</a>
                                         </li>
                                         <li class="s-Footer-Dropdown_navList-Item">
-                                            <a href="${globalvariables.siteUrl}service/index.html${globalvariables.prefixid}3">民泊申請</a>
+                                            <a href="${presets.siteUrl}service/index.html${presets.prefixid}3">民泊申請</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="${globalvariables.siteUrl}price">価格</a>
+                                <a class="touch-hover" href="${presets.siteUrl}price">価格</a>
                             </li>
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="${globalvariables.siteUrl}news">お知らせ</a>
+                                <a class="touch-hover" href="${presets.siteUrl}news">お知らせ</a>
                             </li>
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="${globalvariables.siteUrl}company">会社概要</a>
+                                <a class="touch-hover" href="${presets.siteUrl}company">会社概要</a>
                             </li>
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="${globalvariables.siteUrl}faq">よくある質問</a>
+                                <a class="touch-hover" href="${presets.siteUrl}faq">よくある質問</a>
                             </li>
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="${globalvariables.siteUrl}sitemap">サイトマップ</a>
+                                <a class="touch-hover" href="${presets.siteUrl}sitemap">サイトマップ</a>
                             </li>
                             <li class="s-Footer_navList-Item">
-                                <a class="touch-hover" href="${globalvariables.siteUrl}policy">プライバシーポリシー</a>
+                                <a class="touch-hover" href="${presets.siteUrl}policy">プライバシーポリシー</a>
                             </li>
                         </ul>
                     </nav>

@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables } from '../env/env.js';
+import { presets } from '../env/env.js';
 
 const sidebarTemplate = (post) => {
     const weekLabel = ['日','月','火','水','木','金','土'];
@@ -7,7 +7,7 @@ const sidebarTemplate = (post) => {
     const getday = published.getDay();
     const pageURL = 'index.html';
     return `
-        <a href="${globalvariables.siteUrl}blog/${pageURL}?id=${post.id}">
+        <a href="${presets.siteUrl}blog/${pageURL}?id=${post.id}">
             <div class="p-Sidebar-List-Card_Body">
                 <div class="p-Sidebar-List-Card_Meta">
                     <time class="p-Sidebar-List-Card_Meta-Date c-headline-lv4">${published.toLocaleDateString() + '(' + weekLabel[getday] + ')'}</time>

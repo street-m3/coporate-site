@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables } from '../env/env';
+import { presets } from '../env/env';
 export class DrawerComponents extends HTMLElement {
     constructor() {
         super();
@@ -19,7 +19,7 @@ export class DrawerComponents extends HTMLElement {
                 <nav class="s-Drawer_nav" role="navigation">
                     <ul class="s-Drawer_navList">
                         <li class="s-Drawer_navList-Item">
-                            <a href="${globalvariables.siteUrl}">ホーム</a>
+                            <a href="${presets.siteUrl}">ホーム</a>
                         </li>
                         <li class="s-Drawer_navList-Item s-Drawer-Dropdown">
                             <div class="s-Drawer-Dropdown_Header js-Drawer-Dropdown-Header">
@@ -30,34 +30,34 @@ export class DrawerComponents extends HTMLElement {
                             <div class="s-Drawer-Dropdown_nav">
                                 <ul class="s-Drawer-Dropdown_navList">
                                     <li class="s-Drawer-Dropdown_navList-Item">
-                                        <a href="${globalvariables.siteUrl}service/index.html${prefixBase}1">IT法務</a>
+                                        <a href="${presets.siteUrl}service/index.html${prefixBase}1">IT法務</a>
                                     </li>
                                     <li class="s-Drawer-Dropdown_navList-Item">
-                                        <a href="${globalvariables.siteUrl}service/index.html${prefixBase}2">ビザ申請</a>
+                                        <a href="${presets.siteUrl}service/index.html${prefixBase}2">ビザ申請</a>
                                     </li>
                                     <li class="s-Drawer-Dropdown_navList-Item">
-                                        <a href="${globalvariables.siteUrl}service/index.html${prefixBase}3">民泊申請</a>
+                                        <a href="${presets.siteUrl}service/index.html${prefixBase}3">民泊申請</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="s-Drawer_navList-Item">
-                            <a href="${globalvariables.siteUrl}price">価格</a>
+                            <a href="${presets.siteUrl}price">価格</a>
                         </li>
                         <li class="s-Drawer_navList-Item">
-                            <a href="${globalvariables.siteUrl}news">お知らせ</a>
+                            <a href="${presets.siteUrl}news">お知らせ</a>
                         </li>
                         <li class="s-Drawer_navList-Item">
-                            <a href="${globalvariables.siteUrl}company">会社情報</a>
+                            <a href="${presets.siteUrl}company">会社情報</a>
                         </li>
                         <li class="s-Drawer_navList-Item">
-                            <a href="${globalvariables.siteUrl}faq">よくある質問</a>
+                            <a href="${presets.siteUrl}faq">よくある質問</a>
                         </li>
                         <li class="s-Drawer_navList-Item">
-                            <a href="${globalvariables.siteUrl}sitemap">サイトマップ</a>
+                            <a href="${presets.siteUrl}sitemap">サイトマップ</a>
                         </li>
                         <li class="s-Drawer_navList-Item">
-                            <a href="${globalvariables.siteUrl}policy">プライバシーポリシー</a>
+                            <a href="${presets.siteUrl}policy">プライバシーポリシー</a>
                         </li>
                     </ul>
                     <aside class="s-Contact-Banner" role="complementary">
@@ -71,7 +71,7 @@ export class DrawerComponents extends HTMLElement {
                                     ご質問などありましたらお気軽にお問い合わせください
                                 </p>
                                 <div class="s-Contact-Banner_Component">
-                                    <a href="${globalvariables.siteUrl}contact" class="o-button c-button-border s-Contact-Banner_ContactLink" data-op="vertical-right">
+                                    <a href="${presets.siteUrl}contact" class="o-button c-button-border s-Contact-Banner_ContactLink" data-op="vertical-right">
                                         お問い合わせフォームへ
                                     </a>
                                 </div>
