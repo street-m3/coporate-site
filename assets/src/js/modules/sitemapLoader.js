@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables } from "../env/env";
+import { presets } from "../env/env";
 
 const xmlAsynchronousLorder = async () => {
     const XMLresource = `../sitemap.xml`;
@@ -10,7 +10,7 @@ const xmlAsynchronousLorder = async () => {
         credentials: 'same-origin',
         })
         .then(
-            console.info(`ようこそ ${globalvariables.siteName}へ!`)
+            console.info(`ようこそ ${presets.siteName}へ!`)
         ).catch(error => {
             console.log(error);
         })
@@ -22,7 +22,7 @@ export class SitemapLoader {
         this.options = options;
         this.defaultOptions = {
             ignore: ["403"],
-            bloginfo: `${globalvariables.siteUrl}blog`,
+            bloginfo: `${presets.siteUrl}blog`,
         };
         Object.assign(this.defaultOptions, options);
         this.rootNav = document.querySelector('.c-Breadcrumb_navList');

@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables } from '../env/env';
+import { presets } from '../env/env';
 
 export class ScreenAnimateInnerHTML extends HTMLElement {
     constructor() {
@@ -12,7 +12,7 @@ export class ScreenAnimateInnerHTML extends HTMLElement {
             <div class="c-ScreenAnimate_Container">
                 <div class="c-ScreenAnimate_Layer anim-MotionLayer_01">
                     <div class="c-ScreenAnimate_Routine js-ScreenAnimate-Routine" style="visiblity: hidden; opacity: 0;">
-                        <img src="${globalvariables.siteUrl}images/loading.svg">
+                        <img src="${presets.siteUrl}images/loading.svg">
                     </div>
                 </div>
                 <div class="c-ScreenAnimate_Layer anim-MotionLayer_02"></div>

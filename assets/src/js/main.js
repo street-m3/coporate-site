@@ -1,7 +1,7 @@
 'use strict';
 
 // envオブジェクト
-import { globalvariables } from './env/env.js';
+import { presets } from './env/env.js';
 
 // APIモジュール
 import { newsContentsMainFunctions } from './api.js';
@@ -112,7 +112,7 @@ function DropdowninitFunctions() {
         new Accordion('s-Footer-Dropdown', 'js-Footer-Dropdown-Header');
     } else {
         FooterDropdown.addEventListener('click', () => { 
-            location.href = `${globalvariables.siteUrl}service`;
+            location.href = `${presets.siteUrl}service`;
         });
     }
 }

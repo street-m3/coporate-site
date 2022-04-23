@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables, parentIndexPath } from '../env/env.js';
+import { presets } from '../env/env.js';
 export class Breadcrumb extends HTMLElement {
     constructor() {
         super();
@@ -14,7 +14,7 @@ export class Breadcrumb extends HTMLElement {
                     <nav class="c-Breadcrumb_nav">
                         <ol class="c-Breadcrumb_navList" itemscope itemtype="https://schema.org/BreadcrumbList">
                             <li class="c-Breadcrumb_navList-Item u-uppercase" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <a href="${globalvariables.siteUrl}" itemprop="item">
+                                <a href="${presets.siteUrl}" itemprop="item">
                                     <span itemprop="name">Top</span>
                                 </a>
                             </li>

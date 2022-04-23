@@ -1,5 +1,5 @@
 'use strict';
-import { globalvariables } from "../env/env";
+import { presets } from "../env/env";
 export class ContactBanner extends HTMLElement {
     constructor() {
         super();
@@ -21,7 +21,7 @@ export class ContactBanner extends HTMLElement {
                             ご質問などありましたらお気軽にお問い合わせください
                         </p>
                         <div class="s-Contact-Banner_Component">
-                            <a href="${globalvariables.siteUrl}contact" class="o-button c-button-border s-Contact-Banner_ContactLink" data-op="vertical-right">
+                            <a href="${presets.siteUrl}contact" class="o-button c-button-border s-Contact-Banner_ContactLink" data-op="vertical-right">
                                 お問い合わせフォームへ
                             </a>
                         </div>

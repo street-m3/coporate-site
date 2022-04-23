@@ -1,11 +1,11 @@
 'use strict';
-import { globalvariables } from '../env/env';
+import { presets } from '../env/env';
 const newsTicker = (post) => {
     const pageURL = 'index.html';
     const published = new Date(post.publishedAt);
 
     return `
-        <a href="${globalvariables.siteUrl}blog/${pageURL}?id=${post.id}" class="c-newsTicker_Item-Link">
+        <a href="${presets.siteUrl}blog/${pageURL}?id=${post.id}" class="c-newsTicker_Item-Link">
             <div class="c-newsTicker_Item-Category">
                 ${post.category}
             </div>
