@@ -1,10 +1,6 @@
-const Dotenv = require('dotenv-webpack');
 module.exports = {
     mode: 'production', //production or development
     entry: `./assets/src/js/main.js`,
-    plugins: [
-        new Dotenv()
-    ],
     
     output: {
         path: `${__dirname}/assets/dist/js`,
