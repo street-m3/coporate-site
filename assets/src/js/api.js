@@ -1,7 +1,8 @@
 import { singularTemplate } from './template/singular';
 import { newsTicker } from './site/newsticker.js';
 import { sidebarTemplate } from './template/sidebar.js';
-import { presets, requestURLconnected, requestAPIconnected } from './env/env';
+import { presets } from './env/env';
+import { requestURLconnected, requestAPIconnected } from '../../../functions/postMicrocmsData/postMicrocmsData'
 const NEWS_TICKER_LIMIT = 4; //ニュースティッカーを表示する件数
 const SIDEBAR_CARD_LIST = 5; //サイドバーに表示する件数
 const GET_PAGING_PARAMS = parseInt(new URLSearchParams(window.location.search).get("page")) || 1; //整数値を返す変数
@@ -134,7 +135,7 @@ function _sidebarContentServe(d) {
 /**
  * _newsTickerArticleServe:
  * ニュースティッカー用最新の投稿記事表示用
- * @param {object} d json.contets
+ * @param {object} d json.contents
  * @returns 
  */
 function _newsTickerArticleServe(d) {
