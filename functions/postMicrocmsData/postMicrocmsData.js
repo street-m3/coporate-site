@@ -6,29 +6,6 @@ const headers = {
     "Access-Control-Allow-Methods": "POST",
 };
 
-
-const { REQUEST_KEY_BASE, XMICROCMS_API_KEY } = process.env;
-
-if (REQUEST_KEY_BASE === undefined || XMICROCMS_API_KEY === undefined) {
-    throw new Error("Could not retrieve environment variables. Please review your settings....(;_;)");
-}
-
-/**
- * { string } URL
- * @returns 
- */
-const requestURLconnected = () => {
-    if (typeof REQUEST_KEY_BASE === "string") return REQUEST_KEY_BASE;
-}
-
-/**
- * { string } API_KEY
- * @returns 
- */
-const requestAPIconnected = () => {
-    if (typeof XMICROCMS_API_KEY === "string") return XMICROCMS_API_KEY;
-}
-
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
 const handler = async (event) => {
     if (event.httpMethod !== "POST") {
@@ -40,10 +17,10 @@ const handler = async (event) => {
 
 
     try {
-        const { data } = await axios.get(REQUEST_KEY_BASE, {
+        const { data } = await axios.get(process.env.REQUEST_KEY_BASE, {
             headers: {
                 "Content-Type": "application/json",
-                "X-WRITE-API-KEY": `${XMICROCMS_API_KEY}`,
+                "X-WRITE-API-KEY": `${process.env.XMICROCMS_API_KEY}`,
             }
         })
 
