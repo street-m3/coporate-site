@@ -7,7 +7,6 @@ export class ContactBanner extends HTMLElement {
     }
 
     attachShadow() {
-        const rootUrl = 'https://reverent-volhard-d99d5d.netlify.app/';
         this.insertAdjacentHTML('afterbegin', 
             `
             <aside class="s-Contact-Banner" role="complementary">
