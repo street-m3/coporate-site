@@ -116,3 +116,5 @@ function DropdowninitFunctions() {
         });
     }
 }
+
+console.log('Hello, world!');
