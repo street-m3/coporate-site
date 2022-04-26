@@ -1,7 +1,7 @@
 import { singularTemplate } from './template/singular';
 import { newsTicker } from './site/newsticker.js';
 import { sidebarTemplate } from './template/sidebar.js';
-import { presets, translateFormat, requestAPIconnected} from './env/env';
+import { presets, accessManagement, BASE_ADJUST_API, BASE_ADJUST_ADR } from './env/env';
 const NEWS_TICKER_LIMIT = 4; //ニュースティッカーを表示する件数
 const SIDEBAR_CARD_LIST = 5; //サイドバーに表示する件数
 const GET_PAGING_PARAMS = parseInt(new URLSearchParams(window.location.search).get("page")) || 1; //整数値を返す変数
@@ -26,7 +26,7 @@ const responseFetchContents = async (url) => {
             cache: 'default',
             credentials: 'same-origin',
             headers: {
-                'X-MICROCMS-API-KEY': `${translateFormat(presets.keys)}`,
+                'X-MICROCMS-API-KEY': `${accessManagement(BASE_ADJUST_API)}`,
             },
             redirect: 'follow',
             referrerPolicy: 'no-referrer-when-downgrade',
@@ -42,19 +42,19 @@ const responseFetchContents = async (url) => {
  * microCMSからデータの取り出すための初期化処理
  */
 function newsContentsMainFunctions() {
-    responseFetchContents(`${translateFormat(presets.keys)}${REQUEST_KEY_ORDER}`).then((json) => {
+    responseFetchContents(`${accessManagement(BASE_ADJUST_ADR)}${REQUEST_KEY_ORDER}`).then((json) => {
         const data = json.contents;
         data.forEach((d) => {
             d.id === GET_PARAMETER ? _contentArticleServe(d) : '';
         });
     });
-    responseFetchContents(`${translateFormat(presets.keys)}${REQUEST_KEY_ORDER}${NEWS_TICKER_TOPIC}`).then((json) => {
+    responseFetchContents(`${accessManagement(BASE_ADJUST_ADR)}${REQUEST_KEY_ORDER}${NEWS_TICKER_TOPIC}`).then((json) => {
         const data = json.contents;
         data.forEach((d) => {
             _newsTickerArticleServe(d);
         });
     });
-    responseFetchContents(`${translateFormat(presets.keys)}${REQUEST_KEY_ORDER}${SIDEBAR_CARD_RECENT}`).then((json) => {
+    responseFetchContents(`${accessManagement(BASE_ADJUST_ADR)}${REQUEST_KEY_ORDER}${SIDEBAR_CARD_RECENT}`).then((json) => {
         const data = json.contents;
         data.forEach((d) => {
             _sidebarContentServe(d);
@@ -65,7 +65,7 @@ function newsContentsMainFunctions() {
     const offset = limit * (page - 1);
     const insertTarget = document.querySelector('[data-structure-api="0x4ebf74"]');
     if (!insertTarget) return;
-    responseFetchContents(`${translateFormat(presets.keys)}${REQUEST_KEY_ORDER}&limit=${limit}&offset=${offset}`).then(json => {
+    responseFetchContents(`${accessManagement(BASE_ADJUST_ADR)}${REQUEST_KEY_ORDER}&limit=${limit}&offset=${offset}`).then(json => {
         const data = json.contents;
         data.forEach(d => {
             const article = document.createElement('article');
