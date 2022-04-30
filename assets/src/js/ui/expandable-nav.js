@@ -1,7 +1,7 @@
 'use strict';
-export { Megamenu, HoverHeader };
+export { ExpandableNav, HoverHeader };
 
-class Megamenu {
+class ExpandableNav {
     constructor() {
         this.dropdownContainer = document.querySelectorAll('.js-Header-Dropdown');
         this.dropdownBody = document.querySelector('.s-Header-Dropdown');
@@ -37,7 +37,7 @@ class Megamenu {
     }
 }
 
-class HoverHeader extends Megamenu {
+class HoverHeader extends ExpandableNav {
     constructor() {
         super();
         this.wrapper = document.querySelector('[data-hover]');
