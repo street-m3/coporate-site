@@ -41,7 +41,6 @@ import { LocationController } from './utils/location.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     new ScreenAnimateInnerHTML();
-    new ScreenAnimate();
     series();
     new Header();
     new Footer();
@@ -60,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
+    new ScreenAnimate();
     new MouseFollow(992);
     new EndAnimationMethod();
     new Drawer(992, true);
